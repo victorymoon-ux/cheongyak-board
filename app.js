@@ -2,7 +2,7 @@
 (function () {
   "use strict";
   var FAV_KEY = "cheongyak:fav";
-  var state = { data: null, fav: loadFav(), open: {}, marks: {}, map: null, mapLayer: null, mapOn: localStorage.getItem("cheongyak:map") === "1" };
+  var state = { data: null, fav: loadFav(), open: {}, marks: {}, map: null, mapLayer: null, mapOn: localStorage.getItem("cheongyak:map") !== "0" };
   var MY = { applied: "지원함", docs: "서류 통과", waitlist: "예비번호", won: "당첨", lost: "탈락", gave_up: "포기" };
   var W = ["일", "월", "화", "수", "목", "금", "토"];
   var $ = function (s, el) { return (el || document).querySelector(s); };
