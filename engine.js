@@ -77,7 +77,7 @@
     if (out.total_youth != null) out.display_total = out.total_youth;
     else if (out.total_bank != null) out.display_total = out.total_bank;
     else { out.display_total = rent; if (loan > 0) return out; }
-    var t = out.display_total, max = rates._max || 500000, border = rates._border || 550000;
+    var t = out.display_total, max = rates._max || 800000, border = rates._border || 850000;
     out.verdict = t <= max ? "ok" : t <= border ? "border" : "over";
     return out;
   }

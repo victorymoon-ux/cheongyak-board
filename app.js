@@ -271,7 +271,7 @@
       return false;
     }).sort(function (a, b) { return (a.apply_end || "9").localeCompare(b.apply_end || "9") || (b.score.total - a.score.total); });
     items.sort(function (a, b) { return ((b.watch ? 2 : 0) + (isBig(b) ? 1 : 0)) - ((a.watch ? 2 : 0) + (isBig(a) ? 1 : 0)) || (a.apply_end || "9").localeCompare(b.apply_end || "9"); });
-    var html = '<h2>이번 주 내가 지원할 공고 <small>' + items.length + '건 · 조건 통과(9평↑·월 50만↓) 또는 ⭐ 대형 모집(100호↑, 무조건 지원), 미산정은 노란 메모 · 지금 접수 중이거나 7일 안에 시작 · ⭐ 먼저, 마감 순</small></h2>';
+    var html = '<h2>이번 주 내가 지원할 공고 <small>' + items.length + '건 · 조건 통과(9평↑·월 80만↓) 또는 ⭐ 대형 모집(100호↑, 무조건 지원), 미산정은 노란 메모 · 지금 접수 중이거나 7일 안에 시작 · ⭐ 먼저, 마감 순</small></h2>';
     if (!items.length) html += '<div class="empty">이번 주에 지원할 공고가 없어요. "새로고침(다시 수집)"으로 새 공고를 확인해 보세요.</div>';
     else html += "<ol>" + items.map(function (l, i) {
       var ph = phaseOf(l), mine = mineOf(l), pay = (l.monthly || {}).display_total;
