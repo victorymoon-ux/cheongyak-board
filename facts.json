@@ -5441,7 +5441,7 @@
  },
  "presets": [
   {
-   "name": "동생 (청라·길병원)",
+   "name": "승혜 (청라·길병원)",
    "residence_sido": "인천",
    "work": {
     "station": "예술회관",
@@ -5456,6 +5456,14 @@
     {
      "name": "청라",
      "points": 10
+    },
+    {
+     "name": "구월",
+     "points": 8
+    },
+    {
+     "name": "남동구",
+     "points": 8
     },
     {
      "name": "서구",
