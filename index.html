@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>내 청약 보드</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="style.css?v=1791765838">
+</head>
+<body>
+<header class="top">
+  <div class="brand">내 <span>청약</span> 보드</div>
+  <div class="meta" id="meta">불러오는 중…</div>
+</header>
+<div class="wrap">
+  <aside class="side" aria-label="필터">
+    <div>
+      <input type="search" id="q" placeholder="검색: 단지명·구·역·유형" aria-label="검색" style="width:100%;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:10px">
+    </div>
+    <div class="row">
+      <button class="btn primary" id="refresh" type="button" title="공고를 다시 수집하고 화면을 갱신합니다 (3~5분)">새로고침(다시 수집)</button>
+      <button class="btn" id="rebuild" type="button" title="수집 없이 점수·필터만 다시 계산">다시 계산</button>
+    </div>
+    <div class="note" id="runStatus" hidden></div>
+    <div class="season" id="season"></div>
+    <div>
+      <h4>보기</h4>
+      <label><input type="radio" name="view" value="open" checked> 접수 중 (지금 신청 가능) <span class="n" data-cnt="open"></span></label>
+      <label><input type="radio" name="view" value="upcoming"> 접수 예정 <span class="n" data-cnt="upcoming"></span></label>
+      <label><input type="radio" name="view" value="mine"> 내 지원 현황 <span class="n" data-cnt="mine"></span></label>
+      <label><input type="radio" name="view" value="reco"> 추천 순 <span class="n" data-cnt="reco"></span></label>
+      <label><input type="radio" name="view" value="fav"> 찜 <span class="n" data-cnt="fav"></span></label>
+      <label><input type="radio" name="view" value="edge"> 경계·미산정 <span class="n" data-cnt="edge"></span></label>
+      <label><input type="radio" name="view" value="all"> 전체 <span class="n" data-cnt="all"></span></label>
+    </div>
+    <div>
+      <h4>유형</h4>
+      <div id="types"></div>
+    </div>
+    <div>
+      <h4>조건</h4>
+      <label>최소 평수 <input type="number" id="minPy" value="9" min="0" step="0.5"></label>
+      <label>월 납입 ≤ <input type="number" id="maxPay" value="55" min="0" step="5"> 만</label>
+      <label>구 <select id="gu"><option value="">전체</option></select></label>
+      <label><input type="checkbox" id="line2"> 2호선 역세권만</label>
+      <label><input type="checkbox" id="newOnly"> 신규 공고만</label>
+      <label><input type="checkbox" id="showClosed"> 접수 끝난 것도 보기</label>
+    </div>
+    <div>
+      <button class="btn" id="copyFav" type="button">찜 목록 복사</button>
+    </div>
+    <div class="note" id="transitNote"></div>
+  </aside>
+  <main>
+    <div id="fail"></div>
+    <section class="todo" id="todo" aria-label="이번 주 내가 지원할 공고"></section>
+    <div class="sum" id="sum"></div>
+    <div class="legend"><b style="color:var(--ink2)">색 기준</b><span class="pill urgent">마감 임박 (5일 미만)</span><span class="pill open">접수 중</span><span class="pill upcoming">접수 예정</span><span class="pill closed">접수 종료</span><span class="pill mine">내가 지원함</span><span class="pill result">발표 (내가 지원한 것만)</span></div>
+    <div class="help"><b>점수란?</b> 내 우선순위로 매긴 추천 점수(100점 만점). 을지로입구역 소요시간 <b>40</b> · 평수·룸 <b>25</b> · 모집호수 <b>15</b> · 선호 지역(중구 &gt; 종로·동대문·용산 &gt; 강남·서초·마포) <b>10</b> · 거주 가능 기간 <b>10</b> + 보너스(2호선 역세권 +5, 1.5룸·2룸 +5, 대단지 +2). 점수에 마우스를 올리면 내역이 보입니다. 기준은 <code>rules/우선순위.md</code>에서 바꿀 수 있어요. <b>대형 모집</b> 딱지 = 청년 100호 이상(또는 단지 300세대 이상)이라 예비번호가 많이 도는 공고.</div>
+    <p class="sec"><span id="calTitle">접수 일정 · 이번 주 + 다음 주</span><button class="btn" id="calToggle" type="button" style="margin-left:auto">한 달 보기 ▾</button></p>
+    <div class="calhead"><span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span></div>
+    <div class="cal" id="cal"></div>
+    <div class="maphead"><button class="btn" id="mapToggle" type="button" aria-pressed="false">지도 보기</button><span class="note" id="mapNote" hidden></span></div>
+    <div id="map" hidden aria-label="공고 지도"></div>
+    <p class="sec"><span id="secTitle"></span><span class="cnt" id="secCnt"></span></p>
+    <div class="grid" id="grid"></div>
+  </main>
+</div>
+<script src="vendor/leaflet.js"></script>
+<script src="app.js?v=1791765838"></script>
+</body>
+</html>
