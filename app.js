@@ -2,7 +2,7 @@
 (function () {
   "use strict";
   var FAV_KEY = "cheongyak:fav";
-  var state = { data: null, fav: loadFav(), open: {}, marks: {}, map: null, mapLayer: null, mapOn: localStorage.getItem("cheongyak:map") !== "0" };
+  var state = { data: null, fav: loadFav(), open: {}, marks: {}, map: null, mapLayer: null, mapOn: localStorage.getItem("cheongyak:map") !== "0", mode: "owner", facts: null, stations: [], profile: null };
   var MY = { applied: "지원함", docs: "서류 통과", waitlist: "예비번호", won: "당첨", lost: "탈락", gave_up: "포기" };
   var W = ["일", "월", "화", "수", "목", "금", "토"];
   var $ = function (s, el) { return (el || document).querySelector(s); };
@@ -65,11 +65,13 @@
   function eligChip(l) {
     var label = l.rank ? (l.eligibility || "") + " · " + l.rank : (l.eligibility || "자격 미판정");
     var c = l.eligibility === "가능" ? "mint" : l.eligibility === "불가" ? "rose" : "amber";
+    if (l.status === "neutral") { label = "조건 입력 후 판정"; c = "gray"; }
     if (l.status === "rejected") { label = (l.status_reasons[0] || "탈락"); c = "rose"; }
     if (l.status === "closed") { label = "접수 종료"; c = "gray"; }
     return '<span class="chip ' + c + '">' + esc(label) + "</span>";
   }
   function payKpi(l) {
+    if (l.status === "neutral") return '<div class="kpi"><div class="l">총 월 납입</div><div class="v">—<small>조건 입력 후</small></div></div>';
     var m = l.monthly || {}, v = m.display_total;
     var cls = m.verdict === "ok" ? "mint" : m.verdict === "border" ? "warn" : m.verdict === "over" ? "bad" : "";
     var txt = v == null ? "—" : man(v).toLocaleString();
@@ -77,9 +79,11 @@
     return '<div class="kpi ' + cls + '"><div class="l">총 월 납입</div><div class="v">' + txt + "<small>" + small + "</small></div></div>";
   }
   function transitKpi(l) {
+    if (l.status === "neutral") return '<div class="kpi mint"><div class="l">직장까지</div><div class="v">—<small>조건 입력 후</small></div></div>';
     var v = l.transit_min == null ? "—" : l.transit_min;
     var small = l.transit_min == null ? "미산정" : (l.transit_mode === "estimate" ? "분(추정)" : "분");
-    return '<div class="kpi mint"><div class="l">을지로입구까지</div><div class="v">' + v + "<small>" + small + "</small></div></div>";
+    var wl = state.mode === "static" && state.profile && state.profile.work && state.profile.work.station ? state.profile.work.station + "까지" : "을지로입구까지";
+    return '<div class="kpi mint"><div class="l">' + esc(wl) + '</div><div class="v">' + v + "<small>" + small + "</small></div></div>";
   }
   function area(l) {
     if (l.area_m2_max == null) return "평수 [확인 필요]";
@@ -117,7 +121,7 @@
     var cls = "card " + l.status + (isBig(l) ? " big" : "") + (state.open[l.id] ? " open" : "") + (mine ? " mine" : "");
     var notes = (sc.notes || []).join(", ");
     return '<article class="' + cls + '" data-id="' + esc(l.id) + '">' +
-      '<div class="hd"><div class="row"><span class="pill ' + ph.k + (ph.urgent ? " urgent" : "") + '">' + esc(ph.text) + "</span>" + (mine ? '<span class="pill mine">' + esc(mine.label) + "</span>" : "") + '<span class="chip ' + typeClass(l.type) + '">' + esc(l.type) + "</span>" + bigBadge(l) + (l.is_new ? '<span class="chip">신규</span>' : "") + "</div>" +
+      '<div class="hd"><div class="row"><span class="pill ' + ph.k + (ph.urgent ? " urgent" : "") + '">' + esc(ph.text) + "</span>" + (mine ? '<span class="pill mine">' + esc(mine.label) + "</span>" : "") + '<span class="chip ' + typeClass(l.type) + '">' + esc(l.type) + "</span>" + bigBadge(l) + (l.is_new ? '<span class="chip">신규</span>' : "") + (state.mode === "static" && l.my_status ? '<span class="chip owner">' + esc((state.facts && state.facts.owner) || "승리") + " " + esc(MY[l.my_status] || l.my_status) + "</span>" : "") + "</div>" +
       '<button class="heart' + (isFav(l.id) ? " on" : "") + '" type="button" aria-pressed="' + isFav(l.id) + '" aria-label="찜" data-fav="' + esc(l.id) + '">♥</button></div>' +
       "<div><h3><button type=\"button\" data-toggle=\"" + esc(l.id) + "\">" + esc(starName(l)) + "</button></h3><div class=\"loc\">" + esc(loc) + " · " + esc(l.provider) + "</div></div>" +
       '<div class="phase"><div class="line">' + esc(ph.sub) + "</div>" + timeline(l) + "</div>" +
@@ -130,9 +134,9 @@
       '<input type="text" data-memo="' + esc(l.id) + '" placeholder="메모 (예: 예비 23번, 10/3 이메일 접수)" value="' + esc(mine ? mine.memo : "") + '"></div>' +
       '<div class="detail">' +
       '<div class="kv"><b>점수 내역</b><span>거리 ' + (sc.transit || 0) + " · 지역 " + (sc.gu || 0) + " · 평수 " + (sc.area || 0) + " · 거주기간 " + (sc.years || 0) + " · 모집호수 " + (sc.units || 0) + " · 보너스 " + (sc.bonus || 0) + (notes ? " (" + esc(notes) + ")" : "") + "</span>" +
-      "<b>교통</b><span>" + esc(l.transit_detail || "미산정 — 주소 지오코딩 실패 또는 주소 없음") + "</span>" +
+      "<b>교통</b><span>" + esc(l.transit_detail || (l.status === "neutral" ? "내 조건(직장 역)을 입력하면 계산" : "미산정 — 주소 지오코딩 실패 또는 주소 없음")) + "</span>" +
       "<b>월 납입</b><span>" + payDetail(l) + ((l.monthly || {}).alt ? "<br>전환안: " + esc(l.monthly.alt.note) : "") + "</span>" +
-      "<b>자격</b><span>" + esc(l.eligibility_note || "미판정") + "</span>" +
+      "<b>자격</b><span>" + esc(l.eligibility_note || (l.status === "neutral" ? "내 조건 입력 후 판정" : "미판정")) + "</span>" +
       (l.convert_note ? "<b>전환</b><span>" + esc(l.convert_note) + "</span>" : "") +
       (l.status_reasons && l.status_reasons.length ? "<b>판정</b><span>" + esc(l.status_reasons.join("; ")) + "</span>" : "") +
       (l.announce_date ? "<b>발표</b><span>" + esc(l.announce_date) + "</span>" : "") + (l.movein ? "<b>입주</b><span>" + esc(l.movein) + "</span>" : "") +
@@ -146,6 +150,7 @@
   }
   function payDetail(l) {
     var m = l.monthly || {};
+    if (l.status === "neutral") return "내 조건을 입력하면 계산";
     if (!m || m.display_total == null) return "보증금·월세를 아직 못 읽음";
     var p = state.data.profile_summary;
     if (state.data.static) return esc("월세 " + won(l.rent_won) + " + 보증금 대출 이자 (이자지원 기준)");
@@ -161,11 +166,12 @@
       view: ($("input[name=view]:checked") || {}).value || "due",
       q: ($("#q").value || "").trim().toLowerCase(),
       types: types, minPy: parseFloat($("#minPy").value) || 0, maxPay: parseFloat($("#maxPay").value) || 0,
-      gu: $("#gu").value, line2: $("#line2").checked, newOnly: $("#newOnly").checked, showClosed: $("#showClosed").checked
+      gu: $("#gu").value, line2: $("#line2").checked, newOnly: $("#newOnly").checked, showClosed: $("#showClosed").checked, showOutside: !!($("#showOutside") && $("#showOutside").checked)
     };
   }
-  function okOrBig(l) { return l.status === "passed" || l.status === "border" || (isBig(l) && l.status !== "closed"); }
+  function okOrBig(l) { if (l.status === "neutral") return true; return l.status === "passed" || l.status === "border" || (isBig(l) && l.status !== "closed"); }
   function visible(l, f) {
+    if (l.region_points === null && l.status === "rejected" && !f.showOutside && !mineOf(l)) return false;   // 내 지역 목록 밖
     if (f.q) {
       var hay = [l.name, l.gu, l.station, l.type, l.provider, l.address].join(" ").toLowerCase();
       if (hay.indexOf(f.q) < 0) return false;
@@ -197,16 +203,18 @@
   function render() {
     var d = state.data, f = filters();
     var all = d.listings.slice();
-    var counts = { open: 0, upcoming: 0, mine: 0, reco: 0, fav: 0, edge: 0, all: all.length };
+    var counts = { open: 0, upcoming: 0, mine: 0, reco: 0, fav: 0, edge: 0, all: 0 };
     all.forEach(function (l) {
       var base = Object.assign({}, f);
-      ["open", "upcoming", "mine", "reco", "fav", "edge"].forEach(function (v) { base.view = v; if (visible(l, base)) counts[v]++; });
+      ["open", "upcoming", "mine", "reco", "fav", "edge", "all"].forEach(function (v) { base.view = v; if (visible(l, base)) counts[v]++; });
     });
     Object.keys(counts).forEach(function (k) { var el = $('[data-cnt="' + k + '"]'); if (el) el.textContent = counts[k]; });
     var list = all.filter(function (l) { return visible(l, f); }).sort(sortFor(f.view));
     $("#secTitle").textContent = TITLES[f.view] || f.view;
     $("#secCnt").textContent = list.length + "건";
-    $("#grid").innerHTML = list.length ? list.map(card).join("") : '<div class="empty">조건에 맞는 공고가 없어요. 필터를 풀어보세요.</div>';
+    var hiddenOutside = state.profile ? all.filter(function (l) { return l.region_points === null; }).length : 0;
+    $("#grid").innerHTML = list.length ? list.map(card).join("") : '<div class="empty">조건에 맞는 공고가 없어요. 필터를 풀어보세요.' +
+      (hiddenOutside ? "<br><small>내 지역 목록 밖이라 숨긴 공고 " + hiddenOutside + "건 — 지금 수집 범위는 서울 전체(인천·경기는 곧 추가). 왼쪽 '내 지역 밖도 보기'로 확인 가능</small>" : "") + "</div>";
     var base = all.filter(function (l) { return visible(l, Object.assign({}, f, { view: "all" })); });   // 캘린더·지도는 '보기' 선택과 무관
     renderTodo(all);
     renderSummary(all);
@@ -433,6 +441,7 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Enter" && e.target.matches("[data-jump]")) e.target.click(); });
   }
   function saveMark(id, status, memo) {
+    if (state.mode === "static") { if (status) state.marks[id] = { status: status, memo: memo || "" }; else delete state.marks[id]; localStorage.setItem("cheongyak:marks", JSON.stringify(state.marks)); render(); return; }
     fetch("/api/mark", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: id, status: status, memo: memo }) })
       .then(function (r) { return r.json(); }).then(function (j) { if (j.ok) { state.marks = j.marks; render(); } })
       .catch(function () { setRunStatus("상태 저장 실패 — 서버가 꺼져 있어요(scripts/serve.sh start).", true); });
@@ -454,6 +463,81 @@
       else setRunStatus("실패(코드 " + s.exit_code + "). 로그: " + (s.log || "").slice(-300), true);
     }).catch(function () { setBusy(false); });
   }
+  // ---------- 내 조건(프로필) ----------
+  var PKEY = "cheongyak:profile";
+  function loadProfile() { try { return JSON.parse(localStorage.getItem(PKEY) || "null"); } catch (e) { return null; } }
+  function saveProfile(p) { if (p) localStorage.setItem(PKEY, JSON.stringify(p)); else localStorage.removeItem(PKEY); }
+  function splitList(s) { return (s || "").split(/[,，\s]+/).map(function (x) { return x.trim(); }).filter(Boolean); }
+  function readForm() {
+    var name = $("#p_work").value.trim(), st = null;
+    if (name) { var cands = state.stations.filter(function (s) { return s.name === name; }); if (cands.length) st = { station: name, lat: cands[0].lat, lng: cands[0].lng, lines: cands.map(function (s) { return s.line; }) }; }
+    var regions = [];
+    splitList($("#p_r1").value).forEach(function (n) { regions.push({ name: n, points: 10 }); });
+    splitList($("#p_r2").value).forEach(function (n) { regions.push({ name: n, points: 8 }); });
+    splitList($("#p_r3").value).forEach(function (n) { regions.push({ name: n, points: 7 }); });
+    splitList($("#p_other").value).forEach(function (n) { regions.push({ name: n, points: 3 }); });
+    var man = function (id) { var v = parseFloat($(id).value); return isNaN(v) ? null : Math.round(v * 10000); };
+    return { name: $("#p_name").value.trim() || "나", birth_year: parseInt($("#p_birth").value, 10) || null, marital: $("#p_marital").value, household_size: 1,
+      income_annual_won: man("#p_income"), savings_won: man("#p_savings") || 0, own_cash_won: man("#p_cash") || 0, car: $("#p_car").checked,
+      residence_sido: $("#p_sido").value, work: st, work_name: name, regions: regions,
+      min_pyeong: parseFloat($("#p_minpy").value) || 9, max_monthly_won: man("#p_maxpay") || 500000, border_monthly_won: (man("#p_maxpay") || 500000) + 50000, min_private_years: parseInt($("#p_years").value, 10) || 4,
+      rates: { youth_loan: 0.029, bank_loan: 0.0435, support_rate: 0.01, support_cap_won: 200000000 }, seoul_support: $("#p_support").checked, subscription_joined: null };
+  }
+  function fillForm(p) {
+    if (!p) return;
+    $("#p_name").value = p.name || ""; $("#p_birth").value = p.birth_year || ""; $("#p_marital").value = p.marital || "single";
+    $("#p_income").value = p.income_annual_won != null ? Math.round(p.income_annual_won / 10000) : ""; $("#p_savings").value = p.savings_won != null ? Math.round(p.savings_won / 10000) : "";
+    $("#p_cash").value = p.own_cash_won != null ? Math.round(p.own_cash_won / 10000) : ""; $("#p_car").checked = !!p.car; $("#p_sido").value = p.residence_sido || "서울";
+    $("#p_work").value = (p.work && p.work.station) || p.work_name || "";
+    var by = function (pts) { return (p.regions || []).filter(function (r) { return r.points === pts; }).map(function (r) { return r.name; }).join(", "); };
+    $("#p_r1").value = by(10); $("#p_r2").value = by(8); $("#p_r3").value = by(7); $("#p_other").value = by(3);
+    $("#p_minpy").value = p.min_pyeong || 9; $("#p_maxpay").value = Math.round((p.max_monthly_won || 500000) / 10000); $("#p_years").value = p.min_private_years || 4; $("#p_support").checked = !!p.seoul_support;
+  }
+  function validateProfile(p) {
+    var miss = [];
+    if (!p.birth_year) miss.push("생년"); if (!p.income_annual_won) miss.push("연소득"); if (!p.work) miss.push("직장 지하철역(목록에서 선택)"); if (!p.regions.length) miss.push("지역(1순위 또는 그 외 허용 지역)");
+    return miss;
+  }
+  function evaluateAll() {
+    var f = state.facts, p = state.profile, today = todayISO();
+    var ls = f.listings.map(function (l) {
+      var c = Object.assign({}, l);
+      if (p) { var r = Engine.evaluate(c, p, state.stations, today); Object.assign(c, r); c.rank = null; }
+      else { c.status = "neutral"; c.status_reasons = []; c.score = { total: 0 }; c.monthly = { display_total: null, verdict: "unknown" }; c.transit_min = null; c.eligibility = null; c.region_points = 0; }
+      return c;
+    });
+    state.data = { generated: f.generated, today: f.today, failures: f.failures || [], static: true, owner: f.owner, listings: ls,
+      profile_summary: { name: p ? p.name : (f.owner || ""), work: p && p.work ? p.work.station : "", max_monthly_won: p ? p.max_monthly_won : null } };
+    $("#profWho").textContent = p ? (p.name + " · " + (p.work ? p.work.station : "") + " · " + (p.regions || []).slice(0, 3).map(function (r) { return r.name; }).join("·")) : "아직 입력 안 함";
+    $("#neutralNote").innerHTML = p ? "" : '<div class="neutral-note">왼쪽 <b>내 조건</b>을 입력하면 직장까지 시간·월 납입액·자격·추천 점수가 내 기준으로 계산되고, 내 지역 공고만 보입니다. 지금은 모든 공고를 마감 순으로 보여줍니다.</div>';
+  }
+  function bindProfile() {
+    var dl = $("#stationList"); var names = {}; state.stations.forEach(function (s) { names[s.name] = 1; });
+    dl.innerHTML = Object.keys(names).sort().map(function (n) { return '<option value="' + esc(n) + '">'; }).join("");
+    $("#profSave").addEventListener("click", function () {
+      var p = readForm(), miss = validateProfile(p);
+      if (miss.length) { alert("입력이 더 필요해요: " + miss.join(", ")); return; }
+      state.profile = p; saveProfile(p); evaluateAll(); initFilters(); render(); $("#prof").open = false;
+    });
+    $("#profReset").addEventListener("click", function () { if (!confirm("내 조건을 지울까요?")) return; state.profile = null; saveProfile(null); fillForm({ regions: [] }); evaluateAll(); initFilters(); render(); });
+    $("#profExport").addEventListener("click", function () { var p = state.profile || readForm(); var code = btoa(unescape(encodeURIComponent(JSON.stringify(p)))); if (navigator.clipboard) navigator.clipboard.writeText(code).then(function () { alert("복사했어요. 다른 기기의 '코드 붙여넣기'에 넣으세요."); }); else prompt("복사하세요", code); });
+    $("#profImport").addEventListener("click", function () { var code = prompt("내 조건 코드를 붙여넣으세요"); if (!code) return; try { var p = JSON.parse(decodeURIComponent(escape(atob(code.trim())))); state.profile = p; saveProfile(p); fillForm(p); evaluateAll(); initFilters(); render(); } catch (e) { alert("코드가 올바르지 않아요."); } });
+  }
+  function bootStatic() {
+    state.mode = "static"; document.body.classList.add("static");
+    fetch("seasonality.json?_=" + Date.now()).then(function (r) { return r.json(); }).then(renderSeason).catch(function () { var el = $("#season"); if (el) el.hidden = true; });
+    try { state.marks = JSON.parse(localStorage.getItem("cheongyak:marks") || "{}"); } catch (e) { state.marks = {}; }
+    Promise.all([fetch("facts.json?_=" + Date.now()).then(function (r) { return r.json(); }), fetch("stations.json?_=" + Date.now()).then(function (r) { return r.json(); }).catch(function () { return []; })])
+      .then(function (res) {
+        state.facts = res[0]; state.stations = res[1] || [];
+        state.facts.listings.forEach(function (l) { l.status_reasons = []; l.score = { total: 0 }; });
+        state.profile = loadProfile(); fillForm(state.profile);
+        bindProfile(); evaluateAll(); $("#gu").innerHTML = '<option value="">전체</option>'; $("#types").innerHTML = "";
+        initFilters(); renderCal(); if (!bound) { bind(); bound = true; } render();
+        if (!state.profile) $("#prof").open = true;
+      }).catch(function (err) { $("#meta").textContent = "facts.json을 읽지 못했어요: " + err; });
+  }
+  function bootOwner() { state.mode = "owner"; document.body.classList.add("owner"); loadData(); }
   var bound = false;
   function loadData() {
     fetch("seasonality.json?_=" + Date.now()).then(function (r) { return r.json(); }).then(renderSeason).catch(function () { var el = $("#season"); if (el) el.innerHTML = "<h4>월별 공고 흐름</h4><div class='sub'>seasonality.json 없음 — scripts/seasonality.py 실행</div>"; });
@@ -461,9 +545,10 @@
     return fetch("data.json?_=" + Date.now()).then(function (r) { return r.json(); }).then(function (d) {
       d.listings.forEach(function (l) { l.score = l.score || { total: 0 }; l.status_reasons = l.status_reasons || []; });
       state.data = d; $("#types").innerHTML = ""; $("#gu").innerHTML = '<option value="">전체</option>';
-      if (d.static) { document.body.classList.add("static"); state.marks = {}; d.listings.forEach(function (l) { if (l.my_status) state.marks[l.id] = { status: l.my_status, memo: "" }; }); }
+      if (d.static) { document.body.classList.add("static"); }
       initFilters(); renderCal(); if (!bound) { bind(); bound = true; } render();
     }).catch(function (err) { $("#meta").textContent = "data.json을 읽지 못했어요: " + err; });
   }
-  loadData();
+  // 정적 공유본(/api 없음)이면 engine 모드, 맥(서버)이면 소유자 모드
+  fetch("/api/status", { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("no api"); return r.json(); }).then(bootOwner).catch(bootStatic);
 })();

@@ -7,7 +7,7 @@
 <title>내 청약 보드</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="vendor/leaflet.css">
-<link rel="stylesheet" href="style.css?v=1791767957">
+<link rel="stylesheet" href="style.css?v=1791769426">
 </head>
 <body>
 <header class="top">
@@ -16,6 +16,31 @@
 </header>
 <div class="wrap">
   <aside class="side" aria-label="필터">
+    <details class="prof" id="prof">
+      <summary><b>내 조건</b> <span id="profWho" class="n"></span></summary>
+      <div class="pf">
+        <label>이름(표시용) <input id="p_name" type="text" placeholder="예: 동생"></label>
+        <label>생년 <input id="p_birth" type="number" placeholder="1998"></label>
+        <label>혼인 <select id="p_marital"><option value="single">미혼</option><option value="married">기혼·예비신혼</option></select></label>
+        <label>세전 연소득(만원) <input id="p_income" type="number" placeholder="4300"></label>
+        <label>예적금 등 자산(만원) <input id="p_savings" type="number" placeholder="3000"></label>
+        <label>자기자금(만원) <span class="hint">보증금에 바로 넣을 수 있는 돈</span><input id="p_cash" type="number" placeholder="10000"></label>
+        <label><input id="p_car" type="checkbox"> 자동차 있음</label>
+        <label>거주 시/도 <select id="p_sido"><option>서울</option><option>인천</option><option>경기</option></select></label>
+        <label>직장 가까운 지하철역 <input id="p_work" type="text" list="stationList" placeholder="예: 예술회관, 을지로입구"><datalist id="stationList"></datalist></label>
+        <label>1순위 지역 <span class="hint">쉼표로 여러 개 · 시/도 또는 시군구</span><input id="p_r1" type="text" placeholder="예: 인천"></label>
+        <label>2순위 지역 <input id="p_r2" type="text" placeholder="예: 광명시"></label>
+        <label>3순위 지역 <input id="p_r3" type="text" placeholder="예: 부천시, 시흥시"></label>
+        <label>그 외 허용 지역 <span class="hint">여기 없는 지역은 안 보임</span><input id="p_other" type="text" placeholder="예: 서울"></label>
+        <label>최소 평수 <input id="p_minpy" type="number" value="9" step="0.5"></label>
+        <label>월 납입 상한(만원) <span class="hint">월세 + 보증금 대출 이자</span><input id="p_maxpay" type="number" value="50"></label>
+        <label>민간임대 최소 거주년 <input id="p_years" type="number" value="4"></label>
+        <label><input id="p_support" type="checkbox"> 서울시 청년 임차보증금 이자지원 적용 <span class="hint">서울 거주·서울 주택·연소득 5천 이하면 1%(2억 한도)</span></label>
+        <div class="row"><button class="btn primary" id="profSave" type="button">저장하고 계산</button><button class="btn" id="profReset" type="button">초기화</button></div>
+        <div class="row"><button class="btn" id="profExport" type="button">내 조건 코드 복사</button><button class="btn" id="profImport" type="button">코드 붙여넣기</button></div>
+        <div class="hint">입력값은 이 기기 브라우저에만 저장되고 어디로도 전송되지 않습니다.</div>
+      </div>
+    </details>
     <div>
       <input type="search" id="q" placeholder="검색: 단지명·구·역·유형" aria-label="검색" style="width:100%;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:10px">
     </div>
@@ -47,6 +72,7 @@
       <label><input type="checkbox" id="line2"> 2호선 역세권만</label>
       <label><input type="checkbox" id="newOnly"> 신규 공고만</label>
       <label><input type="checkbox" id="showClosed"> 접수 끝난 것도 보기</label>
+      <label><input type="checkbox" id="showOutside"> 내 지역 밖도 보기</label>
     </div>
     <div>
       <button class="btn" id="copyFav" type="button">찜 목록 복사</button>
@@ -55,6 +81,7 @@
   </aside>
   <main>
     <div id="fail"></div>
+    <div id="neutralNote"></div>
     <section class="todo" id="todo" aria-label="이번 주 내가 지원할 공고"></section>
     <div class="sum" id="sum"></div>
     <div class="legend"><b style="color:var(--ink2)">색 기준</b><span class="pill urgent">마감 임박 (5일 미만)</span><span class="pill open">접수 중</span><span class="pill upcoming">접수 예정</span><span class="pill closed">접수 종료</span><span class="pill mine">내가 지원함</span><span class="pill result">발표 (내가 지원한 것만)</span></div>
@@ -69,6 +96,7 @@
   </main>
 </div>
 <script src="vendor/leaflet.js"></script>
-<script src="app.js?v=1791767957"></script>
+<script src="engine.js?v=1791769426"></script>
+<script src="app.js?v=1791769426"></script>
 </body>
 </html>

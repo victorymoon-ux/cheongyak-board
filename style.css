@@ -192,4 +192,23 @@ main{min-width:0}
 .season .focus b{color:var(--blued)}
 
 /* 공개 공유본(읽기 전용) */
-body.static #refresh,body.static #rebuild,body.static #runStatus,body.static .mine-row,body.static [data-quick]{display:none}
+body.static #refresh,body.static #rebuild,body.static #runStatus{display:none}
+
+/* 내 조건 */
+.prof{background:#fff;border:2px solid var(--mint);border-radius:12px;padding:8px 10px}
+.prof summary{cursor:pointer;font-size:14px;list-style:none;display:flex;gap:8px;align-items:center;min-width:0}
+.prof summary b{white-space:nowrap}
+.prof summary .n{font-size:12px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1}
+.prof summary::-webkit-details-marker{display:none}
+.prof summary::after{content:"▾";margin-left:auto;color:var(--ink2)}
+.prof[open] summary::after{content:"▴"}
+.prof .pf{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.prof .pf label{display:flex;flex-direction:column;gap:3px;font-size:12.5px;font-weight:600;color:var(--ink)}
+.prof .pf label:has(input[type=checkbox]){flex-direction:row;align-items:center;gap:6px;flex-wrap:wrap}
+.prof .pf input[type=text],.prof .pf input[type=number],.prof .pf select{font:inherit;font-size:13px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;width:100%}
+.prof .pf .hint{font-size:11px;font-weight:500;color:var(--ink2)}
+.prof .pf .row{gap:6px}
+.prof .pf .btn{font-size:12.5px;padding:6px 10px}
+body.owner .prof{display:none}
+.neutral-note{background:var(--amber2);color:var(--amberd);border-radius:12px;padding:10px 14px;margin:0 0 14px;font-size:13.5px}
+.chip.owner{background:#EEF0EF;color:#4B5350;border-color:transparent}
