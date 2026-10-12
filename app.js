@@ -214,7 +214,7 @@
     $("#secCnt").textContent = list.length + "건";
     var hiddenOutside = state.profile ? all.filter(function (l) { return l.region_points === null; }).length : 0;
     $("#grid").innerHTML = list.length ? list.map(card).join("") : '<div class="empty">조건에 맞는 공고가 없어요. 필터를 풀어보세요.' +
-      (hiddenOutside ? "<br><small>내 지역 목록 밖이라 숨긴 공고 " + hiddenOutside + "건 — 지금 수집 범위는 서울 전체(인천·경기는 곧 추가). 왼쪽 '내 지역 밖도 보기'로 확인 가능</small>" : "") + "</div>";
+      (hiddenOutside ? "<br><small>내 지역 목록 밖이라 숨긴 공고 " + hiddenOutside + "건 — 수집 범위: 서울·인천·경기 (LH·SH·청년안심·청약홈·iH·GH). 왼쪽 '내 지역 밖도 보기'로 확인 가능</small>" : "") + "</div>";
     var base = all.filter(function (l) { return visible(l, Object.assign({}, f, { view: "all" })); });   // 캘린더·지도는 '보기' 선택과 무관
     renderTodo(all);
     renderSummary(all);
