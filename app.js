@@ -464,9 +464,29 @@
     }).catch(function () { setBusy(false); });
   }
   // ---------- 내 조건(프로필) ----------
-  var PKEY = "cheongyak:profile";
+  var PKEY = "cheongyak:profile", PLIST = "cheongyak:profiles", PACTIVE = "cheongyak:profile_active";
   function loadProfile() { try { return JSON.parse(localStorage.getItem(PKEY) || "null"); } catch (e) { return null; } }
   function saveProfile(p) { if (p) localStorage.setItem(PKEY, JSON.stringify(p)); else localStorage.removeItem(PKEY); }
+  function loadProfiles() { try { return JSON.parse(localStorage.getItem(PLIST) || "{}"); } catch (e) { return {}; } }
+  function saveProfiles(m) { localStorage.setItem(PLIST, JSON.stringify(m)); }
+  function renderPick() {
+    var sel = $("#profPick"); if (!sel) return;
+    var m = loadProfiles(), active = localStorage.getItem(PACTIVE) || "__default__";
+    var opts = [];
+    if (state.facts && state.facts.default_profile) opts.push(['__default__', (state.facts.default_profile.name || "승리") + " (기본값)"]);
+    Object.keys(m).sort().forEach(function (n) { opts.push([n, n]); });
+    opts.push(["__new__", "+ 새 조건 입력"]);
+    sel.innerHTML = opts.map(function (o) { return '<option value="' + esc(o[0]) + '"' + (o[0] === active ? " selected" : "") + ">" + esc(o[1]) + "</option>"; }).join("");
+  }
+  function applyProfile(key) {
+    var m = loadProfiles();
+    if (key === "__default__") { state.profile = state.facts.default_profile || null; state.profileIsDefault = !!state.profile; }
+    else if (key === "__new__") { state.profile = null; state.profileIsDefault = false; fillForm({ regions: [] }); $("#prof").open = true; }
+    else { state.profile = m[key] || null; state.profileIsDefault = false; }
+    localStorage.setItem(PACTIVE, key); saveProfile(state.profile && !state.profileIsDefault ? state.profile : null);
+    if (state.profile) fillForm(state.profile);
+    evaluateAll(); initFilters(); render(); renderPick();
+  }
   function splitList(s) { return (s || "").split(/[,，\s]+/).map(function (x) { return x.trim(); }).filter(Boolean); }
   function readForm() {
     var name = $("#p_work").value.trim(), st = null;
@@ -517,11 +537,20 @@
     $("#profSave").addEventListener("click", function () {
       var p = readForm(), miss = validateProfile(p);
       if (miss.length) { alert("입력이 더 필요해요: " + miss.join(", ")); return; }
-      state.profile = p; state.profileIsDefault = false; saveProfile(p); evaluateAll(); initFilters(); render(); $("#prof").open = false;
+      var m = loadProfiles(); m[p.name] = p; saveProfiles(m);
+      localStorage.setItem(PACTIVE, p.name);
+      state.profile = p; state.profileIsDefault = false; saveProfile(p); evaluateAll(); initFilters(); render(); renderPick(); $("#prof").open = false;
     });
-    $("#profReset").addEventListener("click", function () { if (!confirm("내 조건을 지울까요?")) return; state.profile = null; saveProfile(null); fillForm({ regions: [] }); evaluateAll(); initFilters(); render(); });
+    $("#profPick").addEventListener("change", function (e) { applyProfile(e.target.value); });
+    $("#profDelete").addEventListener("click", function () {
+      var key = $("#profPick").value;
+      if (key === "__default__" || key === "__new__") { alert("기본값은 지울 수 없어요."); return; }
+      if (!confirm("'" + key + "' 조건을 지울까요?")) return;
+      var m = loadProfiles(); delete m[key]; saveProfiles(m); applyProfile("__default__");
+    });
+    $("#profReset").addEventListener("click", function () { fillForm({ regions: [] }); $("#p_name").focus(); });
     $("#profExport").addEventListener("click", function () { var p = state.profile || readForm(); var code = btoa(unescape(encodeURIComponent(JSON.stringify(p)))); if (navigator.clipboard) navigator.clipboard.writeText(code).then(function () { alert("복사했어요. 다른 기기의 '코드 붙여넣기'에 넣으세요."); }); else prompt("복사하세요", code); });
-    $("#profImport").addEventListener("click", function () { var code = prompt("내 조건 코드를 붙여넣으세요"); if (!code) return; try { var p = JSON.parse(decodeURIComponent(escape(atob(code.trim())))); state.profile = p; saveProfile(p); fillForm(p); evaluateAll(); initFilters(); render(); } catch (e) { alert("코드가 올바르지 않아요."); } });
+    $("#profImport").addEventListener("click", function () { var code = prompt("내 조건 코드를 붙여넣으세요"); if (!code) return; try { var p = JSON.parse(decodeURIComponent(escape(atob(code.trim())))); var m = loadProfiles(); m[p.name || "가져온 조건"] = p; saveProfiles(m); localStorage.setItem(PACTIVE, p.name || "가져온 조건"); state.profile = p; state.profileIsDefault = false; saveProfile(p); fillForm(p); evaluateAll(); initFilters(); render(); renderPick(); } catch (e) { alert("코드가 올바르지 않아요."); } });
   }
   function bootStatic() {
     state.mode = "static"; document.body.classList.add("static");
@@ -531,8 +560,14 @@
       .then(function (res) {
         state.facts = res[0]; state.stations = res[1] || [];
         state.facts.listings.forEach(function (l) { l.status_reasons = []; l.score = { total: 0 }; });
-        state.profile = loadProfile() || state.facts.default_profile || null; state.profileIsDefault = !loadProfile() && !!state.facts.default_profile; fillForm(state.profile);
-        bindProfile(); evaluateAll(); $("#gu").innerHTML = '<option value="">전체</option>'; $("#types").innerHTML = "";
+        (function () {
+          var m = loadProfiles(), active = localStorage.getItem(PACTIVE), legacy = loadProfile();
+          if (legacy && legacy.name && !m[legacy.name] && !active) { m[legacy.name] = legacy; saveProfiles(m); active = legacy.name; localStorage.setItem(PACTIVE, active); }
+          if (active && m[active]) { state.profile = m[active]; state.profileIsDefault = false; }
+          else { state.profile = state.facts.default_profile || null; state.profileIsDefault = !!state.profile; if (active !== "__new__") localStorage.setItem(PACTIVE, "__default__"); }
+          fillForm(state.profile);
+        })();
+        bindProfile(); renderPick(); evaluateAll(); $("#gu").innerHTML = '<option value="">전체</option>'; $("#types").innerHTML = "";
         initFilters(); renderCal(); if (!bound) { bind(); bound = true; } render();
         if (!state.profile) $("#prof").open = true;
         if (state.profileIsDefault) $("#neutralNote").innerHTML = '<div class="neutral-note">지금은 <b>승리 기준</b>으로 계산된 화면입니다. 왼쪽 <b>내 조건</b>에 본인 정보를 넣고 저장하면 내 기준으로 바뀝니다(내 기기에만 저장).</div>';

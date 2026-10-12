@@ -7,7 +7,7 @@
 <title>내 청약 보드</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="vendor/leaflet.css">
-<link rel="stylesheet" href="style.css?v=1791769774">
+<link rel="stylesheet" href="style.css?v=1791770247">
 </head>
 <body>
 <header class="top">
@@ -19,6 +19,7 @@
     <details class="prof" id="prof">
       <summary><b>내 조건</b> <span id="profWho" class="n"></span></summary>
       <div class="pf">
+        <label>저장된 조건 고르기 <span class="hint">고른 조건은 새로고침해도 유지</span><select id="profPick"></select></label>
         <label>이름(표시용) <input id="p_name" type="text" placeholder="예: 동생"></label>
         <label>생년 <input id="p_birth" type="number" placeholder="1998"></label>
         <label>혼인 <select id="p_marital"><option value="single">미혼</option><option value="married">기혼·예비신혼</option></select></label>
@@ -36,7 +37,7 @@
         <label>월 납입 상한(만원) <span class="hint">월세 + 보증금 대출 이자</span><input id="p_maxpay" type="number" value="50"></label>
         <label>민간임대 최소 거주년 <input id="p_years" type="number" value="4"></label>
         <label><input id="p_support" type="checkbox"> 서울시 청년 임차보증금 이자지원 적용 <span class="hint">서울 거주·서울 주택·연소득 5천 이하면 1%(2억 한도)</span></label>
-        <div class="row"><button class="btn primary" id="profSave" type="button">저장하고 계산</button><button class="btn" id="profReset" type="button">초기화</button></div>
+        <div class="row"><button class="btn primary" id="profSave" type="button">이 이름으로 저장하고 계산</button><button class="btn" id="profDelete" type="button">이 조건 삭제</button><button class="btn" id="profReset" type="button">빈 칸으로</button></div>
         <div class="row"><button class="btn" id="profExport" type="button">내 조건 코드 복사</button><button class="btn" id="profImport" type="button">코드 붙여넣기</button></div>
         <div class="hint">입력값은 이 기기 브라우저에만 저장되고 어디로도 전송되지 않습니다.</div>
       </div>
@@ -96,7 +97,7 @@
   </main>
 </div>
 <script src="vendor/leaflet.js"></script>
-<script src="engine.js?v=1791769774"></script>
-<script src="app.js?v=1791769774"></script>
+<script src="engine.js?v=1791770247"></script>
+<script src="app.js?v=1791770247"></script>
 </body>
 </html>
