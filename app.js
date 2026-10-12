@@ -86,7 +86,10 @@
     var a = l.area_m2_min != null && l.area_m2_min !== l.area_m2_max ? py(l.area_m2_min) + "~" + py(l.area_m2_max) : py(l.area_m2_max);
     return "전용 " + a + "평";
   }
-  function applicableUnits(l) { if (l.units_youth == null && l.units_general == null) return l.units_total; return (l.units_youth || 0) + (l.units_general || 0); }
+  function applicableUnits(l) {
+    if (l.units_youth == null && l.units_general == null) return (/추가모집|잔여/.test(l.name || "")) ? null : l.units_total;   // 추가·잔여 모집은 단지 전체 세대수를 모집 호수로 안 씀
+    return (l.units_youth || 0) + (l.units_general || 0);
+  }
   function unitsText(l) {
     var p = [];
     if (l.units_youth != null) p.push("청년 " + l.units_youth + "호");
