@@ -111,7 +111,7 @@
   }
   function scoreTip(l) {
     var sc = l.score || {};
-    return "총점 " + (sc.total || 0) + " = 을지로입구 거리 " + (sc.transit || 0) + "/40 + 평수·룸 " + (sc.area || 0) + "/25 + 모집호수 " + (sc.units || 0) + "/15 + 선호 지역 " + (sc.gu || 0) + "/10 + 거주기간 " + (sc.years || 0) + "/10 + 보너스 " + (sc.bonus || 0) + " (2호선 역세권 +5, 1.5룸·2룸 +5, 대단지 +2)";
+    return "총점 " + (sc.total || 0) + " = 을지로입구 거리 " + (sc.transit || 0) + "/40 + 평수·룸 " + (sc.area || 0) + "/25 + 모집호수 " + (sc.units || 0) + "/15 + 선호 지역 " + (sc.gu || 0) + "/10 + 거주기간 " + (sc.years || 0) + "/10 + 보너스 " + (sc.bonus || 0) + " (2호선 역세권 +5, 1.5룸 +5, 2룸 +8, 대단지 +2)";
   }
   function card(l) {
     var dd = dday(l); var ph = phaseOf(l); var mine = mineOf(l);

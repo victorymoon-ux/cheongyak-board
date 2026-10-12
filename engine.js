@@ -11,7 +11,7 @@
     AREA_POINTS: [[9, 5], [11, 10], [13, 15], [15, 20]],
     YEARS_POINTS: [[4, 5], [6, 10]],
     UNITS_POINTS: [[10, 4], [30, 8], [100, 12], [300, 15]],
-    LINE_BONUS: 5, LINE_WALK_MAX: 10, ROOM_BONUS: 5, BIG_COMPLEX_BONUS: 2, BIG_COMPLEX_UNITS: 300, BIG_RECRUIT_UNITS: 100,
+    LINE_BONUS: 5, LINE_WALK_MAX: 10, ROOM_BONUS: 5, ROOM_BONUS_2: 8, BIG_COMPLEX_BONUS: 2, BIG_COMPLEX_UNITS: 300, BIG_RECRUIT_UNITS: 100,
     SUBWAY_KMH: 32, DETOUR: 1.25, TRANSFER_MIN: 8, WAIT_MIN: 4, WORK_WALK_MIN: 3
   };
   var INCOME_1P_120 = 4576036, ASSET_YOUTH = 251000000, ASSET_NATIONAL = 345000000, ASSET_JANGI = 662000000;
@@ -174,7 +174,8 @@
     if (l.units_youth == null && l.units_general == null && l.units_total != null) notes.push("모집호수는 전체 기준");
     var bonus = 0, workLines = (profile.work && profile.work.lines) || [];
     if (intersects(l.station_lines, workLines) && l.station_walk_min != null && l.station_walk_min <= R.LINE_WALK_MAX) { bonus += R.LINE_BONUS; notes.push("직장 노선 역세권 +" + R.LINE_BONUS); }
-    if (["1.5룸", "2룸", "3룸"].indexOf(l.rooms) >= 0) { bonus += R.ROOM_BONUS; notes.push(l.rooms + " +" + R.ROOM_BONUS); }
+    if (l.rooms === "2룸" || l.rooms === "3룸") { bonus += R.ROOM_BONUS_2; notes.push(l.rooms + " +" + R.ROOM_BONUS_2); }
+    else if (l.rooms === "1.5룸") { bonus += R.ROOM_BONUS; notes.push(l.rooms + " +" + R.ROOM_BONUS); }
     if (l.units_total != null && l.units_total >= R.BIG_COMPLEX_UNITS) { bonus += R.BIG_COMPLEX_BONUS; notes.push("대단지 +" + R.BIG_COMPLEX_BONUS); }
     return { transit: transit, gu: gu, area: area, years: years, units: units, bonus: bonus, total: transit + gu + area + years + units + bonus, notes: notes };
   }
