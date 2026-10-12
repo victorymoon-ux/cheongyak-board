@@ -261,6 +261,30 @@
       "<div class='focus'>집중할 달: " + (fl || "데이터 부족") + "</div>" +
       "<div class='legend2'><span class='org sh'>SH</span>서울주택도시공사 · <span class='org lh'>LH</span>한국토지주택공사 · <span class='org pv'>민간</span>청년안심주택 민간사업자. 빨간 테두리 = 이번 달. * LH는 목록이 최근 것만 보여 2026년 확인분만.</div>";
   }
+  // ---------- 전화 체크리스트 ----------
+  function loadCallsLocal() { try { return JSON.parse(localStorage.getItem("cheongyak:calls") || "{}"); } catch (e) { return {}; } }
+  function saveCall(id, called, memo) {
+    if (state.mode === "static") { var c = loadCallsLocal(); c[id] = { called: !!called, memo: memo || "", updated: todayISO() }; localStorage.setItem("cheongyak:calls", JSON.stringify(c)); state.calls = c; renderCallList(); return; }
+    fetch("/api/call", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: id, called: !!called, memo: memo || "" }) })
+      .then(function (r) { return r.json(); }).then(function (j) { if (j.ok) { state.calls = j.calls; renderCallList(); } }).catch(function () {});
+  }
+  function renderCallList() {
+    var el = $("#calls"); if (!el) return;
+    var cfg = state.complexes || { ask: "", complexes: [] }, calls = state.calls || {};
+    if (!cfg.complexes.length) { el.innerHTML = ""; return; }
+    var done = cfg.complexes.filter(function (c) { return calls[c.id] && calls[c.id].called; }).length;
+    el.innerHTML = "<h2>📞 전화 체크리스트 <small style='font-size:12.5px;color:var(--ink2);font-weight:600'>" + done + "/" + cfg.complexes.length + " 완료 · 공실 대기·추가모집 시점 미리 알아두기 · 대부분 평일 낮에만 받음</small></h2>" +
+      '<div class="ask"><b>물어볼 것</b> ' + esc(cfg.ask) + "</div>" +
+      "<table><thead><tr><th></th><th>단지</th><th>타입·비고</th><th>전화</th><th>운영시간</th><th>전화함</th><th>메모 (대기명단 등록 여부, 담당자 말)</th></tr></thead><tbody>" +
+      cfg.complexes.map(function (c, i) {
+        var s = calls[c.id] || {};
+        return '<tr class="' + (s.called ? "done" : "") + '"><td><span class="num">' + (i + 1) + '</span></td><td><div class="nm">' + esc(c.name) + "</div><div class='sub'>" + esc(c.station) + " · " + esc(c.units) + "</div>" + (c.web ? "<div class='sub'><a href='" + esc(c.web.split(" ")[0]) + "' target='_blank' rel='noopener'>" + esc(c.web) + "</a></div>" : "") + "</td>" +
+          "<td><div>" + esc(c.types) + "</div>" + (c.note ? "<div class='sub'>" + esc(c.note) + "</div>" : "") + "</td>" +
+          '<td><a class="tel" href="tel:' + esc(c.tel.replace(/-/g, "")) + '">' + esc(c.tel) + "</a></td><td class='sub'>" + esc(c.hours) + "</td>" +
+          '<td class="chk"><input type="checkbox" data-called="' + esc(c.id) + '"' + (s.called ? " checked" : "") + '>' + (s.updated ? "<div class='sub'>" + esc(s.updated) + "</div>" : "") + "</td>" +
+          '<td><input type="text" data-callmemo="' + esc(c.id) + '" value="' + esc(s.memo || "") + '" placeholder="예: 10/14 통화, 공실 없음, 대기명단 등록"></td></tr>';
+      }).join("") + "</tbody></table>";
+  }
   function renderTodo(all) {
     var t = todayISO();
     var items = all.filter(function (l) {
@@ -421,6 +445,8 @@
   }
   function bind() {
     document.addEventListener("change", function (e) {
+      if (e.target.matches("[data-called]")) { var cid = e.target.getAttribute("data-called"); var me = $('[data-callmemo="' + cid + '"]'); return saveCall(cid, e.target.checked, me ? me.value : ""); }
+      if (e.target.matches("[data-callmemo]")) { var cid2 = e.target.getAttribute("data-callmemo"); var cb = $('[data-called="' + cid2 + '"]'); return saveCall(cid2, cb ? cb.checked : false, e.target.value); }
       if (e.target.matches("[data-mark]")) { var id = e.target.getAttribute("data-mark"); var memoEl = $('[data-memo="' + id + '"]'); return saveMark(id, e.target.value, memoEl ? memoEl.value : ""); }
       if (e.target.matches("[data-memo]")) { var mid = e.target.getAttribute("data-memo"); var sel = $('[data-mark="' + mid + '"]'); if (sel && sel.value) return saveMark(mid, sel.value, e.target.value); return; }
       if (e.target.closest(".side")) render();
@@ -569,6 +595,7 @@
     Promise.all([fetch("facts.json?_=" + Date.now()).then(function (r) { return r.json(); }), fetch("stations.json?_=" + Date.now()).then(function (r) { return r.json(); }).catch(function () { return []; })])
       .then(function (res) {
         state.facts = res[0]; state.stations = res[1] || [];
+        state.complexes = state.facts.complexes || null; state.calls = loadCallsLocal(); renderCallList();
         state.facts.listings.forEach(function (l) { l.status_reasons = []; l.score = { total: 0 }; });
         (function () {
           var m = loadProfiles(), active = localStorage.getItem(PACTIVE), legacy = loadProfile();
@@ -583,7 +610,12 @@
         if (state.profileIsDefault) $("#neutralNote").innerHTML = '<div class="neutral-note">지금은 <b>승리 기준</b>으로 계산된 화면입니다. 왼쪽 <b>내 조건</b>에 본인 정보를 넣고 저장하면 내 기준으로 바뀝니다(내 기기에만 저장).</div>';
       }).catch(function (err) { $("#meta").textContent = "facts.json을 읽지 못했어요: " + err; });
   }
-  function bootOwner() { state.mode = "owner"; document.body.classList.add("owner"); loadData(); }
+  function bootOwner() {
+    state.mode = "owner"; document.body.classList.add("owner");
+    Promise.all([fetch("/api/complexes").then(function (r) { return r.json(); }).catch(function () { return null; }), fetch("/api/calls").then(function (r) { return r.json(); }).catch(function () { return {}; })])
+      .then(function (res) { state.complexes = res[0]; state.calls = res[1] || {}; renderCallList(); });
+    loadData();
+  }
   var bound = false;
   function loadData() {
     fetch("seasonality.json?_=" + Date.now()).then(function (r) { return r.json(); }).then(renderSeason).catch(function () { var el = $("#season"); if (el) el.innerHTML = "<h4>월별 공고 흐름</h4><div class='sub'>seasonality.json 없음 — scripts/seasonality.py 실행</div>"; });

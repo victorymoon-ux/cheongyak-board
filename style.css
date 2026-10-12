@@ -214,3 +214,20 @@ body.owner .prof{display:none}
 .chip.owner{background:#EEF0EF;color:#4B5350;border-color:transparent}
 
 .chip.watch{background:#F3E8FF;color:#6B21A8;border-color:transparent;font-weight:800}
+
+/* 전화 체크리스트 */
+.calls{margin:28px 0 0;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;box-shadow:var(--sh)}
+.calls h2{margin:0 0 4px;font-size:17px}
+.calls .ask{font-size:13px;color:var(--ink2);background:var(--bg2);border-radius:10px;padding:8px 10px;margin:0 0 12px;line-height:1.5}
+.calls table{width:100%;border-collapse:collapse;font-size:13px}
+.calls th{text-align:left;font-size:12px;color:var(--ink2);font-weight:700;padding:6px 8px;border-bottom:1px solid var(--line)}
+.calls td{padding:8px;border-bottom:1px solid #F0F2F1;vertical-align:top}
+.calls tr.done td{opacity:.55}
+.calls tr.done td.chk{opacity:1}
+.calls .nm{font-weight:700}
+.calls .sub{font-size:12px;color:var(--ink2)}
+.calls a.tel{display:inline-block;font-weight:800;color:var(--blued);white-space:nowrap}
+.calls input[type=text]{font:inherit;font-size:12.5px;padding:5px 8px;border:1px solid var(--line);border-radius:8px;width:100%}
+.calls input[type=checkbox]{width:18px;height:18px}
+.calls .num{width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;display:grid;place-items:center;font-size:12px}
+@media (max-width:900px){.calls table,.calls thead,.calls tbody,.calls tr,.calls td{display:block}.calls th{display:none}.calls td{padding:4px 0;border:0}.calls tr{border-bottom:1px solid var(--line);padding:8px 0}}
