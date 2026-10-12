@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T14:18:44",
+ "generated": "2026-10-12T14:22:55",
  "today": "2026-10-12",
  "failures": [],
  "owner": "승리",
@@ -97,7 +97,7 @@
    "phase": "closed",
    "phase_days": -8,
    "my_status": null,
-   "watch": false
+   "watch": true
   },
   {
    "id": "sh:310976",
@@ -234,7 +234,7 @@
    "phase": "closed",
    "phase_days": -14,
    "my_status": null,
-   "watch": false
+   "watch": true
   },
   {
    "id": "soco:6687",
@@ -2425,7 +2425,7 @@
    "phase": "closed",
    "phase_days": -21,
    "my_status": null,
-   "watch": false
+   "watch": true
   },
   {
    "id": "sh:311087",
@@ -3323,7 +3323,7 @@
    "phase": "closed",
    "phase_days": -6,
    "my_status": null,
-   "watch": false
+   "watch": true
   },
   {
    "id": "soco:6684",
@@ -3367,7 +3367,7 @@
    "phase": "upcoming",
    "phase_days": 1,
    "my_status": null,
-   "watch": false
+   "watch": true
   },
   {
    "id": "soco:6663",
