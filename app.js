@@ -264,11 +264,11 @@
   // ---------- 전화 체크리스트 ----------
   function loadCallsLocal() { try { return JSON.parse(localStorage.getItem("cheongyak:calls") || "{}"); } catch (e) { return {}; } }
   function saveCall(id, called, memo) {
-    if (state.mode === "static") { var c = loadCallsLocal(); c[id] = { called: !!called, memo: memo || "", updated: todayISO() }; localStorage.setItem("cheongyak:calls", JSON.stringify(c)); state.calls = c; renderCallList(); return; }
+    if (state.mode === "static") { var c = loadCallsLocal(); c[id] = { called: !!called, memo: memo || "", updated: todayISO() }; localStorage.setItem("cheongyak:calls", JSON.stringify(c)); state.calls = c; renderPhoneList(); return; }
     fetch("/api/call", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: id, called: !!called, memo: memo || "" }) })
-      .then(function (r) { return r.json(); }).then(function (j) { if (j.ok) { state.calls = j.calls; renderCallList(); } }).catch(function () {});
+      .then(function (r) { return r.json(); }).then(function (j) { if (j.ok) { state.calls = j.calls; renderPhoneList(); } }).catch(function () {});
   }
-  function renderCallList() {
+  function renderPhoneList() {
     var el = $("#calls"); if (!el) return;
     var cfg = state.complexes || { ask: "", complexes: [] }, calls = state.calls || {};
     if (!cfg.complexes.length) { el.innerHTML = ""; return; }
@@ -595,7 +595,7 @@
     Promise.all([fetch("facts.json?_=" + Date.now()).then(function (r) { return r.json(); }), fetch("stations.json?_=" + Date.now()).then(function (r) { return r.json(); }).catch(function () { return []; })])
       .then(function (res) {
         state.facts = res[0]; state.stations = res[1] || [];
-        state.complexes = state.facts.complexes || null; state.calls = loadCallsLocal(); renderCallList();
+        state.complexes = state.facts.complexes || null; state.calls = loadCallsLocal(); renderPhoneList();
         state.facts.listings.forEach(function (l) { l.status_reasons = []; l.score = { total: 0 }; });
         (function () {
           var m = loadProfiles(), active = localStorage.getItem(PACTIVE), legacy = loadProfile();
@@ -613,7 +613,7 @@
   function bootOwner() {
     state.mode = "owner"; document.body.classList.add("owner");
     Promise.all([fetch("/api/complexes").then(function (r) { return r.json(); }).catch(function () { return null; }), fetch("/api/calls").then(function (r) { return r.json(); }).catch(function () { return {}; })])
-      .then(function (res) { state.complexes = res[0]; state.calls = res[1] || {}; renderCallList(); });
+      .then(function (res) { state.complexes = res[0]; state.calls = res[1] || {}; renderPhoneList(); });
     loadData();
   }
   var bound = false;
