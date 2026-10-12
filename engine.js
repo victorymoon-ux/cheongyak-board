@@ -114,7 +114,16 @@
     var regs = profile.regions || [];
     if (!regs.length) return { points: 0, matched: null };
     var best = null;
-    regs.forEach(function (r) { if (r.name && (r.name === l.sigungu || r.name === l.gu || r.name === l.sido)) if (!best || r.points > best.points) best = r; });
+    regs.forEach(function (r) {
+      if (!r.name) return;
+      var hit = (r.name === l.sigungu || r.name === l.gu || r.name === l.sido);
+      if (!hit && r.name.length >= 2 && !/[시군구도]$/.test(r.name)) {
+        // 동·지명 키워드(예: 청라): 주소의 시군구 뒤 부분에서만 찾는다 (서울 '청라로' 같은 도로명 오매칭 방지)
+        var addr = l.address || ""; var tail = l.sigungu && addr.indexOf(l.sigungu) >= 0 ? addr.slice(addr.indexOf(l.sigungu) + l.sigungu.length) : addr;
+        hit = new RegExp(r.name + "(동|읍|면|지구|\\s|\\d|$)").test(tail);
+      }
+      if (hit && (!best || r.points > best.points)) best = r;
+    });
     return best ? { points: best.points, matched: best.name } : null;
   }
   function applicableUnits(l) {

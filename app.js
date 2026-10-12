@@ -475,6 +475,7 @@
     var opts = [];
     if (state.facts && state.facts.default_profile) opts.push(['__default__', (state.facts.default_profile.name || "승리") + " (기본값)"]);
     Object.keys(m).sort().forEach(function (n) { opts.push([n, n]); });
+    ((state.facts && state.facts.presets) || []).forEach(function (p, i) { if (!m[p.name]) opts.push(["__preset__:" + i, "✎ " + p.name + " 프리셋 (숫자만 채우면 됨)"]); });
     opts.push(["__new__", "+ 새 조건 입력"]);
     sel.innerHTML = opts.map(function (o) { return '<option value="' + esc(o[0]) + '"' + (o[0] === active ? " selected" : "") + ">" + esc(o[1]) + "</option>"; }).join("");
   }
@@ -482,6 +483,7 @@
     var m = loadProfiles();
     if (key === "__default__") { state.profile = state.facts.default_profile || null; state.profileIsDefault = !!state.profile; }
     else if (key === "__new__") { state.profile = null; state.profileIsDefault = false; fillForm({ regions: [] }); $("#prof").open = true; }
+    else if (key.indexOf("__preset__:") === 0) { var pre = (state.facts.presets || [])[parseInt(key.split(":")[1], 10)]; state.profile = null; state.profileIsDefault = false; fillForm(Object.assign({ regions: [] }, pre)); $("#prof").open = true; $("#p_income").focus(); }
     else { state.profile = m[key] || null; state.profileIsDefault = false; }
     localStorage.setItem(PACTIVE, key); saveProfile(state.profile && !state.profileIsDefault ? state.profile : null);
     if (state.profile) fillForm(state.profile);

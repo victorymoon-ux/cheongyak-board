@@ -5438,5 +5438,89 @@
   },
   "seoul_support": true,
   "subscription_joined": null
- }
+ },
+ "presets": [
+  {
+   "name": "동생 (청라·길병원)",
+   "residence_sido": "인천",
+   "work": {
+    "station": "예술회관",
+    "lat": 37.449396,
+    "lng": 126.701012,
+    "lines": [
+     "INCHEON1"
+    ]
+   },
+   "work_name": "예술회관",
+   "regions": [
+    {
+     "name": "청라",
+     "points": 10
+    },
+    {
+     "name": "서구",
+     "points": 8
+    },
+    {
+     "name": "인천",
+     "points": 7
+    },
+    {
+     "name": "광명시",
+     "points": 7
+    },
+    {
+     "name": "부천시",
+     "points": 3
+    }
+   ],
+   "min_pyeong": 9,
+   "max_monthly_won": 500000,
+   "border_monthly_won": 550000,
+   "min_private_years": 4,
+   "seoul_support": false,
+   "marital": "single"
+  },
+  {
+   "name": "남친 (광명)",
+   "residence_sido": "경기",
+   "work": {
+    "station": "광명사거리",
+    "lat": 37.479252,
+    "lng": 126.854876,
+    "lines": [
+     "7"
+    ]
+   },
+   "work_name": "광명사거리",
+   "regions": [
+    {
+     "name": "광명시",
+     "points": 10
+    },
+    {
+     "name": "청라",
+     "points": 8
+    },
+    {
+     "name": "인천",
+     "points": 7
+    },
+    {
+     "name": "부천시",
+     "points": 7
+    },
+    {
+     "name": "시흥시",
+     "points": 3
+    }
+   ],
+   "min_pyeong": 9,
+   "max_monthly_won": 500000,
+   "border_monthly_won": 550000,
+   "min_private_years": 4,
+   "seoul_support": false,
+   "marital": "single"
+  }
+ ]
 }

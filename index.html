@@ -7,7 +7,7 @@
 <title>내 청약 보드</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="vendor/leaflet.css">
-<link rel="stylesheet" href="style.css?v=1791770247">
+<link rel="stylesheet" href="style.css?v=1791780209">
 </head>
 <body>
 <header class="top">
@@ -29,7 +29,7 @@
         <label><input id="p_car" type="checkbox"> 자동차 있음</label>
         <label>거주 시/도 <select id="p_sido"><option>서울</option><option>인천</option><option>경기</option></select></label>
         <label>직장 가까운 지하철역 <input id="p_work" type="text" list="stationList" placeholder="예: 예술회관, 을지로입구"><datalist id="stationList"></datalist></label>
-        <label>1순위 지역 <span class="hint">쉼표로 여러 개 · 시/도 또는 시군구</span><input id="p_r1" type="text" placeholder="예: 인천"></label>
+        <label>1순위 지역 <span class="hint">쉼표로 여러 개 · 시/도·시군구·동 이름(예: 청라)</span><input id="p_r1" type="text" placeholder="예: 인천"></label>
         <label>2순위 지역 <input id="p_r2" type="text" placeholder="예: 광명시"></label>
         <label>3순위 지역 <input id="p_r3" type="text" placeholder="예: 부천시, 시흥시"></label>
         <label>그 외 허용 지역 <span class="hint">여기 없는 지역은 안 보임</span><input id="p_other" type="text" placeholder="예: 서울"></label>
@@ -97,7 +97,7 @@
   </main>
 </div>
 <script src="vendor/leaflet.js"></script>
-<script src="engine.js?v=1791770247"></script>
-<script src="app.js?v=1791770247"></script>
+<script src="engine.js?v=1791780209"></script>
+<script src="app.js?v=1791780209"></script>
 </body>
 </html>
