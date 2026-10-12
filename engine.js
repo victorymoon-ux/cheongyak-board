@@ -174,8 +174,9 @@
     if (l.units_youth == null && l.units_general == null && l.units_total != null) notes.push("모집호수는 전체 기준");
     var bonus = 0, workLines = (profile.work && profile.work.lines) || [];
     if (intersects(l.station_lines, workLines) && l.station_walk_min != null && l.station_walk_min <= R.LINE_WALK_MAX) { bonus += R.LINE_BONUS; notes.push("직장 노선 역세권 +" + R.LINE_BONUS); }
-    if (l.rooms === "2룸" || l.rooms === "3룸") { bonus += R.ROOM_BONUS_2; notes.push(l.rooms + " +" + R.ROOM_BONUS_2); }
-    else if (l.rooms === "1.5룸") { bonus += R.ROOM_BONUS; notes.push(l.rooms + " +" + R.ROOM_BONUS); }
+    var rm = l.rooms || "";
+    if (/2룸|3룸|투룸/.test(rm)) { bonus += R.ROOM_BONUS_2; notes.push("2룸 이상 +" + R.ROOM_BONUS_2); }
+    else if (rm.indexOf("1.5룸") >= 0) { bonus += R.ROOM_BONUS; notes.push("1.5룸 +" + R.ROOM_BONUS); }
     if (l.units_total != null && l.units_total >= R.BIG_COMPLEX_UNITS) { bonus += R.BIG_COMPLEX_BONUS; notes.push("대단지 +" + R.BIG_COMPLEX_BONUS); }
     return { transit: transit, gu: gu, area: area, years: years, units: units, bonus: bonus, total: transit + gu + area + years + units + bonus, notes: notes };
   }
