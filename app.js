@@ -508,7 +508,7 @@
     });
     state.data = { generated: f.generated, today: f.today, failures: f.failures || [], static: true, owner: f.owner, listings: ls,
       profile_summary: { name: p ? p.name : (f.owner || ""), work: p && p.work ? p.work.station : "", max_monthly_won: p ? p.max_monthly_won : null } };
-    $("#profWho").textContent = p ? (p.name + " · " + (p.work ? p.work.station : "") + " · " + (p.regions || []).slice(0, 3).map(function (r) { return r.name; }).join("·")) : "아직 입력 안 함";
+    $("#profWho").textContent = p ? ((state.profileIsDefault ? p.name + " (기본값) · " : p.name + " · ") + (p.work ? p.work.station : "") + " · " + (p.regions || []).slice(0, 3).map(function (r) { return r.name; }).join("·")) : "아직 입력 안 함";
     $("#neutralNote").innerHTML = p ? "" : '<div class="neutral-note">왼쪽 <b>내 조건</b>을 입력하면 직장까지 시간·월 납입액·자격·추천 점수가 내 기준으로 계산되고, 내 지역 공고만 보입니다. 지금은 모든 공고를 마감 순으로 보여줍니다.</div>';
   }
   function bindProfile() {
@@ -517,7 +517,7 @@
     $("#profSave").addEventListener("click", function () {
       var p = readForm(), miss = validateProfile(p);
       if (miss.length) { alert("입력이 더 필요해요: " + miss.join(", ")); return; }
-      state.profile = p; saveProfile(p); evaluateAll(); initFilters(); render(); $("#prof").open = false;
+      state.profile = p; state.profileIsDefault = false; saveProfile(p); evaluateAll(); initFilters(); render(); $("#prof").open = false;
     });
     $("#profReset").addEventListener("click", function () { if (!confirm("내 조건을 지울까요?")) return; state.profile = null; saveProfile(null); fillForm({ regions: [] }); evaluateAll(); initFilters(); render(); });
     $("#profExport").addEventListener("click", function () { var p = state.profile || readForm(); var code = btoa(unescape(encodeURIComponent(JSON.stringify(p)))); if (navigator.clipboard) navigator.clipboard.writeText(code).then(function () { alert("복사했어요. 다른 기기의 '코드 붙여넣기'에 넣으세요."); }); else prompt("복사하세요", code); });
@@ -531,10 +531,11 @@
       .then(function (res) {
         state.facts = res[0]; state.stations = res[1] || [];
         state.facts.listings.forEach(function (l) { l.status_reasons = []; l.score = { total: 0 }; });
-        state.profile = loadProfile(); fillForm(state.profile);
+        state.profile = loadProfile() || state.facts.default_profile || null; state.profileIsDefault = !loadProfile() && !!state.facts.default_profile; fillForm(state.profile);
         bindProfile(); evaluateAll(); $("#gu").innerHTML = '<option value="">전체</option>'; $("#types").innerHTML = "";
         initFilters(); renderCal(); if (!bound) { bind(); bound = true; } render();
         if (!state.profile) $("#prof").open = true;
+        if (state.profileIsDefault) $("#neutralNote").innerHTML = '<div class="neutral-note">지금은 <b>승리 기준</b>으로 계산된 화면입니다. 왼쪽 <b>내 조건</b>에 본인 정보를 넣고 저장하면 내 기준으로 바뀝니다(내 기기에만 저장).</div>';
       }).catch(function (err) { $("#meta").textContent = "facts.json을 읽지 못했어요: " + err; });
   }
   function bootOwner() { state.mode = "owner"; document.body.classList.add("owner"); loadData(); }

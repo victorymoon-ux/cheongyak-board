@@ -172,19 +172,19 @@ main{min-width:0}
 .card.big h3{color:#8A4B00}
 
 /* 월별 공고 흐름 */
-.season{background:var(--bg2);border-radius:12px;padding:10px 10px 8px}
+.season{background:var(--bg2);border-radius:12px;padding:10px 8px 8px;overflow:hidden;max-width:100%}
 .season h4{margin:0 0 2px;font-size:13px;color:var(--ink)}
 .season .sub{font-size:11px;color:var(--ink2);margin:0 0 8px;line-height:1.35}
 .season table{border-collapse:separate;border-spacing:1px;width:100%;table-layout:fixed}
-.season th{font-size:9px;font-weight:700;color:var(--ink2);padding:0;text-align:center;width:11px}
-.season th:first-child{width:104px}
+.season th{font-size:9px;font-weight:700;color:var(--ink2);padding:0;text-align:center}
+.season th:first-child{width:42%}
 .season th.now{color:var(--rosed)}
-.season td.lb{font-size:10.5px;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:104px;padding-right:3px}
+.season td.lb{font-size:10px;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:2px;max-width:0}
 .season .org{display:inline-block;font-size:8.5px;font-weight:800;border-radius:4px;padding:1px 3px;margin-right:3px;vertical-align:1px;line-height:1.2}
 .season .org.sh{background:#DDEBFF;color:#1D4FBF}
 .season .org.lh{background:#E6F7F1;color:#0E7A5F}
 .season .org.pv{background:#F3E8FF;color:#6B21A8}
-.season td.c{height:15px;border-radius:2px;background:#fff;position:relative;border:1px solid #E6E9E7;padding:0}
+.season td.c{height:14px;border-radius:2px;background:#fff;position:relative;border:1px solid #E6E9E7;padding:0;min-width:0}
 .season td.c.now{outline:2px solid var(--rose);outline-offset:-1px}
 .season td.c.peak::after{content:"★";position:absolute;inset:0;display:grid;place-items:center;font-size:8px;color:#fff;text-shadow:0 0 2px rgba(0,0,0,.6)}
 .season .legend2{font-size:10.5px;color:var(--ink2);margin-top:6px;line-height:1.4}
