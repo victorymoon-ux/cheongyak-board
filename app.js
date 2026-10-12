@@ -309,12 +309,17 @@
   function liveItems(list) {
     return list.filter(function (l) { return mineOf(l) || (l.status !== "closed" && (l.status !== "rejected" || isBig(l))); });
   }
+  function workPoint() {
+    var p = state.mode === "static" ? state.profile : null;
+    if (p && p.work && p.work.lat != null) return { lat: p.work.lat, lng: p.work.lng, label: (p.work.station || "직장") + "역 (" + (p.name || "나") + " 직장)" };
+    return { lat: 37.5664, lng: 126.9810, label: "회사 (을지로입구)" };
+  }
   function ensureMap() {
     if (state.map || typeof L === "undefined") return state.map;
-    var m = L.map("map", { scrollWheelZoom: true }).setView([37.5664, 126.9810], 12);
+    var w = workPoint();
+    var m = L.map("map", { scrollWheelZoom: true }).setView([w.lat, w.lng], 12);
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "&copy; OpenStreetMap" }).addTo(m);
-    var p = state.data.profile_summary;
-    L.marker([37.5664, 126.9810], { icon: L.divIcon({ className: "", html: '<div class="work-icon">★ 회사 (을지로입구)</div>', iconSize: [0, 0] }), zIndexOffset: 1000 }).addTo(m).bindPopup("<b>" + esc(p.work) + "</b><br>서울 중구 을지로 29 · 을지로입구역 2호선");
+    state.workMarker = L.marker([w.lat, w.lng], { icon: L.divIcon({ className: "", html: '<div class="work-icon">★ ' + esc(w.label) + "</div>", iconSize: [0, 0] }), zIndexOffset: 1000 }).addTo(m).bindPopup("<b>" + esc(w.label) + "</b>");
     var legend = L.control({ position: "bottomright" });
     legend.onAdd = function () { var d = L.DomUtil.create("div", "maplegend"); d.innerHTML = '<div><i style="background:#E5484D"></i>마감 임박 (5일 미만)</div><div><i style="background:#2F6FED"></i>접수 중</div><div><i style="background:#17B890"></i>접수 예정</div><div><i style="background:#fff;border:3px solid #7C3AED"></i>내가 지원함</div><div style="color:var(--ink2)">점 크기 = 점수</div>'; return d; };
     legend.addTo(m);
@@ -327,7 +332,9 @@
     if (!on) { $("#mapNote").hidden = true; return; }
     var m = ensureMap(); if (!m) { $("#mapNote").hidden = false; $("#mapNote").textContent = "지도 라이브러리를 불러오지 못했어요(인터넷 연결 확인)."; return; }
     state.mapLayer.clearLayers();
-    var missing = 0, bounds = [[37.5664, 126.9810]];
+    var wp = workPoint();
+    if (state.workMarker) { state.workMarker.setLatLng([wp.lat, wp.lng]); state.workMarker.setIcon(L.divIcon({ className: "", html: '<div class="work-icon">★ ' + esc(wp.label) + "</div>", iconSize: [0, 0] })); state.workMarker.bindPopup("<b>" + esc(wp.label) + "</b>"); }
+    var missing = 0, bounds = [[wp.lat, wp.lng]];
     var items = liveItems(list), hidden = list.length - items.length;
     items.forEach(function (l) {
       var mine = mineOf(l);
