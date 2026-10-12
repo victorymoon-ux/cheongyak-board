@@ -103,6 +103,7 @@
   }
   function isBig(l) { var n = applicableUnits(l); return n != null && n >= BIG_UNITS; }
   function starName(l) { return (isBig(l) ? "⭐ " : "") + l.name; }
+  function watchBadge(l) { return l.watch ? '<span class="chip watch" title="관심 단지 키워드 일치 (config/watch_keywords.json)">💜 관심 단지</span>' : ""; }
   function bigBadge(l) {
     if (isBig(l)) return '<span class="chip big" title="청년+일반 모집 100호 이상 — 예비번호가 많이 돌아 기회가 큼. 조건에 걸려도 무조건 지원">⭐ 대형 모집 ' + applicableUnits(l) + "호 · 무조건 지원</span>";
     if (l.units_total != null && l.units_total >= BIG_COMPLEX) return '<span class="chip big" title="단지 전체 ' + l.units_total + '세대 대단지">대단지 ' + l.units_total + "세대</span>";
@@ -121,7 +122,7 @@
     var cls = "card " + l.status + (isBig(l) ? " big" : "") + (state.open[l.id] ? " open" : "") + (mine ? " mine" : "");
     var notes = (sc.notes || []).join(", ");
     return '<article class="' + cls + '" data-id="' + esc(l.id) + '">' +
-      '<div class="hd"><div class="row"><span class="pill ' + ph.k + (ph.urgent ? " urgent" : "") + '">' + esc(ph.text) + "</span>" + (mine ? '<span class="pill mine">' + esc(mine.label) + "</span>" : "") + '<span class="chip ' + typeClass(l.type) + '">' + esc(l.type) + "</span>" + bigBadge(l) + (l.is_new ? '<span class="chip">신규</span>' : "") + (state.mode === "static" && l.my_status ? '<span class="chip owner">' + esc((state.facts && state.facts.owner) || "승리") + " " + esc(MY[l.my_status] || l.my_status) + "</span>" : "") + "</div>" +
+      '<div class="hd"><div class="row"><span class="pill ' + ph.k + (ph.urgent ? " urgent" : "") + '">' + esc(ph.text) + "</span>" + (mine ? '<span class="pill mine">' + esc(mine.label) + "</span>" : "") + '<span class="chip ' + typeClass(l.type) + '">' + esc(l.type) + "</span>" + bigBadge(l) + watchBadge(l) + (l.is_new ? '<span class="chip">신규</span>' : "") + (state.mode === "static" && l.my_status ? '<span class="chip owner">' + esc((state.facts && state.facts.owner) || "승리") + " " + esc(MY[l.my_status] || l.my_status) + "</span>" : "") + "</div>" +
       '<button class="heart' + (isFav(l.id) ? " on" : "") + '" type="button" aria-pressed="' + isFav(l.id) + '" aria-label="찜" data-fav="' + esc(l.id) + '">♥</button></div>' +
       "<div><h3><button type=\"button\" data-toggle=\"" + esc(l.id) + "\">" + esc(starName(l)) + "</button></h3><div class=\"loc\">" + esc(loc) + " · " + esc(l.provider) + "</div></div>" +
       '<div class="phase"><div class="line">' + esc(ph.sub) + "</div>" + timeline(l) + "</div>" +
@@ -169,7 +170,7 @@
       gu: $("#gu").value, line2: $("#line2").checked, newOnly: $("#newOnly").checked, showClosed: $("#showClosed").checked, showOutside: !!($("#showOutside") && $("#showOutside").checked)
     };
   }
-  function okOrBig(l) { if (l.status === "neutral") return true; return l.status === "passed" || l.status === "border" || (isBig(l) && l.status !== "closed"); }
+  function okOrBig(l) { if (l.status === "neutral") return true; return l.status === "passed" || l.status === "border" || ((isBig(l) || l.watch) && l.status !== "closed"); }
   function visible(l, f) {
     if (l.region_points === null && l.status === "rejected" && !f.showOutside && !mineOf(l)) return false;   // 내 지역 목록 밖
     if (f.q) {
@@ -263,13 +264,13 @@
   function renderTodo(all) {
     var t = todayISO();
     var items = all.filter(function (l) {
-      if (!(l.status === "passed" || l.status === "border" || l.status === "unscored" || (isBig(l) && l.status !== "closed"))) return false;
+      if (!(l.status === "passed" || l.status === "border" || l.status === "unscored" || ((isBig(l) || l.watch) && l.status !== "closed"))) return false;
       var ph = phaseOf(l);
       if (ph.k === "open") return true;
       if (ph.k === "upcoming") return daysFrom(l.apply_start) <= 7;
       return false;
     }).sort(function (a, b) { return (a.apply_end || "9").localeCompare(b.apply_end || "9") || (b.score.total - a.score.total); });
-    items.sort(function (a, b) { return (isBig(b) ? 1 : 0) - (isBig(a) ? 1 : 0) || (a.apply_end || "9").localeCompare(b.apply_end || "9"); });
+    items.sort(function (a, b) { return ((b.watch ? 2 : 0) + (isBig(b) ? 1 : 0)) - ((a.watch ? 2 : 0) + (isBig(a) ? 1 : 0)) || (a.apply_end || "9").localeCompare(b.apply_end || "9"); });
     var html = '<h2>이번 주 내가 지원할 공고 <small>' + items.length + '건 · 조건 통과(9평↑·월 50만↓) 또는 ⭐ 대형 모집(100호↑, 무조건 지원), 미산정은 노란 메모 · 지금 접수 중이거나 7일 안에 시작 · ⭐ 먼저, 마감 순</small></h2>';
     if (!items.length) html += '<div class="empty">이번 주에 지원할 공고가 없어요. "새로고침(다시 수집)"으로 새 공고를 확인해 보세요.</div>';
     else html += "<ol>" + items.map(function (l, i) {
@@ -277,7 +278,7 @@
       var period = (l.apply_start ? fmtD(l.apply_start) : "?") + " ~ " + (l.apply_end ? fmtD(l.apply_end) : "?");
       var when = ph.k === "open" ? (ph.urgent ? "<b style='color:var(--rosed)'>" + ph.text.replace("마감 임박 · ", "") + "</b>" : "<b style='color:var(--blued)'>" + ph.text.replace("접수 중 · ", "") + "</b>") : "<b style='color:var(--mintd)'>" + ph.sub.split(" · ")[0] + "</b>";
       return '<li class="' + (ph.urgent ? "urgent" : ph.k) + (mine ? " done" : "") + '"><span class="num">' + (i + 1) + "</span>" +
-        '<div class="t"><div class="nm"><button type="button" data-jump="' + esc(l.id) + '">' + esc(starName(l)) + "</button>" + (mine ? ' <span class="pill mine">' + esc(mine.label) + "</span>" : "") + bigBadge(l) + "</div>" +
+        '<div class="t"><div class="nm"><button type="button" data-jump="' + esc(l.id) + '">' + esc(starName(l)) + "</button>" + watchBadge(l) + (mine ? ' <span class="pill mine">' + esc(mine.label) + "</span>" : "") + bigBadge(l) + "</div>" +
         '<div class="meta"><span>' + when + " · 접수 " + esc(period) + "</span><span>" + esc(l.gu || "") + (l.station ? " " + esc(l.station) + "역" : "") + (l.transit_min != null ? " · 을지로입구 <b>" + l.transit_min + "분</b>" : "") + "</span>" +
         "<span>" + esc(area(l)) + (l.rooms ? " " + esc(l.rooms) : "") + " · 보증금 " + esc(won(l.deposit_won)) + " / 월세 " + esc(won(l.rent_won)) + " → <b>월 " + (pay != null ? man(pay).toLocaleString() + "만" : "?") + "</b></span>" +
         "<span>모집 <b>" + esc(unitsText(l)) + "</b></span>" +
@@ -307,7 +308,7 @@
   var PHASE_COLOR = { urgent: "#E5484D", open: "#2F6FED", upcoming: "#17B890", closed: "#9AA39F", unknown: "#9AA39F" };
   // 지도·캘린더가 공유하는 목록: 왼쪽 필터 통과 + 접수 종료·탈락 제외(내가 지원한 건 포함)
   function liveItems(list) {
-    return list.filter(function (l) { return mineOf(l) || (l.status !== "closed" && (l.status !== "rejected" || isBig(l))); });
+    return list.filter(function (l) { return mineOf(l) || (l.status !== "closed" && (l.status !== "rejected" || isBig(l) || l.watch)); });
   }
   function workPoint() {
     var p = state.mode === "static" ? state.profile : null;

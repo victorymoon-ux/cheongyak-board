@@ -212,3 +212,5 @@ body.static #refresh,body.static #rebuild,body.static #runStatus{display:none}
 body.owner .prof{display:none}
 .neutral-note{background:var(--amber2);color:var(--amberd);border-radius:12px;padding:10px 14px;margin:0 0 14px;font-size:13.5px}
 .chip.owner{background:#EEF0EF;color:#4B5350;border-color:transparent}
+
+.chip.watch{background:#F3E8FF;color:#6B21A8;border-color:transparent;font-weight:800}

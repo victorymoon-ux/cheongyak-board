@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T13:54:34",
+ "generated": "2026-10-12T14:04:13",
  "today": "2026-10-12",
  "failures": [],
  "owner": "승리",
@@ -47,7 +47,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -22,
-   "my_status": null
+   "my_status": null,
+   "watch": true
   },
   {
    "id": "soco:6678",
@@ -95,7 +96,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -8,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "sh:310976",
@@ -140,7 +142,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -1,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6680",
@@ -186,7 +189,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -6,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6666",
@@ -229,7 +233,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -14,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6676",
@@ -276,7 +281,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6687",
@@ -321,7 +327,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": 2,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020725",
@@ -364,7 +371,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -20,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020715",
@@ -407,7 +415,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -20,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6689",
@@ -453,7 +462,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": 2,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020843",
@@ -1057,7 +1067,8 @@
    ],
    "phase": "upcoming",
    "phase_days": 2,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6694",
@@ -1102,7 +1113,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": 2,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6665",
@@ -1147,7 +1159,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -28,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6690",
@@ -1193,7 +1206,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": 0,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6659",
@@ -1238,7 +1252,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -28,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6686",
@@ -1284,7 +1299,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": 0,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6658",
@@ -1329,7 +1345,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -27,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6679",
@@ -1374,7 +1391,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -7,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6677",
@@ -1419,7 +1437,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "sh:311005",
@@ -1464,7 +1483,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": null,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6693",
@@ -1509,7 +1529,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": 1,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6695",
@@ -1554,7 +1575,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": 3,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020858",
@@ -1600,7 +1622,8 @@
    "sites": [],
    "phase": "upcoming",
    "phase_days": 1,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020578",
@@ -1643,7 +1666,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -20,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6660",
@@ -1688,7 +1712,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -26,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6692",
@@ -1733,7 +1758,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": 0,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020759",
@@ -1776,7 +1802,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -12,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020768",
@@ -1819,7 +1846,8 @@
    "sites": [],
    "phase": "upcoming",
    "phase_days": 1,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6691",
@@ -1864,7 +1892,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": 2,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6661",
@@ -1911,7 +1940,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -28,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020807",
@@ -1954,7 +1984,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -11,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020753",
@@ -1997,7 +2028,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -11,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020619",
@@ -2040,7 +2072,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -20,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020755",
@@ -2083,7 +2116,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": 3,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020802",
@@ -2126,7 +2160,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": 11,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020686",
@@ -2169,7 +2204,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -19,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020553",
@@ -2212,7 +2248,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -39,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6675",
@@ -2255,7 +2292,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -20,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6662",
@@ -2298,7 +2336,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -27,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "sh:311087",
@@ -2341,7 +2380,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": 10,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020780",
@@ -2384,7 +2424,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -5,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6673",
@@ -2427,7 +2468,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6671",
@@ -2470,7 +2512,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6682",
@@ -2516,7 +2559,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -7,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "sh:310950",
@@ -2561,7 +2605,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -9,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020798",
@@ -2604,7 +2649,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -12,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020693",
@@ -2647,7 +2693,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -33,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020630",
@@ -2690,7 +2737,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -33,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6683",
@@ -2735,7 +2783,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -8,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6688",
@@ -2778,7 +2827,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": 0,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6668",
@@ -2823,7 +2873,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6667",
@@ -2868,7 +2919,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6653",
@@ -2914,7 +2966,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -33,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6664",
@@ -2957,7 +3010,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -28,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "ah:2026850039",
@@ -3000,7 +3054,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -59,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020811",
@@ -3043,7 +3098,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -4,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020608",
@@ -3086,7 +3142,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -40,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020602",
@@ -3129,7 +3186,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -40,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020605",
@@ -3174,7 +3232,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -40,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020577",
@@ -3219,7 +3278,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -40,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6685",
@@ -3262,7 +3322,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -6,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6684",
@@ -3305,7 +3366,8 @@
    "sites": [],
    "phase": "upcoming",
    "phase_days": 1,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6663",
@@ -3348,7 +3410,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -28,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6681",
@@ -3391,7 +3454,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -7,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6672",
@@ -3434,7 +3498,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6674",
@@ -3477,7 +3542,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6670",
@@ -3520,7 +3586,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "soco:6669",
@@ -3563,7 +3630,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020744",
@@ -3606,7 +3674,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -12,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020697",
@@ -3649,7 +3718,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -20,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020626",
@@ -3692,7 +3762,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -40,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020607",
@@ -3735,7 +3806,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -40,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020583",
@@ -3778,7 +3850,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -40,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020596",
@@ -3821,7 +3894,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -40,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020595",
@@ -3864,7 +3938,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -40,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020604",
@@ -3907,7 +3982,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -40,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020599",
@@ -3950,7 +4026,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -40,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020546",
@@ -3993,7 +4070,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -48,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020812",
@@ -4036,7 +4114,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": 0,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020710",
@@ -4079,7 +4158,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -11,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020727",
@@ -4122,7 +4202,8 @@
    "sites": [],
    "phase": "open",
    "phase_days": 4,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:0000061177",
@@ -4165,7 +4246,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -12,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020769",
@@ -4208,7 +4290,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -19,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:0000061173",
@@ -4251,7 +4334,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -12,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020731",
@@ -4294,7 +4378,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -19,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020713",
@@ -4337,7 +4422,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -11,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020670",
@@ -4380,7 +4466,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -12,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020704",
@@ -4423,7 +4510,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -12,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020695",
@@ -4466,7 +4554,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -12,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020699",
@@ -4509,7 +4598,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020805",
@@ -4552,7 +4642,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -19,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020659",
@@ -4595,7 +4686,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -19,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020668",
@@ -4638,7 +4730,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -11,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020652",
@@ -4681,7 +4774,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -20,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020662",
@@ -4724,7 +4818,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -12,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020678",
@@ -4767,7 +4862,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -24,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020688",
@@ -4810,7 +4906,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -33,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020689",
@@ -4853,7 +4950,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -33,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020618",
@@ -4896,7 +4994,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -33,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020621",
@@ -4939,7 +5038,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -33,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:0000061160",
@@ -4982,7 +5082,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -31,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020564",
@@ -5025,7 +5126,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -38,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020550",
@@ -5068,7 +5170,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -40,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020552",
@@ -5111,7 +5214,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -48,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020560",
@@ -5154,7 +5258,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -45,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "lh:2015122300020531",
@@ -5197,7 +5302,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -46,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "ah:2026850048",
@@ -5240,7 +5346,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "ah:2026850047",
@@ -5283,7 +5390,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -27,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "ah:2026850045",
@@ -5326,7 +5434,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -49,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   },
   {
    "id": "ah:2026850040",
@@ -5369,7 +5478,8 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -61,
-   "my_status": null
+   "my_status": null,
+   "watch": false
   }
  ],
  "static": true,
