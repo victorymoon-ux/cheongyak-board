@@ -3336,8 +3336,47 @@
  ],
  "complexes": {
   "_note": "전화 체크리스트용 관심 단지. 순서 = 우선순위. hours는 공고문·안내에 적힌 입주지원센터 운영시간(대부분 평일).",
-  "ask": "청년 1인 · 39㎡ 이상 타입 공실 대기 명단 가능한지 / 추가모집 예정 시점 / 보증금 비율 50% 초과 전환 가능한지",
+  "ask": "① 청년 1인·39㎡ 이상 타입 공실 대기 명단 가능한지 ② 추가모집(공고) 예정 시점 ③ 잔여세대(공실) 선착순 모집을 단지 홈페이지/앱에서 따로 하는지 (회원가입·관심고객 등록 방식) ④ 보증금 비율 50% 초과 전환 가능한지",
   "complexes": [
+   {
+    "id": "prep_verdium",
+    "name": "✅ 준비: 용산베르디움프렌즈 회원가입 + 관심고객 등록 연습",
+    "station": "삼각지",
+    "units": "",
+    "types": "마이페이지에서 등록 확인 후 연습분은 반드시 취소",
+    "tel": "",
+    "web": "https://www.ys-vertium-friends.co.kr",
+    "hours": "지금",
+    "note": "다음 모집(11월 예상) 때 00:00 정각 클릭. PC·모바일 동시접속 불가",
+    "vacancy_url": "https://www.ys-vertium-friends.co.kr",
+    "vacancy_how": "회원 전용 공지"
+   },
+   {
+    "id": "prep_kakao",
+    "name": "✅ 준비: 청년주택 잔여세대 알림 오픈채팅 2곳 가입",
+    "station": "",
+    "units": "",
+    "types": "공지방(대화X) + 수다방",
+    "tel": "",
+    "web": "https://open.kakao.com/o/g3R8UjRi",
+    "hours": "지금",
+    "note": "수다방 https://open.kakao.com/o/g9JswxRi — 광고·파트너스 링크 섞여 있으니 정보만",
+    "vacancy_url": "",
+    "vacancy_how": ""
+   },
+   {
+    "id": "prep_elyes",
+    "name": "✅ 준비: 롯데 엘리스(Elyes) 회원가입 + 남영역·원효 관심단지 등록",
+    "station": "남영",
+    "units": "",
+    "types": "",
+    "tel": "",
+    "web": "https://www.elyes.co.kr",
+    "hours": "지금",
+    "note": "공실 계약신청도 이 사이트에서 선착순",
+    "vacancy_url": "https://www.elyes.co.kr",
+    "vacancy_how": "계약신청·관심단지 등록"
+   },
    {
     "id": "namyeong",
     "name": "남영역 롯데캐슬 헤리티지",
@@ -3347,7 +3386,9 @@
     "tel": "02-3272-2997",
     "web": "https://www.elyes.co.kr (관심단지 등록)",
     "hours": "평일 10:00~17:00 추정",
-    "note": "1타깃. 39형 특별 50% 1억6,800만/월 67만"
+    "note": "1타깃. 39형 특별 50% 1억6,800만/월 67만",
+    "vacancy_url": "https://www.elyes.co.kr",
+    "vacancy_how": "롯데 엘리스 사이트 '계약신청·관심단지 등록'으로 공실 선착순 — 가입 후 연습, 문자 알림"
    },
    {
     "id": "urbaniel",
@@ -3358,7 +3399,9 @@
     "tel": "02-6677-4422",
     "web": "",
     "hours": "평일",
-    "note": "을지로입구 8분, 롯데건설 운영(엘리스 가능성)"
+    "note": "을지로입구 8분, 롯데건설 운영(엘리스 가능성)",
+    "vacancy_url": "https://www.elyes.co.kr",
+    "vacancy_how": "롯데건설 운영 — 엘리스에 등록돼 있는지 확인"
    },
    {
     "id": "labom",
@@ -3369,7 +3412,9 @@
     "tel": "02-2297-3392",
     "web": "",
     "hours": "평일",
-    "note": "2027-06 계약 만료 전후 공실 예상"
+    "note": "2027-06 계약 만료 전후 공실 예상",
+    "vacancy_url": "",
+    "vacancy_how": "운영사(인트러스) — 공실 선착순 경로 문의"
    },
    {
     "id": "cheongajin",
@@ -3380,7 +3425,9 @@
     "tel": "02-6273-0266",
     "web": "",
     "hours": "평일",
-    "note": ""
+    "note": "",
+    "vacancy_url": "",
+    "vacancy_how": "운영사(우리자산신탁) — 문의"
    },
    {
     "id": "harrington",
@@ -3391,7 +3438,9 @@
     "tel": "02-335-1800",
     "web": "",
     "hours": "평일",
-    "note": "2019 최초: 37A 40% 1억2,230만/월 73만 (현재는 2년마다 ≤5% 인상분 반영 필요). 2호선 최대 단지"
+    "note": "2019 최초: 37A 40% 1억2,230만/월 73만 (현재는 2년마다 ≤5% 인상분 반영 필요). 2호선 최대 단지",
+    "vacancy_url": "",
+    "vacancy_how": "효성 자체 운영 — 입주지원센터에 공실 선착순 경로 문의"
    },
    {
     "id": "forena",
@@ -3402,7 +3451,9 @@
     "tel": "02-2633-2030",
     "web": "",
     "hours": "평일",
-    "note": "33형 1억1,000만/월 62만~"
+    "note": "33형 1억1,000만/월 62만~",
+    "vacancy_url": "",
+    "vacancy_how": "한화 포레나 — 공실 선착순 경로 문의"
    },
    {
     "id": "verdium",
@@ -3413,7 +3464,9 @@
     "tel": "02-3785-3344",
     "web": "",
     "hours": "평일",
-    "note": "용산 최대"
+    "note": "용산 최대",
+    "vacancy_url": "https://www.ys-vertium-friends.co.kr",
+    "vacancy_how": "단지 홈페이지 회원 전용 공지 → 거의 매달 선착순. 관심고객 등록(타입별 100명, 00:00 시작·5분 내 마감) → 이틀 뒤 계약신청(선착순 1인) → 다음날 계약금 10%. 청년/신혼 유형 구분 없음(1인도 3룸 가능)"
    },
    {
     "id": "166",
@@ -3424,7 +3477,9 @@
     "tel": "070-7609-0177",
     "web": "",
     "hours": "평일",
-    "note": "중구지만 초소형"
+    "note": "중구지만 초소형",
+    "vacancy_url": "",
+    "vacancy_how": "공고(서울주거포털) 외 자체 공실 모집 여부 문의"
    },
    {
     "id": "benheim",
@@ -3435,7 +3490,9 @@
     "tel": "02-6273-0707",
     "web": "",
     "hours": "월~금 10:00~17:00 (점심 12~13)",
-    "note": "39B 2억3,040만/월 28.8만"
+    "note": "39B 2억3,040만/월 28.8만",
+    "vacancy_url": "",
+    "vacancy_how": "공고(서울주거포털) 외 자체 공실 모집 여부 문의"
    },
    {
     "id": "urbanhub",
@@ -3446,7 +3503,9 @@
     "tel": "02-6954-1162",
     "web": "",
     "hours": "평일",
-    "note": "소형"
+    "note": "소형",
+    "vacancy_url": "",
+    "vacancy_how": "공고(서울주거포털) 외 자체 공실 모집 여부 문의"
    },
    {
     "id": "rumini",
@@ -3457,7 +3516,9 @@
     "tel": "02-821-4015",
     "web": "https://www.elyes.co.kr",
     "hours": "평일",
-    "note": "롯데"
+    "note": "롯데",
+    "vacancy_url": "https://www.elyes.co.kr",
+    "vacancy_how": "엘리스 동일"
    },
    {
     "id": "eseo",
@@ -3468,7 +3529,9 @@
     "tel": "02-333-3352",
     "web": "",
     "hours": "평일",
-    "note": ""
+    "note": "",
+    "vacancy_url": "",
+    "vacancy_how": "공고(서울주거포털) 외 자체 공실 모집 여부 문의"
    },
    {
     "id": "remark",
@@ -3479,7 +3542,9 @@
     "tel": "02-3272-6008",
     "web": "",
     "hours": "평일",
-    "note": "40형 9,800만/월 82만~"
+    "note": "40형 9,800만/월 82만~",
+    "vacancy_url": "",
+    "vacancy_how": "공고(서울주거포털) 외 자체 공실 모집 여부 문의"
    },
    {
     "id": "mangrove",
@@ -3490,7 +3555,9 @@
     "tel": "02-2289-6348",
     "web": "https://mangrove.city",
     "hours": "평일",
-    "note": "8평"
+    "note": "8평",
+    "vacancy_url": "https://mangrove.city",
+    "vacancy_how": "맹그로브 자체 사이트에서 공실 수시 모집"
    }
   ]
  }

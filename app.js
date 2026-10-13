@@ -273,14 +273,15 @@
     var cfg = state.complexes || { ask: "", complexes: [] }, calls = state.calls || {};
     if (!cfg.complexes.length) { el.innerHTML = ""; return; }
     var done = cfg.complexes.filter(function (c) { return calls[c.id] && calls[c.id].called; }).length;
-    el.innerHTML = "<h2>📞 전화 체크리스트 <small style='font-size:12.5px;color:var(--ink2);font-weight:600'>" + done + "/" + cfg.complexes.length + " 완료 · 공실 대기·추가모집 시점 미리 알아두기 · 대부분 평일 낮에만 받음</small></h2>" +
+    el.innerHTML = "<h2>📞 전화·준비 체크리스트 <small style='font-size:12.5px;color:var(--ink2);font-weight:600'>" + done + "/" + cfg.complexes.length + " 완료 · 공실(잔여세대) 선착순은 단지 홈페이지 회원 전용인 곳이 많음 → 미리 가입·연습 · 전화는 평일 낮</small></h2>" +
       '<div class="ask"><b>물어볼 것</b> ' + esc(cfg.ask) + "</div>" +
-      "<table><thead><tr><th></th><th>단지</th><th>타입·비고</th><th>전화</th><th>운영시간</th><th>전화함</th><th>메모 (대기명단 등록 여부, 담당자 말)</th></tr></thead><tbody>" +
+      "<table><thead><tr><th></th><th>단지</th><th>타입·비고</th><th>공실(잔여세대) 모집 경로</th><th>전화</th><th>운영시간</th><th>전화함</th><th>메모</th></tr></thead><tbody>" +
       cfg.complexes.map(function (c, i) {
         var s = calls[c.id] || {};
         return '<tr class="' + (s.called ? "done" : "") + '"><td><span class="num">' + (i + 1) + '</span></td><td><div class="nm">' + esc(c.name) + "</div><div class='sub'>" + esc(c.station) + " · " + esc(c.units) + "</div>" + (c.web ? "<div class='sub'><a href='" + esc(c.web.split(" ")[0]) + "' target='_blank' rel='noopener'>" + esc(c.web) + "</a></div>" : "") + "</td>" +
           "<td><div>" + esc(c.types) + "</div>" + (c.note ? "<div class='sub'>" + esc(c.note) + "</div>" : "") + "</td>" +
-          '<td><a class="tel" href="tel:' + esc(c.tel.replace(/-/g, "")) + '">' + esc(c.tel) + "</a></td><td class='sub'>" + esc(c.hours) + "</td>" +
+          "<td class='sub'>" + (c.vacancy_url ? "<a href='" + esc(c.vacancy_url) + "' target='_blank' rel='noopener'>" + esc(c.vacancy_url.replace(/^https?:\/\//, "")) + "</a><br>" : "") + esc(c.vacancy_how || "") + "</td>" +
+          "<td>" + (c.tel ? '<a class="tel" href="tel:' + esc(c.tel.replace(/-/g, "")) + '">' + esc(c.tel) + "</a>" : "<span class='sub'>—</span>") + "</td><td class='sub'>" + esc(c.hours) + "</td>" +
           '<td class="chk"><input type="checkbox" data-called="' + esc(c.id) + '"' + (s.called ? " checked" : "") + '>' + (s.updated ? "<div class='sub'>" + esc(s.updated) + "</div>" : "") + "</td>" +
           '<td><input type="text" data-callmemo="' + esc(c.id) + '" value="' + esc(s.memo || "") + '" placeholder="예: 10/14 통화, 공실 없음, 대기명단 등록"></td></tr>';
       }).join("") + "</tbody></table>";
