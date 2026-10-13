@@ -154,10 +154,11 @@
     if (l.status === "neutral") return "내 조건을 입력하면 계산";
     if (!m || m.display_total == null) return "보증금·월세를 아직 못 읽음";
     var p = state.data.profile_summary;
-    if (state.data.static) return esc("월세 " + won(l.rent_won) + " + 보증금 대출 이자 (이자지원 기준)");
+    if (state.data.static) return esc("월세 " + won(l.rent_won) + " + 보증금 대출 이자 (이자지원 기준)" + (m.policy_note ? " · " + m.policy_note : ""));
     var s = "월세 " + won(l.rent_won) + " + 대출 " + won(m.loan_won) + " (보증금 − 자기자금 " + won(p.own_cash_won) + ")";
     if (m.total_youth != null) s += " → 청년대출 " + (p.rates.youth_loan * 100).toFixed(1) + "%: 월 " + man(m.total_youth).toLocaleString() + "만";
     if (m.total_bank != null) s += " / 일반은행 " + (p.rates.bank_loan * 100).toFixed(2) + "%: 월 " + man(m.total_bank).toLocaleString() + "만";
+    if (m.policy_note) s += " · " + m.policy_note;
     return esc(s);
   }
 

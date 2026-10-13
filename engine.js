@@ -12,7 +12,8 @@
     YEARS_POINTS: [[4, 5], [6, 10]],
     UNITS_POINTS: [[10, 4], [30, 8], [100, 12], [300, 15]],
     LINE_BONUS: 5, LINE_WALK_MAX: 10, ROOM_BONUS: 5, ROOM_BONUS_2: 8, BIG_COMPLEX_BONUS: 2, BIG_COMPLEX_UNITS: 300, BIG_RECRUIT_UNITS: 100,
-    SUBWAY_KMH: 32, DETOUR: 1.25, TRANSFER_MIN: 8, WAIT_MIN: 4, WORK_WALK_MIN: 3
+    SUBWAY_KMH: 32, DETOUR: 1.25, TRANSFER_MIN: 8, WAIT_MIN: 4, WORK_WALK_MIN: 3,
+    POLICY_MAX_DEPOSIT_WON: 300000000, SUPPORT_MAX_RENT_WON: 900000
   };
   var INCOME_1P_120 = 4576036, ASSET_YOUTH = 251000000, ASSET_NATIONAL = 345000000, ASSET_JANGI = 662000000;
   var RULES = {
@@ -63,10 +64,18 @@
   // ---- 월 납입 ----
   function interest(loan, rate) { return rate == null ? null : bround(loan * rate / 12); }
   function baseCost(dep, rent, own, rates) {
-    var out = { loan_won: 0, interest_youth: null, interest_bank: null, total_youth: null, total_bank: null, display_total: null, verdict: "unknown", alt: null };
+    var out = { loan_won: 0, interest_youth: null, interest_bank: null, total_youth: null, total_bank: null, display_total: null, verdict: "unknown", alt: null, policy_note: null };
     if (dep == null || rent == null) return out;
     var loan = Math.max(0, dep - own); out.loan_won = loan;
     var iy;
+    if (dep > R.POLICY_MAX_DEPOSIT_WON && loan > 0) {
+      // 보증금 3억 초과: 청년 버팀목·서울시 이자지원 모두 불가 → 은행 금리
+      rates = Object.assign({}, rates, { support_rate: null, support_cap_won: null, youth_loan: rates.bank_loan });
+      out.policy_note = "보증금 3억 초과 → 청년 버팀목·서울시 이자지원 불가, 은행 금리 적용";
+    } else if (rates.support_rate != null && rent > R.SUPPORT_MAX_RENT_WON && loan > 0) {
+      rates = Object.assign({}, rates, { support_rate: null, support_cap_won: null });
+      out.policy_note = "월세 90만 초과 → 서울시 이자지원 불가, 버팀목 금리 적용";
+    }
     if (rates.support_rate != null && rates.support_cap_won) {
       var cap = rates.support_cap_won;
       iy = interest(Math.min(loan, cap), rates.support_rate) + (loan > cap ? (interest(loan - cap, rates.youth_loan) || 0) : 0);
