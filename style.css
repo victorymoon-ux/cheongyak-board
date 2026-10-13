@@ -231,3 +231,12 @@ body.owner .prof{display:none}
 .calls input[type=checkbox]{width:18px;height:18px}
 .calls .num{width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;display:grid;place-items:center;font-size:12px}
 @media (max-width:900px){.calls table,.calls thead,.calls tbody,.calls tr,.calls td{display:block}.calls th{display:none}.calls td{padding:4px 0;border:0}.calls tr{border-bottom:1px solid var(--line);padding:8px 0}}
+
+.news ul{list-style:none;margin:0;padding:0}
+.news li{display:grid;grid-template-columns:auto auto 1fr auto;gap:10px;align-items:baseline;padding:7px 4px;border-bottom:1px solid var(--line);font-size:13.5px}
+.news li:last-child{border-bottom:0}
+.news .src{font-size:11px;font-weight:800;padding:2px 7px;border-radius:999px;background:var(--bg2);color:var(--ink2);white-space:nowrap}
+.news .src.review{background:#e6f7ea;color:#1d6b35}.news .src.cafe{background:#e8f1ff;color:#1b4f9c}.news .src.vertium{background:#fff1e0;color:#9a4a00}
+.news .new{font-size:11px;font-weight:800;color:#fff;background:var(--red,#e5484d);padding:1px 6px;border-radius:6px}
+.news .d{color:var(--ink2);font-size:12px;white-space:nowrap}
+.news a{color:var(--ink);text-decoration:none}.news a:hover{text-decoration:underline}

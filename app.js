@@ -268,6 +268,19 @@
     fetch("/api/call", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: id, called: !!called, memo: memo || "" }) })
       .then(function (r) { return r.json(); }).then(function (j) { if (j.ok) { state.calls = j.calls; renderPhoneList(); } }).catch(function () {});
   }
+  function renderNews(items) {
+    var el = $("#news"); if (!el) return;
+    items = items || [];
+    if (!items.length) { el.innerHTML = ""; return; }
+    var t = todayISO(), cutoff = new Date(t); cutoff.setDate(cutoff.getDate() - 7); cutoff = cutoff.toISOString().slice(0, 10);
+    var labels = { blog: "블로그", cafe: "카페", vertium: "베르디움 회원공지" };
+    el.innerHTML = "<h2>📰 잔여세대(공실) 소식 <small style='font-size:12.5px;color:var(--ink2);font-weight:600'>네이버 블로그·카페 검색을 매일 모음 · 선착순(잔여세대) 1순위 전략용 · 후기·대행 광고도 섞여 있으니 날짜와 출처 확인</small></h2><ul>" +
+      items.slice(0, 40).map(function (n) {
+        return "<li>" + ((n.first_seen || "") >= cutoff ? "<span class='new'>NEW</span>" : "<span></span>") +
+          "<span class='src " + esc(n.review ? "review" : (n.source || "")) + "'>" + esc(n.review ? "후기(확인됨)" : (labels[n.source] || n.source || "")) + "</span>" +
+          "<a href='" + esc(n.url) + "' target='_blank' rel='noopener'>" + esc(n.title) + "</a><span class='d'>" + esc(n.date || "") + "</span></li>";
+      }).join("") + "</ul>";
+  }
   function renderPhoneList() {
     var el = $("#calls"); if (!el) return;
     var cfg = state.complexes || { ask: "", complexes: [] }, calls = state.calls || {};
@@ -596,7 +609,7 @@
     Promise.all([fetch("facts.json?_=" + Date.now()).then(function (r) { return r.json(); }), fetch("stations.json?_=" + Date.now()).then(function (r) { return r.json(); }).catch(function () { return []; })])
       .then(function (res) {
         state.facts = res[0]; state.stations = res[1] || [];
-        state.complexes = state.facts.complexes || null; state.calls = loadCallsLocal(); renderPhoneList();
+        state.complexes = state.facts.complexes || null; state.calls = loadCallsLocal(); renderPhoneList(); renderNews(state.facts.news);
         state.facts.listings.forEach(function (l) { l.status_reasons = []; l.score = { total: 0 }; });
         (function () {
           var m = loadProfiles(), active = localStorage.getItem(PACTIVE), legacy = loadProfile();
@@ -623,6 +636,7 @@
     fetch("/api/marks").then(function (r) { return r.json(); }).then(function (m) { if (!document.body.classList.contains("static")) { state.marks = m || {}; render(); } }).catch(function () {});
     return fetch("data.json?_=" + Date.now()).then(function (r) { return r.json(); }).then(function (d) {
       d.listings.forEach(function (l) { l.score = l.score || { total: 0 }; l.status_reasons = l.status_reasons || []; });
+      renderNews(d.news);
       state.data = d; $("#types").innerHTML = ""; $("#gu").innerHTML = '<option value="">전체</option>';
       if (d.static) { document.body.classList.add("static"); }
       initFilters(); renderCal(); if (!bound) { bind(); bound = true; } render();
