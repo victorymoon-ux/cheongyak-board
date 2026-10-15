@@ -274,10 +274,12 @@
     items = items || [];
     if (!items.length) { el.innerHTML = ""; return; }
     var t = todayISO(), cutoff = new Date(t); cutoff.setDate(cutoff.getDate() - 7); cutoff = cutoff.toISOString().slice(0, 10);
+    var cutoff30 = new Date(t); cutoff30.setDate(cutoff30.getDate() - 30); cutoff30 = cutoff30.toISOString().slice(0, 10);
     var labels = { blog: "블로그", cafe: "카페", vertium: "베르디움 회원공지" };
     el.innerHTML = "<h2>📰 잔여세대(공실) 소식 <small style='font-size:12.5px;color:var(--ink2);font-weight:600'>네이버 블로그·카페 검색을 매일 모음 · 선착순(잔여세대) 1순위 전략용 · 후기·대행 광고도 섞여 있으니 날짜와 출처 확인</small></h2><ul>" +
       items.slice(0, 40).map(function (n) {
-        return "<li>" + ((n.first_seen || "") >= cutoff ? "<span class='new'>NEW</span>" : "<span></span>") +
+        var recent = (n.first_seen || "") >= cutoff && (!n.date || n.date.length < 7 || n.date >= cutoff30);   // 처음 본 지 7일 + 글 자체도 30일 이내일 때만 NEW
+        return "<li>" + (recent ? "<span class='new'>NEW</span>" : "<span></span>") +
           "<span class='src " + esc(n.review ? "review" : (n.source || "")) + "'>" + esc(n.review ? "후기(확인됨)" : (labels[n.source] || n.source || "")) + "</span>" +
           "<a href='" + esc(n.url) + "' target='_blank' rel='noopener'>" + esc(n.title) + "</a><span class='d'>" + esc(n.date || "") + "</span></li>";
       }).join("") + "</ul>";
