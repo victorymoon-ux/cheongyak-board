@@ -219,7 +219,11 @@ body.owner .prof{display:none}
 .calls{margin:28px 0 0;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;box-shadow:var(--sh)}
 .calls h2{margin:0 0 4px;font-size:17px}
 .calls .ask{font-size:13px;color:var(--ink2);background:var(--bg2);border-radius:10px;padding:8px 10px;margin:0 0 12px;line-height:1.5}
-.calls table{width:100%;border-collapse:collapse;font-size:13px}
+.calls{overflow:hidden}
+.calls table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:13px}
+.calls th,.calls td{overflow-wrap:anywhere;word-break:break-word;min-width:0}
+.calls col.c-num{width:34px}.calls col.c-name{width:19%}.calls col.c-type{width:24%}.calls col.c-how{width:22%}.calls col.c-tel{width:9%}.calls col.c-hours{width:7%}.calls col.c-chk{width:56px}.calls col.c-memo{width:14%}
+.calls a{overflow-wrap:anywhere}
 .calls th{text-align:left;font-size:12px;color:var(--ink2);font-weight:700;padding:6px 8px;border-bottom:1px solid var(--line)}
 .calls td{padding:8px;border-bottom:1px solid #F0F2F1;vertical-align:top}
 .calls tr.done td{opacity:.55}
@@ -233,10 +237,10 @@ body.owner .prof{display:none}
 @media (max-width:900px){.calls table,.calls thead,.calls tbody,.calls tr,.calls td{display:block}.calls th{display:none}.calls td{padding:4px 0;border:0}.calls tr{border-bottom:1px solid var(--line);padding:8px 0}}
 
 .news ul{list-style:none;margin:0;padding:0}
-.news li{display:grid;grid-template-columns:auto auto 1fr auto;gap:10px;align-items:baseline;padding:7px 4px;border-bottom:1px solid var(--line);font-size:13.5px}
+.news li{display:grid;grid-template-columns:auto auto minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:7px 4px;border-bottom:1px solid var(--line);font-size:13.5px}
 .news li:last-child{border-bottom:0}
 .news .src{font-size:11px;font-weight:800;padding:2px 7px;border-radius:999px;background:var(--bg2);color:var(--ink2);white-space:nowrap}
 .news .src.review{background:#e6f7ea;color:#1d6b35}.news .src.cafe{background:#e8f1ff;color:#1b4f9c}.news .src.vertium{background:#fff1e0;color:#9a4a00}
 .news .new{font-size:11px;font-weight:800;color:#fff;background:var(--red,#e5484d);padding:1px 6px;border-radius:6px}
 .news .d{color:var(--ink2);font-size:12px;white-space:nowrap}
-.news a{color:var(--ink);text-decoration:none}.news a:hover{text-decoration:underline}
+.news a{color:var(--ink);text-decoration:none;overflow-wrap:anywhere;min-width:0}.news a:hover{text-decoration:underline}
