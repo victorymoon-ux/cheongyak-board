@@ -386,11 +386,15 @@
           if (site.lat == null || site.lng == null) return;
           var sm = L.circleMarker([site.lat, site.lng], { radius: 6, color: scolor, weight: 2, fillColor: "#fff", fillOpacity: .95 });
           var p = state.data.profile_summary, loan = Math.max(0, (site.deposit_won || 0) - (p.own_cash_won || 100000000));
-          var pay = site.deposit_won != null ? Math.round(loan * ((p.rates && p.rates.youth_loan) || 0.029) / 12 / 1e4) : null;
-          var pay1 = site.deposit_won != null ? Math.round(loan * 0.01 / 12 / 1e4) : null;
+          var rt = p.rates || {}, over3 = site.deposit_won > (Engine.RULES.POLICY_MAX_DEPOSIT_WON || 300000000);
+          // 보증금 3억 초과면 청년 버팀목·서울시 이자지원 모두 불가 → 은행 금리만 (engine.js baseCost와 같은 규칙)
+          var pay = site.deposit_won != null ? Math.round(loan * (over3 ? (rt.bank_loan || 0.0435) : (rt.youth_loan || 0.029)) / 12 / 1e4) : null;
+          var pay1 = site.deposit_won != null && !over3 ? Math.round((Math.min(loan, rt.support_cap_won || 200000000) * (rt.support_rate != null ? rt.support_rate : 0.01) + Math.max(0, loan - (rt.support_cap_won || 200000000)) * (rt.youth_loan || 0.029)) / 12 / 1e4) : null;
+          var payText = pay == null ? "" : over3 ? "<br>대출 " + won(loan) + " → <b>보증금 3억 초과라 버팀목·이자지원 불가</b> → 은행 " + ((rt.bank_loan || 0.0435) * 100).toFixed(2) + "%: 월 " + pay + "만"
+            : "<br>대출 " + won(loan) + " → 버팀목 월 " + pay + "만 / 서울시 이자지원(1%) 월 " + pay1 + "만";
           sm.bindPopup('<span class="pill ' + ph.k + '">' + esc(ph.text) + "</span><br><b>" + esc(starName(l)) + "</b><br>" + esc(site.name || "") + "<br>" + esc(site.address || "") + "<br>" +
             (site.area_m2 ? "전용 " + site.area_m2 + "㎡(" + py(site.area_m2) + "평)" : "") + (site.rooms ? " 방" + site.rooms : "") + (site.deposit_won != null ? " · 전세 " + won(site.deposit_won) : "") +
-            (pay != null ? "<br>대출 " + won(loan) + " → 버팀목 월 " + pay + "만 / 서울시 이자지원(1%) 월 " + pay1 + "만" : "") +
+            payText +
             '<div class="row" style="margin-top:6px"><a class="btn primary" href="' + esc(l.source_url) + '" target="_blank" rel="noopener">신청 페이지 ↗</a> <button class="btn" type="button" data-jump="' + esc(l.id) + '">카드로 이동</button></div>', { maxWidth: 360 });
           sm.bindTooltip((isBig(l) ? "⭐ " : "") + (site.name || site.address || "").slice(0, 16), { direction: "right", offset: [8, 0], className: "mk-label " + (ph.urgent ? "urgent" : ph.k) });
           sm.addTo(state.mapLayer); bounds.push([site.lat, site.lng]);
