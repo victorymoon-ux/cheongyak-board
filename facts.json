@@ -1,7 +1,15 @@
 {
- "generated": "2026-10-16T11:59:39",
- "today": "2026-10-16",
- "failures": [],
+ "generated": "2026-10-17T14:32:19",
+ "today": "2026-10-17",
+ "failures": [
+  "LH 청약플러스 (POST https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do 실패: HTTPSConnectionPool(host='apply.lh.or.kr', p)",
+  "SH 인터넷청약 (POST https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do 실패: HTTPSConnectionPool(host='www.i-sh.co)",
+  "청년안심주택 (POST https://soco.seoul.go.kr/youth/pgm/home/yohome/bbsListJson.json 실패: HTTPSConnectionPool(host='soco.seoul.go.kr', po)",
+  "청약홈 민간임대 (POST https://www.applyhome.co.kr/ai/aia/selectOtherLttotPblancListView.do 실패: HTTPSConnectionPool(host='www.applyhome.co)",
+  "인천도시공사 iH (GET https://www.ih.co.kr/main/bbs/bbsMsgList.do 실패: HTTPSConnectionPool(host='www.ih.co.kr', port=443): Max retries exce)",
+  "경기주택도시공사 GH (POST https://apply.gh.or.kr/sb/sr/sr7150/selectPbancRentHouseList.do 실패: HTTPSConnectionPool(host='apply.gh.or.kr', port)",
+  "실패한 소스는 이전 수집본으로 보충: lh 56건, sh 7건, soco 40건, applyhome 2건, ih 0건, gh 1건"
+ ],
  "owner": "승리",
  "listings": [
   {
@@ -47,7 +55,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -2,
+   "phase_days": -3,
    "my_status": null,
    "watch": true
   },
@@ -96,7 +104,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -12,
+   "phase_days": -13,
    "my_status": null,
    "watch": true
   },
@@ -142,7 +150,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -5,
+   "phase_days": -6,
    "my_status": null,
    "watch": false
   },
@@ -189,7 +197,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -10,
+   "phase_days": -11,
    "my_status": null,
    "watch": true
   },
@@ -279,7 +287,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -18,
+   "phase_days": -19,
    "my_status": null,
    "watch": true
   },
@@ -325,7 +333,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -2,
+   "phase_days": -3,
    "my_status": null,
    "watch": false
   },
@@ -371,7 +379,7 @@
    "is_new": true,
    "sites": [],
    "phase": "upcoming",
-   "phase_days": 3,
+   "phase_days": 2,
    "my_status": null,
    "watch": false
   },
@@ -417,7 +425,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -2,
+   "phase_days": -3,
    "my_status": null,
    "watch": false
   },
@@ -461,7 +469,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -24,
+   "phase_days": -25,
    "my_status": null,
    "watch": false
   },
@@ -505,7 +513,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -24,
+   "phase_days": -25,
    "my_status": null,
    "watch": false
   },
@@ -552,7 +560,7 @@
    "is_new": true,
    "sites": [],
    "phase": "upcoming",
-   "phase_days": 2,
+   "phase_days": 1,
    "my_status": null,
    "watch": false
   },
@@ -600,7 +608,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -1204,8 +1212,8 @@
      "type": "도시형생활주택"
     }
    ],
-   "phase": "open",
-   "phase_days": 0,
+   "phase": "closed",
+   "phase_days": -1,
    "my_status": null,
    "watch": false
   },
@@ -1251,7 +1259,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -2,
+   "phase_days": -3,
    "my_status": null,
    "watch": true
   },
@@ -1297,7 +1305,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -32,
+   "phase_days": -33,
    "my_status": null,
    "watch": false
   },
@@ -1390,7 +1398,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -4,
+   "phase_days": -5,
    "my_status": null,
    "watch": false
   },
@@ -1436,7 +1444,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -11,
+   "phase_days": -12,
    "my_status": null,
    "watch": false
   },
@@ -1482,7 +1490,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -1,
+   "phase_days": -2,
    "my_status": null,
    "watch": false
   },
@@ -1529,7 +1537,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -1,
+   "phase_days": -2,
    "my_status": null,
    "watch": false
   },
@@ -1576,7 +1584,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -4,
+   "phase_days": -5,
    "my_status": null,
    "watch": false
   },
@@ -1622,7 +1630,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -3,
+   "phase_days": -4,
    "my_status": null,
    "watch": false
   },
@@ -1668,7 +1676,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -1712,7 +1720,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -24,
+   "phase_days": -25,
    "my_status": null,
    "watch": false
   },
@@ -1758,7 +1766,7 @@
    "is_new": true,
    "sites": [],
    "phase": "upcoming",
-   "phase_days": 3,
+   "phase_days": 2,
    "my_status": null,
    "watch": false
   },
@@ -1802,7 +1810,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -15,
+   "phase_days": -16,
    "my_status": null,
    "watch": false
   },
@@ -1846,7 +1854,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -15,
+   "phase_days": -16,
    "my_status": null,
    "watch": false
   },
@@ -1890,7 +1898,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -1,
+   "phase_days": -2,
    "my_status": null,
    "watch": false
   },
@@ -1934,7 +1942,7 @@
    "is_new": true,
    "sites": [],
    "phase": "open",
-   "phase_days": 7,
+   "phase_days": 6,
    "my_status": null,
    "watch": false
   },
@@ -1978,7 +1986,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -23,
+   "phase_days": -24,
    "my_status": null,
    "watch": false
   },
@@ -2022,7 +2030,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -43,
+   "phase_days": -44,
    "my_status": null,
    "watch": false
   },
@@ -2066,7 +2074,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -24,
+   "phase_days": -25,
    "my_status": null,
    "watch": false
   },
@@ -2112,7 +2120,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -4,
+   "phase_days": -5,
    "my_status": null,
    "watch": false
   },
@@ -2158,7 +2166,7 @@
    "is_new": true,
    "sites": [],
    "phase": "upcoming",
-   "phase_days": 3,
+   "phase_days": 2,
    "my_status": null,
    "watch": false
   },
@@ -2202,7 +2210,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -16,
+   "phase_days": -17,
    "my_status": null,
    "watch": false
   },
@@ -2246,7 +2254,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -1,
+   "phase_days": -2,
    "my_status": null,
    "watch": false
   },
@@ -2290,7 +2298,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -24,
+   "phase_days": -25,
    "my_status": null,
    "watch": false
   },
@@ -2334,7 +2342,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -9,
+   "phase_days": -10,
    "my_status": null,
    "watch": false
   },
@@ -2378,7 +2386,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": true
   },
@@ -2422,7 +2430,7 @@
    "is_new": true,
    "sites": [],
    "phase": "open",
-   "phase_days": 6,
+   "phase_days": 5,
    "my_status": null,
    "watch": false
   },
@@ -2466,7 +2474,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -2513,7 +2521,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -11,
+   "phase_days": -12,
    "my_status": null,
    "watch": false
   },
@@ -2557,7 +2565,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -16,
+   "phase_days": -17,
    "my_status": null,
    "watch": false
   },
@@ -2601,7 +2609,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -37,
+   "phase_days": -38,
    "my_status": null,
    "watch": false
   },
@@ -2645,7 +2653,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -37,
+   "phase_days": -38,
    "my_status": null,
    "watch": false
   },
@@ -2691,7 +2699,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -12,
+   "phase_days": -13,
    "my_status": null,
    "watch": false
   },
@@ -2735,7 +2743,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -4,
+   "phase_days": -5,
    "my_status": null,
    "watch": true
   },
@@ -2781,7 +2789,7 @@
    "is_new": true,
    "sites": [],
    "phase": "open",
-   "phase_days": 3,
+   "phase_days": 2,
    "my_status": null,
    "watch": false
   },
@@ -2827,7 +2835,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -2873,7 +2881,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": true
   },
@@ -2919,7 +2927,7 @@
    "is_new": true,
    "sites": [],
    "phase": "upcoming",
-   "phase_days": 3,
+   "phase_days": 2,
    "my_status": null,
    "watch": false
   },
@@ -3007,7 +3015,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -32,
+   "phase_days": -33,
    "my_status": null,
    "watch": false
   },
@@ -3051,7 +3059,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -8,
+   "phase_days": -9,
    "my_status": null,
    "watch": false
   },
@@ -3095,7 +3103,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -44,
+   "phase_days": -45,
    "my_status": null,
    "watch": false
   },
@@ -3139,7 +3147,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -44,
+   "phase_days": -45,
    "my_status": null,
    "watch": false
   },
@@ -3183,7 +3191,7 @@
    "is_new": true,
    "sites": [],
    "phase": "upcoming",
-   "phase_days": 5,
+   "phase_days": 4,
    "my_status": null,
    "watch": true
   },
@@ -3229,7 +3237,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -44,
+   "phase_days": -45,
    "my_status": null,
    "watch": false
   },
@@ -3275,7 +3283,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -44,
+   "phase_days": -45,
    "my_status": null,
    "watch": false
   },
@@ -3319,7 +3327,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -10,
+   "phase_days": -11,
    "my_status": null,
    "watch": true
   },
@@ -3363,7 +3371,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -1,
+   "phase_days": -2,
    "my_status": null,
    "watch": true
   },
@@ -3407,7 +3415,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -32,
+   "phase_days": -33,
    "my_status": null,
    "watch": false
   },
@@ -3451,7 +3459,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -11,
+   "phase_days": -12,
    "my_status": null,
    "watch": true
   },
@@ -3495,7 +3503,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -3539,7 +3547,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -3583,7 +3591,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": true
   },
@@ -3627,7 +3635,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -3671,7 +3679,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -16,
+   "phase_days": -17,
    "my_status": null,
    "watch": false
   },
@@ -3715,7 +3723,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -24,
+   "phase_days": -25,
    "my_status": null,
    "watch": false
   },
@@ -3727,17 +3735,19 @@
    "name": "[정정공고]인천시 검단지역 영구임대주택 예비입주자 모집공고(2026.08.20)",
    "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020626&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
    "is_private": false,
-   "address": null,
+   "address": "인천광역시 검단구 서로3로 49",
    "gu": null,
    "sido": "인천",
-   "sigungu": null,
-   "lat": null,
-   "lng": null,
-   "station": null,
-   "station_lat": null,
-   "station_lng": null,
-   "station_lines": [],
-   "station_walk_min": null,
+   "sigungu": "검단구",
+   "lat": 37.5844318,
+   "lng": 126.7065953,
+   "station": "아라",
+   "station_lat": 37.592259,
+   "station_lng": 126.713301,
+   "station_lines": [
+    "INCHEON1"
+   ],
+   "station_walk_min": 14,
    "units_youth": null,
    "units_general": null,
    "units_total": null,
@@ -3759,7 +3769,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -44,
+   "phase_days": -45,
    "my_status": null,
    "watch": false
   },
@@ -3803,7 +3813,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -44,
+   "phase_days": -45,
    "my_status": null,
    "watch": false
   },
@@ -3847,7 +3857,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -44,
+   "phase_days": -45,
    "my_status": null,
    "watch": false
   },
@@ -3891,7 +3901,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -44,
+   "phase_days": -45,
    "my_status": null,
    "watch": false
   },
@@ -3903,17 +3913,19 @@
    "name": "인천시 검단지역 영구임대주택 예비입주자 모집공고(2026.08.20)",
    "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020595&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
    "is_private": false,
-   "address": null,
+   "address": "인천광역시 검단구 서로3로 49",
    "gu": null,
    "sido": "인천",
-   "sigungu": null,
-   "lat": null,
-   "lng": null,
-   "station": null,
-   "station_lat": null,
-   "station_lng": null,
-   "station_lines": [],
-   "station_walk_min": null,
+   "sigungu": "검단구",
+   "lat": 37.5844318,
+   "lng": 126.7065953,
+   "station": "아라",
+   "station_lat": 37.592259,
+   "station_lng": 126.713301,
+   "station_lines": [
+    "INCHEON1"
+   ],
+   "station_walk_min": 14,
    "units_youth": null,
    "units_general": null,
    "units_total": null,
@@ -3935,7 +3947,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -44,
+   "phase_days": -45,
    "my_status": null,
    "watch": false
   },
@@ -3979,7 +3991,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -44,
+   "phase_days": -45,
    "my_status": null,
    "watch": false
   },
@@ -4023,7 +4035,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -44,
+   "phase_days": -45,
    "my_status": null,
    "watch": false
   },
@@ -4067,7 +4079,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -15,
+   "phase_days": -16,
    "my_status": null,
    "watch": false
   },
@@ -4110,8 +4122,8 @@
    "posted": "2026-09-21",
    "is_new": true,
    "sites": [],
-   "phase": "open",
-   "phase_days": 0,
+   "phase": "closed",
+   "phase_days": -1,
    "my_status": null,
    "watch": false
   },
@@ -4155,7 +4167,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -16,
+   "phase_days": -17,
    "my_status": null,
    "watch": false
   },
@@ -4199,7 +4211,7 @@
    "is_new": true,
    "sites": [],
    "phase": "open",
-   "phase_days": 12,
+   "phase_days": 11,
    "my_status": null,
    "watch": false
   },
@@ -4243,7 +4255,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -16,
+   "phase_days": -17,
    "my_status": null,
    "watch": false
   },
@@ -4287,7 +4299,7 @@
    "is_new": true,
    "sites": [],
    "phase": "open",
-   "phase_days": 12,
+   "phase_days": 11,
    "my_status": null,
    "watch": false
   },
@@ -4331,7 +4343,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -15,
+   "phase_days": -16,
    "my_status": null,
    "watch": false
   },
@@ -4375,7 +4387,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -16,
+   "phase_days": -17,
    "my_status": null,
    "watch": false
   },
@@ -4419,7 +4431,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -16,
+   "phase_days": -17,
    "my_status": null,
    "watch": false
   },
@@ -4463,7 +4475,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -4507,7 +4519,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -16,
+   "phase_days": -17,
    "my_status": null,
    "watch": false
   },
@@ -4551,7 +4563,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -23,
+   "phase_days": -24,
    "my_status": null,
    "watch": false
   },
@@ -4595,7 +4607,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -23,
+   "phase_days": -24,
    "my_status": null,
    "watch": false
   },
@@ -4639,7 +4651,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -16,
+   "phase_days": -17,
    "my_status": null,
    "watch": false
   },
@@ -4683,7 +4695,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -24,
+   "phase_days": -25,
    "my_status": null,
    "watch": false
   },
@@ -4727,7 +4739,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -15,
+   "phase_days": -16,
    "my_status": null,
    "watch": false
   },
@@ -4771,7 +4783,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -28,
+   "phase_days": -29,
    "my_status": null,
    "watch": false
   },
@@ -4815,7 +4827,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -37,
+   "phase_days": -38,
    "my_status": null,
    "watch": false
   },
@@ -4859,7 +4871,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -37,
+   "phase_days": -38,
    "my_status": null,
    "watch": false
   },
@@ -4903,7 +4915,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -37,
+   "phase_days": -38,
    "my_status": null,
    "watch": false
   },
@@ -4947,7 +4959,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -37,
+   "phase_days": -38,
    "my_status": null,
    "watch": false
   },
@@ -4991,7 +5003,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -35,
+   "phase_days": -36,
    "my_status": null,
    "watch": false
   },
@@ -5035,7 +5047,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -42,
+   "phase_days": -43,
    "my_status": null,
    "watch": false
   },
@@ -5079,7 +5091,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -44,
+   "phase_days": -45,
    "my_status": null,
    "watch": false
   },
@@ -5211,7 +5223,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -5255,7 +5267,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -31,
+   "phase_days": -32,
    "my_status": null,
    "watch": false
   },
@@ -5306,9 +5318,17 @@
  ],
  "news": [
   {
+   "url": "https://blog.naver.com/parkjimin1992/224197886830",
+   "title": "건대입구역 더포디엄830 청년주택 추가모집공고｜청약조건·입주자격·구비서류 총정리",
+   "date": "2026-02-27",
+   "source": "blog",
+   "query": "더포디엄830 선착순 후기",
+   "first_seen": "2026-10-17"
+  },
+  {
    "url": "https://blog.naver.com/tjsrud9306/224429044651",
    "title": "사줄사람 선착순 한명 바로 당신입니다 쑤니딸 맞다 애매하니까 표정에 다 나온다 ㄷㄷ 고개 각도부터 이미 맘에안듬 비즈 욕심 못버려서 입어봤는데 다들 아니래~ 저 헬스... 짜줌마!!!!!!마에스트로!!!!!! 용달저씨 언제와용 이러고 있는데 경비아저씨한테 덕담들음 양가 아버님들은 절대 안해주려는걸 아저씨가 해냄 머라셧더라 ㅠㅠ 양보하고 미러링이고 싸우지말라 암튼...",
-   "date": "2026-10-02",
+   "date": "2026-09-26",
    "source": "blog",
    "query": "마에스트로 선착순 후기",
    "first_seen": "2026-10-16"
@@ -5348,7 +5368,7 @@
   {
    "url": "https://blog.naver.com/youthzipnote/224415084991",
    "title": "[추가모집] 청년안심주택 신림역 최강타워 (2026.09.19~09.21)",
-   "date": "2026-09-18",
+   "date": "2026-09-19",
    "source": "blog",
    "query": "최강타워 잔여세대",
    "first_seen": "2026-10-14"
@@ -5777,14 +5797,6 @@
    "url": "https://blog.naver.com/doradorung/223953928716",
    "title": "관악구 청년안심주택 서울대입구역 BX201 15타입 특공 공실 25/8/4",
    "date": "2025-07-31",
-   "source": "blog",
-   "query": "RSS doradorung",
-   "first_seen": "2026-10-13"
-  },
-  {
-   "url": "https://blog.naver.com/doradorung/223950843699",
-   "title": "용산 청년안심주택 공실 추가모집 서울역 어반허브 서울스테이션 25/7/28~7/29",
-   "date": "2025-07-29",
    "source": "blog",
    "query": "RSS doradorung",
    "first_seen": "2026-10-13"
