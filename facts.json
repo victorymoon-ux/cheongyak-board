@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-17T14:32:19",
- "today": "2026-10-17",
+ "generated": "2026-10-18T12:31:07",
+ "today": "2026-10-18",
  "failures": [
   "LH 청약플러스 (POST https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do 실패: HTTPSConnectionPool(host='apply.lh.or.kr', p)",
   "SH 인터넷청약 (POST https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do 실패: HTTPSConnectionPool(host='www.i-sh.co)",
@@ -55,7 +55,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -3,
+   "phase_days": -4,
    "my_status": null,
    "watch": true
   },
@@ -104,7 +104,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -13,
+   "phase_days": -14,
    "my_status": null,
    "watch": true
   },
@@ -150,7 +150,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -6,
+   "phase_days": -7,
    "my_status": null,
    "watch": false
   },
@@ -197,7 +197,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -11,
+   "phase_days": -12,
    "my_status": null,
    "watch": true
   },
@@ -287,7 +287,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -19,
+   "phase_days": -20,
    "my_status": null,
    "watch": true
   },
@@ -333,7 +333,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -3,
+   "phase_days": -4,
    "my_status": null,
    "watch": false
   },
@@ -379,7 +379,7 @@
    "is_new": true,
    "sites": [],
    "phase": "upcoming",
-   "phase_days": 2,
+   "phase_days": 1,
    "my_status": null,
    "watch": false
   },
@@ -425,7 +425,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -3,
+   "phase_days": -4,
    "my_status": null,
    "watch": false
   },
@@ -469,7 +469,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -513,7 +513,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -559,7 +559,7 @@
    "posted": "2026-10-15",
    "is_new": true,
    "sites": [],
-   "phase": "upcoming",
+   "phase": "open",
    "phase_days": 1,
    "my_status": null,
    "watch": false
@@ -608,7 +608,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -26,
+   "phase_days": -27,
    "my_status": null,
    "watch": false
   },
@@ -1213,7 +1213,7 @@
     }
    ],
    "phase": "closed",
-   "phase_days": -1,
+   "phase_days": -2,
    "my_status": null,
    "watch": false
   },
@@ -1259,7 +1259,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -3,
+   "phase_days": -4,
    "my_status": null,
    "watch": true
   },
@@ -1305,7 +1305,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -33,
+   "phase_days": -34,
    "my_status": null,
    "watch": false
   },
@@ -1398,7 +1398,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -5,
+   "phase_days": -6,
    "my_status": null,
    "watch": false
   },
@@ -1444,7 +1444,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -12,
+   "phase_days": -13,
    "my_status": null,
    "watch": false
   },
@@ -1490,7 +1490,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -2,
+   "phase_days": -3,
    "my_status": null,
    "watch": false
   },
@@ -1537,7 +1537,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -2,
+   "phase_days": -3,
    "my_status": null,
    "watch": false
   },
@@ -1584,7 +1584,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -5,
+   "phase_days": -6,
    "my_status": null,
    "watch": false
   },
@@ -1630,7 +1630,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -4,
+   "phase_days": -5,
    "my_status": null,
    "watch": false
   },
@@ -1676,7 +1676,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -26,
+   "phase_days": -27,
    "my_status": null,
    "watch": false
   },
@@ -1720,7 +1720,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -1766,7 +1766,7 @@
    "is_new": true,
    "sites": [],
    "phase": "upcoming",
-   "phase_days": 2,
+   "phase_days": 1,
    "my_status": null,
    "watch": false
   },
@@ -1810,7 +1810,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -16,
+   "phase_days": -17,
    "my_status": null,
    "watch": false
   },
@@ -1854,7 +1854,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -16,
+   "phase_days": -17,
    "my_status": null,
    "watch": false
   },
@@ -1898,7 +1898,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -2,
+   "phase_days": -3,
    "my_status": null,
    "watch": false
   },
@@ -1942,7 +1942,7 @@
    "is_new": true,
    "sites": [],
    "phase": "open",
-   "phase_days": 6,
+   "phase_days": 5,
    "my_status": null,
    "watch": false
   },
@@ -1986,7 +1986,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -24,
+   "phase_days": -25,
    "my_status": null,
    "watch": false
   },
@@ -2030,7 +2030,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -44,
+   "phase_days": -45,
    "my_status": null,
    "watch": false
   },
@@ -2074,7 +2074,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -2120,7 +2120,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -5,
+   "phase_days": -6,
    "my_status": null,
    "watch": false
   },
@@ -2166,7 +2166,7 @@
    "is_new": true,
    "sites": [],
    "phase": "upcoming",
-   "phase_days": 2,
+   "phase_days": 1,
    "my_status": null,
    "watch": false
   },
@@ -2210,7 +2210,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -17,
+   "phase_days": -18,
    "my_status": null,
    "watch": false
   },
@@ -2254,7 +2254,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -2,
+   "phase_days": -3,
    "my_status": null,
    "watch": false
   },
@@ -2298,7 +2298,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -2342,7 +2342,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -10,
+   "phase_days": -11,
    "my_status": null,
    "watch": false
   },
@@ -2386,7 +2386,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -26,
+   "phase_days": -27,
    "my_status": null,
    "watch": true
   },
@@ -2430,7 +2430,7 @@
    "is_new": true,
    "sites": [],
    "phase": "open",
-   "phase_days": 5,
+   "phase_days": 4,
    "my_status": null,
    "watch": false
   },
@@ -2474,7 +2474,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -26,
+   "phase_days": -27,
    "my_status": null,
    "watch": false
   },
@@ -2521,7 +2521,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -12,
+   "phase_days": -13,
    "my_status": null,
    "watch": false
   },
@@ -2565,7 +2565,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -17,
+   "phase_days": -18,
    "my_status": null,
    "watch": false
   },
@@ -2609,7 +2609,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -38,
+   "phase_days": -39,
    "my_status": null,
    "watch": false
   },
@@ -2653,7 +2653,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -38,
+   "phase_days": -39,
    "my_status": null,
    "watch": false
   },
@@ -2699,7 +2699,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -13,
+   "phase_days": -14,
    "my_status": null,
    "watch": false
   },
@@ -2743,7 +2743,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -5,
+   "phase_days": -6,
    "my_status": null,
    "watch": true
   },
@@ -2789,7 +2789,7 @@
    "is_new": true,
    "sites": [],
    "phase": "open",
-   "phase_days": 2,
+   "phase_days": 1,
    "my_status": null,
    "watch": false
   },
@@ -2835,7 +2835,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -26,
+   "phase_days": -27,
    "my_status": null,
    "watch": false
   },
@@ -2881,7 +2881,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -26,
+   "phase_days": -27,
    "my_status": null,
    "watch": true
   },
@@ -2927,7 +2927,7 @@
    "is_new": true,
    "sites": [],
    "phase": "upcoming",
-   "phase_days": 2,
+   "phase_days": 1,
    "my_status": null,
    "watch": false
   },
@@ -3015,7 +3015,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -33,
+   "phase_days": -34,
    "my_status": null,
    "watch": false
   },
@@ -3059,7 +3059,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -9,
+   "phase_days": -10,
    "my_status": null,
    "watch": false
   },
@@ -3103,7 +3103,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -45,
+   "phase_days": -46,
    "my_status": null,
    "watch": false
   },
@@ -3147,7 +3147,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -45,
+   "phase_days": -46,
    "my_status": null,
    "watch": false
   },
@@ -3191,7 +3191,7 @@
    "is_new": true,
    "sites": [],
    "phase": "upcoming",
-   "phase_days": 4,
+   "phase_days": 3,
    "my_status": null,
    "watch": true
   },
@@ -3237,7 +3237,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -45,
+   "phase_days": -46,
    "my_status": null,
    "watch": false
   },
@@ -3283,7 +3283,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -45,
+   "phase_days": -46,
    "my_status": null,
    "watch": false
   },
@@ -3327,7 +3327,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -11,
+   "phase_days": -12,
    "my_status": null,
    "watch": true
   },
@@ -3371,7 +3371,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -2,
+   "phase_days": -3,
    "my_status": null,
    "watch": true
   },
@@ -3415,7 +3415,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -33,
+   "phase_days": -34,
    "my_status": null,
    "watch": false
   },
@@ -3459,7 +3459,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -12,
+   "phase_days": -13,
    "my_status": null,
    "watch": true
   },
@@ -3503,7 +3503,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -26,
+   "phase_days": -27,
    "my_status": null,
    "watch": false
   },
@@ -3547,7 +3547,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -26,
+   "phase_days": -27,
    "my_status": null,
    "watch": false
   },
@@ -3591,7 +3591,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -26,
+   "phase_days": -27,
    "my_status": null,
    "watch": true
   },
@@ -3635,7 +3635,7 @@
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -26,
+   "phase_days": -27,
    "my_status": null,
    "watch": false
   },
@@ -3679,7 +3679,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -17,
+   "phase_days": -18,
    "my_status": null,
    "watch": false
   },
@@ -3723,7 +3723,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -3769,7 +3769,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -45,
+   "phase_days": -46,
    "my_status": null,
    "watch": false
   },
@@ -3813,7 +3813,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -45,
+   "phase_days": -46,
    "my_status": null,
    "watch": false
   },
@@ -3857,7 +3857,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -45,
+   "phase_days": -46,
    "my_status": null,
    "watch": false
   },
@@ -3901,7 +3901,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -45,
+   "phase_days": -46,
    "my_status": null,
    "watch": false
   },
@@ -3947,7 +3947,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -45,
+   "phase_days": -46,
    "my_status": null,
    "watch": false
   },
@@ -3991,7 +3991,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -45,
+   "phase_days": -46,
    "my_status": null,
    "watch": false
   },
@@ -4035,7 +4035,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -45,
+   "phase_days": -46,
    "my_status": null,
    "watch": false
   },
@@ -4079,7 +4079,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -16,
+   "phase_days": -17,
    "my_status": null,
    "watch": false
   },
@@ -4123,7 +4123,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -1,
+   "phase_days": -2,
    "my_status": null,
    "watch": false
   },
@@ -4167,7 +4167,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -17,
+   "phase_days": -18,
    "my_status": null,
    "watch": false
   },
@@ -4211,7 +4211,7 @@
    "is_new": true,
    "sites": [],
    "phase": "open",
-   "phase_days": 11,
+   "phase_days": 10,
    "my_status": null,
    "watch": false
   },
@@ -4255,7 +4255,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -17,
+   "phase_days": -18,
    "my_status": null,
    "watch": false
   },
@@ -4299,7 +4299,7 @@
    "is_new": true,
    "sites": [],
    "phase": "open",
-   "phase_days": 11,
+   "phase_days": 10,
    "my_status": null,
    "watch": false
   },
@@ -4343,7 +4343,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -16,
+   "phase_days": -17,
    "my_status": null,
    "watch": false
   },
@@ -4387,7 +4387,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -17,
+   "phase_days": -18,
    "my_status": null,
    "watch": false
   },
@@ -4431,7 +4431,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -17,
+   "phase_days": -18,
    "my_status": null,
    "watch": false
   },
@@ -4475,7 +4475,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -26,
+   "phase_days": -27,
    "my_status": null,
    "watch": false
   },
@@ -4519,7 +4519,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -17,
+   "phase_days": -18,
    "my_status": null,
    "watch": false
   },
@@ -4563,7 +4563,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -24,
+   "phase_days": -25,
    "my_status": null,
    "watch": false
   },
@@ -4607,7 +4607,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -24,
+   "phase_days": -25,
    "my_status": null,
    "watch": false
   },
@@ -4651,7 +4651,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -17,
+   "phase_days": -18,
    "my_status": null,
    "watch": false
   },
@@ -4695,7 +4695,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -25,
+   "phase_days": -26,
    "my_status": null,
    "watch": false
   },
@@ -4739,7 +4739,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -16,
+   "phase_days": -17,
    "my_status": null,
    "watch": false
   },
@@ -4783,7 +4783,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -29,
+   "phase_days": -30,
    "my_status": null,
    "watch": false
   },
@@ -4827,7 +4827,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -38,
+   "phase_days": -39,
    "my_status": null,
    "watch": false
   },
@@ -4871,7 +4871,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -38,
+   "phase_days": -39,
    "my_status": null,
    "watch": false
   },
@@ -4915,7 +4915,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -38,
+   "phase_days": -39,
    "my_status": null,
    "watch": false
   },
@@ -4959,7 +4959,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -38,
+   "phase_days": -39,
    "my_status": null,
    "watch": false
   },
@@ -5003,7 +5003,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -36,
+   "phase_days": -37,
    "my_status": null,
    "watch": false
   },
@@ -5047,7 +5047,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -43,
+   "phase_days": -44,
    "my_status": null,
    "watch": false
   },
@@ -5091,7 +5091,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -45,
+   "phase_days": -46,
    "my_status": null,
    "watch": false
   },
@@ -5223,7 +5223,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -26,
+   "phase_days": -27,
    "my_status": null,
    "watch": false
   },
@@ -5267,7 +5267,7 @@
    "is_new": true,
    "sites": [],
    "phase": "closed",
-   "phase_days": -32,
+   "phase_days": -33,
    "my_status": null,
    "watch": false
   },
