@@ -245,3 +245,5 @@ body.owner .prof{display:none}
 .news .new{font-size:11px;font-weight:800;color:#fff;background:var(--red,#e5484d);padding:1px 6px;border-radius:6px}
 .news .d{color:var(--ink2);font-size:12px;white-space:nowrap}
 .news a{color:var(--ink);text-decoration:none;overflow-wrap:anywhere;min-width:0}.news a:hover{text-decoration:underline}
+
+.schedule{margin:12px 0;padding:12px;background:var(--bg,#f5f7fa);border-radius:8px;font-size:13px;line-height:1.65}.schedule ul{margin:6px 0;padding-left:18px}.schedule li{margin:5px 0;overflow-wrap:anywhere}

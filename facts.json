@@ -268,8 +268,8 @@
    "convert_note": "임대료를 보증금으로 전환하여 납부할 수 있으며, 「주택법 시행령」 제82조에 따라 토지임대료를 보증금으로 전환하려는 경우 그 보증금을 산정할 때 / • 청년 특별공급의 경우 재당첨제한 적용주택(이전기관 종사자 특별공급 주택, 분양가상한제 적용주택, 분양전환공공임대주택, 토지임대주택, 투기과열지구 및 / • 신혼부부·생애최초·신생아 특별공급 및 일반공급의 경우 재당첨제한 적용주택(이전기관 종사자 특별공급 주택, 분양가상한제 적용주택, 분양전환공공임대주택,",
    "max_years": 40,
    "end_year": null,
-   "apply_start": "2026-11-02",
-   "apply_end": "2026-11-04",
+   "apply_start": "2026-10-26",
+   "apply_end": "2026-11-06",
    "announce_date": "2026-11-26",
    "movein": "2027-05",
    "pdf_url": "https://www.i-sh.co.kr/com/file/innoFD.do?brdId=GS0401&seq=311656&fileTp=A&fileSeq=1",
@@ -277,9 +277,63 @@
    "is_new": true,
    "sites": [],
    "phase": "upcoming",
-   "phase_days": 11,
+   "phase_days": 4,
    "my_status": null,
-   "watch": true
+   "watch": true,
+   "apply_start_time": "10:00",
+   "apply_end_time": "17:00",
+   "application_periods": [
+    {
+     "label": "사전청약 당첨자",
+     "start": "2026-10-26",
+     "end": "2026-10-27",
+     "start_time": "10:00",
+     "end_time": "17:00",
+     "note": "인터넷접수 기준. 방문인터넷접수는 유형별 접수기간 중 10:00~16:00 도착자에 한함."
+    },
+    {
+     "label": "특별공급 (청년·신혼부부·생애최초·신생아)",
+     "start": "2026-11-02",
+     "end": "2026-11-03",
+     "start_time": "10:00",
+     "end_time": "17:00",
+     "note": "인터넷접수 기준. 방문인터넷접수는 유형별 접수기간 중 10:00~16:00 도착자에 한함."
+    },
+    {
+     "label": "일반공급 1순위 (서울 2년 이상)",
+     "start": "2026-11-04",
+     "end": "2026-11-04",
+     "start_time": "10:00",
+     "end_time": "17:00",
+     "note": "인터넷접수 기준. 방문인터넷접수는 유형별 접수기간 중 10:00~16:00 도착자에 한함."
+    },
+    {
+     "label": "일반공급 1순위 (서울 2년 미만·인천·경기)",
+     "start": "2026-11-05",
+     "end": "2026-11-05",
+     "start_time": "10:00",
+     "end_time": "17:00",
+     "note": "인터넷접수 기준. 방문인터넷접수는 유형별 접수기간 중 10:00~16:00 도착자에 한함."
+    },
+    {
+     "label": "일반공급 2순위",
+     "start": "2026-11-06",
+     "end": "2026-11-06",
+     "start_time": "10:00",
+     "end_time": "17:00",
+     "note": "인터넷접수 기준. 방문인터넷접수는 유형별 접수기간 중 10:00~16:00 도착자에 한함."
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "winner",
+     "date": "2026-11-26",
+     "time": "16:00",
+     "after": true
+    }
+   ],
+   "schedule_source": "https://youth.seoul.go.kr/api/sh/view.do?key=2309250014&sn=1",
+   "schedule_verified_at": "2026-10-22"
   },
   {
    "id": "soco:6699",
@@ -2994,7 +3048,7 @@
    "end_year": null,
    "apply_start": "2026-10-21",
    "apply_end": "2026-10-22",
-   "announce_date": "2026-10-23",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=3c3e9c3ca61349da8e412f11d6c4aae0&fileSn=1",
    "posted": "2026-10-15",
@@ -3003,7 +3057,28 @@
    "phase": "open",
    "phase_days": 0,
    "my_status": null,
-   "watch": true
+   "watch": true,
+   "apply_start_time": "00:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "일반공급",
+     "start": "2026-10-21",
+     "end": "2026-10-22",
+     "start_time": "00:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-23",
+     "time": "12:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6696&menuNo=400008",
+   "schedule_verified_at": "2026-10-22"
   },
   {
    "id": "ih:4468",
@@ -3566,7 +3641,7 @@
    "end_year": null,
    "apply_start": "2026-11-02",
    "apply_end": "2026-11-04",
-   "announce_date": "2026-11-16",
+   "announce_date": "2027-04-08",
    "movein": "2028-02",
    "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=69040764",
    "posted": "2026-10-19",
@@ -3575,7 +3650,35 @@
    "phase": "upcoming",
    "phase_days": 11,
    "my_status": null,
-   "watch": false
+   "watch": false,
+   "apply_start_time": "10:00",
+   "apply_end_time": "16:00",
+   "application_periods": [
+    {
+     "label": "인터넷·모바일 청약",
+     "start": "2026-11-02",
+     "end": "2026-11-04",
+     "start_time": "10:00",
+     "end_time": "16:00",
+     "note": "일반·우선공급 현장접수: 11/3 10:00~16:00, 점심 12:00~13:00 제외. 기존거주자는 별도 안내문 확인."
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-11-16",
+     "time": "17:00",
+     "after": true
+    },
+    {
+     "kind": "winner",
+     "date": "2027-04-08",
+     "time": "17:00",
+     "after": true
+    }
+   ],
+   "schedule_source": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=69040764",
+   "schedule_verified_at": "2026-10-22"
   },
   {
    "id": "lh:2015122300020744",

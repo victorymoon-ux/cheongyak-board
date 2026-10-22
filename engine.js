@@ -1,9 +1,9 @@
 /* engine.js — 브라우저에서 각자 조건(profile)으로 공고(facts)를 계산한다.
    Python(cheongyak/rules.py·cost.py·score.py·eligibility.py)과 같은 규칙. 바꾸면 양쪽 다 + tests/test_engine.py 로 교차 확인. */
 (function (root, factory) {
-  if (typeof module === "object" && module.exports) module.exports = factory();
-  else root.Engine = factory();
-})(typeof self !== "undefined" ? self : this, function () {
+  if (typeof module === "object" && module.exports) module.exports = factory(require("./schedule.js"));
+  else root.Engine = factory(root.Schedule);
+})(typeof self !== "undefined" ? self : this, function (Schedule) {
   "use strict";
   var R = {
     M2_PER_PYEONG: 3.3058,
@@ -149,7 +149,7 @@
   // ---- 필터 ----
   function applyFilters(l, profile, ctx, today) {
     var reasons = [], unscored = [];
-    if (l.apply_end && l.apply_end < today) return ["closed", ["접수 종료 (" + l.apply_end + ")"]];
+    if (Schedule.phase(l, today === Schedule.today() ? new Date() : new Date(today + "T12:00:00+09:00")).k === "closed") return ["closed", ["접수 종료 (" + l.apply_end + ")"]];
     if (ctx.region === null) return ["rejected", ["내 지역 목록에 없음 (" + (l.sigungu || l.sido || "지역 미확인") + ")"]];
     if (!l.sigungu && !l.gu) unscored.push("구 미확인");
     var minM2 = profile.min_pyeong * R.M2_PER_PYEONG;
@@ -209,7 +209,7 @@
   }
 
   function evaluate(l, profile, stations, today) {
-    today = today || new Date().toISOString().slice(0, 10);
+    today = today || Schedule.today();
     var tr = (l.lat != null || l.station_lat != null) ? transitEstimate(l, profile, stations) : null;
     var ctx = { transit_min: tr ? tr.minutes : null, region: regionPoints(l, profile), monthly: monthlyCost(l, profile) };
     var fs = applyFilters(l, profile, ctx, today);

@@ -19,47 +19,27 @@
   }
   function man(v) { return v == null ? null : Math.round(v / 1e4); }
   function py(m2) { return m2 == null ? null : Math.round(m2 / 3.3058 * 10) / 10; }
-  function todayISO() { var n = new Date(); return n.getFullYear() + "-" + String(n.getMonth() + 1).padStart(2, "0") + "-" + String(n.getDate()).padStart(2, "0"); }
+  function todayISO() { return Schedule.today(new Date()); }
   function fmtD(iso) { if (!iso) return "?"; var d = new Date(iso); return (d.getUTCMonth() + 1) + "/" + d.getUTCDate() + "(" + W[d.getUTCDay()] + ")"; }
   function daysFrom(iso) { return Math.round((new Date(iso) - new Date(todayISO())) / 864e5); }
-  function phaseOf(l) {
-    var t = todayISO();
-    if (!l.apply_start && !l.apply_end) return { k: "unknown", text: "접수기간 확인 필요", sub: "" };
-    if (l.apply_start && t < l.apply_start) { var n = daysFrom(l.apply_start); return { k: "upcoming", text: "접수 예정 · " + fmtD(l.apply_start) + " 시작", sub: n === 1 ? "내일 시작" : n + "일 후 시작 · " + fmtD(l.apply_start) + "~" + fmtD(l.apply_end) }; }
-    if (l.apply_end && t > l.apply_end) { var a = l.announce_date ? daysFrom(l.announce_date) : null; return { k: "closed", text: "접수 종료 · " + fmtD(l.apply_end), sub: l.announce_date ? (a >= 0 ? "발표 " + fmtD(l.announce_date) + " (" + (a === 0 ? "오늘" : a + "일 후") + ")" : "발표 완료 " + fmtD(l.announce_date)) : "발표일 미확인" }; }
-    var d = l.apply_end ? daysFrom(l.apply_end) : null;
-    return { k: "open", urgent: d != null && d <= URGENT_DAYS, text: (d != null && d <= URGENT_DAYS ? "마감 임박 · " : "접수 중 · ") + (d == null ? "마감 미확인" : d === 0 ? "오늘 마감" : "마감까지 D-" + d), sub: (l.apply_start ? fmtD(l.apply_start) : "?") + " ~ " + (l.apply_end ? fmtD(l.apply_end) + " 마감" : "?") };
+  function phaseOf(l) { return Schedule.phase(l); }
+  function scheduleHTML(l) {
+    var rows = Schedule.periods(l).map(function(p) { return '<li><b>' + esc(p.label || '접수') + '</b> · ' + esc(Schedule.range(p)) + (p.note ? '<br>' + esc(p.note) : '') + '</li>'; });
+    Schedule.announcements(l).forEach(function(a) { rows.push('<li><b>' + esc(Schedule.label(a)) + '</b> · ' + esc(Schedule.at(a.date, a.time) + (a.after ? ' 이후' : '')) + '</li>'); });
+    var source = l.schedule_source;
+    return '<div class="schedule"><b>공급유형별 일정 · 한국시간(KST)</b><ul>' + rows.join('') + '</ul>' + (source && /^https:\/\//.test(source) ? '<a href="' + esc(source) + '" target="_blank" rel="noopener">일정 공식 근거 ↗</a>' : '') + '</div>';
   }
   function mineOf(l) {
     var m = state.marks[l.id]; if (!m || !m.status) return null;
     var ph = phaseOf(l); var label = MY[m.status] || m.status;
-    if (m.status === "applied" && ph.k === "closed") label = "지원함 → 결과 대기중" + (l.announce_date ? " · 발표 " + fmtD(l.announce_date) : "");
+    if (m.status === "applied" && ph.k === "closed") label = "지원함 → 결과 대기중" + (Schedule.announcements(l).length ? " · " + Schedule.announcements(l).map(function(a) { return Schedule.label(a) + " " + Schedule.at(a.date, a.time) + (a.after ? " 이후" : ""); }).join(" / ") : "");
     return { status: m.status, label: label, memo: m.memo || "" };
   }
-  function timeline(l) {
-    var pts = [["공고", l.posted], ["접수 시작", l.apply_start], ["접수 마감", l.apply_end], ["발표", l.announce_date]].filter(function (p) { return p[1]; });
-    if (pts.length < 2) return "";
-    var t0 = new Date(pts[0][1]).getTime(), t1 = new Date(pts[pts.length - 1][1]).getTime(); if (t1 <= t0) return "";
-    var x = function (iso) { return Math.max(0, Math.min(100, (new Date(iso).getTime() - t0) / (t1 - t0) * 100)); };
-    // 공고일이 접수 시작과 가까우면(15% 이내) 라벨 겹침 방지로 공고 점을 숨긴다
-    if (pts[0][0] === "공고" && pts[1] && Math.abs(x(pts[1][1]) - x(pts[0][1])) < 15) pts.shift();
-    var today = new Date(todayISO()).getTime(); var tx = (today - t0) / (t1 - t0) * 100;
-    var seg = ""; if (l.apply_start && l.apply_end) seg = '<div class="seg' + (todayISO() > l.apply_end ? " closed" : (phaseOf(l).urgent ? " urgent" : (phaseOf(l).k === "upcoming" ? " upcoming" : ""))) + '" style="left:' + x(l.apply_start) + '%;width:' + (x(l.apply_end) - x(l.apply_start)) + '%"></div>';
-    var lastX = -100, row = 0;
-    var html = pts.map(function (p) {
-      var px = x(p[1]); row = (px - lastX < 16) ? 1 - row : 0; lastX = px;
-      return '<div class="pt' + (p[0] === "발표" ? " ann" : (new Date(p[1]).getTime() <= today ? " on" : "")) + '" style="left:' + px + '%"></div>' +
-        '<div class="lb r' + row + '" style="left:' + px + '%"><b>' + p[0] + "</b>" + fmtD(p[1]) + "</div>";
-    }).join("");
-    return '<div class="tl"><div class="bar"></div>' + seg + html + (tx >= 0 && tx <= 100 ? '<div class="today" style="left:' + tx + '%"></div>' : "") + "</div>";
-  }
+  function timeline(l) { return scheduleHTML(l); }
   function dday(l) {
-    if (!l.apply_end) return { t: "마감 [확인 필요]", c: "gray", d: 9999 };
-    var d = Math.round((new Date(l.apply_end) - new Date(todayISO())) / 864e5);
-    var period = (l.apply_start || "?").slice(5).replace("-", "/") + "~" + l.apply_end.slice(5).replace("-", "/");
-    if (d < 0) return { t: "마감 · " + period, c: "gray", d: d };
-    if (d === 0) return { t: "오늘 마감 · " + period, c: "rose", d: d };
-    return { t: "D-" + d + " · " + period, c: d <= 3 ? "rose" : d <= 7 ? "amber" : "navy", d: d };
+    var ph = phaseOf(l), p = ph.period, end = p.end;
+    var d = end ? Math.round((new Date(end) - new Date(todayISO())) / 864e5) : 9999;
+    return { t: ph.text + " · " + ph.sub, c: ph.k === "closed" ? "gray" : ph.urgent ? "rose" : "navy", d: d };
   }
   function typeClass(t) { return /민간/.test(t) ? "navy" : /행복|매입|공공|국민|전세|장기/.test(t) ? "mint" : "gray"; }
   function eligChip(l) {
@@ -140,7 +120,7 @@
       "<b>자격</b><span>" + esc(l.eligibility_note || (l.status === "neutral" ? "내 조건 입력 후 판정" : "미판정")) + "</span>" +
       (l.convert_note ? "<b>전환</b><span>" + esc(l.convert_note) + "</span>" : "") +
       (l.status_reasons && l.status_reasons.length ? "<b>판정</b><span>" + esc(l.status_reasons.join("; ")) + "</span>" : "") +
-      (l.announce_date ? "<b>발표</b><span>" + esc(l.announce_date) + "</span>" : "") + (l.movein ? "<b>입주</b><span>" + esc(l.movein) + "</span>" : "") +
+      (l.movein ? "<b>입주</b><span>" + esc(l.movein) + "</span>" : "") +
       (l.address ? "<b>주소</b><span>" + esc(l.address) + "</span>" : "") + "</div>" +
       (l.sites && l.sites.length ? "<div><b>주택 " + l.sites.length + "곳</b> (지도에 집 단위로 표시)<pre>" + esc(l.sites.map(function (s) { return (s.address || "").replace("서울특별시 ", "") + (s.deposit_won != null ? " · 전세 " + won(s.deposit_won) : "") + (s.area_m2 ? " · " + py(s.area_m2) + "평" : ""); }).join("\n")) + "</pre></div>" : "") +
       (l.apply_note ? "<pre>" + esc(l.apply_note) + "</pre>" : "") +
@@ -316,8 +296,8 @@
     if (!items.length) html += '<div class="empty">이번 주에 지원할 공고가 없어요. "새로고침(다시 수집)"으로 새 공고를 확인해 보세요.</div>';
     else html += "<ol>" + items.map(function (l, i) {
       var ph = phaseOf(l), mine = mineOf(l), pay = (l.monthly || {}).display_total;
-      var period = (l.apply_start ? fmtD(l.apply_start) : "?") + " ~ " + (l.apply_end ? fmtD(l.apply_end) : "?");
-      var when = ph.k === "open" ? (ph.urgent ? "<b style='color:var(--rosed)'>" + ph.text.replace("마감 임박 · ", "") + "</b>" : "<b style='color:var(--blued)'>" + ph.text.replace("접수 중 · ", "") + "</b>") : "<b style='color:var(--mintd)'>" + ph.sub.split(" · ")[0] + "</b>";
+      var period = Schedule.periods(l).map(function(p) { return (p.label || "접수") + " " + Schedule.range(p); }).join(" / ") + " (한국시간)";
+      var when = ph.k === "open" ? (ph.urgent ? "<b style='color:var(--rosed)'>" + esc(ph.text.replace("마감 임박 · ", "")) + "</b>" : "<b style='color:var(--blued)'>" + esc(ph.text.replace("접수 중 · ", "")) + "</b>") : "<b style='color:var(--mintd)'>" + esc(ph.sub.split(" · ")[0]) + "</b>";
       return '<li class="' + (ph.urgent ? "urgent" : ph.k) + (mine ? " done" : "") + '"><span class="num">' + (i + 1) + "</span>" +
         '<div class="t"><div class="nm"><button type="button" data-jump="' + esc(l.id) + '">' + esc(starName(l)) + "</button>" + watchBadge(l) + (mine ? ' <span class="pill mine">' + esc(mine.label) + "</span>" : "") + bigBadge(l) + "</div>" +
         '<div class="meta"><span>' + when + " · 접수 " + esc(period) + "</span><span>" + esc(l.gu || "") + (l.station ? " " + esc(l.station) + "역" : "") + (l.transit_min != null ? " · 을지로입구 <b>" + l.transit_min + "분</b>" : "") + "</span>" +
@@ -349,7 +329,7 @@
   var PHASE_COLOR = { urgent: "#E5484D", open: "#2F6FED", upcoming: "#17B890", closed: "#9AA39F", unknown: "#9AA39F" };
   // 지도·캘린더가 공유하는 목록: 왼쪽 필터 통과 + 접수 종료·탈락 제외(내가 지원한 건 포함)
   function liveItems(list) {
-    return list.filter(function (l) { return mineOf(l) || (l.status !== "closed" && (l.status !== "rejected" || isBig(l) || l.watch)); });
+    return list.filter(function (l) { return mineOf(l) || (l.status !== "closed" && phaseOf(l).k !== "closed" && (l.status !== "rejected" || isBig(l) || l.watch)); });
   }
   function workPoint() {
     var p = state.mode === "static" ? state.profile : null;
@@ -426,7 +406,7 @@
     var items = liveItems(list || d.listings);
     var expanded = localStorage.getItem("cheongyak:cal") === "month";
     var weeks = expanded ? 5 : 2;
-    var sunday = new Date(t0.getTime() - t0.getDay() * 864e5);          // 이번 주 일요일
+    var sunday = new Date(t0.getTime() - t0.getUTCDay() * 864e5);          // 이번 주 일요일
     var days = [];
     for (var i = 0; i < weeks * 7; i++) days.push(new Date(sunday.getTime() + i * 864e5).toISOString().slice(0, 10));
     var today = todayISO();
@@ -434,9 +414,10 @@
     var push = function (day, e) { if (days.indexOf(day) >= 0) (ev[day] = ev[day] || []).push(e); };
     items.forEach(function (l) {
       var short = starName(l).replace(/\[.*?\]\s*/g, "").slice(0, 16);
-      if (l.apply_start) push(l.apply_start, { c: "start", t: short + " 접수", id: l.id });
-      if (l.apply_end) push(l.apply_end, { c: daysFrom(l.apply_end) <= URGENT_DAYS && l.apply_end >= today ? "end urgent" : "end", t: short + " 마감", id: l.id });
-      if (l.announce_date && mineOf(l)) push(l.announce_date, { c: "ann", t: "내 지원 발표: " + short.slice(0, 12), id: l.id });
+      Schedule.events(l).forEach(function(e) {
+        if (e.kind === "ann" && !mineOf(l)) return;
+        push(e.date, { c: e.kind, t: short + " · " + e.label + " " + (e.time || "시각 미확인") + (e.after ? " 이후" : ""), id:l.id });
+      });
       var m = mineOf(l); if (m && l.apply_end) push(l.apply_end, { c: "mine", t: "내 지원: " + short.slice(0, 14), id: l.id });
     });
     $("#calTitle").textContent = (expanded ? "접수 일정 · 한 달 (이번 주부터 5주)" : "접수 일정 · 이번 주 + 다음 주") + " · " + items.length + "건 (지도와 같은 목록: 왼쪽 필터 통과, 탈락·종료 제외)";
@@ -487,7 +468,7 @@
       var jump = e.target.closest("[data-jump]");
       if (jump) { var jid = jump.getAttribute("data-jump"); $("input[name=view][value=all]").checked = true; $("#showClosed").checked = true; state.open[jid] = true; render(); var el = $('[data-id="' + jid + '"]'); if (el) el.scrollIntoView({ behavior: "smooth", block: "center" }); return; }
       if (e.target.id === "copyFav") {
-        var lines = state.data.listings.filter(function (l) { return isFav(l.id); }).map(function (l) { return l.id + " | " + l.name + " | " + (l.apply_start || "?") + "~" + (l.apply_end || "?") + " | " + (l.pdf_url || l.source_url); });
+        var lines = state.data.listings.filter(function (l) { return isFav(l.id); }).map(function (l) { return l.id + " | " + l.name + " | " + Schedule.periods(l).map(function(p) { return (p.label || "접수") + " " + Schedule.range(p); }).join(" / ") + " (한국시간)" + " | " + (l.pdf_url || l.source_url); });
         var txt = lines.join("\n") || "(찜 없음)";
         if (navigator.clipboard) navigator.clipboard.writeText(txt).then(function () { e.target.textContent = "복사됨 ✓"; setTimeout(function () { e.target.textContent = "찜 목록 복사"; }, 1500); });
         else window.prompt("복사하세요", txt);
@@ -651,4 +632,13 @@
   }
   // 정적 공유본(/api 없음)이면 engine 모드, 맥(서버)이면 소유자 모드
   fetch("/api/status", { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("no api"); return r.json(); }).then(bootOwner).catch(bootStatic);
+  var clockState = "";
+  setInterval(function () {
+    if (!state.data) return;
+    var next = todayISO() + state.data.listings.map(function(l) { var p = phaseOf(l); return l.id + p.k + p.sub + p.urgent; }).join("|");
+    if (next === clockState) return;
+    clockState = next;
+    if (state.mode === "static") evaluateAll();
+    render();
+  }, 30000);
 })();
