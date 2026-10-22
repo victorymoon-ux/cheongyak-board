@@ -7,7 +7,7 @@
 <title>내 청약 보드</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="vendor/leaflet.css">
-<link rel="stylesheet" href="style.css?v=1792649838">
+<link rel="stylesheet" href="style.css?v=1792657484">
 </head>
 <body>
 <header class="top">
@@ -16,15 +16,16 @@
 </header>
 <div class="wrap">
   <aside class="side" aria-label="필터">
+    <p id="freshness" class="hint" aria-live="polite"></p>
     <details class="prof" id="prof">
       <summary><b>내 조건</b> <span id="profWho" class="n"></span></summary>
       <div class="pf">
         <label>저장된 조건 고르기 <span class="hint">고른 조건은 새로고침해도 유지</span><select id="profPick"></select></label>
         <label>이름(표시용) <input id="p_name" type="text" placeholder="예: 동생"></label>
-        <label>생년 <input id="p_birth" type="number" placeholder="1998"></label>
+        <label>생년(선택·만나이 판정에 사용하지 않음) <input id="p_birth" type="number" placeholder="1998"></label>
         <label>혼인 <select id="p_marital"><option value="single">미혼</option><option value="married">기혼·예비신혼</option></select></label>
-        <label>세전 연소득(만원) <input id="p_income" type="number" placeholder="4300"></label>
-        <label>예적금 등 자산(만원) <input id="p_savings" type="number" placeholder="3000"></label>
+        <label>세전 연소득(만원·선택) <input id="p_income" type="number" placeholder="4300"></label>
+        <label>예적금(만원·총자산 아님·선택) <input id="p_savings" type="number" placeholder="3000"></label>
         <label>자기자금(만원) <span class="hint">보증금에 바로 넣을 수 있는 돈</span><input id="p_cash" type="number" placeholder="10000"></label>
         <label><input id="p_car" type="checkbox"> 자동차 있음</label>
         <label>거주 시/도 <select id="p_sido"><option>서울</option><option>인천</option><option>경기</option></select></label>
@@ -36,7 +37,9 @@
         <label>최소 평수 <input id="p_minpy" type="number" value="9" step="0.5"></label>
         <label>월 납입 상한(만원) <span class="hint">월세 + 보증금 대출 이자</span><input id="p_maxpay" type="number" value="50"></label>
         <label>민간임대 최소 거주년 <input id="p_years" type="number" value="4"></label>
-        <label><input id="p_support" type="checkbox"> 서울시 청년 임차보증금 이자지원 적용 <span class="hint">서울 거주·서울 주택·연소득 5천 이하면 1%(2억 한도)</span></label>
+        <label>비용 예시용 일반은행 연금리(%) <input id="p_rate" type="number" min="0" max="100" step="0.01" placeholder="은행 안내 금리 직접 입력"></label>
+        <label><input id="p_support" type="checkbox"> 서울시 이자지원 요건 안내 보기(자동 할인 없음)</label>
+        <p class="hint">자격·대출 승인을 판정하지 않습니다. 소득·생년 입력은 선택이며 이 브라우저에만 저장합니다. <a href="https://housing.seoul.go.kr/site/main/content/sh01_040901" target="_blank" rel="noopener">서울시 공식 요건</a></p>
         <div class="row"><button class="btn primary" id="profSave" type="button">이 이름으로 저장하고 계산</button><button class="btn" id="profDelete" type="button">이 조건 삭제</button><button class="btn" id="profReset" type="button">빈 칸으로</button></div>
         <div class="row"><button class="btn" id="profExport" type="button">내 조건 코드 복사</button><button class="btn" id="profImport" type="button">코드 붙여넣기</button></div>
         <div class="hint">입력값은 이 기기 브라우저에만 저장되고 어디로도 전송되지 않습니다.</div>
@@ -86,7 +89,7 @@
     <section class="todo" id="todo" aria-label="이번 주 내가 지원할 공고"></section>
     <div class="sum" id="sum"></div>
     <div class="legend"><b style="color:var(--ink2)">색 기준</b><span class="pill urgent">마감 임박 (5일 미만)</span><span class="pill open">접수 중</span><span class="pill upcoming">접수 예정</span><span class="pill closed">접수 종료</span><span class="pill mine">내가 지원함</span><span class="pill result">발표 (내가 지원한 것만)</span></div>
-    <div class="help"><b>점수란?</b> 내 우선순위로 매긴 추천 점수(100점 만점). 을지로입구역 소요시간 <b>40</b> · 평수·룸 <b>25</b> · 모집호수 <b>15</b> · 선호 지역(중구 &gt; 종로·동대문·용산 &gt; 강남·서초·마포) <b>10</b> · 거주 가능 기간 <b>10</b> + 보너스(2호선 역세권 +5, 1.5룸 +5, 2룸 +8, 대단지 +2). 점수에 마우스를 올리면 내역이 보입니다. 기준은 <code>rules/우선순위.md</code>에서 바꿀 수 있어요. <b>대형 모집</b> 딱지 = 청년 100호 이상(또는 단지 300세대 이상)이라 예비번호가 많이 도는 공고.</div>
+    <div class="help"><b>점수란?</b> 입력한 직장까지의 소요시간 <b>40</b> · 평수·룸 <b>25</b> · 모집호수 <b>15</b> · 입력한 선호 지역 <b>10</b> · 거주 가능 기간 <b>10</b> + 보너스. 신청 자격이나 당첨 확률을 뜻하지 않습니다. 상세 조건은 각 공고문을 확인하세요. <b>대형 모집</b> 표시는 모집 규모 안내입니다.</div>
     <p class="sec"><span id="calTitle">접수 일정 · 이번 주 + 다음 주</span><button class="btn" id="calToggle" type="button" style="margin-left:auto">한 달 보기 ▾</button></p>
     <div class="calhead"><span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span></div>
     <div class="cal" id="cal"></div>
@@ -99,8 +102,8 @@
   </main>
 </div>
 <script src="vendor/leaflet.js"></script>
-<script src="schedule.js?v=1792649838"></script>
-<script src="engine.js?v=1792649838"></script>
-<script src="app.js?v=1792649838"></script>
+<script src="schedule.js?v=1792657484"></script>
+<script src="engine.js?v=1792657484"></script>
+<script src="app.js?v=1792657484"></script>
 </body>
 </html>

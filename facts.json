@@ -1,56 +1,16 @@
 {
- "generated": "2026-10-22T09:02:38",
+ "static": true,
+ "generated": "2026-10-22T17:30:56+09:00",
  "today": "2026-10-22",
+ "collection": {
+  "started_at": "2026-10-22T17:20:46+09:00",
+  "finished_at": "2026-10-22T17:27:30+09:00",
+  "last_success_at": "2026-10-22T17:27:30+09:00",
+  "status": "completed",
+  "failure_count": 0
+ },
  "failures": [],
- "owner": "승리",
  "listings": [
-  {
-   "id": "soco:6689",
-   "source": "soco",
-   "provider": "캡스톤서림역청년주택일반사모부동산투자 유한회사",
-   "type": "청년안심-민간",
-   "name": "[민간임대] 서울대벤처타운역 센터스퀘어 서울대점 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6689&menuNo=400008",
-   "is_private": true,
-   "address": "서울특별시 관악구 신림동 1747",
-   "gu": "관악구",
-   "sido": "서울",
-   "sigungu": "관악구",
-   "lat": 37.486897,
-   "lng": 126.928177,
-   "station": "신림",
-   "station_lat": 37.484201,
-   "station_lng": 126.929715,
-   "station_lines": [
-    "2",
-    "SILLIM"
-   ],
-   "station_walk_min": 4,
-   "units_youth": 1,
-   "units_general": 1,
-   "units_total": 413,
-   "area_m2_min": 22.96,
-   "area_m2_max": 44.62,
-   "rooms": "2룸(54형 44.62㎡, 청년 또는 신혼 일반·특별)",
-   "rooms_guessed": false,
-   "deposit_won": 145000000,
-   "rent_won": 549000,
-   "convert_note": "표시값 = 54형 특별공급 50%(승리 소득 358만 ≤ 120%) 1억4,500만/54.9만 · 특별 30% 8,700만/75.8만 · 40% 1억1,600만/65.8만 / 일반 30% 1억300만/90.5만 · 35% 1억2,100만/84.6만 · 40% 1억3,800만/78.6만",
-   "max_years": 10,
-   "end_year": null,
-   "apply_start": "2026-10-12",
-   "apply_end": "2026-10-14",
-   "announce_date": "2026-10-15",
-   "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=a1f33efb8e2444a48100e9ffa16b5c8d&fileSn=1",
-   "posted": "2026-10-08",
-   "is_new": false,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -8,
-   "my_status": null,
-   "watch": true
-  },
   {
    "id": "soco:6678",
    "source": "soco",
@@ -84,12 +44,11 @@
    "rooms_guessed": false,
    "deposit_won": 98000000,
    "rent_won": 820000,
-   "convert_note": "전환 불가 보증보험 가입액 관련 사유( ) / 본 주택은 ■ 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다. / 임대보증금을 월 임대료로 전환하거나 월 임대료를 임대보증금으로 전환하는 경우에는 임대보증금    , ※",
    "max_years": 10,
    "end_year": null,
    "apply_start": "2026-10-01",
    "apply_end": "2026-10-04",
-   "announce_date": "2026-10-07",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=9c4a4250b89146ca80186bbf26e59b86&fileSn=1",
    "posted": "2026-09-22",
@@ -97,8 +56,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -18,
-   "my_status": null,
-   "watch": true
+   "apply_start_time": "10:00",
+   "apply_end_time": "18:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-01",
+     "end": "2026-10-04",
+     "start_time": "10:00",
+     "end_time": "18:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-07",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6678&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6680",
@@ -131,12 +109,11 @@
    "rooms_guessed": false,
    "deposit_won": 173000000,
    "rent_won": 1208900,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-05",
    "apply_end": "2026-10-06",
-   "announce_date": "2026-10-07",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=8ba2c2ef90b34937a19ca772dba31bf4&fileSn=1",
    "posted": "2026-10-01",
@@ -144,98 +121,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -16,
-   "my_status": null,
-   "watch": true
-  },
-  {
-   "id": "soco:6666",
-   "source": "soco",
-   "provider": "(주)엠지하우징",
-   "type": "청년안심-민간",
-   "name": "[민간임대] 공덕역 e·seo(이서) 최초모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6666&menuNo=400008",
-   "is_private": true,
-   "address": "서울특별시 마포구 염리동 172-10번지",
-   "gu": "마포구",
-   "sido": "서울",
-   "sigungu": "마포구",
-   "lat": null,
-   "lng": null,
-   "station": null,
-   "station_lat": null,
-   "station_lng": null,
-   "station_lines": [],
-   "station_walk_min": null,
-   "units_youth": null,
-   "units_general": 139,
-   "units_total": 299,
-   "area_m2_min": 17.74,
-   "area_m2_max": 60.47,
-   "rooms": "2룸",
-   "rooms_guessed": true,
-   "deposit_won": null,
-   "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다. / ※ 임대보증금을 월 임대료로 전환하거나, 월 임대료를 임대보증금으로 전환하는 경우에는 임대보증금 / 비율을 30%, 35%, 40% 단위로 전환이 가능하며, 제시된 비율 외 임대 보증금의 변경은 사업주와",
-   "max_years": 10,
-   "end_year": null,
-   "apply_start": "2026-09-22",
-   "apply_end": "2026-09-28",
-   "announce_date": "2026-09-29",
-   "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=d7ce796baece4252b26a7ede0c487d4d&fileSn=1",
-   "posted": "2026-09-15",
-   "is_new": false,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -24,
-   "my_status": null,
-   "watch": true
-  },
-  {
-   "id": "soco:6687",
-   "source": "soco",
-   "provider": "㈜하월곡동대한제43호위탁관리부동산투자회사",
-   "type": "청년안심-민간",
-   "name": "[민간임대] 미아사거리역 미아 헤리츠타워 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6687&menuNo=400008",
-   "is_private": true,
-   "address": "서울특별시 성북구 월계로 38",
-   "gu": "성북구",
-   "sido": "서울",
-   "sigungu": "성북구",
-   "lat": 37.6166217,
-   "lng": 127.0410823,
-   "station": "미아사거리",
-   "station_lat": 37.613292,
-   "station_lng": 127.030053,
-   "station_lines": [
-    "4"
+   "apply_start_time": null,
+   "apply_end_time": "00:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-05",
+     "end": "2026-10-06",
+     "start_time": null,
+     "end_time": "00:00"
+    }
    ],
-   "station_walk_min": 13,
-   "units_youth": null,
-   "units_general": null,
-   "units_total": null,
-   "area_m2_min": 36.93,
-   "area_m2_max": 59.88,
-   "rooms": "1.5룸(36)·2룸(59)",
-   "rooms_guessed": false,
-   "deposit_won": 286000000,
-   "rent_won": 480000,
-   "convert_note": "36타입(11.2평) 20,400/81만 · 24,500/65만 · 28,600/48만 / 59타입(18.1평) 29,400/117 · 35,300/94 · 41,200/70 (보증금 50/60/70%)",
-   "max_years": 10,
-   "end_year": null,
-   "apply_start": "2026-10-12",
-   "apply_end": "2026-10-14",
-   "announce_date": "2026-10-15",
-   "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=e43ccb9c57d549fa93de78ae4524282e&fileSn=1",
-   "posted": "2026-10-08",
-   "is_new": false,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -8,
-   "my_status": null,
-   "watch": false
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-07",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6680&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "sh:311656",
@@ -265,7 +171,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "임대료를 보증금으로 전환하여 납부할 수 있으며, 「주택법 시행령」 제82조에 따라 토지임대료를 보증금으로 전환하려는 경우 그 보증금을 산정할 때 / • 청년 특별공급의 경우 재당첨제한 적용주택(이전기관 종사자 특별공급 주택, 분양가상한제 적용주택, 분양전환공공임대주택, 토지임대주택, 투기과열지구 및 / • 신혼부부·생애최초·신생아 특별공급 및 일반공급의 경우 재당첨제한 적용주택(이전기관 종사자 특별공급 주택, 분양가상한제 적용주택, 분양전환공공임대주택,",
    "max_years": 40,
    "end_year": null,
    "apply_start": "2026-10-26",
@@ -278,8 +183,6 @@
    "sites": [],
    "phase": "upcoming",
    "phase_days": 4,
-   "my_status": null,
-   "watch": true,
    "apply_start_time": "10:00",
    "apply_end_time": "17:00",
    "application_periods": [
@@ -365,12 +268,11 @@
    "rooms_guessed": false,
    "deposit_won": 151000000,
    "rent_won": 680000,
-   "convert_note": "표시값 = 45A 1310호 1억5,100만/68만 (고정) / 23A 1407호 8,900만/40만. 비율 전환 불가(기존 호실 금액)",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-19",
    "apply_end": "2026-10-19",
-   "announce_date": "2026-10-20",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=29366c0d5b1c4ffd84f7d5ffec885710&fileSn=1",
    "posted": "2026-10-15",
@@ -378,54 +280,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -3,
-   "my_status": null,
-   "watch": false
-  },
-  {
-   "id": "soco:6694",
-   "source": "soco",
-   "provider": "주식회사 엘앤피개발",
-   "type": "청년안심-민간",
-   "name": "[민간임대] 노원역 해링턴플레이스 노원 센트럴 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6694&menuNo=400008",
-   "is_private": true,
-   "address": "서울특별시 노원구 노원로 495",
-   "gu": "노원구",
-   "sido": "서울",
-   "sigungu": "노원구",
-   "lat": 37.6249481,
-   "lng": 127.0862145,
-   "station": "화랑대",
-   "station_lat": 37.620064,
-   "station_lng": 127.084689,
-   "station_lines": [
-    "6"
+   "apply_start_time": "10:00",
+   "apply_end_time": "16:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-19",
+     "end": "2026-10-19",
+     "start_time": "10:00",
+     "end_time": "16:00"
+    }
    ],
-   "station_walk_min": 7,
-   "units_youth": 1,
-   "units_general": 2,
-   "units_total": 299,
-   "area_m2_min": 23.56,
-   "area_m2_max": 48.64,
-   "rooms": "원룸(23)·2룸(48)",
-   "rooms_guessed": false,
-   "deposit_won": 132000000,
-   "rent_won": 700000,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다. / - 임대보증금 비율을 20%, 30%, 40% 단위로 전환이 가능하나, (최초 계약이 아닐 경우) 기존 호실의 금액 / 로의 비율 전환 불가할 수 있음(보증보험 가입액 관련 사유)",
-   "max_years": 10,
-   "end_year": null,
-   "apply_start": "2026-10-11",
-   "apply_end": "2026-10-14",
-   "announce_date": "2026-10-15",
-   "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=6618dcd0610a459d9d7f6fe0a7314d24&fileSn=1",
-   "posted": "2026-10-08",
-   "is_new": false,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -8,
-   "my_status": null,
-   "watch": false
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-20",
+     "time": "16:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6699&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020725",
@@ -455,7 +330,6 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "• (분양전환 불가) 해당 모집공고의 주택은 분양전환이 불가능한 주택입니다. / [26-4차 비분양전환형 든든전세주택]        성명 :                        접수번호 : / [26-4차 비분양전환형 든든전세주택]        성명 :                        접수번호 :",
    "max_years": 8,
    "end_year": null,
    "apply_start": null,
@@ -468,8 +342,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -30,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020715",
@@ -499,7 +377,6 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "• (분양전환 불가) 해당 모집공고의 주택은 분양전환이 불가능한 주택입니다. / [26-4차 비분양전환형 든든전세주택]        성명 :                        접수번호 : / [26-4차 비분양전환형 든든전세주택]        성명 :                        접수번호 :",
    "max_years": 8,
    "end_year": null,
    "apply_start": null,
@@ -512,8 +389,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -30,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6697",
@@ -546,12 +427,11 @@
    "rooms_guessed": false,
    "deposit_won": 298900000,
    "rent_won": 450000,
-   "convert_note": "표시값 = 54형 70% 2억9,890만/45만 · 50% 2억1,350만/76만 · 30% 1억2,810만/107만 / 57형 70% 2억7,240만/41만 · 50% 1억9,460만/69만 · 30% 1억1,670만/97만. 비율 전환은 최초 계약만",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-18",
    "apply_end": "2026-10-19",
-   "announce_date": "2026-10-20",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=6333cf0d3ae44efda393eb3d67e45c3f&fileSn=1",
    "posted": "2026-10-15",
@@ -559,8 +439,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -3,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": "09:00",
+   "apply_end_time": "18:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-18",
+     "end": "2026-10-19",
+     "start_time": "09:00",
+     "end_time": "18:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-20",
+     "time": "16:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6697&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6676",
@@ -594,12 +493,11 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-21",
    "apply_end": "2026-09-21",
-   "announce_date": "2026-09-22",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=eb8e351de205400b9518504e14d1b184&fileSn=1",
    "posted": "2026-09-17",
@@ -607,8 +505,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -31,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": "09:00",
+   "apply_end_time": "17:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-09-21",
+     "end": "2026-09-21",
+     "start_time": "09:00",
+     "end_time": "17:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-09-22",
+     "time": "16:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6676&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020843",
@@ -638,7 +555,6 @@
    "rooms_guessed": false,
    "deposit_won": 249624000,
    "rent_won": 0,
-   "convert_note": "서울지역본부 든든전세주택 입주자 모집공고 (비분양전환형) / • (분양전환 불가) 해당 모집공고의 주택은 분양전환이 불가능한 주택입니다.",
    "max_years": 8,
    "end_year": null,
    "apply_start": "2026-10-14",
@@ -656,8 +572,7 @@
      "lng": 127.1450331,
      "area_m2": 54.18,
      "rooms": "3",
-     "deposit_won": 342280000,
-     "type": "도시형생활주택"
+     "deposit_won": 342280000
     },
     {
      "name": "강서방화동(마곡노블리안)",
@@ -666,8 +581,7 @@
      "lng": 126.8176787,
      "area_m2": 64.6995,
      "rooms": 3,
-     "deposit_won": 344736000,
-     "type": "아파트"
+     "deposit_won": 344736000
     },
     {
      "name": "강서방화동(마곡노블리안)",
@@ -676,8 +590,7 @@
      "lng": 126.8176787,
      "area_m2": 68.4838,
      "rooms": "3",
-     "deposit_won": 370180000,
-     "type": "아파트"
+     "deposit_won": 370180000
     },
     {
      "name": "광진중곡동(인화빌3)",
@@ -686,8 +599,7 @@
      "lng": 127.0785015,
      "area_m2": 66.19,
      "rooms": "3",
-     "deposit_won": 423120000,
-     "type": "도시형생활주택"
+     "deposit_won": 423120000
     },
     {
      "name": "광진자양동(갤러리하우스)",
@@ -696,8 +608,7 @@
      "lng": 127.0770545,
      "area_m2": 52.39,
      "rooms": "3",
-     "deposit_won": 398180000,
-     "type": "도시형생활주택"
+     "deposit_won": 398180000
     },
     {
      "name": "광진중곡동(양지쉐르빌)",
@@ -706,8 +617,7 @@
      "lng": 127.0828,
      "area_m2": 56.33,
      "rooms": "3",
-     "deposit_won": 350020000,
-     "type": "도시형생활주택"
+     "deposit_won": 350020000
     },
     {
      "name": "금천가산동(비엘하우스104)",
@@ -716,8 +626,7 @@
      "lng": 126.8868739,
      "area_m2": 67.58,
      "rooms": "3",
-     "deposit_won": 318030000,
-     "type": "오피스텔"
+     "deposit_won": 318030000
     },
     {
      "name": "금천가산동(비엘하우스104)",
@@ -726,8 +635,7 @@
      "lng": 126.8868739,
      "area_m2": 67.58,
      "rooms": "3",
-     "deposit_won": 311116000,
-     "type": "오피스텔"
+     "deposit_won": 311116000
     },
     {
      "name": "노원상계동(양지쉐르빌)",
@@ -736,8 +644,7 @@
      "lng": null,
      "area_m2": 58.99,
      "rooms": "3",
-     "deposit_won": 284083000,
-     "type": "도시형생활주택"
+     "deposit_won": 284083000
     },
     {
      "name": "노원상계동(시온빌라트)",
@@ -746,8 +653,7 @@
      "lng": 127.0523534,
      "area_m2": 59.63,
      "rooms": "3",
-     "deposit_won": 313894000,
-     "type": "도시형생활주택"
+     "deposit_won": 313894000
     },
     {
      "name": "노원상계동(시온빌라트)",
@@ -756,8 +662,7 @@
      "lng": 127.0523534,
      "area_m2": 59.58,
      "rooms": "3",
-     "deposit_won": 334060000,
-     "type": "도시형생활주택"
+     "deposit_won": 334060000
     },
     {
      "name": "노원상계동(시온빌리지)",
@@ -766,8 +671,7 @@
      "lng": 127.0523534,
      "area_m2": 58.76,
      "rooms": "3",
-     "deposit_won": 306003000,
-     "type": "도시형생활주택"
+     "deposit_won": 306003000
     },
     {
      "name": "노원상계동(시온빌리지)",
@@ -776,8 +680,7 @@
      "lng": 127.0523534,
      "area_m2": 69.51,
      "rooms": "3",
-     "deposit_won": 315648000,
-     "type": "도시형생활주택"
+     "deposit_won": 315648000
     },
     {
      "name": "노원상계동(시온빌리지)",
@@ -786,8 +689,7 @@
      "lng": 127.0523534,
      "area_m2": 58.76,
      "rooms": "3",
-     "deposit_won": 306003000,
-     "type": "도시형생활주택"
+     "deposit_won": 306003000
     },
     {
      "name": "노원상계동(시온아트빌)",
@@ -796,8 +698,7 @@
      "lng": 127.0720781,
      "area_m2": 59.05,
      "rooms": "3",
-     "deposit_won": 249624000,
-     "type": "도시형생활주택"
+     "deposit_won": 249624000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -806,8 +707,7 @@
      "lng": 127.0353819,
      "area_m2": 84.99,
      "rooms": "3",
-     "deposit_won": 395200000,
-     "type": "오피스텔"
+     "deposit_won": 395200000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -816,8 +716,7 @@
      "lng": 127.0353819,
      "area_m2": 59.99,
      "rooms": "3",
-     "deposit_won": 304000000,
-     "type": "오피스텔"
+     "deposit_won": 304000000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -826,8 +725,7 @@
      "lng": 127.0353819,
      "area_m2": 84.99,
      "rooms": "3",
-     "deposit_won": 395200000,
-     "type": "오피스텔"
+     "deposit_won": 395200000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -836,8 +734,7 @@
      "lng": 127.0353819,
      "area_m2": 59.99,
      "rooms": "3",
-     "deposit_won": 300800000,
-     "type": "오피스텔"
+     "deposit_won": 300800000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -846,8 +743,7 @@
      "lng": 127.0353819,
      "area_m2": 59.99,
      "rooms": "3",
-     "deposit_won": 304000000,
-     "type": "오피스텔"
+     "deposit_won": 304000000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -856,8 +752,7 @@
      "lng": 127.0353819,
      "area_m2": 59.99,
      "rooms": "3",
-     "deposit_won": 304000000,
-     "type": "오피스텔"
+     "deposit_won": 304000000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -866,8 +761,7 @@
      "lng": 127.0353819,
      "area_m2": 59.99,
      "rooms": "3",
-     "deposit_won": 304000000,
-     "type": "오피스텔"
+     "deposit_won": 304000000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -876,8 +770,7 @@
      "lng": 127.0353819,
      "area_m2": 84.99,
      "rooms": "3",
-     "deposit_won": 405600000,
-     "type": "오피스텔"
+     "deposit_won": 405600000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -886,8 +779,7 @@
      "lng": 127.0353819,
      "area_m2": 84.99,
      "rooms": "3",
-     "deposit_won": 411200000,
-     "type": "오피스텔"
+     "deposit_won": 411200000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -896,8 +788,7 @@
      "lng": 127.0353819,
      "area_m2": 59.99,
      "rooms": "3",
-     "deposit_won": 311200000,
-     "type": "오피스텔"
+     "deposit_won": 311200000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -906,8 +797,7 @@
      "lng": 127.0353819,
      "area_m2": 84.99,
      "rooms": "3",
-     "deposit_won": 411200000,
-     "type": "오피스텔"
+     "deposit_won": 411200000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -916,8 +806,7 @@
      "lng": 127.0353819,
      "area_m2": 59.99,
      "rooms": "3",
-     "deposit_won": 311200000,
-     "type": "오피스텔"
+     "deposit_won": 311200000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -926,8 +815,7 @@
      "lng": 127.0353819,
      "area_m2": 84.99,
      "rooms": "3",
-     "deposit_won": 415200000,
-     "type": "오피스텔"
+     "deposit_won": 415200000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -936,8 +824,7 @@
      "lng": 127.0353819,
      "area_m2": 59.99,
      "rooms": "3",
-     "deposit_won": 318400000,
-     "type": "오피스텔"
+     "deposit_won": 318400000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -946,8 +833,7 @@
      "lng": 127.0353819,
      "area_m2": 59.99,
      "rooms": "3",
-     "deposit_won": 318400000,
-     "type": "오피스텔"
+     "deposit_won": 318400000
     },
     {
      "name": "도봉창동(미래하이츠)",
@@ -956,8 +842,7 @@
      "lng": 127.0353819,
      "area_m2": 59.99,
      "rooms": "3",
-     "deposit_won": 318400000,
-     "type": "오피스텔"
+     "deposit_won": 318400000
     },
     {
      "name": "동대문장안동(시온그랜드빌)",
@@ -966,8 +851,7 @@
      "lng": 127.0706922,
      "area_m2": 59.88,
      "rooms": "3",
-     "deposit_won": 312140000,
-     "type": "도시형생활주택"
+     "deposit_won": 312140000
     },
     {
      "name": "동대문장안동(시온그랜드빌)",
@@ -976,8 +860,7 @@
      "lng": 127.0706922,
      "area_m2": 56.72,
      "rooms": "3",
-     "deposit_won": 266547000,
-     "type": "도시형생활주택"
+     "deposit_won": 266547000
     },
     {
      "name": "성북보문동(위드13)",
@@ -986,8 +869,7 @@
      "lng": 127.020393,
      "area_m2": 51.52,
      "rooms": "3",
-     "deposit_won": 359488000,
-     "type": "도시형생활주택"
+     "deposit_won": 359488000
     },
     {
      "name": "성북보문동(위드13)",
@@ -996,8 +878,7 @@
      "lng": 127.020393,
      "area_m2": 51.52,
      "rooms": "3",
-     "deposit_won": 362995000,
-     "type": "도시형생활주택"
+     "deposit_won": 362995000
     },
     {
      "name": "성북장위동(라인캐슬)",
@@ -1006,8 +887,7 @@
      "lng": 127.0367889,
      "area_m2": 55.15,
      "rooms": "3",
-     "deposit_won": 349013000,
-     "type": "아파트"
+     "deposit_won": 349013000
     },
     {
      "name": "성북석관동(아이유하임)",
@@ -1016,8 +896,7 @@
      "lng": 127.0520395,
      "area_m2": 72.45,
      "rooms": "3",
-     "deposit_won": 310460000,
-     "type": "도시형생활주택"
+     "deposit_won": 310460000
     },
     {
      "name": "성북석관동(아이유하임)",
@@ -1026,8 +905,7 @@
      "lng": 127.0520395,
      "area_m2": 78.29,
      "rooms": "3",
-     "deposit_won": 338840000,
-     "type": "도시형생활주택"
+     "deposit_won": 338840000
     },
     {
      "name": "성북석관동(아이유하임)",
@@ -1036,8 +914,7 @@
      "lng": 127.0520395,
      "area_m2": 76.54,
      "rooms": "3",
-     "deposit_won": 329380000,
-     "type": "도시형생활주택"
+     "deposit_won": 329380000
     },
     {
      "name": "영등포대림동(삼화에코빌1차)",
@@ -1046,8 +923,7 @@
      "lng": 126.8968464,
      "area_m2": 55.64,
      "rooms": "3",
-     "deposit_won": 326800000,
-     "type": "아파트"
+     "deposit_won": 326800000
     },
     {
      "name": "영등포대림동(삼화에코빌1차)",
@@ -1056,8 +932,7 @@
      "lng": 126.8968464,
      "area_m2": 54.29,
      "rooms": "3",
-     "deposit_won": 338840000,
-     "type": "아파트"
+     "deposit_won": 338840000
     },
     {
      "name": "영등포대림동(브라이튼디엘)",
@@ -1066,8 +941,7 @@
      "lng": 126.8968464,
      "area_m2": 58.43,
      "rooms": "3",
-     "deposit_won": 303758000,
-     "type": "아파트"
+     "deposit_won": 303758000
     },
     {
      "name": "영등포대림동(브라이튼디엘)",
@@ -1076,8 +950,7 @@
      "lng": 126.8968464,
      "area_m2": 83.91,
      "rooms": "3",
-     "deposit_won": 411705000,
-     "type": "아파트"
+     "deposit_won": 411705000
     },
     {
      "name": "은평역촌동(첼라넥스빌)",
@@ -1086,8 +959,7 @@
      "lng": 126.9181661,
      "area_m2": 56.83,
      "rooms": "3",
-     "deposit_won": 349160000,
-     "type": "도시형생활주택"
+     "deposit_won": 349160000
     },
     {
      "name": "은평신사동(승윤노블리안)",
@@ -1096,8 +968,7 @@
      "lng": 126.919875,
      "area_m2": 78.266,
      "rooms": "3",
-     "deposit_won": 355980000,
-     "type": "오피스텔"
+     "deposit_won": 355980000
     },
     {
      "name": "중랑면목동(클래시하우스6차)",
@@ -1106,8 +977,7 @@
      "lng": 127.0954898,
      "area_m2": 70.22,
      "rooms": "3",
-     "deposit_won": 360340000,
-     "type": "도시형생활주택"
+     "deposit_won": 360340000
     },
     {
      "name": "중랑면목동(클래시하우스6차)",
@@ -1116,8 +986,7 @@
      "lng": 127.0954898,
      "area_m2": 71.12,
      "rooms": "3",
-     "deposit_won": 365500000,
-     "type": "도시형생활주택"
+     "deposit_won": 365500000
     },
     {
      "name": "중랑면목동(클래시하우스6차)",
@@ -1126,8 +995,7 @@
      "lng": 127.0954898,
      "area_m2": 59.96,
      "rooms": "3",
-     "deposit_won": 323360000,
-     "type": "도시형생활주택"
+     "deposit_won": 323360000
     },
     {
      "name": "중랑면목동(클래시하우스6차)",
@@ -1136,8 +1004,7 @@
      "lng": 127.0954898,
      "area_m2": 70.22,
      "rooms": "3",
-     "deposit_won": 364640000,
-     "type": "도시형생활주택"
+     "deposit_won": 364640000
     },
     {
      "name": "중랑면목동(클래시하우스6차)",
@@ -1146,8 +1013,7 @@
      "lng": 127.0954898,
      "area_m2": 69.95,
      "rooms": "3",
-     "deposit_won": 359480000,
-     "type": "도시형생활주택"
+     "deposit_won": 359480000
     },
     {
      "name": "중랑묵동(미소드림빌)",
@@ -1156,8 +1022,7 @@
      "lng": 127.0805094,
      "area_m2": 73.86,
      "rooms": "3",
-     "deposit_won": 361241000,
-     "type": "도시형생활주택"
+     "deposit_won": 361241000
     },
     {
      "name": "중랑중화동(화인하우스)",
@@ -1166,8 +1031,7 @@
      "lng": 127.0813648,
      "area_m2": 82.6,
      "rooms": "3",
-     "deposit_won": 363780000,
-     "type": "다세대주택"
+     "deposit_won": 363780000
     },
     {
      "name": "중랑묵동(파크스위트)",
@@ -1176,8 +1040,7 @@
      "lng": 127.0751325,
      "area_m2": 51.74,
      "rooms": "3",
-     "deposit_won": 348481000,
-     "type": "도시형생활주택"
+     "deposit_won": 348481000
     },
     {
      "name": "중랑묵동(파크스위트)",
@@ -1186,8 +1049,7 @@
      "lng": 127.0751325,
      "area_m2": 58.8,
      "rooms": "3",
-     "deposit_won": 397697000,
-     "type": "도시형생활주택"
+     "deposit_won": 397697000
     },
     {
      "name": "중랑상봉동(현대캐슬)",
@@ -1196,8 +1058,7 @@
      "lng": 127.0846772,
      "area_m2": 55.6,
      "rooms": "3",
-     "deposit_won": 338990000,
-     "type": "도시형생활주택"
+     "deposit_won": 338990000
     },
     {
      "name": "중랑망우동(현진스위트빌)",
@@ -1206,75 +1067,97 @@
      "lng": 127.0999885,
      "area_m2": 56.16,
      "rooms": "4",
-     "deposit_won": 378400000,
-     "type": "도시형생활주택"
+     "deposit_won": 378400000
     }
    ],
    "phase": "closed",
    "phase_days": -6,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
-   "id": "soco:6691",
+   "id": "soco:6689",
    "source": "soco",
-   "provider": "우리자산신탁 주식회사",
+   "provider": "캡스톤서림역청년주택일반사모부동산투자 유한회사",
    "type": "청년안심-민간",
-   "name": "[민간임대] 구로디지털단지역 유벤투스 240 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6691&menuNo=400008",
+   "name": "[민간임대] 서울대벤처타운역 센터스퀘어 서울대점 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6689&menuNo=400008",
    "is_private": true,
-   "address": "서울특별시 관악구 신림동 1644-3",
+   "address": "서울특별시 관악구 신림동 1747",
    "gu": "관악구",
    "sido": "서울",
    "sigungu": "관악구",
-   "lat": 37.4730961,
-   "lng": 126.9282982,
-   "station": "서울대벤처타운",
-   "station_lat": 37.472002,
-   "station_lng": 126.933935,
+   "lat": null,
+   "lng": null,
+   "station": "신림",
+   "station_lat": 37.484201,
+   "station_lng": 126.929715,
    "station_lines": [
+    "2",
     "SILLIM"
    ],
-   "station_walk_min": 7,
-   "units_youth": 50,
-   "units_general": 0,
-   "units_total": 240,
-   "area_m2_min": null,
-   "area_m2_max": 32.81,
-   "rooms": "1.5룸(33타입 32.81㎡ 안방+알파룸+거실)",
+   "station_walk_min": 4,
+   "units_youth": 1,
+   "units_general": 1,
+   "units_total": 413,
+   "area_m2_min": 22.96,
+   "area_m2_max": 44.62,
+   "rooms": "2룸(54형 44.62㎡, 청년 또는 신혼 일반·특별)",
    "rooms_guessed": false,
-   "deposit_won": 92000000,
-   "rent_won": 670000,
-   "convert_note": "33타입 특별 30% 9,200만/67만 · 40% 1억2,100만/54만 · 50% 1억5,000만/41만 (소득 120% 이하)",
+   "deposit_won": 145000000,
+   "rent_won": 549000,
    "max_years": 10,
    "end_year": null,
    "apply_start": "2026-10-12",
    "apply_end": "2026-10-14",
-   "announce_date": "2026-10-15",
+   "announce_date": null,
    "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=8932ce14f0144bf8baeca04aa11219a3&fileSn=1",
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=a1f33efb8e2444a48100e9ffa16b5c8d&fileSn=1",
    "posted": "2026-10-08",
    "is_new": false,
    "sites": [],
    "phase": "closed",
    "phase_days": -8,
-   "my_status": null,
-   "watch": true
+   "apply_start_time": null,
+   "apply_end_time": "00:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-12",
+     "end": "2026-10-14",
+     "start_time": null,
+     "end_time": "00:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-15",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6689&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
-   "id": "soco:6665",
+   "id": "soco:6687",
    "source": "soco",
    "provider": "㈜하월곡동대한제43호위탁관리부동산투자회사",
    "type": "청년안심-민간",
    "name": "[민간임대] 미아사거리역 미아 헤리츠타워 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6665&menuNo=400008",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6687&menuNo=400008",
    "is_private": true,
    "address": "서울특별시 성북구 월계로 38",
    "gu": "성북구",
    "sido": "서울",
    "sigungu": "성북구",
-   "lat": 37.6166217,
-   "lng": 127.0410823,
+   "lat": null,
+   "lng": null,
    "station": "미아사거리",
    "station_lat": 37.613292,
    "station_lng": 127.030053,
@@ -1284,75 +1167,46 @@
    "station_walk_min": 13,
    "units_youth": null,
    "units_general": null,
-   "units_total": 254,
-   "area_m2_min": 19.86,
+   "units_total": null,
+   "area_m2_min": 36.93,
    "area_m2_max": 59.88,
-   "rooms": "2룸",
-   "rooms_guessed": true,
-   "deposit_won": null,
-   "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다. / - 임대보증금 비율은 50%, 60%, 70% 단위로 전환이 가능하나, (최초 계약이 아닐 경우) 기존 호실의 금액으",
-   "max_years": null,
-   "end_year": null,
-   "apply_start": "2026-09-10",
-   "apply_end": "2026-09-14",
-   "announce_date": "2026-09-15",
-   "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=e808c4a62ec143dd9a51c2a82bbb210a&fileSn=1",
-   "posted": "2026-09-10",
-   "is_new": false,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -38,
-   "my_status": null,
-   "watch": false
-  },
-  {
-   "id": "soco:6690",
-   "source": "soco",
-   "provider": "상봉동케이원청년주택피에프브이(주)",
-   "type": "청년안심-민간",
-   "name": "[민간임대] 상봉역 와이센트럴시티 상봉 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6690&menuNo=400008",
-   "is_private": true,
-   "address": "서울특별시 중랑구 망우로 313",
-   "gu": "중랑구",
-   "sido": "서울",
-   "sigungu": "중랑구",
-   "lat": 37.5990343,
-   "lng": 127.0963032,
-   "station": "망우",
-   "station_lat": 37.59955,
-   "station_lng": 127.091909,
-   "station_lines": [
-    "GYEONGUI",
-    "GYEONGCHUN"
-   ],
-   "station_walk_min": 5,
-   "units_youth": null,
-   "units_general": null,
-   "units_total": 351,
-   "area_m2_min": 30.09,
-   "area_m2_max": 36.61,
-   "rooms": "원룸(30·34·36타입)",
+   "rooms": "1.5룸(36)·2룸(59)",
    "rooms_guessed": false,
-   "deposit_won": 124000000,
-   "rent_won": 460000,
-   "convert_note": "보증금 비율 30/40/50%: 30타입(9.1평) 7,400/65만 · 9,900/55만 · 12,400/46만 / 34타입(10.4평) 7,900/69 · 10,600/59 · 13,200/49 / 36타입(11.1평) 8,200/71 · 10,900/61 · 13,600/51. 20타입(6평)은 9평 미만",
+   "deposit_won": 286000000,
+   "rent_won": 480000,
    "max_years": 10,
    "end_year": null,
    "apply_start": "2026-10-12",
-   "apply_end": "2026-10-12",
-   "announce_date": "2026-10-13",
+   "apply_end": "2026-10-14",
+   "announce_date": null,
    "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=dc23e897c48a4f34a754a0164ad98c2d&fileSn=1",
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=e43ccb9c57d549fa93de78ae4524282e&fileSn=1",
    "posted": "2026-10-08",
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -10,
-   "my_status": null,
-   "watch": false
+   "phase_days": -8,
+   "apply_start_time": "09:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-12",
+     "end": "2026-10-14",
+     "start_time": "09:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-15",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6687&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6679",
@@ -1384,12 +1238,11 @@
    "rooms_guessed": true,
    "deposit_won": 35000000,
    "rent_won": 560000,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다. / ※ 임대보증금을 월 임대료로 전환하거나, 월 임대료를 임대보증금으로 전환하는 경우에는 임대보증금 / 비율을 20%, 30%, 40% 단위로 전환이 가능하며, 제시된 비율 외 임대 보증금의 변경은 사업주와",
    "max_years": 10,
    "end_year": null,
    "apply_start": "2026-09-30",
    "apply_end": "2026-10-05",
-   "announce_date": "2026-10-07",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=d8cb94ce7286493e864d7c07d051afe5&fileSn=1",
    "posted": "2026-09-22",
@@ -1397,54 +1250,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -17,
-   "my_status": null,
-   "watch": false
-  },
-  {
-   "id": "soco:6695",
-   "source": "soco",
-   "provider": "(주)성원산업",
-   "type": "청년안심-민간",
-   "name": "[민간임대] 신독산역 센트레빌 웨스트온 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6695&menuNo=400008",
-   "is_private": true,
-   "address": "서울특별시 금천구 시흥대로 377",
-   "gu": "금천구",
-   "sido": "서울",
-   "sigungu": "금천구",
-   "lat": 37.4382322,
-   "lng": 126.9029544,
-   "station": "석수",
-   "station_lat": 37.435047,
-   "station_lng": 126.902295,
-   "station_lines": [
-    "1"
+   "apply_start_time": "09:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-09-30",
+     "end": "2026-10-05",
+     "start_time": "09:00",
+     "end_time": "23:00"
+    }
    ],
-   "station_walk_min": 5,
-   "units_youth": null,
-   "units_general": null,
-   "units_total": 589,
-   "area_m2_min": 19.33,
-   "area_m2_max": 41.79,
-   "rooms": "원룸(25)·2룸(54)",
-   "rooms_guessed": false,
-   "deposit_won": 137000000,
-   "rent_won": 750000,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다. / - 임대보증금을 월 임대료로 전환하거나 월 임대료를 임대보증금으로 전환하는 경우에는 임대보증금 비율은 / 상위표 단위로 전환이 가능하며, (최초 계약이 아닐 경우) 기존 호실의 금액으로 계약될 수 있습니다.",
-   "max_years": 10,
-   "end_year": null,
-   "apply_start": "2026-10-11",
-   "apply_end": "2026-10-15",
-   "announce_date": "2026-10-16",
-   "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=750a08abd4724bb68acccb20b71324b1&fileSn=1",
-   "posted": "2026-10-08",
-   "is_new": false,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -7,
-   "my_status": null,
-   "watch": false
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-07",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6679&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020858",
@@ -1458,8 +1284,8 @@
    "gu": null,
    "sido": "인천",
    "sigungu": "서구",
-   "lat": 37.5056839,
-   "lng": 126.667044,
+   "lat": null,
+   "lng": null,
    "station": "석남",
    "station_lat": 37.506193,
    "station_lng": 126.676203,
@@ -1477,12 +1303,11 @@
    "rooms_guessed": false,
    "deposit_won": 26000000,
    "rent_won": 242090,
-   "convert_note": "임대보증금↔월임대료 전환(보증금→월세 3.5%, 월세→보증금 6%). 21A 청년 2,600만/24.2만 · 26AS 청년(소득有) 3,463만/17.6만 · 44A 8,156만/41.5만",
    "max_years": 10,
    "end_year": null,
    "apply_start": "2026-10-13",
    "apply_end": "2026-10-15",
-   "announce_date": "2026-10-26",
+   "announce_date": null,
    "movein": "2028-03",
    "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68798818",
    "posted": "2026-09-30",
@@ -1490,101 +1315,83 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -7,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-26",
+     "time": "17:00",
+     "after": true
+    }
+   ],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
-   "id": "soco:6686",
+   "id": "soco:6694",
    "source": "soco",
-   "provider": "더클래식 동작",
+   "provider": "주식회사 엘앤피개발",
    "type": "청년안심-민간",
-   "name": "[민간임대] 노량진역 더클래식 동작 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6686&menuNo=400008",
+   "name": "[민간임대] 노원역 해링턴플레이스 노원 센트럴 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6694&menuNo=400008",
    "is_private": true,
-   "address": "서울특별시 동작구 노량진동 37-1",
-   "gu": "동작구",
+   "address": "서울특별시 노원구 노원로 495",
+   "gu": "노원구",
    "sido": "서울",
-   "sigungu": "동작구",
-   "lat": 37.5110101,
-   "lng": 126.9414634,
-   "station": "노량진",
-   "station_lat": 37.514149,
-   "station_lng": 126.94271,
+   "sigungu": "노원구",
+   "lat": null,
+   "lng": null,
+   "station": "화랑대",
+   "station_lat": 37.620064,
+   "station_lng": 127.084689,
    "station_lines": [
-    "1",
-    "9"
+    "6"
    ],
-   "station_walk_min": 4,
+   "station_walk_min": 7,
    "units_youth": 1,
-   "units_general": 8,
-   "units_total": 272,
-   "area_m2_min": 15.73,
-   "area_m2_max": 18.24,
-   "rooms": "원룸",
+   "units_general": 2,
+   "units_total": 299,
+   "area_m2_min": 23.56,
+   "area_m2_max": 48.64,
+   "rooms": "원룸(23)·2룸(48)",
    "rooms_guessed": false,
-   "deposit_won": 53180000,
-   "rent_won": 460000,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
+   "deposit_won": 132000000,
+   "rent_won": 700000,
    "max_years": 10,
    "end_year": null,
-   "apply_start": "2026-10-12",
-   "apply_end": "2026-10-12",
-   "announce_date": "2026-10-13",
+   "apply_start": "2026-10-11",
+   "apply_end": "2026-10-14",
+   "announce_date": null,
    "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=dc26bbaadb2249a4b6c4a542bf1b330b&fileSn=1",
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=6618dcd0610a459d9d7f6fe0a7314d24&fileSn=1",
    "posted": "2026-10-08",
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -10,
-   "my_status": null,
-   "watch": false
-  },
-  {
-   "id": "soco:6693",
-   "source": "soco",
-   "provider": "개봉아이알디피에프브이(주)",
-   "type": "청년안심-민간",
-   "name": "[민간임대] 개봉역 세이지움 개봉 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6693&menuNo=400008",
-   "is_private": true,
-   "address": "서울특별시 구로구 개봉동 503",
-   "gu": "구로구",
-   "sido": "서울",
-   "sigungu": "구로구",
-   "lat": 37.4931629,
-   "lng": 126.851736,
-   "station": "오류동",
-   "station_lat": 37.494526,
-   "station_lng": 126.845365,
-   "station_lines": [
-    "1"
+   "phase_days": -8,
+   "apply_start_time": "09:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-11",
+     "end": "2026-10-14",
+     "start_time": "09:00",
+     "end_time": "23:00"
+    }
    ],
-   "station_walk_min": 8,
-   "units_youth": null,
-   "units_general": 1,
-   "units_total": 605,
-   "area_m2_min": 39.41,
-   "area_m2_max": 39.41,
-   "rooms": "1.5룸(39A)",
-   "rooms_guessed": false,
-   "deposit_won": 95000000,
-   "rent_won": 768500,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
-   "max_years": 10,
-   "end_year": null,
-   "apply_start": "2026-10-12",
-   "apply_end": "2026-10-13",
-   "announce_date": "2026-10-14",
-   "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=f57eea070a4c4b64b1537b50afec67fc&fileSn=1",
-   "posted": "2026-10-08",
-   "is_new": false,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -9,
-   "my_status": null,
-   "watch": false
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-15",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6694&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "sh:311754",
@@ -1614,7 +1421,6 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "임대보증금 인상분을 전월세전환율에 따라 월임대료 인상으로 전환할 수 있습니다. / 전환되지 않습니다.",
    "max_years": 10,
    "end_year": null,
    "apply_start": null,
@@ -1627,8 +1433,76 @@
    "sites": [],
    "phase": "unknown",
    "phase_days": null,
-   "my_status": null,
-   "watch": true
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
+  },
+  {
+   "id": "soco:6695",
+   "source": "soco",
+   "provider": "(주)성원산업",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 신독산역 센트레빌 웨스트온 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6695&menuNo=400008",
+   "is_private": true,
+   "address": "서울특별시 금천구 시흥대로 377",
+   "gu": "금천구",
+   "sido": "서울",
+   "sigungu": "금천구",
+   "lat": null,
+   "lng": null,
+   "station": "석수",
+   "station_lat": 37.435047,
+   "station_lng": 126.902295,
+   "station_lines": [
+    "1"
+   ],
+   "station_walk_min": 5,
+   "units_youth": null,
+   "units_general": null,
+   "units_total": 589,
+   "area_m2_min": 19.33,
+   "area_m2_max": 41.79,
+   "rooms": "원룸(25)·2룸(54)",
+   "rooms_guessed": false,
+   "deposit_won": 137000000,
+   "rent_won": 750000,
+   "max_years": 10,
+   "end_year": null,
+   "apply_start": "2026-10-11",
+   "apply_end": "2026-10-15",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=750a08abd4724bb68acccb20b71324b1&fileSn=1",
+   "posted": "2026-10-08",
+   "is_new": false,
+   "sites": [],
+   "phase": "closed",
+   "phase_days": -7,
+   "apply_start_time": "09:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-11",
+     "end": "2026-10-15",
+     "start_time": "09:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-16",
+     "time": "16:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6695&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6677",
@@ -1660,12 +1534,11 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-20",
    "apply_end": "2026-09-21",
-   "announce_date": "2026-09-23",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=1078c236c26e478e94fff9402f594f4f&fileSn=1",
    "posted": "2026-09-17",
@@ -1673,8 +1546,91 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -31,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": "09:00",
+   "apply_end_time": "17:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-09-20",
+     "end": "2026-09-21",
+     "start_time": "09:00",
+     "end_time": "17:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-09-23",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6677&menuNo=400008",
+   "schedule_verified_at": null
+  },
+  {
+   "id": "soco:6691",
+   "source": "soco",
+   "provider": "우리자산신탁 주식회사",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 구로디지털단지역 유벤투스 240 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6691&menuNo=400008",
+   "is_private": true,
+   "address": "서울특별시 관악구 신림동 1644-3",
+   "gu": "관악구",
+   "sido": "서울",
+   "sigungu": "관악구",
+   "lat": null,
+   "lng": null,
+   "station": "서울대벤처타운",
+   "station_lat": 37.472002,
+   "station_lng": 126.933935,
+   "station_lines": [
+    "SILLIM"
+   ],
+   "station_walk_min": 7,
+   "units_youth": 50,
+   "units_general": 0,
+   "units_total": 240,
+   "area_m2_min": null,
+   "area_m2_max": 32.81,
+   "rooms": "1.5룸(33타입 32.81㎡ 안방+알파룸+거실)",
+   "rooms_guessed": false,
+   "deposit_won": 92000000,
+   "rent_won": 670000,
+   "max_years": 10,
+   "end_year": null,
+   "apply_start": "2026-10-12",
+   "apply_end": "2026-10-14",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=8932ce14f0144bf8baeca04aa11219a3&fileSn=1",
+   "posted": "2026-10-08",
+   "is_new": false,
+   "sites": [],
+   "phase": "closed",
+   "phase_days": -8,
+   "apply_start_time": null,
+   "apply_end_time": "00:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-12",
+     "end": "2026-10-14",
+     "start_time": null,
+     "end_time": "00:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-15",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6691&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020578",
@@ -1704,7 +1660,6 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "위하여 30년 이상 장기간 임대를 목적으로 공급하는 공공임대주택으로, 분양전환 되지 않습니다. / ▪ 주택청약종합저축 전환 신청자는 입주자모집공고일 전일까지 주택청약종합저축으로 전환가입이 / 으로 전환하는 경우, 순위확인서 발급이 불가하여 청약신청 불가 또는 심사에서 탈락될 수 있으니",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-21",
@@ -1717,8 +1672,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -30,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "sh:311651",
@@ -1748,7 +1707,6 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -1761,8 +1719,76 @@
    "sites": [],
    "phase": "unknown",
    "phase_days": null,
-   "my_status": null,
-   "watch": true
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
+  },
+  {
+   "id": "soco:6693",
+   "source": "soco",
+   "provider": "개봉아이알디피에프브이(주)",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 개봉역 세이지움 개봉 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6693&menuNo=400008",
+   "is_private": true,
+   "address": "서울특별시 구로구 개봉동 503",
+   "gu": "구로구",
+   "sido": "서울",
+   "sigungu": "구로구",
+   "lat": null,
+   "lng": null,
+   "station": "오류동",
+   "station_lat": 37.494526,
+   "station_lng": 126.845365,
+   "station_lines": [
+    "1"
+   ],
+   "station_walk_min": 8,
+   "units_youth": null,
+   "units_general": 1,
+   "units_total": 605,
+   "area_m2_min": 39.41,
+   "area_m2_max": 39.41,
+   "rooms": "1.5룸(39A)",
+   "rooms_guessed": false,
+   "deposit_won": 95000000,
+   "rent_won": 768500,
+   "max_years": 10,
+   "end_year": null,
+   "apply_start": "2026-10-12",
+   "apply_end": "2026-10-13",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=f57eea070a4c4b64b1537b50afec67fc&fileSn=1",
+   "posted": "2026-10-08",
+   "is_new": false,
+   "sites": [],
+   "phase": "closed",
+   "phase_days": -9,
+   "apply_start_time": "00:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-12",
+     "end": "2026-10-13",
+     "start_time": "00:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-14",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6693&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6701",
@@ -1794,12 +1820,11 @@
    "rooms_guessed": false,
    "deposit_won": 106000000,
    "rent_won": 630000,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다. / - 임대보증금 비율은 30%, 35%, 40% 단위로 전환이 가능하나, 최초 계약이 아닐 경우 기존 호실의 금액",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-19",
    "apply_end": "2026-10-20",
-   "announce_date": "2026-10-21",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=9852a8f159a44d3daf2e8d4bcff50f2f&fileSn=1",
    "posted": "2026-10-15",
@@ -1807,8 +1832,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -2,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": "09:00",
+   "apply_end_time": "18:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-19",
+     "end": "2026-10-20",
+     "start_time": "09:00",
+     "end_time": "18:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-21",
+     "time": "14:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6701&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020807",
@@ -1838,12 +1882,11 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "■ 임대기간 : 통합공공임대주택은 최대 거주기간(30년) 제한이 있는 공공임대주택이며, 분양전환되지 않습니다. / • 일반공급 대상호수는 우선공급 신청 미달로 인한 잔여호수 일반공급 전환으로 증가될 수 있습니다. / • 월임대료의 임대보증금 전환 및 임대보증금의 월임대료 전환은 임차인의 선택사항으로서 100만원 단위로 전환 가능합니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-29",
    "apply_end": "2026-10-01",
-   "announce_date": "2026-10-13",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68684216",
    "posted": "2026-09-21",
@@ -1851,8 +1894,19 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-13",
+     "time": null,
+     "after": false
+    }
+   ],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020753",
@@ -1882,12 +1936,11 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "■ 임대기간 : 통합공공임대주택은 최대 거주기간(30년) 제한이 있는 공공임대주택이며, 분양전환되지 않습니다. / • 일반공급 대상호수는 우선공급 신청 미달로 인한 잔여호수 일반공급 전환으로 증가될 수 있습니다. / • 월임대료의 임대보증금 전환 및 임대보증금의 월임대료 전환은 임차인의 선택사항으로서 100만원 단위로 전환 가능합니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-29",
    "apply_end": "2026-10-01",
-   "announce_date": "2026-10-13",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68630902",
    "posted": "2026-09-17",
@@ -1895,8 +1948,66 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-13",
+     "time": null,
+     "after": false
+    }
+   ],
+   "schedule_source": null,
+   "schedule_verified_at": null
+  },
+  {
+   "id": "lh:2015122300020619",
+   "source": "lh",
+   "provider": "LH",
+   "type": "국민임대",
+   "name": "'26년 9월 인천시 남동구 국민임대주택 예비입주자 모집 공고(2026.09.07)",
+   "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020619&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
+   "is_private": false,
+   "address": null,
+   "gu": null,
+   "sido": "인천",
+   "sigungu": null,
+   "lat": null,
+   "lng": null,
+   "station": null,
+   "station_lat": null,
+   "station_lng": null,
+   "station_lines": [],
+   "station_walk_min": null,
+   "units_youth": null,
+   "units_general": null,
+   "units_total": null,
+   "area_m2_min": 50.0,
+   "area_m2_max": 50.0,
+   "rooms": "2룸",
+   "rooms_guessed": true,
+   "deposit_won": null,
+   "rent_won": null,
+   "max_years": null,
+   "end_year": null,
+   "apply_start": "2026-09-21",
+   "apply_end": "2026-09-22",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68332341",
+   "posted": "2026-09-07",
+   "is_new": false,
+   "sites": [],
+   "phase": "closed",
+   "phase_days": -30,
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020927",
@@ -1926,7 +2037,6 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -1937,10 +2047,14 @@
    "posted": "2026-10-19",
    "is_new": true,
    "sites": [],
-   "phase": "open",
+   "phase": "unknown",
    "phase_days": 1,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020755",
@@ -1970,7 +2084,6 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -1983,8 +2096,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -7,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020802",
@@ -2014,7 +2131,6 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -2025,10 +2141,14 @@
    "posted": "2026-09-30",
    "is_new": false,
    "sites": [],
-   "phase": "open",
+   "phase": "unknown",
    "phase_days": 1,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020686",
@@ -2058,7 +2178,6 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-21",
@@ -2071,54 +2190,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -29,
-   "my_status": null,
-   "watch": false
-  },
-  {
-   "id": "soco:6692",
-   "source": "soco",
-   "provider": "권기범 외 3명",
-   "type": "청년안심-민간",
-   "name": "[민간임대] 화곡역 포르투나블루 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6692&menuNo=400008",
-   "is_private": true,
-   "address": "서울특별시 강서구 화곡로 146",
-   "gu": "강서구",
-   "sido": "서울",
-   "sigungu": "강서구",
-   "lat": 37.5561457,
-   "lng": 126.852459,
-   "station": "가양",
-   "station_lat": 37.561391,
-   "station_lng": 126.854456,
-   "station_lines": [
-    "9"
-   ],
-   "station_walk_min": 8,
-   "units_youth": 2,
-   "units_general": 1,
-   "units_total": 82,
-   "area_m2_min": 20.46,
-   "area_m2_max": 20.46,
-   "rooms": "원룸(B타입)",
-   "rooms_guessed": false,
-   "deposit_won": 156800000,
-   "rent_won": 0,
-   "convert_note": "청년 특별 B타입 4,700/45.7만 · 5,488/42.4 · 6,272/39.2 · 15,680/0(전세형) / 청년 일반 5,721/59.5 ~ 9,830/38.5",
-   "max_years": 10,
-   "end_year": null,
-   "apply_start": "2026-10-09",
-   "apply_end": "2026-10-12",
-   "announce_date": "2026-10-13",
-   "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=c9bd3a8def6e4e8b875c5cd9d23b9413&fileSn=1",
-   "posted": "2026-10-08",
-   "is_new": false,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -10,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6698",
@@ -2150,12 +2227,11 @@
    "rooms_guessed": false,
    "deposit_won": 154500000,
    "rent_won": 572400,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-19",
    "apply_end": "2026-10-20",
-   "announce_date": "2026-10-22",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=71f4772b771b4314b57230c3ac866b30&fileSn=1",
    "posted": "2026-10-15",
@@ -2163,8 +2239,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -2,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": "09:00",
+   "apply_end_time": "18:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-19",
+     "end": "2026-10-20",
+     "start_time": "09:00",
+     "end_time": "18:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-22",
+     "time": "10:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6698&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020759",
@@ -2194,12 +2289,11 @@
    "rooms_guessed": false,
    "deposit_won": 2000000,
    "rent_won": null,
-   "convert_note": "전환 / - (전환한도) 기본 월임대료의 최대 60%를 보증금으로 전환 가능 / - (증액 전환이율) 연 6%",
    "max_years": 10,
    "end_year": null,
    "apply_start": "2026-09-28",
    "apply_end": "2026-09-30",
-   "announce_date": "2026-10-02",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68646610",
    "posted": "2026-09-17",
@@ -2207,8 +2301,19 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -22,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-02",
+     "time": "14:00",
+     "after": true
+    }
+   ],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020768",
@@ -2238,7 +2343,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "월임대료의 최대 60%를 보증금으로 전환(증액분×6%÷12)",
    "max_years": 10,
    "end_year": null,
    "apply_start": "2026-10-13",
@@ -2251,8 +2355,138 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -7,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
+  },
+  {
+   "id": "soco:6704",
+   "source": "soco",
+   "provider": "김대용",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 상봉역 상봉동양엔파트 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6704&menuNo=400008",
+   "is_private": true,
+   "address": "서울특별시 중랑구 망우로 266",
+   "gu": "중랑구",
+   "sido": "서울",
+   "sigungu": "중랑구",
+   "lat": 37.6001724,
+   "lng": 127.1081091,
+   "station": "양원",
+   "station_lat": 37.606596,
+   "station_lng": 127.107906,
+   "station_lines": [
+    "GYEONGUI"
+   ],
+   "station_walk_min": 9,
+   "units_youth": 1,
+   "units_general": null,
+   "units_total": 299,
+   "area_m2_min": 38.64,
+   "area_m2_max": 38.64,
+   "rooms": "2룸",
+   "rooms_guessed": true,
+   "deposit_won": null,
+   "rent_won": null,
+   "max_years": null,
+   "end_year": null,
+   "apply_start": "2026-10-26",
+   "apply_end": "2026-10-26",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=728b03efb7f24970a5bd8746cb611a5d&fileSn=1",
+   "posted": "2026-10-22",
+   "is_new": true,
+   "sites": [],
+   "phase": "upcoming",
+   "phase_days": 4,
+   "apply_start_time": "10:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-26",
+     "end": "2026-10-26",
+     "start_time": "10:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-27",
+     "time": "16:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6704&menuNo=400008",
+   "schedule_verified_at": null
+  },
+  {
+   "id": "soco:6707",
+   "source": "soco",
+   "provider": "(주)우리대성문위탁관리부동산투자회사",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 청량리역 퀸즈W 청량리역 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6707&menuNo=400008",
+   "is_private": true,
+   "address": "서울특별시 동대문구 전농동 127-359",
+   "gu": "동대문구",
+   "sido": "서울",
+   "sigungu": "동대문구",
+   "lat": null,
+   "lng": null,
+   "station": null,
+   "station_lat": null,
+   "station_lng": null,
+   "station_lines": [],
+   "station_walk_min": null,
+   "units_youth": null,
+   "units_general": null,
+   "units_total": 206,
+   "area_m2_min": 20.0,
+   "area_m2_max": 41.4,
+   "rooms": "2룸",
+   "rooms_guessed": true,
+   "deposit_won": null,
+   "rent_won": null,
+   "max_years": null,
+   "end_year": null,
+   "apply_start": "2026-10-26",
+   "apply_end": "2026-10-26",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=76f2c57347504426bfb76cf3cae88b30&fileSn=1",
+   "posted": "2026-10-22",
+   "is_new": true,
+   "sites": [],
+   "phase": "upcoming",
+   "phase_days": 4,
+   "apply_start_time": "00:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-26",
+     "end": "2026-10-26",
+     "start_time": "00:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-27",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6707&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6675",
@@ -2282,12 +2516,11 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다. / - 임대보증금을 월 임대료로 전환하거나 월 임대료를 임대보증금으로 전환하는 경우에는 임대보증금 비 / 율은 40%, 45%, 50% 단위로 전환이 가능하며, 제시된 비율 외 임대보증금 비율의 변경은 사업주와 협",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-21",
    "apply_end": "2026-09-22",
-   "announce_date": "2026-09-23",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=cd99f9e22ed249bfa00b80e34e389567&fileSn=1",
    "posted": "2026-09-17",
@@ -2295,8 +2528,92 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -30,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": "00:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-09-21",
+     "end": "2026-09-22",
+     "start_time": "00:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-09-23",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6675&menuNo=400008",
+   "schedule_verified_at": null
+  },
+  {
+   "id": "soco:6690",
+   "source": "soco",
+   "provider": "상봉동케이원청년주택피에프브이(주)",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 상봉역 와이센트럴시티 상봉 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6690&menuNo=400008",
+   "is_private": true,
+   "address": "서울특별시 중랑구 망우로 313",
+   "gu": "중랑구",
+   "sido": "서울",
+   "sigungu": "중랑구",
+   "lat": null,
+   "lng": null,
+   "station": "망우",
+   "station_lat": 37.59955,
+   "station_lng": 127.091909,
+   "station_lines": [
+    "GYEONGUI",
+    "GYEONGCHUN"
+   ],
+   "station_walk_min": 5,
+   "units_youth": null,
+   "units_general": null,
+   "units_total": 351,
+   "area_m2_min": 30.09,
+   "area_m2_max": 36.61,
+   "rooms": "원룸(30·34·36타입)",
+   "rooms_guessed": false,
+   "deposit_won": 124000000,
+   "rent_won": 460000,
+   "max_years": 10,
+   "end_year": null,
+   "apply_start": "2026-10-12",
+   "apply_end": "2026-10-12",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=dc23e897c48a4f34a754a0164ad98c2d&fileSn=1",
+   "posted": "2026-10-08",
+   "is_new": false,
+   "sites": [],
+   "phase": "closed",
+   "phase_days": -10,
+   "apply_start_time": "00:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-12",
+     "end": "2026-10-12",
+     "start_time": "00:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-13",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6690&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020780",
@@ -2326,7 +2643,6 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "주택이며, 분양전환 되지 않습니다. / 임대조건 전환가능 / 최대전환시",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-07",
@@ -2339,8 +2655,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -15,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6673",
@@ -2364,18 +2684,17 @@
    "units_youth": null,
    "units_general": null,
    "units_total": 346,
-   "area_m2_min": 39.46,
+   "area_m2_min": 39.06,
    "area_m2_max": 39.46,
    "rooms": "2룸",
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-18",
    "apply_end": "2026-09-21",
-   "announce_date": "2026-09-22",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=349705dcdbc14ecabc8ed7b067a420cb&fileSn=1",
    "posted": "2026-09-17",
@@ -2383,8 +2702,82 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -31,
-   "my_status": null,
-   "watch": true
+   "apply_start_time": "10:00",
+   "apply_end_time": "16:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-09-18",
+     "end": "2026-09-21",
+     "start_time": "10:00",
+     "end_time": "16:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-09-22",
+     "time": "12:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6673&menuNo=400008",
+   "schedule_verified_at": null
+  },
+  {
+   "id": "soco:6671",
+   "source": "soco",
+   "provider": "랜드코퍼레이션",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 신풍역 비스타동원 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6671&menuNo=400008",
+   "is_private": true,
+   "address": "서울특별시 영등포구 신길동 3608번지 외",
+   "gu": "영등포구",
+   "sido": "서울",
+   "sigungu": "영등포구",
+   "lat": null,
+   "lng": null,
+   "station": null,
+   "station_lat": null,
+   "station_lng": null,
+   "station_lines": [],
+   "station_walk_min": null,
+   "units_youth": 8,
+   "units_general": 1002,
+   "units_total": 576,
+   "area_m2_min": null,
+   "area_m2_max": null,
+   "rooms": null,
+   "rooms_guessed": false,
+   "deposit_won": null,
+   "rent_won": null,
+   "max_years": null,
+   "end_year": null,
+   "apply_start": "2026-09-21",
+   "apply_end": "2026-09-21",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=7b451f2609674acbbcb7f61532dc7047&fileSn=1",
+   "posted": "2026-09-17",
+   "is_new": false,
+   "sites": [],
+   "phase": "closed",
+   "phase_days": -31,
+   "apply_start_time": "09:00",
+   "apply_end_time": "21:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-09-21",
+     "end": "2026-09-21",
+     "start_time": "09:00",
+     "end_time": "21:00"
+    }
+   ],
+   "announcements": [],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6671&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6682",
@@ -2417,12 +2810,11 @@
    "rooms_guessed": true,
    "deposit_won": 47000000,
    "rent_won": 740000,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-05",
    "apply_end": "2026-10-05",
-   "announce_date": "2026-10-06",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=a781459f86a14272b07e2c760da6f68e&fileSn=1",
    "posted": "2026-10-01",
@@ -2430,8 +2822,91 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -17,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": "00:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-05",
+     "end": "2026-10-05",
+     "start_time": "00:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-06",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6682&menuNo=400008",
+   "schedule_verified_at": null
+  },
+  {
+   "id": "soco:6703",
+   "source": "soco",
+   "provider": "㈜대한묵동위탁관리부동산투자회사",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 화랑대역 에이트플레이스 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6703&menuNo=400008",
+   "is_private": true,
+   "address": "서울특별시 중랑구 신내로 267",
+   "gu": "중랑구",
+   "sido": "서울",
+   "sigungu": "중랑구",
+   "lat": 37.6159659,
+   "lng": 127.0944724,
+   "station": "봉화산",
+   "station_lat": 37.617283,
+   "station_lng": 127.091401,
+   "station_lines": [
+    "6"
+   ],
+   "station_walk_min": 4,
+   "units_youth": null,
+   "units_general": null,
+   "units_total": 724,
+   "area_m2_min": null,
+   "area_m2_max": null,
+   "rooms": null,
+   "rooms_guessed": false,
+   "deposit_won": null,
+   "rent_won": null,
+   "max_years": null,
+   "end_year": null,
+   "apply_start": "2026-10-23",
+   "apply_end": "2026-10-28",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=0b4ea787ebb7484fb985e2e49f3a9ce7&fileSn=1",
+   "posted": "2026-10-22",
+   "is_new": true,
+   "sites": [],
+   "phase": "upcoming",
+   "phase_days": 1,
+   "apply_start_time": "09:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-23",
+     "end": "2026-10-28",
+     "start_time": "09:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-29",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6703&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020798",
@@ -2461,7 +2936,6 @@
    "rooms_guessed": false,
    "deposit_won": 1000000,
    "rent_won": null,
-   "convert_note": "전환 / - (전환한도) 기본 월임대료의 최대 60%를 보증금으로 전환 가능 / - (증액 전환이율) 연 6%",
    "max_years": 10,
    "end_year": null,
    "apply_start": null,
@@ -2474,8 +2948,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -22,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020693",
@@ -2505,7 +2983,6 @@
    "rooms_guessed": false,
    "deposit_won": 1000000,
    "rent_won": null,
-   "convert_note": "전환 / - (전환한도) 기본 월임대료의 최대 60%를 보증금으로 전환 가능 / - (증액 전환이율) 연 6%",
    "max_years": 10,
    "end_year": null,
    "apply_start": null,
@@ -2518,8 +2995,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -43,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020630",
@@ -2549,7 +3030,6 @@
    "rooms_guessed": false,
    "deposit_won": 1000000,
    "rent_won": null,
-   "convert_note": "전환 / - (전환한도) 기본 월임대료의 최대 60%를 보증금으로 전환 가능 / - (증액 전환이율) 연 6%",
    "max_years": 10,
    "end_year": null,
    "apply_start": null,
@@ -2562,8 +3042,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -43,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6683",
@@ -2595,12 +3079,11 @@
    "rooms_guessed": true,
    "deposit_won": 110000000,
    "rent_won": 322000,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다. / 불가합니다. *임대보증금  비율 전환 불가(보증보험 가입액 관련 사유)",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-02",
    "apply_end": "2026-10-04",
-   "announce_date": "2026-10-07",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=29bdb360cdd1412bb71a8e2a49b2e16c&fileSn=1",
    "posted": "2026-10-01",
@@ -2608,8 +3091,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -18,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": "10:00",
+   "apply_end_time": "17:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-02",
+     "end": "2026-10-04",
+     "start_time": "10:00",
+     "end_time": "17:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-07",
+     "time": "14:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6683&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6688",
@@ -2639,12 +3141,11 @@
    "rooms_guessed": false,
    "deposit_won": 67000000,
    "rent_won": 518000,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
    "max_years": 10,
    "end_year": null,
    "apply_start": "2026-10-12",
    "apply_end": "2026-10-12",
-   "announce_date": "2026-10-13",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=0e8ccf1417194a63a7ba0afb6e0f0975&fileSn=1",
    "posted": "2026-10-08",
@@ -2652,8 +3153,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -10,
-   "my_status": null,
-   "watch": true
+   "apply_start_time": "10:00",
+   "apply_end_time": "17:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-12",
+     "end": "2026-10-12",
+     "start_time": "10:00",
+     "end_time": "17:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-13",
+     "time": "15:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6688&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "sh:311521",
@@ -2663,7 +3183,7 @@
    "name": "서초구 청년예술인주택 서리풀 청년아트타운(수요자맞춤형) 잔여세대 모집 공고",
    "source_url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/view.do?seq=311521",
    "is_private": false,
-   "address": "서울특별시 서초구 공고 제2026- 0000호",
+   "address": "서울특별시 서초구 공고 제2026 - 0000호",
    "gu": "서초구",
    "sido": "서울",
    "sigungu": "서초구",
@@ -2683,7 +3203,6 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "※상호전환(월임대료에서 임대보증금으로 전환)제도안내-[SH서초주거안심종합센터 문의 / • 표시된월임대료에서60%까지임대보증금으로전환이가능하며,전환이율은6.7%임 / • 상호전환시기는기본조건으로계약체결후잔금에대해서신청이가능합니다.",
    "max_years": 10,
    "end_year": null,
    "apply_start": null,
@@ -2696,8 +3215,76 @@
    "sites": [],
    "phase": "unknown",
    "phase_days": null,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
+  },
+  {
+   "id": "soco:6706",
+   "source": "soco",
+   "provider": "우리자산신탁 주식회사",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 구로디지털단지역 유벤투스 240 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6706&menuNo=400008",
+   "is_private": true,
+   "address": "서울특별시 관악구 신림동 1644-3",
+   "gu": "관악구",
+   "sido": "서울",
+   "sigungu": "관악구",
+   "lat": 37.4730961,
+   "lng": 126.9282982,
+   "station": "서울대벤처타운",
+   "station_lat": 37.472002,
+   "station_lng": 126.933935,
+   "station_lines": [
+    "SILLIM"
+   ],
+   "station_walk_min": 7,
+   "units_youth": null,
+   "units_general": null,
+   "units_total": 240,
+   "area_m2_min": null,
+   "area_m2_max": null,
+   "rooms": null,
+   "rooms_guessed": false,
+   "deposit_won": null,
+   "rent_won": null,
+   "max_years": null,
+   "end_year": null,
+   "apply_start": "2026-10-26",
+   "apply_end": "2026-10-28",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=e8efb3f7eadb4e269887d55d9b8d632f&fileSn=1",
+   "posted": "2026-10-22",
+   "is_new": true,
+   "sites": [],
+   "phase": "upcoming",
+   "phase_days": 4,
+   "apply_start_time": null,
+   "apply_end_time": "00:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-26",
+     "end": "2026-10-28",
+     "start_time": null,
+     "end_time": "00:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-29",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6706&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6700",
@@ -2729,12 +3316,11 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-16",
    "apply_end": "2026-10-19",
-   "announce_date": "2026-10-20",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=38ebf7fb3139417daace246a6c587d75&fileSn=1",
    "posted": "2026-10-15",
@@ -2742,8 +3328,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -3,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": "00:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-16",
+     "end": "2026-10-19",
+     "start_time": null,
+     "end_time": "00:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-20",
+     "time": "11:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6700&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6668",
@@ -2775,12 +3380,11 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다. / - 임대보증금을 월 임대료로 전환하거나 월 임대료를 임대보증금으로 전환하는 경우에는 임대보증금 비 / 율 전환 불가(보증보험 가입액 관련 사유)",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-17",
    "apply_end": "2026-09-21",
-   "announce_date": "2026-09-22",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=bea308a8d31142128fc0025d94dfcf34&fileSn=1",
    "posted": "2026-09-17",
@@ -2788,54 +3392,91 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -31,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": "16:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-09-17",
+     "end": "2026-09-21",
+     "start_time": "16:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-09-22",
+     "time": "14:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6668&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
-   "id": "soco:6667",
+   "id": "soco:6692",
    "source": "soco",
-   "provider": "정지량 외 6명",
+   "provider": "권기범 외 3명",
    "type": "청년안심-민간",
-   "name": "[민간임대] 강변역 비바힐스강변 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6667&menuNo=400008",
+   "name": "[민간임대] 화곡역 포르투나블루 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6692&menuNo=400008",
    "is_private": true,
-   "address": "서울특별시 광진구 구의동 593-11",
-   "gu": "광진구",
+   "address": "서울특별시 강서구 화곡로 146",
+   "gu": "강서구",
    "sido": "서울",
-   "sigungu": "광진구",
-   "lat": 37.54417,
-   "lng": 127.09262,
-   "station": "아차산",
-   "station_lat": 37.551691,
-   "station_lng": 127.089761,
+   "sigungu": "강서구",
+   "lat": null,
+   "lng": null,
+   "station": "가양",
+   "station_lat": 37.561391,
+   "station_lng": 126.854456,
    "station_lines": [
-    "5"
+    "9"
    ],
-   "station_walk_min": 11,
-   "units_youth": 1,
-   "units_general": null,
-   "units_total": 98,
-   "area_m2_min": 15.87,
-   "area_m2_max": 15.87,
-   "rooms": "원룸",
-   "rooms_guessed": true,
-   "deposit_won": null,
-   "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
-   "max_years": null,
+   "station_walk_min": 8,
+   "units_youth": 2,
+   "units_general": 1,
+   "units_total": 82,
+   "area_m2_min": 20.46,
+   "area_m2_max": 20.46,
+   "rooms": "원룸(B타입)",
+   "rooms_guessed": false,
+   "deposit_won": 156800000,
+   "rent_won": 0,
+   "max_years": 10,
    "end_year": null,
-   "apply_start": "2026-09-21",
-   "apply_end": "2026-09-21",
-   "announce_date": "2026-09-22",
+   "apply_start": "2026-10-09",
+   "apply_end": "2026-10-12",
+   "announce_date": null,
    "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=9a2c6c27162543e483c90f18578bfbef&fileSn=1",
-   "posted": "2026-09-17",
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=c9bd3a8def6e4e8b875c5cd9d23b9413&fileSn=1",
+   "posted": "2026-10-08",
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -31,
-   "my_status": null,
-   "watch": true
+   "phase_days": -10,
+   "apply_start_time": null,
+   "apply_end_time": "00:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-09",
+     "end": "2026-10-12",
+     "start_time": null,
+     "end_time": "00:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-13",
+     "time": "11:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6692&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6702",
@@ -2867,12 +3508,11 @@
    "rooms_guessed": false,
    "deposit_won": 65000000,
    "rent_won": 410000,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다. / - 임대보증금 비율은 30%, 35%, 40% 단위로 전환이 가능하나, 최초 계약이 아닐 경우 기존 호실의 금액",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-19",
    "apply_end": "2026-10-20",
-   "announce_date": "2026-10-21",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=5025ff882999490b947aecacef706c3e&fileSn=1",
    "posted": "2026-10-15",
@@ -2880,8 +3520,92 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -2,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": "09:00",
+   "apply_end_time": "18:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-19",
+     "end": "2026-10-20",
+     "start_time": "09:00",
+     "end_time": "18:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-21",
+     "time": "14:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6702&menuNo=400008",
+   "schedule_verified_at": null
+  },
+  {
+   "id": "soco:6686",
+   "source": "soco",
+   "provider": "더클래식 동작",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 노량진역 더클래식 동작 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6686&menuNo=400008",
+   "is_private": true,
+   "address": "서울특별시 동작구 노량진동 37-1",
+   "gu": "동작구",
+   "sido": "서울",
+   "sigungu": "동작구",
+   "lat": null,
+   "lng": null,
+   "station": "노량진",
+   "station_lat": 37.514149,
+   "station_lng": 126.94271,
+   "station_lines": [
+    "1",
+    "9"
+   ],
+   "station_walk_min": 4,
+   "units_youth": 1,
+   "units_general": 8,
+   "units_total": 272,
+   "area_m2_min": 15.73,
+   "area_m2_max": 18.24,
+   "rooms": "원룸",
+   "rooms_guessed": false,
+   "deposit_won": 53180000,
+   "rent_won": 460000,
+   "max_years": 10,
+   "end_year": null,
+   "apply_start": "2026-10-12",
+   "apply_end": "2026-10-12",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=dc26bbaadb2249a4b6c4a542bf1b330b&fileSn=1",
+   "posted": "2026-10-08",
+   "is_new": false,
+   "sites": [],
+   "phase": "closed",
+   "phase_days": -10,
+   "apply_start_time": "10:00",
+   "apply_end_time": "18:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-12",
+     "end": "2026-10-12",
+     "start_time": "10:00",
+     "end_time": "18:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-13",
+     "time": "14:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6686&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "sh:311549",
@@ -2911,7 +3635,6 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "※ 위 월임대료 중 60%까지 임대보증금으로 전환이 가능하며 전환이율은 6.7%임(연1회에 한함)",
    "max_years": 10,
    "end_year": null,
    "apply_start": null,
@@ -2924,21 +3647,32 @@
    "sites": [],
    "phase": "unknown",
    "phase_days": null,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [
+    {
+     "kind": "winner",
+     "date": "2026-12-23",
+     "time": null,
+     "after": false
+    }
+   ],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
-   "id": "soco:6664",
-   "source": "soco",
-   "provider": "(주)상봉대한제42호위탁관리부동산투자회사",
-   "type": "청년안심-민간",
-   "name": "[민간임대] 상봉역 상봉생활 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6664&menuNo=400008",
-   "is_private": true,
-   "address": "서울특별시 중랑구 상봉동 116-49번지",
-   "gu": "중랑구",
-   "sido": "서울",
-   "sigungu": "중랑구",
+   "id": "lh:2015122300020931",
+   "source": "lh",
+   "provider": "LH",
+   "type": "매입임대",
+   "name": "[인천지역본부] 일반 매입임대주택 입주자 모집 공고(인천,부천)",
+   "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020931&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
+   "is_private": false,
+   "address": null,
+   "gu": null,
+   "sido": "인천",
+   "sigungu": null,
    "lat": null,
    "lng": null,
    "station": null,
@@ -2946,30 +3680,33 @@
    "station_lng": null,
    "station_lines": [],
    "station_walk_min": null,
-   "units_youth": 67,
+   "units_youth": null,
    "units_general": null,
-   "units_total": 299,
+   "units_total": null,
    "area_m2_min": null,
    "area_m2_max": null,
    "rooms": null,
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다. / - 임대보증금을 월 임대료로 전환하거나 월 임대료를 임대보증금으로 전환하는 경우에는 임대보증금 비 / 율은 30%, 50%, 70% 단위로 전환이 가능하며, 제시된 비율 외 임대보증금 비율의 변경은 사업주와 협",
-   "max_years": null,
+   "max_years": 30,
    "end_year": null,
-   "apply_start": "2026-09-13",
-   "apply_end": "2026-09-14",
-   "announce_date": "2026-09-15",
+   "apply_start": null,
+   "apply_end": "2026-11-03",
+   "announce_date": null,
    "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=852613b035664196ac9ac9a88f86db48&fileSn=1",
-   "posted": "2026-09-10",
-   "is_new": false,
+   "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=69080281",
+   "posted": "2026-10-22",
+   "is_new": true,
    "sites": [],
-   "phase": "closed",
-   "phase_days": -38,
-   "my_status": null,
-   "watch": false
+   "phase": "unknown",
+   "phase_days": 12,
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020811",
@@ -2999,12 +3736,11 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "상호전환 / - (전환한도) 월임대료의 최대 60%를 보증금으로 전환 가능 / - (증액 전환이율) 연 6%",
    "max_years": 20,
    "end_year": null,
    "apply_start": null,
    "apply_end": "2026-10-08",
-   "announce_date": "2026-10-12",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68689376",
    "posted": "2026-09-22",
@@ -3012,8 +3748,19 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -14,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-12",
+     "time": "17:00",
+     "after": true
+    }
+   ],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6696",
@@ -3043,7 +3790,6 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-21",
@@ -3056,8 +3802,6 @@
    "sites": [],
    "phase": "open",
    "phase_days": 0,
-   "my_status": null,
-   "watch": true,
    "apply_start_time": "00:00",
    "apply_end_time": "23:00",
    "application_periods": [
@@ -3085,7 +3829,7 @@
    "source": "ih",
    "provider": "iH 인천도시공사",
    "type": "국민임대",
-   "name": "우리집 영구임대주택(만석·만석2·만석3, 인현·인현2, 괭이부리마을, 남촌, 덕적, 옥련) 예비입주자 모집 공고 new",
+   "name": "우리집 영구임대주택(만석·만석2·만석3, 인현·인현2, 괭이부리마을, 남촌, 덕적, 옥련) 예비입주자 모집 공고",
    "source_url": "https://www.ih.co.kr/main/bbs/bbsMsgDetail.do?msg_seq=4468&cate1=general&bcd=notice&pgdiv=general",
    "is_private": false,
    "address": "인천광역시",
@@ -3108,12 +3852,11 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "※ 이 주택은 최장 50년까지 임대가 가능하며, 입주자에게 분양전환되지 않는 장기공공임대주택입니다 . / 주거약자용 임대주택은 모집정원에 신청인원이 미달할 경우 일반공급물량으로 전환되지 않습니다. / • 이 주택의 입주자로 선정된 자가 임대차기간 종료 전에 다른 주택을 소유하게 된 경우 (분양전환되는",
    "max_years": 50,
    "end_year": null,
    "apply_start": null,
    "apply_end": null,
-   "announce_date": "2027-02-26",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://www.ih.co.kr/main/bbs/bbsMsgFileDown.do?bcd=notice&msg_seq=4468&fileno=1",
    "posted": "2026-10-21",
@@ -3121,52 +3864,12 @@
    "sites": [],
    "phase": "unknown",
    "phase_days": null,
-   "my_status": null,
-   "watch": false
-  },
-  {
-   "id": "soco:6685",
-   "source": "soco",
-   "provider": "이승은 외 3인",
-   "type": "청년안심-민간",
-   "name": "[민간임대] 동묘앞역 청계로벤하임 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6685&menuNo=400008",
-   "is_private": true,
-   "address": "서울특별시 종로구 숭인동 240-1 외",
-   "gu": "종로구",
-   "sido": "서울",
-   "sigungu": "종로구",
-   "lat": null,
-   "lng": null,
-   "station": null,
-   "station_lat": null,
-   "station_lng": null,
-   "station_lines": [],
-   "station_walk_min": null,
-   "units_youth": 2,
-   "units_general": 2,
-   "units_total": 139,
-   "area_m2_min": null,
-   "area_m2_max": null,
-   "rooms": null,
-   "rooms_guessed": false,
-   "deposit_won": 230400000,
-   "rent_won": 288100,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
-   "max_years": null,
-   "end_year": null,
-   "apply_start": "2026-10-06",
-   "apply_end": "2026-10-06",
-   "announce_date": "2026-10-07",
-   "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=ce79b8c4c137492eb0aa984aa180ee7b&fileSn=1",
-   "posted": "2026-10-01",
-   "is_new": false,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -16,
-   "my_status": null,
-   "watch": true
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6684",
@@ -3196,12 +3899,11 @@
    "rooms_guessed": true,
    "deposit_won": 86400000,
    "rent_won": 590000,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다. / - 임대보증금 비율은 40%, 45% 50% 단위로 전환이 가능하나, (최초 계약이 아닐 경우) 기존 호실의 금액으",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-13",
    "apply_end": "2026-10-15",
-   "announce_date": "2026-10-19",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=0c74a02337394ac18f6b8675d6053ab6&fileSn=1",
    "posted": "2026-10-01",
@@ -3209,21 +3911,40 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -7,
-   "my_status": null,
-   "watch": true
+   "apply_start_time": "09:00",
+   "apply_end_time": "17:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-13",
+     "end": "2026-10-15",
+     "start_time": "09:00",
+     "end_time": "17:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-19",
+     "time": "14:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6684&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
-   "id": "soco:6663",
+   "id": "soco:6685",
    "source": "soco",
-   "provider": "김수미",
+   "provider": "이승은 외 3인",
    "type": "청년안심-민간",
-   "name": "[민간임대] 장한평역 유니트125(UNIT125) 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6663&menuNo=400008",
+   "name": "[민간임대] 동묘앞역 청계로벤하임 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6685&menuNo=400008",
    "is_private": true,
-   "address": "서울특별시 동대문구 장안동 418-1번지",
-   "gu": "동대문구",
+   "address": "서울특별시 종로구 숭인동 240-1 외",
+   "gu": "종로구",
    "sido": "서울",
-   "sigungu": "동대문구",
+   "sigungu": "종로구",
    "lat": null,
    "lng": null,
    "station": null,
@@ -3231,30 +3952,48 @@
    "station_lng": null,
    "station_lines": [],
    "station_walk_min": null,
-   "units_youth": 1,
-   "units_general": null,
-   "units_total": 125,
+   "units_youth": 2,
+   "units_general": 2,
+   "units_total": 139,
    "area_m2_min": null,
    "area_m2_max": null,
    "rooms": null,
    "rooms_guessed": false,
-   "deposit_won": null,
-   "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다. / - 임대보증금 비율은 30%, 40% 50% 단위로 전환이 가능하나, (최초 계약이 아닐 경우) 기존 호실의 금액으 / 비율 전환 불가(보증보험 가입액 관련 사유)",
+   "deposit_won": 230400000,
+   "rent_won": 288100,
    "max_years": null,
    "end_year": null,
-   "apply_start": "2026-09-11",
-   "apply_end": "2026-09-14",
-   "announce_date": "2026-09-15",
+   "apply_start": "2026-10-06",
+   "apply_end": "2026-10-06",
+   "announce_date": null,
    "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=26b2ee94088d4fc88bfdd0a10fc2f1b3&fileSn=1",
-   "posted": "2026-09-10",
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=ce79b8c4c137492eb0aa984aa180ee7b&fileSn=1",
+   "posted": "2026-10-01",
    "is_new": false,
    "sites": [],
    "phase": "closed",
-   "phase_days": -38,
-   "my_status": null,
-   "watch": false
+   "phase_days": -16,
+   "apply_start_time": "00:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-06",
+     "end": "2026-10-06",
+     "start_time": "00:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-07",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6685&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6681",
@@ -3284,12 +4023,11 @@
    "rooms_guessed": true,
    "deposit_won": 97000000,
    "rent_won": 1009100,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-04",
    "apply_end": "2026-10-05",
-   "announce_date": "2026-10-07",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=4cbc99a3da804addb2dd040b964978f8&fileSn=1",
    "posted": "2026-10-01",
@@ -3297,8 +4035,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -17,
-   "my_status": null,
-   "watch": true
+   "apply_start_time": "00:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-04",
+     "end": "2026-10-05",
+     "start_time": "00:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-07",
+     "time": "14:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6681&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6672",
@@ -3328,12 +4085,11 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-21",
    "apply_end": "2026-09-21",
-   "announce_date": "2026-09-22",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=968b2f371c05436da96a1ad06e425b5a&fileSn=1",
    "posted": "2026-09-17",
@@ -3341,52 +4097,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -31,
-   "my_status": null,
-   "watch": false
-  },
-  {
-   "id": "soco:6671",
-   "source": "soco",
-   "provider": "랜드코퍼레이션",
-   "type": "청년안심-민간",
-   "name": "[민간임대] 신풍역 비스타동원 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6671&menuNo=400008",
-   "is_private": true,
-   "address": "서울특별시 영등포구 신길동 3608번지 외",
-   "gu": "영등포구",
-   "sido": "서울",
-   "sigungu": "영등포구",
-   "lat": null,
-   "lng": null,
-   "station": null,
-   "station_lat": null,
-   "station_lng": null,
-   "station_lines": [],
-   "station_walk_min": null,
-   "units_youth": 8,
-   "units_general": null,
-   "units_total": 576,
-   "area_m2_min": null,
-   "area_m2_max": null,
-   "rooms": null,
-   "rooms_guessed": false,
-   "deposit_won": null,
-   "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
-   "max_years": null,
-   "end_year": null,
-   "apply_start": "2026-09-21",
-   "apply_end": "2026-09-21",
-   "announce_date": null,
-   "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=7b451f2609674acbbcb7f61532dc7047&fileSn=1",
-   "posted": "2026-09-17",
-   "is_new": false,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -31,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": "00:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-09-21",
+     "end": "2026-09-21",
+     "start_time": "00:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-09-22",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6672&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "sh:311948",
@@ -3416,7 +4147,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "○ 토지 유상임대(임대료 후불), 매매잔금 지급시 무상임대로 전환",
    "max_years": 2,
    "end_year": null,
    "apply_start": "2026-10-19",
@@ -3429,8 +4159,12 @@
    "sites": [],
    "phase": "open",
    "phase_days": 28,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "sh:311653",
@@ -3460,7 +4194,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "○ 토지 유상임대(임대료 후불), 매매잔금 지급시 무상임대로 전환",
    "max_years": 2,
    "end_year": null,
    "apply_start": "2026-10-19",
@@ -3473,8 +4206,74 @@
    "sites": [],
    "phase": "open",
    "phase_days": 28,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
+  },
+  {
+   "id": "soco:6705",
+   "source": "soco",
+   "provider": "(주)신림리더스하우징",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 신림역 최강타워 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6705&menuNo=400008",
+   "is_private": true,
+   "address": "서울특별시 관악구 남부순환로 180길 6",
+   "gu": "관악구",
+   "sido": "서울",
+   "sigungu": "관악구",
+   "lat": null,
+   "lng": null,
+   "station": null,
+   "station_lat": null,
+   "station_lng": null,
+   "station_lines": [],
+   "station_walk_min": null,
+   "units_youth": 1,
+   "units_general": 1,
+   "units_total": 299,
+   "area_m2_min": null,
+   "area_m2_max": null,
+   "rooms": null,
+   "rooms_guessed": false,
+   "deposit_won": null,
+   "rent_won": null,
+   "max_years": null,
+   "end_year": null,
+   "apply_start": "2026-10-23",
+   "apply_end": "2026-10-26",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=0c9629f4962749799cbb263c1b0ae306&fileSn=1",
+   "posted": "2026-10-22",
+   "is_new": true,
+   "sites": [],
+   "phase": "upcoming",
+   "phase_days": 1,
+   "apply_start_time": "10:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-10-23",
+     "end": "2026-10-26",
+     "start_time": "10:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-27",
+     "time": "11:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6705&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6674",
@@ -3504,12 +4303,11 @@
    "rooms_guessed": true,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-21",
    "apply_end": "2026-09-21",
-   "announce_date": "2026-09-22",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=a2bbc66fe4ac4b378731e01a25b6a200&fileSn=1",
    "posted": "2026-09-17",
@@ -3517,8 +4315,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -31,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": "10:00",
+   "apply_end_time": "16:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-09-21",
+     "end": "2026-09-21",
+     "start_time": "10:00",
+     "end_time": "16:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-09-22",
+     "time": "16:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6674&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6670",
@@ -3548,12 +4365,11 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-19",
    "apply_end": "2026-09-21",
-   "announce_date": "2026-09-22",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=f06d7abc94874da68f18c512dccca94f&fileSn=1",
    "posted": "2026-09-17",
@@ -3561,8 +4377,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -31,
-   "my_status": null,
-   "watch": true
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-09-19",
+     "end": "2026-09-21",
+     "start_time": null,
+     "end_time": null
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-09-22",
+     "time": "11:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6670&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6669",
@@ -3592,12 +4427,11 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "■ 본 주택은 관련 법령에 따라 임대의무기간 종료 후 임차인에게 분양전환 우선권을 부여하지 않습니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-21",
    "apply_end": "2026-09-21",
-   "announce_date": "2026-09-22",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=672fe0c1d9b14cf2b6a431a747333b0d&fileSn=1",
    "posted": "2026-09-17",
@@ -3605,8 +4439,27 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -31,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": "10:00",
+   "apply_end_time": "16:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-09-21",
+     "end": "2026-09-21",
+     "start_time": "10:00",
+     "end_time": "16:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-09-22",
+     "time": "16:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6669&menuNo=400008",
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020925",
@@ -3636,7 +4489,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "• 상기 행복주택은 공급대상자에 따라 최대 거주기간 제한이 있는 임대주택이며 분양전환되지 않 / • 주택청약종합저축 전환 신청자는 입주자모집공고일 전일까지 주택청약종합저축으로의 전환가입이 / 임대조건 전환가능",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-11-02",
@@ -3649,8 +4501,6 @@
    "sites": [],
    "phase": "upcoming",
    "phase_days": 11,
-   "my_status": null,
-   "watch": false,
    "apply_start_time": "10:00",
    "apply_end_time": "16:00",
    "application_periods": [
@@ -3708,12 +4558,11 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "• 상기 행복주택은 공급대상자에 따라 최대 거주기간 제한이 있는 임대주택이며 분양전환되지 않습니다. / • 월임대료의 임대보증금 전환 및 임대보증금의 월임대료 전환은 임차인의 선택사항으로서 임대보증금 100만원 단위로 / 전환 가능합니다.",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-28",
    "apply_end": "2026-09-30",
-   "announce_date": "2026-10-12",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68573813",
    "posted": "2026-09-16",
@@ -3721,52 +4570,19 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -22,
-   "my_status": null,
-   "watch": false
-  },
-  {
-   "id": "lh:2015122300020619",
-   "source": "lh",
-   "provider": "LH",
-   "type": "국민임대",
-   "name": "'26년 9월 인천시 남동구 국민임대주택 예비입주자 모집 공고(2026.09.07)",
-   "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020619&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "is_private": false,
-   "address": null,
-   "gu": null,
-   "sido": "인천",
-   "sigungu": null,
-   "lat": null,
-   "lng": null,
-   "station": null,
-   "station_lat": null,
-   "station_lng": null,
-   "station_lines": [],
-   "station_walk_min": null,
-   "units_youth": null,
-   "units_general": null,
-   "units_total": null,
-   "area_m2_min": null,
-   "area_m2_max": null,
-   "rooms": null,
-   "rooms_guessed": false,
-   "deposit_won": null,
-   "rent_won": null,
-   "convert_note": "위하여 30년 이상 장기간 임대를 목적으로 공급하는 공공임대주택으로, 분양전환 되지 않습니다. / ▪주택청약종합저축 전환 신청자는 입주자모집공고일 전일까지 주택청약저축으로 전환가입이 완료되어 / ▪ 월임대료의 임대보증금 전환(임대보증금 증액) 및 임대보증금의 월임대료 전환(임대보증금 감액)은 임차인의 선택사항으로서",
-   "max_years": null,
-   "end_year": null,
-   "apply_start": "2026-09-21",
-   "apply_end": "2026-09-22",
-   "announce_date": "2027-01-28",
-   "movein": null,
-   "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68332341",
-   "posted": "2026-09-07",
-   "is_new": false,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -30,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-10-12",
+     "time": "14:00",
+     "after": false
+    }
+   ],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020697",
@@ -3796,12 +4612,11 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "위하여 30년 이상 장기간 임대를 목적으로 공급하는 공공임대주택으로, 분양전환 되지 않습니다. / ▪ 주택청약종합저축 전환 신청자는 입주자모집공고일 전일까지 주택청약종합저축으로 전환가입이 / 으로 전환하는 경우, 순위확인서 발급이 불가하여 청약신청 불가 또는 심사에서 탈락될 수 있으니",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-22",
    "apply_end": "2026-09-22",
-   "announce_date": "2026-09-22",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68456720",
    "posted": "2026-09-07",
@@ -3809,8 +4624,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -30,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020626",
@@ -3820,7 +4639,7 @@
    "name": "[정정공고]인천시 검단지역 영구임대주택 예비입주자 모집공고(2026.08.20)",
    "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020626&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
    "is_private": false,
-   "address": "인천광역시",
+   "address": null,
    "gu": null,
    "sido": "인천",
    "sigungu": null,
@@ -3840,12 +4659,11 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "건설되었으며, 모집정원 미달시에도 일반으로 전환되지 않습니다. / 로 모집정원 미달 시에도 일반으로 전환되지 않습니다. / 전환가능보증금",
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-08-31",
    "apply_end": "2026-09-02",
-   "announce_date": "2026-12-03",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68300672",
    "posted": "2026-08-26",
@@ -3853,8 +4671,59 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -50,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
+  },
+  {
+   "id": "lh:0000061190",
+   "source": "lh",
+   "provider": "LH",
+   "type": "국민임대",
+   "name": "구리갈매 S1블록 10년공공임대주택 예비입주자 모집공고",
+   "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061190&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026",
+   "is_private": false,
+   "address": "경기도",
+   "gu": null,
+   "sido": "경기",
+   "sigungu": null,
+   "lat": null,
+   "lng": null,
+   "station": null,
+   "station_lat": null,
+   "station_lng": null,
+   "station_lines": [],
+   "station_walk_min": null,
+   "units_youth": null,
+   "units_general": null,
+   "units_total": null,
+   "area_m2_min": null,
+   "area_m2_max": null,
+   "rooms": null,
+   "rooms_guessed": false,
+   "deposit_won": null,
+   "rent_won": null,
+   "max_years": null,
+   "end_year": null,
+   "apply_start": null,
+   "apply_end": "2026-11-04",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": null,
+   "posted": "2026-10-22",
+   "is_new": true,
+   "sites": [],
+   "phase": "unknown",
+   "phase_days": 13,
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020900",
@@ -3884,7 +4753,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -3895,10 +4763,14 @@
    "posted": "2026-10-16",
    "is_new": true,
    "sites": [],
-   "phase": "open",
+   "phase": "unknown",
    "phase_days": 7,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020710",
@@ -3928,7 +4800,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-30",
@@ -3941,8 +4812,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020727",
@@ -3972,7 +4847,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-12",
@@ -3985,8 +4859,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -6,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:0000061177",
@@ -4016,7 +4894,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -4029,8 +4906,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -22,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020769",
@@ -4060,7 +4941,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -4071,10 +4951,14 @@
    "posted": "2026-09-15",
    "is_new": false,
    "sites": [],
-   "phase": "open",
+   "phase": "unknown",
    "phase_days": 6,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:0000061173",
@@ -4104,7 +4988,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -4117,8 +5000,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -22,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020731",
@@ -4148,7 +5035,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -4159,54 +5045,14 @@
    "posted": "2026-09-10",
    "is_new": false,
    "sites": [],
-   "phase": "open",
+   "phase": "unknown",
    "phase_days": 6,
-   "my_status": null,
-   "watch": false
-  },
-  {
-   "id": "lh:2015122300020670",
-   "source": "lh",
-   "provider": "LH",
-   "type": "국민임대",
-   "name": "의정부송산3단지 공임50년 예비입주자 표준모집공고문",
-   "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020670&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=08&mi=1026",
-   "is_private": false,
-   "address": "경기도",
-   "gu": null,
-   "sido": "경기",
-   "sigungu": null,
-   "lat": null,
-   "lng": null,
-   "station": null,
-   "station_lat": null,
-   "station_lng": null,
-   "station_lines": [],
-   "station_walk_min": null,
-   "units_youth": null,
-   "units_general": null,
-   "units_total": null,
-   "area_m2_min": null,
-   "area_m2_max": null,
-   "rooms": null,
-   "rooms_guessed": false,
-   "deposit_won": null,
-   "rent_won": null,
-   "convert_note": null,
-   "max_years": null,
-   "end_year": null,
-   "apply_start": "2026-09-30",
-   "apply_end": "2026-09-30",
-   "announce_date": null,
-   "movein": null,
-   "pdf_url": null,
-   "posted": "2026-09-10",
-   "is_new": false,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -22,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020713",
@@ -4236,7 +5082,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -4249,8 +5094,59 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
+  },
+  {
+   "id": "lh:2015122300020670",
+   "source": "lh",
+   "provider": "LH",
+   "type": "국민임대",
+   "name": "의정부송산3단지 공임50년 예비입주자 표준모집공고문",
+   "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020670&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=08&mi=1026",
+   "is_private": false,
+   "address": "경기도",
+   "gu": null,
+   "sido": "경기",
+   "sigungu": null,
+   "lat": null,
+   "lng": null,
+   "station": null,
+   "station_lat": null,
+   "station_lng": null,
+   "station_lines": [],
+   "station_walk_min": null,
+   "units_youth": null,
+   "units_general": null,
+   "units_total": null,
+   "area_m2_min": null,
+   "area_m2_max": null,
+   "rooms": null,
+   "rooms_guessed": false,
+   "deposit_won": null,
+   "rent_won": null,
+   "max_years": null,
+   "end_year": null,
+   "apply_start": "2026-09-30",
+   "apply_end": "2026-09-30",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": null,
+   "posted": "2026-09-10",
+   "is_new": false,
+   "sites": [],
+   "phase": "closed",
+   "phase_days": -22,
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020704",
@@ -4280,7 +5176,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-29",
@@ -4293,52 +5188,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -22,
-   "my_status": null,
-   "watch": false
-  },
-  {
-   "id": "lh:2015122300020699",
-   "source": "lh",
-   "provider": "LH",
-   "type": "매입임대",
-   "name": "[경기남부] 용인시 청년 매입임대주택 예비입주자 모집공고",
-   "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020699&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
-   "is_private": false,
-   "address": "경기도",
-   "gu": null,
-   "sido": "경기",
-   "sigungu": null,
-   "lat": null,
-   "lng": null,
-   "station": null,
-   "station_lat": null,
-   "station_lng": null,
-   "station_lines": [],
-   "station_walk_min": null,
-   "units_youth": null,
-   "units_general": null,
-   "units_total": null,
-   "area_m2_min": null,
-   "area_m2_max": null,
-   "rooms": null,
-   "rooms_guessed": false,
-   "deposit_won": null,
-   "rent_won": null,
-   "convert_note": null,
-   "max_years": null,
-   "end_year": null,
-   "apply_start": null,
-   "apply_end": "2026-09-21",
-   "announce_date": null,
-   "movein": null,
-   "pdf_url": null,
-   "posted": "2026-09-07",
-   "is_new": false,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -31,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020695",
@@ -4368,7 +5223,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-28",
@@ -4381,8 +5235,59 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -22,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
+  },
+  {
+   "id": "lh:2015122300020699",
+   "source": "lh",
+   "provider": "LH",
+   "type": "매입임대",
+   "name": "[경기남부] 용인시 청년 매입임대주택 예비입주자 모집공고",
+   "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020699&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
+   "is_private": false,
+   "address": "경기도",
+   "gu": null,
+   "sido": "경기",
+   "sigungu": null,
+   "lat": null,
+   "lng": null,
+   "station": null,
+   "station_lat": null,
+   "station_lng": null,
+   "station_lines": [],
+   "station_walk_min": null,
+   "units_youth": null,
+   "units_general": null,
+   "units_total": null,
+   "area_m2_min": null,
+   "area_m2_max": null,
+   "rooms": null,
+   "rooms_guessed": false,
+   "deposit_won": null,
+   "rent_won": null,
+   "max_years": null,
+   "end_year": null,
+   "apply_start": null,
+   "apply_end": "2026-09-21",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": null,
+   "posted": "2026-09-07",
+   "is_new": false,
+   "sites": [],
+   "phase": "closed",
+   "phase_days": -31,
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020805",
@@ -4412,7 +5317,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-21",
@@ -4425,8 +5329,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -29,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020659",
@@ -4456,7 +5364,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-21",
@@ -4469,8 +5376,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -29,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020652",
@@ -4500,7 +5411,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-21",
@@ -4513,8 +5423,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -30,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020668",
@@ -4544,7 +5458,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-30",
@@ -4557,8 +5470,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -21,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020662",
@@ -4588,7 +5505,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-29",
@@ -4601,8 +5517,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -22,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020678",
@@ -4632,7 +5552,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-16",
@@ -4645,8 +5564,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -34,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020688",
@@ -4676,7 +5599,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -4689,8 +5611,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -43,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020689",
@@ -4720,7 +5646,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -4733,52 +5658,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -43,
-   "my_status": null,
-   "watch": false
-  },
-  {
-   "id": "lh:2015122300020621",
-   "source": "lh",
-   "provider": "LH",
-   "type": "매입임대",
-   "name": "[경기남부] 26년 3차 청년 매입임대주택 예비입주자 모집공고",
-   "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020621&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
-   "is_private": false,
-   "address": "경기도",
-   "gu": null,
-   "sido": "경기",
-   "sigungu": null,
-   "lat": null,
-   "lng": null,
-   "station": null,
-   "station_lat": null,
-   "station_lng": null,
-   "station_lines": [],
-   "station_walk_min": null,
-   "units_youth": null,
-   "units_general": null,
-   "units_total": null,
-   "area_m2_min": null,
-   "area_m2_max": null,
-   "rooms": null,
-   "rooms_guessed": false,
-   "deposit_won": null,
-   "rent_won": null,
-   "convert_note": null,
-   "max_years": null,
-   "end_year": null,
-   "apply_start": null,
-   "apply_end": "2026-09-09",
-   "announce_date": null,
-   "movein": null,
-   "pdf_url": null,
-   "posted": "2026-08-27",
-   "is_new": false,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -43,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:2015122300020618",
@@ -4808,7 +5693,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -4821,8 +5705,59 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -43,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
+  },
+  {
+   "id": "lh:2015122300020621",
+   "source": "lh",
+   "provider": "LH",
+   "type": "매입임대",
+   "name": "[경기남부] 26년 3차 청년 매입임대주택 예비입주자 모집공고",
+   "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020621&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
+   "is_private": false,
+   "address": "경기도",
+   "gu": null,
+   "sido": "경기",
+   "sigungu": null,
+   "lat": null,
+   "lng": null,
+   "station": null,
+   "station_lat": null,
+   "station_lng": null,
+   "station_lines": [],
+   "station_walk_min": null,
+   "units_youth": null,
+   "units_general": null,
+   "units_total": null,
+   "area_m2_min": null,
+   "area_m2_max": null,
+   "rooms": null,
+   "rooms_guessed": false,
+   "deposit_won": null,
+   "rent_won": null,
+   "max_years": null,
+   "end_year": null,
+   "apply_start": null,
+   "apply_end": "2026-09-09",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": null,
+   "posted": "2026-08-27",
+   "is_new": false,
+   "sites": [],
+   "phase": "closed",
+   "phase_days": -43,
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "lh:0000061160",
@@ -4852,7 +5787,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -4865,8 +5799,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -41,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "sh:311918",
@@ -4896,7 +5834,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": "Q1. 상호전환 제도는 무엇인가요? / A1. 상호전환 제도는 전세전환과 월세전환이 있습니다. 전세전환은 보증금을 더 납부하고 / 월세전환은 보증금을 적게 혹은 기 납부한 경우 받아가고 임대료를 더 많이 내는",
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -4909,8 +5846,12 @@
    "sites": [],
    "phase": "unknown",
    "phase_days": null,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "sh:311849",
@@ -4940,7 +5881,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -4953,8 +5893,12 @@
    "sites": [],
    "phase": "unknown",
    "phase_days": null,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "sh:311463",
@@ -4984,7 +5928,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -4997,8 +5940,12 @@
    "sites": [],
    "phase": "unknown",
    "phase_days": null,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "ah:2026850048",
@@ -5028,7 +5975,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-21",
@@ -5041,8 +5987,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -31,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "ah:2026850047",
@@ -5072,7 +6022,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-09-14",
@@ -5085,8 +6034,12 @@
    "sites": [],
    "phase": "closed",
    "phase_days": -37,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "ah:2026950093",
@@ -5116,7 +6069,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-26",
@@ -5129,15 +6081,19 @@
    "sites": [],
    "phase": "upcoming",
    "phase_days": 4,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "ih:4469",
    "source": "ih",
    "provider": "iH 인천도시공사",
    "type": "국민임대",
-   "name": "영구임대주택(선학, 연수, 더샵부평) 예비입주자 추가모집 공고 new",
+   "name": "영구임대주택(선학, 연수, 더샵부평) 예비입주자 추가모집 공고",
    "source_url": "https://www.ih.co.kr/main/bbs/bbsMsgDetail.do?msg_seq=4469&cate1=general&bcd=notice&pgdiv=general",
    "is_private": false,
    "address": "인천광역시",
@@ -5160,7 +6116,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -5173,8 +6128,12 @@
    "sites": [],
    "phase": "unknown",
    "phase_days": null,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "gh:839",
@@ -5204,7 +6163,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": "2026-10-26",
@@ -5217,8 +6175,12 @@
    "sites": [],
    "phase": "upcoming",
    "phase_days": 4,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "ghb:65277",
@@ -5248,7 +6210,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -5261,8 +6222,12 @@
    "sites": [],
    "phase": "unknown",
    "phase_days": null,
-   "my_status": null,
-   "watch": false
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "ghb:65275",
@@ -5292,7 +6257,6 @@
    "rooms_guessed": false,
    "deposit_won": null,
    "rent_won": null,
-   "convert_note": null,
    "max_years": null,
    "end_year": null,
    "apply_start": null,
@@ -5305,8 +6269,12 @@
    "sites": [],
    "phase": "unknown",
    "phase_days": null,
-   "my_status": null,
-   "watch": true
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   }
  ],
  "news": [
@@ -5315,7 +6283,6 @@
    "title": "용산베르디움프렌즈 입주 준비! 청년안심주택 신청 자격부터 추가 모집까지",
    "date": "",
    "source": "blog",
-   "query": "용산베르디움프렌즈 잔여세대",
    "first_seen": "2026-10-21"
   },
   {
@@ -5323,7 +6290,6 @@
    "title": "동대문역사문화공원역 166타워 청년안심주택 추가모집 공고 서울청년주택청약 전 필독!",
    "date": "2026-10-19",
    "source": "blog",
-   "query": "166타워 잔여세대",
    "first_seen": "2026-10-20"
   },
   {
@@ -5331,7 +6297,6 @@
    "title": "[추가모집] 청년안심주택 상봉역 와이 센트럴시티 상봉 (2026.10.12)",
    "date": "2026-10-08",
    "source": "blog",
-   "query": "청년안심주택 공실 모집 문자",
    "first_seen": "2026-10-20"
   },
   {
@@ -5339,7 +6304,6 @@
    "title": "9월 7일까지! 화랑대역 에이트플레이스 청년안심주택 추가모집 청약 신청 방법 자격 총정리",
    "date": "2026-09-06",
    "source": "blog",
-   "query": "청년안심주택 공실 모집 문자",
    "first_seen": "2026-10-19"
   },
   {
@@ -5347,7 +6311,6 @@
    "title": "건대입구역 더포디엄830 청년주택 추가모집공고｜청약조건·입주자격·구비서류 총정리",
    "date": "2026-02-27",
    "source": "blog",
-   "query": "더포디엄830 선착순 후기",
    "first_seen": "2026-10-17"
   },
   {
@@ -5355,7 +6318,6 @@
    "title": "사줄사람 선착순 한명 바로 당신입니다 쑤니딸 맞다 애매하니까 표정에 다 나온다 ㄷㄷ 고개 각도부터 이미 맘에안듬 비즈 욕심 못버려서 입어봤는데 다들 아니래~ 저 헬스... 짜줌마!!!!!!마에스트로!!!!!! 용달저씨 언제와용 이러고 있는데 경비아저씨한테 덕담들음 양가 아버님들은 절대 안해주려는걸 아저씨가 해냄 머라셧더라 ㅠㅠ 양보하고 미러링이고 싸우지말라 암튼...",
    "date": "2026-10-01",
    "source": "blog",
-   "query": "마에스트로 선착순 후기",
    "first_seen": "2026-10-16"
   },
   {
@@ -5363,7 +6325,6 @@
    "title": "청년안심주택, 예비번호 200번대로 시작해서 4개월 만에 합격했어요 ✨",
    "date": "2026-09-14",
    "source": "blog",
-   "query": "청년안심주택 공실 모집 문자",
    "first_seen": "2026-10-16"
   },
   {
@@ -5371,7 +6332,6 @@
    "title": "청계로벤하임 청년안심주택 추가모집공고 역대급이라는데",
    "date": "",
    "source": "blog",
-   "query": "청계로벤하임 잔여세대",
    "first_seen": "2026-10-16"
   },
   {
@@ -5379,7 +6339,6 @@
    "title": "용산 베르디움 프렌즈 청년안심주택 관심고객 등록하기",
    "date": "2026-06-15",
    "source": "blog",
-   "query": "용산베르디움프렌즈 선착순 후기",
    "first_seen": "2026-10-15"
   },
   {
@@ -5387,7 +6346,6 @@
    "title": "청년안심주택 8세대 추가모집, 타입별 보증금·월세 비교",
    "date": "",
    "source": "blog",
-   "query": "청년안심주택 추가모집 선착순 성공",
    "first_seen": "2026-10-15"
   },
   {
@@ -5395,7 +6353,6 @@
    "title": "[추가모집] 청년안심주택 신림역 최강타워 (2026.09.19~09.21)",
    "date": "2026-09-17",
    "source": "blog",
-   "query": "최강타워 잔여세대",
    "first_seen": "2026-10-14"
   },
   {
@@ -5403,7 +6360,6 @@
    "title": "[청년안심주택] 광진구 청년안심주택 건대입구역 더포디엄830 잔여세대 보증금·월임대료·청약일....",
    "date": "2026-03-02",
    "source": "blog",
-   "query": "더포디엄830 잔여세대",
    "first_seen": "2026-10-14"
   },
   {
@@ -5411,7 +6367,6 @@
    "title": "송파구 청년안심주택 문정역 마에스트로 추가모집 자격, 보증금, 신청 방법 총정리",
    "date": "2026-01-23",
    "source": "blog",
-   "query": "마에스트로 잔여세대",
    "first_seen": "2026-10-14"
   },
   {
@@ -5419,7 +6374,6 @@
    "title": "광진구 자양동 청안주 건대입구역 더포디엄830 공실 모집 25/7/11~7/13",
    "date": "2025-07-13",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-14"
   },
   {
@@ -5427,7 +6381,6 @@
    "title": "청년안심주택 7월 추가모집 일정 공공지원민간임대 청약",
    "date": "",
    "source": "blog",
-   "query": "청년안심주택 추가모집 선착순 성공",
    "first_seen": "2026-10-14"
   },
   {
@@ -5435,7 +6388,6 @@
    "title": "센터스퀘어 서울대점 추가모집 (민간임대) 공고 총정리",
    "date": "",
    "source": "blog",
-   "query": "센터스퀘어 서울대점 잔여세대",
    "first_seen": "2026-10-14"
   },
   {
@@ -5443,7 +6395,6 @@
    "title": "더포디엄830 추가모집 입주 자격, 보증금, 월세 총정리",
    "date": "",
    "source": "blog",
-   "query": "더포디엄830 잔여세대",
    "first_seen": "2026-10-14"
   },
   {
@@ -5451,7 +6402,6 @@
    "title": "[추가모집] 청년안심주택 이랜드PEER신촌 (2026.09.20)",
    "date": "2026-09-18",
    "source": "blog",
-   "query": "청년안심주택 공실 모집 문자",
    "first_seen": "2026-10-13"
   },
   {
@@ -5459,7 +6409,6 @@
    "title": "[민간임대] 왕십리역 청년안심주택 라봄성동 추가모집｜39A·39B 예비입주자 청약 일정·임대조건 ....",
    "date": "2026-09-18",
    "source": "blog",
-   "query": "청년안심주택 공실 모집 문자",
    "first_seen": "2026-10-13"
   },
   {
@@ -5467,7 +6416,6 @@
    "title": "2026 청년안심주택 추가모집 신청 자격과 보증금 지원 정리",
    "date": "2026-09-09",
    "source": "blog",
-   "query": "청계로벤하임 잔여세대",
    "first_seen": "2026-10-13"
   },
   {
@@ -5475,7 +6423,6 @@
    "title": "2026 청년안심주택 추가모집 총정리 오늘 마감 단지부터 신청자격까지",
    "date": "2026-08-18",
    "source": "blog",
-   "query": "청년안심주택 공실 모집 문자",
    "first_seen": "2026-10-13"
   },
   {
@@ -5483,16 +6430,13 @@
    "title": "[성공] 회기 하트리움 — 선착순+예비등록 병행, 수백번대 예비도 순차 연락 와서 입주",
    "date": "2026-08",
    "source": "blog",
-   "query": "리서치 2026-10-13",
-   "first_seen": "2026-10-13",
-   "review": true
+   "first_seen": "2026-10-13"
   },
   {
    "url": "https://blog.naver.com/landhyun_/223945814611",
    "title": "[청년안심주택] 서울역 어반허브 서울스테이션 추가모집! 2025년 7월 공고 총정리",
    "date": "2026-07-15",
    "source": "blog",
-   "query": "어반허브 서울스테이션 잔여세대",
    "first_seen": "2026-10-13"
   },
   {
@@ -5500,7 +6444,6 @@
    "title": "안녕하세요 용산베르디움프렌즈 선착순에 성공했는데 대출이 가능할까요?",
    "date": "2026-07-09",
    "source": "cafe",
-   "query": "용산베르디움프렌즈 선착순 후기",
    "first_seen": "2026-10-13"
   },
   {
@@ -5508,16 +6451,13 @@
    "title": "[실패] 용베프 39B 5호실 — 보안문자 20초 안에 전부 마감, 대행업체 의혹(비권장)",
    "date": "2026-07",
    "source": "blog",
-   "query": "리서치 2026-10-13",
-   "first_seen": "2026-10-13",
-   "review": true
+   "first_seen": "2026-10-13"
   },
   {
    "url": "https://cafe.naver.com/ayshh/130734",
    "title": "용산베르디움프렌즈 신규임차인 선착순 모집 (25년 3월 12일 오후2시) 3.5일 게시물",
    "date": "2026-06-25",
    "source": "cafe",
-   "query": "청년주택 관심고객 등록 선착순",
    "first_seen": "2026-10-13"
   },
   {
@@ -5525,7 +6465,6 @@
    "title": "용산베르디움 청년주택 자격과 선착순 방법",
    "date": "2026-06-18",
    "source": "blog",
-   "query": "용산베르디움프렌즈 선착순 후기",
    "first_seen": "2026-10-13"
   },
   {
@@ -5533,7 +6472,6 @@
    "title": "청년안심주택 일반공급 신청 추첨? 선착순?",
    "date": "2026-06-16",
    "source": "cafe",
-   "query": "청년주택 관심고객 등록 선착순",
    "first_seen": "2026-10-13"
   },
   {
@@ -5541,7 +6479,6 @@
    "title": "️ [청년주택] 월세 10만 원대? 용산 베르디움 프렌즈 추가모집 & 평형별 현실 후기 총정리",
    "date": "2026-06-16",
    "source": "blog",
-   "query": "용산베르디움프렌즈 선착순 후기",
    "first_seen": "2026-10-13"
   },
   {
@@ -5549,7 +6486,6 @@
    "title": "월세 10만원대 용산 진입 기회! 용산 베르디움 프렌즈 청년안심주택 소득 자산 무관 선착순 모집 ....",
    "date": "2026-06-16",
    "source": "blog",
-   "query": "용산베르디움프렌즈 선착순 후기",
    "first_seen": "2026-10-13"
   },
   {
@@ -5557,7 +6493,6 @@
    "title": "용산 베르디움프렌즈 청년주택 신혼부부 선착순 (+19 39 49)",
    "date": "2026-06-16",
    "source": "blog",
-   "query": "용산베르디움프렌즈 선착순 후기",
    "first_seen": "2026-10-13"
   },
   {
@@ -5565,7 +6500,6 @@
    "title": "용산 베르디움프렌즈 청년안심주택 추가모집 가격 조건 완벽 가이드",
    "date": "2026-06-15",
    "source": "blog",
-   "query": "용산베르디움프렌즈 선착순 후기",
    "first_seen": "2026-10-13"
   },
   {
@@ -5573,7 +6507,6 @@
    "title": "1 용산베르디움프렌즈 (19㎡): 5호 모집에 6,644명이 신청해 1,328.8대 1 비스타 동원 (29㎡): 3호 모집에 2,671명이 신청해 890.3대 1을 기록했다. 4. 2026년 현재 공급 및 청약 동향 2026년 상반기(3~4월)에 걸쳐 대규모 공공임대 주택 모집 공고 (573세대... 추가·잔여 세대 모집 공고가 5월 들어 활발히 발표되고 있다. 수급 불안 우려: 전월세 가격이 급등하면서 저렴하고 쾌적한...",
    "date": "2026-05-19",
    "source": "blog",
-   "query": "용산베르디움프렌즈 잔여세대",
    "first_seen": "2026-10-13"
   },
   {
@@ -5581,7 +6514,6 @@
    "title": "청년안심주택 공실(?) 문자",
    "date": "2026-05-15",
    "source": "cafe",
-   "query": "청년안심주택 공실 모집 문자",
    "first_seen": "2026-10-13"
   },
   {
@@ -5589,7 +6521,6 @@
    "title": "[용산구] 서울역 역세권 어반허브서울스테이션 추가 모집 일정 및 평면도 살펴보기!",
    "date": "2026-05-09",
    "source": "blog",
-   "query": "어반허브 서울스테이션 선착순 후기",
    "first_seen": "2026-10-13"
   },
   {
@@ -5597,7 +6528,6 @@
    "title": "신독산역 센트레빌 웨스트온 청년안심주택 추가모집｜10월 11~15일 신청",
    "date": "2026-03-31",
    "source": "blog",
-   "query": "청년안심주택 공실 모집",
    "first_seen": "2026-10-13"
   },
   {
@@ -5605,16 +6535,13 @@
    "title": "[성공] 이랜드PEER 신촌 17형 — 선착순 티켓팅(지금은 추첨으로 바뀜)",
    "date": "2026-03",
    "source": "blog",
-   "query": "리서치 2026-10-13",
-   "first_seen": "2026-10-13",
-   "review": true
+   "first_seen": "2026-10-13"
   },
   {
    "url": "https://blog.naver.com/s2jihan2/224165938176",
    "title": "[청년안심주택] 라봄성동 입주후기 (1) 잔여세대 공고 당첨 후기 및 SH 주거비 지원(무이자 보증금 ....",
    "date": "2026-01-31",
    "source": "blog",
-   "query": "라봄성동 잔여세대",
    "first_seen": "2026-10-13"
   },
   {
@@ -5622,7 +6549,6 @@
    "title": "[왕십리역 라봄성동] 청년안심주택 추가모집 자격, 임대료, 신청방법 총정리",
    "date": "2025-12-24",
    "source": "blog",
-   "query": "라봄성동 잔여세대",
    "first_seen": "2026-10-13"
   },
   {
@@ -5630,7 +6556,6 @@
    "title": "[강북구] 청년주택 ‘청솔둥지’ 잔여세대 모집 솔직 분석! 옵션 없고 임대료 비싸다?",
    "date": "2025-12-13",
    "source": "blog",
-   "query": "역세권청년주택 잔여세대 후기",
    "first_seen": "2026-10-13"
   },
   {
@@ -5638,7 +6563,6 @@
    "title": "[용산 원효 루미니] 청년안심주택 잔여세대 입주 자격, 보증금, 신청 방법 총정리",
    "date": "2025-11-28",
    "source": "blog",
-   "query": "용산 원효 루미니 잔여세대",
    "first_seen": "2026-10-13"
   },
   {
@@ -5646,7 +6570,6 @@
    "title": "충정로역 청년안심주택 어바니엘충정로 26 1세대 공실 추가모집 25/10/13",
    "date": "2025-10-13",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5654,7 +6577,6 @@
    "title": "루미노 LUMINO816 연신내역 청년주택 공실 모집 25/10/6~10/7",
    "date": "2025-10-06",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5662,7 +6584,6 @@
    "title": "용답동 힐데스하임 장한평역 청년주택 추가모집 신청 25/10/2~10/8",
    "date": "2025-10-04",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5670,7 +6591,6 @@
    "title": "4호선 쌍문역 청년주택 인히어쌍문 공실 6세대 추가모집 9/28",
    "date": "2025-09-28",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5678,7 +6598,6 @@
    "title": "삼각지역 청년주택 용산베르디움프렌즈 9,10월 선착순 9/29~10/1",
    "date": "2025-09-26",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5686,7 +6605,6 @@
    "title": "청년주택 민간 공실 8세대 회기역 휘경제이스카이시티 25/9/13~9/15",
    "date": "2025-09-13",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5694,7 +6612,6 @@
    "title": "청년주택 민간 공실 5세대 모집 건대입구역 더포디엄830 25/9/13~9/14",
    "date": "2025-09-13",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5702,7 +6619,6 @@
    "title": "종로구 청년주택 동묘앞역 청계로벤하임 특별/일반 공실 9세대 25/9/8",
    "date": "2025-09-08",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5710,7 +6626,6 @@
    "title": "서초역 청년주택 서초꽃마을 주얼리 공실 2세대 모집 25/9/8",
    "date": "2025-09-08",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5718,7 +6633,6 @@
    "title": "중구 청년주택 동대문역사문화공원역 166타워 공실 7세대 25/9/7~9/8",
    "date": "2025-09-08",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5726,7 +6640,6 @@
    "title": "장안동 하트리움 동대문구 장한평역 청년주택 특별공급 공실 신청 25/9/6~9/8",
    "date": "2025-09-08",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5734,7 +6647,6 @@
    "title": "광진구 청년주택 강변역 비바힐스강변 공실 2세대 추가모집25/9/6~9/8",
    "date": "2025-09-08",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5742,7 +6654,6 @@
    "title": "[민간임대] 동대문역사문화공원역 166타워 추가모집공고, 핵심만 콕! 한눈에 정리",
    "date": "2025-09-07",
    "source": "blog",
-   "query": "166타워 잔여세대",
    "first_seen": "2026-10-13"
   },
   {
@@ -5750,7 +6661,6 @@
    "title": "용산구 롯데건설 청년주택 용산원효루미니 : 공실 3세대 추가모집 신청 25/9/1",
    "date": "2025-08-31",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5758,7 +6668,6 @@
    "title": "은평구 청년주택 구산역 구산주택 민간임대 공실 2세대 모집 25/8/25",
    "date": "2025-08-21",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5766,7 +6675,6 @@
    "title": "서울대입구역 BX201 청년주택 15형, 30형 일반공급 공실 25/8/18",
    "date": "2025-08-17",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5774,7 +6682,6 @@
    "title": "성동구 청년주택 장한평역 용답동 힐데스하임 14타입 공실 25/8/13~8/19",
    "date": "2025-08-14",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5782,7 +6689,6 @@
    "title": "연신내역 루미노 Lumino816 은평구 청년주택 공실 추가모집 25/8/10",
    "date": "2025-08-08",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   },
   {
@@ -5790,472 +6696,8 @@
    "title": "선릉역 마에스트로 삼성동 청년주택 공실 추가모집 25/8/8~8/10",
    "date": "2025-08-07",
    "source": "blog",
-   "query": "RSS doradorung",
    "first_seen": "2026-10-13"
   }
  ],
- "static": true,
- "default_profile": {
-  "name": "승리",
-  "birth_year": 1996,
-  "marital": "single",
-  "household_size": 1,
-  "income_annual_won": 43000000,
-  "savings_won": 30000000,
-  "own_cash_won": 100000000,
-  "car": false,
-  "residence_sido": "서울",
-  "work": {
-   "station": "을지로입구",
-   "lat": 37.5664,
-   "lng": 126.981,
-   "lines": [
-    "2"
-   ]
-  },
-  "regions": [
-   {
-    "name": "중구",
-    "points": 10
-   },
-   {
-    "name": "종로구",
-    "points": 8
-   },
-   {
-    "name": "동대문구",
-    "points": 8
-   },
-   {
-    "name": "용산구",
-    "points": 8
-   },
-   {
-    "name": "강남구",
-    "points": 7
-   },
-   {
-    "name": "서초구",
-    "points": 7
-   },
-   {
-    "name": "마포구",
-    "points": 7
-   },
-   {
-    "name": "서울",
-    "points": 3
-   }
-  ],
-  "min_pyeong": 9,
-  "max_monthly_won": 800000,
-  "border_monthly_won": 850000,
-  "min_private_years": 4,
-  "rates": {
-   "youth_loan": 0.029,
-   "bank_loan": 0.0435,
-   "support_rate": 0.01,
-   "support_cap_won": 200000000,
-   "rates_note": "기본 표시 = 서울시 청년 임차보증금 이자지원(연소득 5천 이하, 보증금 3억·월세 90만 이하 주택, 한도 2억, 본인부담 연 1%) + 2억 초과분 청년 버팀목 2.9%. bank = 한국은행 2026-08 전세대출 평균 4.35%. 이자지원 예산 소진 시 버팀목 2.9% 전액 적용으로 바뀔 수 있음"
-  },
-  "seoul_support": true,
-  "subscription_joined": null
- },
- "presets": [
-  {
-   "name": "승혜 (청라·길병원)",
-   "residence_sido": "인천",
-   "work": {
-    "station": "예술회관",
-    "lat": 37.449396,
-    "lng": 126.701012,
-    "lines": [
-     "INCHEON1"
-    ]
-   },
-   "work_name": "예술회관",
-   "regions": [
-    {
-     "name": "청라",
-     "points": 10
-    },
-    {
-     "name": "구월",
-     "points": 8
-    },
-    {
-     "name": "남동구",
-     "points": 8
-    },
-    {
-     "name": "서구",
-     "points": 8
-    },
-    {
-     "name": "인천",
-     "points": 7
-    },
-    {
-     "name": "광명시",
-     "points": 7
-    },
-    {
-     "name": "부천시",
-     "points": 3
-    }
-   ],
-   "min_pyeong": 9,
-   "max_monthly_won": 500000,
-   "border_monthly_won": 550000,
-   "min_private_years": 4,
-   "seoul_support": false,
-   "marital": "single"
-  },
-  {
-   "name": "남친 (광명)",
-   "residence_sido": "경기",
-   "work": {
-    "station": "광명사거리",
-    "lat": 37.479252,
-    "lng": 126.854876,
-    "lines": [
-     "7"
-    ]
-   },
-   "work_name": "광명사거리",
-   "regions": [
-    {
-     "name": "광명시",
-     "points": 10
-    },
-    {
-     "name": "청라",
-     "points": 8
-    },
-    {
-     "name": "인천",
-     "points": 7
-    },
-    {
-     "name": "부천시",
-     "points": 7
-    },
-    {
-     "name": "시흥시",
-     "points": 3
-    }
-   ],
-   "min_pyeong": 9,
-   "max_monthly_won": 500000,
-   "border_monthly_won": 550000,
-   "min_private_years": 4,
-   "seoul_support": false,
-   "marital": "single"
-  }
- ],
- "complexes": {
-  "_note": "전화 체크리스트용 관심 단지. 순서 = 우선순위. hours는 공고문·안내에 적힌 입주지원센터 운영시간(대부분 평일).",
-  "ask": "① 청년 1인·39㎡ 이상 타입 공실 대기 명단 가능한지 ② 추가모집(공고) 예정 시점 ③ 잔여세대(공실) 선착순 모집을 단지 홈페이지/앱에서 따로 하는지 (회원가입·관심고객 등록 방식) ④ 보증금 비율 50% 초과 전환 가능한지",
-  "complexes": [
-   {
-    "id": "prep_verdium",
-    "name": "✅ 준비: 용산베르디움프렌즈 회원가입 + 관심고객 등록 연습",
-    "station": "삼각지",
-    "units": "",
-    "types": "마이페이지에서 등록 확인 후 연습분은 반드시 취소 · 주소·우편번호 메모장 준비 · 호실 많은 타입(49B·44) 선택",
-    "tel": "",
-    "web": "https://www.ys-vertium-friends.co.kr",
-    "hours": "지금",
-    "note": "매월 첫째 주 수 공지 → 다음 주 월 00:00 관심고객(타입별 100명, 1인 1타입·기존 등록 취소 후 재등록) → 수 14:00 계약신청은 회사 유선 PC(13:50 로그인·셀프체크 완료 대기). 서버시간 time.navyism.com/?host=www.ys-vertium-friends.co.kr",
-    "vacancy_url": "https://www.ys-vertium-friends.co.kr",
-    "vacancy_how": "회원 전용 공지"
-   },
-   {
-    "id": "prep_kakao",
-    "name": "✅ 준비: 청년주택 잔여세대 알림 오픈채팅 2곳 가입",
-    "station": "",
-    "units": "",
-    "types": "공지방(대화X) + 수다방",
-    "tel": "",
-    "web": "https://open.kakao.com/o/g3R8UjRi",
-    "hours": "지금",
-    "note": "수다방 https://open.kakao.com/o/g9JswxRi — 광고·파트너스 링크 섞여 있으니 정보만",
-    "vacancy_url": "",
-    "vacancy_how": ""
-   },
-   {
-    "id": "prep_elyes",
-    "name": "✅ 준비: 롯데 엘리스(Elyes) 회원가입 + 남영역·원효 관심단지 등록",
-    "station": "남영",
-    "units": "",
-    "types": "",
-    "tel": "",
-    "web": "https://www.elyes.co.kr",
-    "hours": "지금",
-    "note": "엘리스 공실은 선착순이 아니라 추첨(하루 접수·익일 발표) — 접수일 놓치지 않는 게 전부",
-    "vacancy_url": "https://www.elyes.co.kr",
-    "vacancy_how": "계약신청·관심단지 등록"
-   },
-   {
-    "id": "prep_waitlist",
-    "name": "✅ 준비: 대기자·예비 등록 받는 단지엔 무조건 등록",
-    "station": "",
-    "units": "",
-    "types": "하트리움·BX201·포레나당산(예비 6개월) 등",
-    "tel": "",
-    "web": "",
-    "hours": "지금",
-    "note": "후기: 수백 번대 예비도 순차 연락 와서 입주. '간보다 뺏긴 게 3번'",
-    "vacancy_url": "",
-    "vacancy_how": "전화로 대기명단 유무 확인 후 등록"
-   },
-   {
-    "id": "namyeong",
-    "name": "남영역 롯데캐슬 헤리티지",
-    "station": "1호선 남영",
-    "units": "민간 217 (2025-04)",
-    "types": "청년 39A/39B 39.83㎡ 1.5룸 59호 · 23형 40호 (49형 2룸은 신혼 전용). 26.02 39형 2세대 이후 공고 없음",
-    "tel": "02-3272-2997",
-    "web": "https://www.elyes.co.kr (관심단지 등록)",
-    "hours": "평일 10:00~17:00 추정",
-    "note": "1타깃. 39형 특별 50% 1억6,800만/월 67만",
-    "vacancy_url": "https://www.elyes.co.kr",
-    "vacancy_how": "롯데 엘리스 사이트 '계약신청·관심단지 등록'으로 공실 선착순 — 가입 후 연습, 문자 알림"
-   },
-   {
-    "id": "urbaniel",
-    "name": "충정로역 어바니엘 위드 더 스타일",
-    "station": "2·5호선 충정로",
-    "units": "민간 450 (2019-08)",
-    "types": "[확인 필요]",
-    "tel": "02-6677-4422",
-    "web": "",
-    "hours": "평일",
-    "note": "을지로입구 8분, 롯데건설 운영(엘리스 가능성)",
-    "vacancy_url": "https://www.elyes.co.kr",
-    "vacancy_how": "롯데건설 운영 — 엘리스에 등록돼 있는지 확인"
-   },
-   {
-    "id": "labom",
-    "name": "왕십리역 라봄성동",
-    "station": "2호선 왕십리 6번",
-    "units": "민간 181 (2025-06)",
-    "types": "39A 39.46㎡ 49호 · 39B 39.06㎡ 3호 — 추가모집 '청년 또는 신혼 일반'(26.9 예비자 30% 1억1,400/90 · 50% 1억9,000/65만)",
-    "tel": "02-6459-9200",
-    "web": "https://labomseongdong.com/bbs/board.php?bo_table=notice",
-    "hours": "평일",
-    "note": "2027-06 계약 만료 전후 공실 예상",
-    "vacancy_url": "https://labomseongdong.com/bbs/board.php?bo_table=notice",
-    "vacancy_how": "홈페이지 공지 + 네이버폼 추첨, 예비 50배수·3개월, 거의 매달. 1인 1타입 → 39A"
-   },
-   {
-    "id": "cheongajin",
-    "name": "왕십리역 청아진",
-    "station": "2·5호선 왕십리",
-    "units": "민간 133 (2026-07)",
-    "types": "18.22㎡ 단일(큰 타입 없음) — 2룸 목적엔 제외",
-    "tel": "02-6273-0266",
-    "web": "",
-    "hours": "평일",
-    "note": "",
-    "vacancy_url": "",
-    "vacancy_how": "caj266.com 인터넷청약, 추가모집 이력 없음"
-   },
-   {
-    "id": "harrington",
-    "name": "합정역 서교 효성해링턴타워",
-    "station": "2·6호선 합정",
-    "units": "민간 751 (2019-11)",
-    "types": "17형 288 · 37A 37.17㎡ 신혼 1.5룸 292 · 37B 셰어 171 — 39㎡↑ 없음, 포털 추가모집 0건",
-    "tel": "02-335-1800",
-    "web": "",
-    "hours": "평일",
-    "note": "2019 최초: 37A 40% 1억2,230만/월 73만 (현재는 2년마다 ≤5% 인상분 반영 필요). 2호선 최대 단지",
-    "vacancy_url": "",
-    "vacancy_how": "민간 공실 경로 미확인 → 02-335-1800 대기명단 문의"
-   },
-   {
-    "id": "forena",
-    "name": "영등포구청역 포레나 당산",
-    "station": "2·5호선 영등포구청",
-    "units": "민간 409 (2022-11)",
-    "types": "41㎡형 41.13㎡ 투룸(침실2+거실) 42호 — '신혼 및 청년 일반'(26.07 1억5,050/71 · 1억8,975/56만). 33㎡ 70·36㎡ 56 1.5룸",
-    "tel": "02-6671-2030",
-    "web": "",
-    "hours": "평일",
-    "note": "33형 1억1,000만/월 62만~",
-    "vacancy_url": "",
-    "vacancy_how": "네이버폼 추첨, 예비 150명·3개월, 1월·7월(6개월 주기). 1인 1타입 → 41㎡"
-   },
-   {
-    "id": "verdium",
-    "name": "삼각지역 용산베르디움프렌즈",
-    "station": "4·6호선 삼각지",
-    "units": "민간 763 (2020-09)",
-    "types": "청년형 39A 1.5룸 71호 · 39B 39.80㎡ 2룸 124호(1인 최대) / 44~49 신혼형(1인 불가로 보임, 확인 필요)",
-    "tel": "02-3785-3344",
-    "web": "",
-    "hours": "평일",
-    "note": "용산 최대",
-    "vacancy_url": "https://www.ys-vertium-friends.co.kr",
-    "vacancy_how": "단지 홈페이지 회원 전용 공지 → 거의 매달 선착순. 관심고객 등록(타입별 100명, 00:00 시작·5분 내 마감) → 이틀 뒤 계약신청(선착순 1인) → 다음날 계약금 10%. 청년/신혼 유형 구분 없음(1인도 3룸 가능)"
-   },
-   {
-    "id": "166",
-    "name": "동대문역사문화공원역 166타워",
-    "station": "2·4·5호선",
-    "units": "민간 84 (2023-08)",
-    "types": "14.1~18.5㎡ 원룸만 — 제외",
-    "tel": "070-7609-0177",
-    "web": "",
-    "hours": "평일",
-    "note": "중구지만 초소형",
-    "vacancy_url": "",
-    "vacancy_how": "공고(서울주거포털) 외 자체 공실 모집 여부 문의"
-   },
-   {
-    "id": "benheim",
-    "name": "동묘앞역 청계로벤하임",
-    "station": "1·6호선 동묘앞",
-    "units": "민간 123 (2023-07)",
-    "types": "39A 39.30㎡ 9호 · 39B 39.99㎡ 10호 1.5룸 — '청년 또는 신혼' 일반(26.10 39B 806호 2억3,040/28.8만)",
-    "tel": "02-6273-0707",
-    "web": "https://lovenheim.imweb.me",
-    "hours": "월~금 10:00~17:00 (점심 12~13)",
-    "note": "39B 2억3,040만/월 28.8만",
-    "vacancy_url": "https://lovenheim.imweb.me",
-    "vacancy_how": "네이버폼 추첨(하루 00:00~23:00), 예비 20배수·6개월, 거의 매월. 서류 lovenheim@naver.com"
-   },
-   {
-    "id": "urbanhub",
-    "name": "서울역 어반허브 서울스테이션",
-    "station": "1·4호선 서울역",
-    "units": "민간 152 (2025-04)",
-    "types": "최대 35형 35.27㎡ 신혼 5호, 나머지 원룸 — 2룸 목적엔 제외",
-    "tel": "02-6954-1162",
-    "web": "",
-    "hours": "평일",
-    "note": "소형",
-    "vacancy_url": "https://urbanhub25.com",
-    "vacancy_how": "홈페이지 청약(2~3일 접수) 추첨, 예비 20배수. soco에도 매번 공고"
-   },
-   {
-    "id": "rumini",
-    "name": "용산 원효 루미니 (엘리스)",
-    "station": "1호선 남영",
-    "units": "민간 465 (2022-02)",
-    "types": "43A 43.96㎡ 2룸 216호 · 43B 2룸 45호 — 청년·신혼 구분 없음(43A 1억7,344/78~81만, 1~2개월 주기)",
-    "tel": "02-821-4015",
-    "web": "https://www.elyes.co.kr",
-    "hours": "평일",
-    "note": "롯데",
-    "vacancy_url": "https://www.elyes.co.kr",
-    "vacancy_how": "엘리스 계약신청: 하루 접수(09~16시) → 익일 10시 전산추첨 → 1~3일 내 계약(계약금 5%) → 1개월 내 입주"
-   },
-   {
-    "id": "eseo",
-    "name": "공덕역 e·seo(이서)",
-    "station": "5·6호선·공항·경의 공덕",
-    "units": "민간 175 (2026-09)",
-    "types": "42.57㎡ 41호 · 49.72㎡ 12호 · 37.36㎡ 1호 — 26.09 최초, 추가모집 2027 감시",
-    "tel": "02-333-3352",
-    "web": "",
-    "hours": "평일",
-    "note": "",
-    "vacancy_url": "",
-    "vacancy_how": "공고(서울주거포털) 외 자체 공실 모집 여부 문의"
-   },
-   {
-    "id": "remark",
-    "name": "대흥역 리마크빌 마포",
-    "station": "6호선 대흥",
-    "units": "민간 425 (2026-09)",
-    "types": "45.09㎡ 134호 보유 — 26.09 최초, 추가모집 2027 감시",
-    "tel": "02-3272-6008",
-    "web": "",
-    "hours": "평일",
-    "note": "40형 9,800만/월 82만~",
-    "vacancy_url": "",
-    "vacancy_how": "공고(서울주거포털) 외 자체 공실 모집 여부 문의"
-   },
-   {
-    "id": "mangrove",
-    "name": "홍대입구역 맹그로브창천",
-    "station": "2호선 홍대입구",
-    "units": "민간 196 (2026-09)",
-    "types": "최대 29.90㎡ 코리빙(청년 전용) — 2룸 목적엔 제외",
-    "tel": "02-2289-6348",
-    "web": "https://mangrove.city",
-    "hours": "평일",
-    "note": "8평",
-    "vacancy_url": "https://changcheon.mangrove.city/notices",
-    "vacancy_how": "홈페이지 공지 + 입주관심 등록, 예비 6개월. 추가모집 아직 없음"
-   },
-   {
-    "id": "choigang",
-    "name": "신림역 최강타워",
-    "station": "2호선 신림",
-    "units": "민간 220 (2023)",
-    "types": "39A 39.66㎡ 44호(1.5룸+드레스룸) · 42A 42.72㎡ 44호(신혼형) — 26.07 추가모집 '청년/신혼 일반'(39A 9,200/73 · 42A 9,800/78.3만)",
-    "tel": "02-872-8886",
-    "web": "https://www.최강타워.com",
-    "hours": "평일",
-    "note": "접수 3일로 짧음. 전액 보증보험",
-    "vacancy_url": "https://www.최강타워.com",
-    "vacancy_how": "네이버폼 추첨, 예비 10배수·6개월(1·7·9월)"
-   },
-   {
-    "id": "centersq",
-    "name": "서울대벤처타운역 센터스퀘어 서울대점",
-    "station": "신림선(신림역 환승)",
-    "units": "민간 324 (2024)",
-    "types": "54형 44.62㎡ 31호 — '청년 또는 신혼' 특별·일반(특별 50% 1억4,500/54.9만)",
-    "tel": "02-877-0708",
-    "web": "https://centersquaresnu.com",
-    "hours": "평일",
-    "note": "10/14(수) 23:00 마감 접수 중 naver.me/Gi0m8UAr, 발표 10/15 17:00",
-    "vacancy_url": "https://centersquaresnu.com",
-    "vacancy_how": "네이버폼 추첨, 예비 일반 200·특별 100명·6개월"
-   },
-   {
-    "id": "podium",
-    "name": "건대입구역 더포디엄830",
-    "station": "2·7호선 건대입구",
-    "units": "민간 313 (2024)",
-    "types": "52A 41.25㎡ 16호 · 52B 42.17㎡ 28호 — '청년 또는 신혼부부형 일반'(1억7,300/116~121만 → 예산 초과)",
-    "tel": "02-6239-0330",
-    "web": "https://thepodium830.com",
-    "hours": "평일",
-    "note": "공고 최다(거의 매달)지만 월세 높음. 근저당 4.47억 → 은행 확인",
-    "vacancy_url": "https://thepodium830.com",
-    "vacancy_how": "네이버폼 추첨, 예비 50배수·6개월"
-   },
-   {
-    "id": "maestro",
-    "name": "선릉역 마에스트로",
-    "station": "2호선·분당선 선릉",
-    "units": "민간 217 (2023)",
-    "types": "38A 38.61㎡ 3호 · 39A 39.73㎡ 1호 신혼형 — 26.08 38A 청년 일반 2억4,300/70.95만",
-    "tel": "02-555-7708",
-    "web": "https://maestrosamseong.com",
-    "hours": "평일",
-    "note": "당첨 문자 후 서류 먼저 낸 순 계약 사례 → 서류 PDF 미리",
-    "vacancy_url": "https://maestrosamseong.com",
-    "vacancy_how": "네이버폼 추첨, 예비 20배수(8·10월)"
-   },
-   {
-    "id": "remark_guui",
-    "name": "구의역 리마크빌 구의",
-    "station": "2호선 구의",
-    "units": "민간 354 (2026-03 입주)",
-    "types": "39A·39B 39.48㎡ 93호(거실+안방+팬트리) — 30% 9,600/85 · 40% 1억2,800/73 · 50% 1억5,900/61만",
-    "tel": "02-446-0246",
-    "web": "https://remarkvillguui.com",
-    "hours": "평일",
-    "note": "추가모집 아직 없음 → 2026말~2027 첫 공실 감시",
-    "vacancy_url": "https://remarkvillguui.com",
-    "vacancy_how": "홈페이지 인터넷청약(KT리빙)"
-   }
-  ]
- }
+ "built_at": "2026-10-22T17:30:56+09:00"
 }

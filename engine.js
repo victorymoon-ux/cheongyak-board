@@ -15,18 +15,6 @@
     SUBWAY_KMH: 32, DETOUR: 1.25, TRANSFER_MIN: 8, WAIT_MIN: 4, WORK_WALK_MIN: 3,
     POLICY_MAX_DEPOSIT_WON: 300000000, SUPPORT_MAX_RENT_WON: 900000
   };
-  var INCOME_1P_120 = 4576036, ASSET_YOUTH = 251000000, ASSET_NATIONAL = 345000000, ASSET_JANGI = 662000000;
-  var RULES = {
-    "행복주택": { age: [19, 39], single: true, income: INCOME_1P_120, asset: ASSET_YOUTH, account: false, rank1: true, note: "거주·직장 지역이면 1순위, 공고별 해당 구 우선공급" },
-    "청년안심-공공": { age: [19, 39], single: true, income: INCOME_1P_120, asset: ASSET_YOUTH, account: false, note: "3순위(본인 소득·자산), 시세 50%" },
-    "청년안심-민간": { age: [19, 39], single: false, income: null, asset: null, account: false, note: "일반공급은 소득·자산 무관(자동차 4,542만 이하). 의무기간 종료 연도 확인" },
-    "매입임대": { age: [19, 39], single: true, income: INCOME_1P_120, asset: ASSET_YOUTH, account: false, note: "청년 3순위, 보증금 200만·시세 50%" },
-    "공공지원민간": { age: [19, 39], single: false, income: null, asset: null, account: false, note: "일반공급 소득·자산 무관. 의무기간 10년" },
-    "장기전세": { age: [19, 200], single: false, income: INCOME_1P_120, asset: ASSET_JANGI, account: true, note: "1인 세대주는 전용 40㎡ 이하만. 1순위 = 통장 2년·24회" },
-    "국민임대": { age: [19, 200], single: false, income: INCOME_1P_120, asset: ASSET_NATIONAL, account: true, note: "1인가구 40㎡ 이하 우선. 공고문 확인" },
-    "전세임대": { age: [19, 39], single: true, income: INCOME_1P_120, asset: ASSET_YOUTH, account: false, note: "청년 전세임대 3순위 기준 가정" }
-  };
-
   function bround(x) { var f = Math.floor(x), d = x - f; if (d > 0.5) return f + 1; if (d < 0.5) return f; return f % 2 === 0 ? f : f + 1; }
   function toPyeong(m2) { return bround(m2 / R.M2_PER_PYEONG * 10) / 10; }
   function haversine(lat1, lng1, lat2, lng2) {
@@ -65,27 +53,16 @@
   function interest(loan, rate) { return rate == null ? null : bround(loan * rate / 12); }
   function baseCost(dep, rent, own, rates) {
     var out = { loan_won: 0, interest_youth: null, interest_bank: null, total_youth: null, total_bank: null, display_total: null, verdict: "unknown", alt: null, policy_note: null };
-    if (dep == null || rent == null) return out;
+    if (dep == null || rent == null || own == null) return out;
     var loan = Math.max(0, dep - own); out.loan_won = loan;
-    var iy;
-    if (dep > R.POLICY_MAX_DEPOSIT_WON && loan > 0) {
-      // 보증금 3억 초과: 청년 버팀목·서울시 이자지원 모두 불가 → 은행 금리
-      rates = Object.assign({}, rates, { support_rate: null, support_cap_won: null, youth_loan: rates.bank_loan });
-      out.policy_note = "보증금 3억 초과 → 청년 버팀목·서울시 이자지원 불가, 은행 금리 적용";
-    } else if (rates.support_rate != null && rent > R.SUPPORT_MAX_RENT_WON && loan > 0) {
-      rates = Object.assign({}, rates, { support_rate: null, support_cap_won: null });
-      out.policy_note = "월세 90만 초과 → 서울시 이자지원 불가, 버팀목 금리 적용";
-    }
-    if (rates.support_rate != null && rates.support_cap_won) {
-      var cap = rates.support_cap_won;
-      iy = interest(Math.min(loan, cap), rates.support_rate) + (loan > cap ? (interest(loan - cap, rates.youth_loan) || 0) : 0);
-    } else iy = interest(loan, rates.youth_loan);
-    var ib = interest(loan, rates.bank_loan);
+    var iy = null;
+    var ib = loan === 0 ? 0 : interest(loan, rates.bank_loan);
+    out.policy_note = "입력한 일반은행 금리의 비용 예시 · 대출 승인/한도 미확인 · 서울시 이자지원 자동 할인 없음";
     out.interest_youth = iy; out.interest_bank = ib;
     out.total_youth = iy != null ? rent + iy : null; out.total_bank = ib != null ? rent + ib : null;
     if (out.total_youth != null) out.display_total = out.total_youth;
     else if (out.total_bank != null) out.display_total = out.total_bank;
-    else { out.display_total = rent; if (loan > 0) return out; }
+    else { out.display_total = rent; if (loan > 0) { out.display_total = null; return out; } }
     var t = out.display_total, max = rates._max || 800000, border = rates._border || 850000;
     out.verdict = t <= max ? "ok" : t <= border ? "border" : "over";
     return out;
@@ -104,8 +81,9 @@
     var rates = Object.assign({}, profile.rates || {}, { _max: profile.max_monthly_won, _border: profile.border_monthly_won });
     if (!profile.seoul_support) { rates.support_rate = null; rates.support_cap_won = null; }
     var out = baseCost(l.deposit_won, l.rent_won, profile.own_cash_won, rates);
+    out.support_checks = supportChecks(l, profile);
     var cp = parseConvertPct(l.convert_note);
-    var rate = rates.youth_loan != null ? rates.youth_loan : rates.bank_loan;
+    var rate = rates.bank_loan;
     if (out.verdict !== "over" || !cp || rate == null) return out;
     var toDep = cp[1] / 100; if (toDep <= 0) return out;
     var max = profile.max_monthly_won, delta = l.rent_won - max, extra = bround(delta * 12 / toDep);
@@ -191,21 +169,33 @@
   }
 
   // ---- 자격 ----
+  function eligibilityChecks(l, profile) {
+    var labels = (l.application_periods || []).map(function(p) { return p.label || "공급유형 확인 필요"; });
+    if (!labels.length) labels = [l.type + " · 공급유형 확인 필요"];
+    return labels.map(function(label) { return { supply:label, status:"확인 필요", checks:[
+      "공고별 자격 기준일·정확한 만나이 확인 필요 (생년만으로 판정하지 않음)",
+      profile.homeless === false ? "입력상 주택 보유 · 공고의 주택수 산정 및 적용 범위 확인 필요" : "본인·배우자·세대구성원 중 무주택 적용 범위와 증빙 확인 필요",
+      "공고별 소득 상한·산정기간·본인/가구/부모 합산 범위 확인 필요",
+      "총자산·자동차 평가액·부채 공제 범위 확인 필요 (예적금만으로 판정하지 않음)",
+      "거주기간·직장·혼인·청약통장 등 공급유형별 요건 및 순위 확인 필요"
+    ]}; });
+  }
   function judge(l, profile, today) {
-    var r = RULES[l.type];
-    if (!r) return ["조건부", "유형 미분류 — 공고문에서 자격 직접 확인"];
-    var age = parseInt(today.slice(0, 4), 10) - profile.birth_year;
-    if (age < r.age[0] || age > r.age[1]) return ["불가", "나이 " + age + "세 (기준 " + r.age[0] + "~" + r.age[1] + ")"];
-    if (r.single && profile.marital !== "single") return ["불가", "미혼만 가능"];
-    var reasons = [], checks = [];
-    var inc = profile.income_annual_won / 12;
-    if (r.income != null) { if (inc > r.income) return ["불가", "소득 월 " + Math.round(inc).toLocaleString() + "원 > 기준 " + r.income.toLocaleString() + "원"]; reasons.push("소득 " + Math.floor(inc / 10000) + "만 ≤ " + Math.floor(r.income / 10000) + "만"); }
-    if (r.asset != null) { if ((profile.savings_won || 0) > r.asset) return ["불가", "총자산 " + (profile.savings_won || 0).toLocaleString() + "원 > 기준 " + r.asset.toLocaleString() + "원"]; reasons.push("자산 OK"); }
-    if (profile.car) checks.push("자동차가액 4,542만 이하 확인");
-    if (r.account && !profile.subscription_joined) checks.push("청약통장 가입일·납입횟수 확인(순위 결정)");
-    if (r.rank1 && profile.residence_sido && l.sido && (profile.residence_sido === l.sido)) reasons.unshift(profile.residence_sido + " 거주·직장 → 1순위");
-    if (checks.length) return ["조건부", reasons.concat(checks).join("; ") + " · " + r.note];
-    return ["가능", (reasons.length ? reasons.join("; ") + " · " : "가능 · ") + r.note];
+    return ["확인 필요", "공고별 공급유형과 심사 범위를 확인해야 합니다. 입력값만으로 신청 자격이나 당첨·대출 승인을 확정하지 않습니다."];
+  }
+  function supportChecks(l, p) {
+    var reasons = [];
+    var region = l.sido || (/^서울/.test(l.address || "") ? "서울" : null);
+    reasons.push(region === "서울" ? "서울 소재: 확인된 공고 주소 기준" : region ? "서울 밖 주택: 지원 대상 아님" : "주택 소재지 확인 필요");
+    reasons.push(l.is_private === false ? "공공임대 등 지원 제외 주택 여부 확인 필요 · 자동 할인 없음" : "건축물 용도·위반건축물·공공임대 제외 여부 확인 필요");
+    if (l.deposit_won == null || l.rent_won == null) reasons.push("보증금·월세 확인 필요");
+    else if (l.deposit_won > 300000000 || l.rent_won > 900000) reasons.push("보증금 3억원·월세 90만원 기준 초과");
+    if (p.marital === "single" && p.income_annual_won != null && p.income_annual_won > 50000000) reasons.push("개인 연소득 5천만원 기준 초과");
+    else reasons.push("은행 산정 연소득 확인 필요 (미혼 개인 5천만원 / 기혼 부부합산 6천만원)");
+    reasons.push("신청일 만19~39세·본인/배우자 무주택·세대주·서울 전입 요건 확인 필요");
+    reasons.push("주거급여·기존 지원 이력·은행 보증/대출 심사 확인 필요");
+    reasons.push("협약대출 최대 2억원·보증금 90% 이내. 지원분 기본 연2%p, 본인부담 최저 연1% (고정 1%가 아님). 버팀목 등과 임의 혼합하지 않음");
+    return reasons;
   }
 
   function evaluate(l, profile, stations, today) {
@@ -216,10 +206,10 @@
     var sc = score(l, profile, ctx, today);
     var el = judge(l, profile, today);
     return { transit_min: ctx.transit_min, transit_mode: tr ? "estimate" : null, transit_detail: tr ? tr.detail : null,
-      monthly: ctx.monthly, status: fs[0], status_reasons: fs[1], score: sc, eligibility: el[0], eligibility_note: el[1],
+      monthly: ctx.monthly, status: fs[0], status_reasons: fs[1], score: sc, eligibility: el[0], eligibility_note: el[1], eligibility_checks: eligibilityChecks(l, profile),
       region_points: ctx.region ? ctx.region.points : null, region_matched: ctx.region ? ctx.region.matched : null, is_big: isBig(l) };
   }
 
   return { evaluate: evaluate, transitEstimate: transitEstimate, monthlyCost: monthlyCost, regionPoints: regionPoints, applyFilters: applyFilters, score: score, judge: judge,
-    nearestStation: nearestStation, toPyeong: toPyeong, applicableUnits: applicableUnits, isBig: isBig, RULES: R };
+    supportChecks: supportChecks, eligibilityChecks: eligibilityChecks, nearestStation: nearestStation, toPyeong: toPyeong, applicableUnits: applicableUnits, isBig: isBig, RULES: R };
 });

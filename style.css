@@ -192,7 +192,7 @@ main{min-width:0}
 .season .focus b{color:var(--blued)}
 
 /* 공개 공유본(읽기 전용) */
-body.static #refresh,body.static #rebuild,body.static #runStatus{display:none}
+body.static #rebuild{display:none}
 
 /* 내 조건 */
 .prof{background:#fff;border:2px solid var(--mint);border-radius:12px;padding:8px 10px}
@@ -247,3 +247,5 @@ body.owner .prof{display:none}
 .news a{color:var(--ink);text-decoration:none;overflow-wrap:anywhere;min-width:0}.news a:hover{text-decoration:underline}
 
 .schedule{margin:12px 0;padding:12px;background:var(--bg,#f5f7fa);border-radius:8px;font-size:13px;line-height:1.65}.schedule ul{margin:6px 0;padding-left:18px}.schedule li{margin:5px 0;overflow-wrap:anywhere}
+
+#freshness{font-size:12px;line-height:1.65;overflow-wrap:anywhere}.eligibility-checks{font-size:13px;line-height:1.6;margin:10px 0}

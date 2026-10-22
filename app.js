@@ -43,20 +43,20 @@
   }
   function typeClass(t) { return /민간/.test(t) ? "navy" : /행복|매입|공공|국민|전세|장기/.test(t) ? "mint" : "gray"; }
   function eligChip(l) {
-    var label = l.rank ? (l.eligibility || "") + " · " + l.rank : (l.eligibility || "자격 미판정");
-    var c = l.eligibility === "가능" ? "mint" : l.eligibility === "불가" ? "rose" : "amber";
-    if (l.status === "neutral") { label = "조건 입력 후 판정"; c = "gray"; }
+    var label = "자격 확인 필요";
+    var c = "amber";
+    if (l.status === "neutral") { label = "공고별 자격 확인 필요"; c = "gray"; }
     if (l.status === "rejected") { label = (l.status_reasons[0] || "탈락"); c = "rose"; }
     if (l.status === "closed") { label = "접수 종료"; c = "gray"; }
     return '<span class="chip ' + c + '">' + esc(label) + "</span>";
   }
   function payKpi(l) {
-    if (l.status === "neutral") return '<div class="kpi"><div class="l">총 월 납입</div><div class="v">—<small>조건 입력 후</small></div></div>';
+    if (l.status === "neutral") return '<div class="kpi"><div class="l">월 비용 예시</div><div class="v">—<small>조건 입력 후</small></div></div>';
     var m = l.monthly || {}, v = m.display_total;
     var cls = m.verdict === "ok" ? "mint" : m.verdict === "border" ? "warn" : m.verdict === "over" ? "bad" : "";
     var txt = v == null ? "—" : man(v).toLocaleString();
     var small = v == null ? "미산정" : (m.verdict === "unknown" ? "만원 (금리 미설정)" : "만원");
-    return '<div class="kpi ' + cls + '"><div class="l">총 월 납입</div><div class="v">' + txt + "<small>" + small + "</small></div></div>";
+    return '<div class="kpi ' + cls + '"><div class="l">월 비용 예시</div><div class="v">' + txt + "<small>" + small + "</small></div></div>";
   }
   function transitKpi(l) {
     if (l.status === "neutral") return '<div class="kpi mint"><div class="l">직장까지</div><div class="v">—<small>조건 입력 후</small></div></div>';
@@ -91,7 +91,7 @@
   }
   function scoreTip(l) {
     var sc = l.score || {};
-    return "총점 " + (sc.total || 0) + " = 을지로입구 거리 " + (sc.transit || 0) + "/40 + 평수·룸 " + (sc.area || 0) + "/25 + 모집호수 " + (sc.units || 0) + "/15 + 선호 지역 " + (sc.gu || 0) + "/10 + 거주기간 " + (sc.years || 0) + "/10 + 보너스 " + (sc.bonus || 0) + " (2호선 역세권 +5, 1.5룸 +5, 2룸 +8, 대단지 +2)";
+    return "총점 " + (sc.total || 0) + " = 직장까지 거리 " + (sc.transit || 0) + "/40 + 평수·룸 " + (sc.area || 0) + "/25 + 모집호수 " + (sc.units || 0) + "/15 + 선호 지역 " + (sc.gu || 0) + "/10 + 거주기간 " + (sc.years || 0) + "/10 + 보너스 " + (sc.bonus || 0) + " (2호선 역세권 +5, 1.5룸 +5, 2룸 +8, 대단지 +2)";
   }
   function card(l) {
     var dd = dday(l); var ph = phaseOf(l); var mine = mineOf(l);
@@ -102,7 +102,7 @@
     var cls = "card " + l.status + (isBig(l) ? " big" : "") + (state.open[l.id] ? " open" : "") + (mine ? " mine" : "");
     var notes = (sc.notes || []).join(", ");
     return '<article class="' + cls + '" data-id="' + esc(l.id) + '">' +
-      '<div class="hd"><div class="row"><span class="pill ' + ph.k + (ph.urgent ? " urgent" : "") + '">' + esc(ph.text) + "</span>" + (mine ? '<span class="pill mine">' + esc(mine.label) + "</span>" : "") + '<span class="chip ' + typeClass(l.type) + '">' + esc(l.type) + "</span>" + bigBadge(l) + watchBadge(l) + (l.is_new ? '<span class="chip">신규</span>' : "") + (state.mode === "static" && l.my_status ? '<span class="chip owner">' + esc((state.facts && state.facts.owner) || "승리") + " " + esc(MY[l.my_status] || l.my_status) + "</span>" : "") + "</div>" +
+      '<div class="hd"><div class="row"><span class="pill ' + ph.k + (ph.urgent ? " urgent" : "") + '">' + esc(ph.text) + "</span>" + (mine ? '<span class="pill mine">' + esc(mine.label) + "</span>" : "") + '<span class="chip ' + typeClass(l.type) + '">' + esc(l.type) + "</span>" + bigBadge(l) + watchBadge(l) + (l.is_new ? '<span class="chip">신규</span>' : "") + "</div>" +
       '<button class="heart' + (isFav(l.id) ? " on" : "") + '" type="button" aria-pressed="' + isFav(l.id) + '" aria-label="찜" data-fav="' + esc(l.id) + '">♥</button></div>' +
       "<div><h3><button type=\"button\" data-toggle=\"" + esc(l.id) + "\">" + esc(starName(l)) + "</button></h3><div class=\"loc\">" + esc(loc) + " · " + esc(l.provider) + "</div></div>" +
       '<div class="phase"><div class="line">' + esc(ph.sub) + "</div>" + timeline(l) + "</div>" +
@@ -123,23 +123,23 @@
       (l.movein ? "<b>입주</b><span>" + esc(l.movein) + "</span>" : "") +
       (l.address ? "<b>주소</b><span>" + esc(l.address) + "</span>" : "") + "</div>" +
       (l.sites && l.sites.length ? "<div><b>주택 " + l.sites.length + "곳</b> (지도에 집 단위로 표시)<pre>" + esc(l.sites.map(function (s) { return (s.address || "").replace("서울특별시 ", "") + (s.deposit_won != null ? " · 전세 " + won(s.deposit_won) : "") + (s.area_m2 ? " · " + py(s.area_m2) + "평" : ""); }).join("\n")) + "</pre></div>" : "") +
+      eligibilityHTML(l) +
       (l.apply_note ? "<pre>" + esc(l.apply_note) + "</pre>" : "") +
       '<div class="row">' + (l.pdf_url ? '<a class="btn primary" href="' + esc(l.pdf_url) + '" target="_blank" rel="noopener">공고문 PDF</a>' : "") +
       '<a class="btn" href="' + esc(l.source_url) + '" target="_blank" rel="noopener">공고 페이지</a>' +
       '<span class="chip gray">' + esc(l.id) + "</span></div>" +
       "</div></article>";
   }
+  function eligibilityHTML(l) {
+    var checks = l.eligibility_checks || Engine.eligibilityChecks(l, state.profile || {});
+    return '<details class="eligibility-checks"><summary>공급유형별 자격 확인 필요</summary>' + checks.map(function(c) { return '<b>' + esc(c.supply) + '</b><ul>' + c.checks.map(function(t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul>'; }).join('') + '</details>';
+  }
   function payDetail(l) {
     var m = l.monthly || {};
-    if (l.status === "neutral") return "내 조건을 입력하면 계산";
-    if (!m || m.display_total == null) return "보증금·월세를 아직 못 읽음";
-    var p = state.data.profile_summary;
-    if (state.data.static) return esc("월세 " + won(l.rent_won) + " + 보증금 대출 이자 (이자지원 기준)" + (m.policy_note ? " · " + m.policy_note : ""));
-    var s = "월세 " + won(l.rent_won) + " + 대출 " + won(m.loan_won) + " (보증금 − 자기자금 " + won(p.own_cash_won) + ")";
-    if (m.total_youth != null) s += " → 청년대출 " + (p.rates.youth_loan * 100).toFixed(1) + "%: 월 " + man(m.total_youth).toLocaleString() + "만";
-    if (m.total_bank != null) s += " / 일반은행 " + (p.rates.bank_loan * 100).toFixed(2) + "%: 월 " + man(m.total_bank).toLocaleString() + "만";
-    if (m.policy_note) s += " · " + m.policy_note;
-    return esc(s);
+    if (l.status === "neutral") return "내 조건을 입력하면 비용 예시 계산";
+    var text = m.display_total == null ? "보증금·월세·자기자금·은행 금리 확인 필요" : "월세 + 입력한 일반은행 금리의 이자 예시 · 대출 승인/한도 미확인 · 서울시 이자지원 자동 할인 없음";
+    if (state.profile && state.profile.seoul_support) text += " · " + Engine.supportChecks(l, state.profile).join(" / ");
+    return esc(text);
   }
 
   function filters() {
@@ -300,7 +300,7 @@
       var when = ph.k === "open" ? (ph.urgent ? "<b style='color:var(--rosed)'>" + esc(ph.text.replace("마감 임박 · ", "")) + "</b>" : "<b style='color:var(--blued)'>" + esc(ph.text.replace("접수 중 · ", "")) + "</b>") : "<b style='color:var(--mintd)'>" + esc(ph.sub.split(" · ")[0]) + "</b>";
       return '<li class="' + (ph.urgent ? "urgent" : ph.k) + (mine ? " done" : "") + '"><span class="num">' + (i + 1) + "</span>" +
         '<div class="t"><div class="nm"><button type="button" data-jump="' + esc(l.id) + '">' + esc(starName(l)) + "</button>" + watchBadge(l) + (mine ? ' <span class="pill mine">' + esc(mine.label) + "</span>" : "") + bigBadge(l) + "</div>" +
-        '<div class="meta"><span>' + when + " · 접수 " + esc(period) + "</span><span>" + esc(l.gu || "") + (l.station ? " " + esc(l.station) + "역" : "") + (l.transit_min != null ? " · 을지로입구 <b>" + l.transit_min + "분</b>" : "") + "</span>" +
+        '<div class="meta"><span>' + when + " · 접수 " + esc(period) + "</span><span>" + esc(l.gu || "") + (l.station ? " " + esc(l.station) + "역" : "") + (l.transit_min != null ? " · 직장까지 <b>" + l.transit_min + "분</b>" : "") + "</span>" +
         "<span>" + esc(area(l)) + (l.rooms ? " " + esc(l.rooms) : "") + " · 보증금 " + esc(won(l.deposit_won)) + " / 월세 " + esc(won(l.rent_won)) + " → <b>월 " + (pay != null ? man(pay).toLocaleString() + "만" : "?") + "</b></span>" +
         "<span>모집 <b>" + esc(unitsText(l)) + "</b></span>" +
         '<span>' + esc((l.rank ? l.eligibility + " · " + l.rank : l.eligibility) || "자격 미판정") + " · 추천 " + ((l.score || {}).total || 0) + "점" + (isBig(l) && l.status === "rejected" ? " · <b style='color:var(--rosed)'>조건 미달(" + esc(l.status_reasons[0] || "") + ")이지만 대형 모집이라 지원</b>" : "") + (l.status === "unscored" ? " · <b style='color:var(--amberd)'>미산정: " + esc(l.status_reasons.join(", ")) + " — 공고문 확인 후 판단</b>" : "") + "</span></div></div>" +
@@ -334,7 +334,7 @@
   function workPoint() {
     var p = state.mode === "static" ? state.profile : null;
     if (p && p.work && p.work.lat != null) return { lat: p.work.lat, lng: p.work.lng, label: (p.work.station || "직장") + "역 (" + (p.name || "나") + " 직장)" };
-    return { lat: 37.5664, lng: 126.9810, label: "회사 (을지로입구)" };
+    return { lat: 37.5665, lng: 126.9780, label: "서울 지도 중심", centerOnly:true };
   }
   function ensureMap() {
     if (state.map || typeof L === "undefined") return state.map;
@@ -355,7 +355,7 @@
     var m = ensureMap(); if (!m) { $("#mapNote").hidden = false; $("#mapNote").textContent = "지도 라이브러리를 불러오지 못했어요(인터넷 연결 확인)."; return; }
     state.mapLayer.clearLayers();
     var wp = workPoint();
-    if (state.workMarker) { state.workMarker.setLatLng([wp.lat, wp.lng]); state.workMarker.setIcon(L.divIcon({ className: "", html: '<div class="work-icon">★ ' + esc(wp.label) + "</div>", iconSize: [0, 0] })); state.workMarker.bindPopup("<b>" + esc(wp.label) + "</b>"); }
+    if (state.workMarker) { state.workMarker.setOpacity(wp.centerOnly ? 0 : 1); state.workMarker.setLatLng([wp.lat, wp.lng]); state.workMarker.setIcon(L.divIcon({ className: "", html: '<div class="work-icon">★ ' + esc(wp.label) + "</div>", iconSize: [0, 0] })); state.workMarker.bindPopup("<b>" + esc(wp.label) + "</b>"); }
     var missing = 0, bounds = [[wp.lat, wp.lng]];
     var items = liveItems(list), hidden = list.length - items.length;
     items.forEach(function (l) {
@@ -367,13 +367,9 @@
         l.sites.forEach(function (site) {
           if (site.lat == null || site.lng == null) return;
           var sm = L.circleMarker([site.lat, site.lng], { radius: 6, color: scolor, weight: 2, fillColor: "#fff", fillOpacity: .95 });
-          var p = state.data.profile_summary, loan = Math.max(0, (site.deposit_won || 0) - (p.own_cash_won || 100000000));
-          var rt = p.rates || {}, over3 = site.deposit_won > (Engine.RULES.POLICY_MAX_DEPOSIT_WON || 300000000);
-          // 보증금 3억 초과면 청년 버팀목·서울시 이자지원 모두 불가 → 은행 금리만 (engine.js baseCost와 같은 규칙)
-          var pay = site.deposit_won != null ? Math.round(loan * (over3 ? (rt.bank_loan || 0.0435) : (rt.youth_loan || 0.029)) / 12 / 1e4) : null;
-          var pay1 = site.deposit_won != null && !over3 ? Math.round((Math.min(loan, rt.support_cap_won || 200000000) * (rt.support_rate != null ? rt.support_rate : 0.01) + Math.max(0, loan - (rt.support_cap_won || 200000000)) * (rt.youth_loan || 0.029)) / 12 / 1e4) : null;
-          var payText = pay == null ? "" : over3 ? "<br>대출 " + won(loan) + " → <b>보증금 3억 초과라 버팀목·이자지원 불가</b> → 은행 " + ((rt.bank_loan || 0.0435) * 100).toFixed(2) + "%: 월 " + pay + "만"
-            : "<br>대출 " + won(loan) + " → 버팀목 월 " + pay + "만 / 서울시 이자지원(1%) 월 " + pay1 + "만";
+          var p = state.profile;
+          var costs = p ? Engine.monthlyCost(Object.assign({}, l, site, { rent_won:site.rent_won == null ? l.rent_won : site.rent_won }), p) : null;
+          var payText = costs && costs.display_total != null ? "<br>입력한 은행 금리의 월 비용 예시 " + esc(won(costs.display_total)) + " · 대출 승인/한도 미확인 · 이자지원 자동 할인 없음" : "<br>내 조건·보증금·월세·금리 확인 후 비용 예시 계산";
           sm.bindPopup('<span class="pill ' + ph.k + '">' + esc(ph.text) + "</span><br><b>" + esc(starName(l)) + "</b><br>" + esc(site.name || "") + "<br>" + esc(site.address || "") + "<br>" +
             (site.area_m2 ? "전용 " + site.area_m2 + "㎡(" + py(site.area_m2) + "평)" : "") + (site.rooms ? " 방" + site.rooms : "") + (site.deposit_won != null ? " · 전세 " + won(site.deposit_won) : "") +
             payText +
@@ -389,7 +385,7 @@
       var mk = L.circleMarker([l.lat, l.lng], { radius: r, color: mine ? "#7C3AED" : "#fff", weight: mine ? 3 : 1.5, fillColor: color, fillOpacity: l.status === "closed" || l.status === "rejected" ? .55 : .9 });
       var pay = (l.monthly || {}).display_total;
       mk.bindPopup('<span class="pill ' + ph.k + '">' + esc(ph.text) + "</span>" + (mine ? ' <span class="pill mine">' + esc(mine.label) + "</span>" : "") + "<br><b>" + esc(starName(l)) + "</b> " + bigBadge(l) + "<br>" +
-        esc([l.gu, l.station ? l.station + "역" : "", l.transit_min != null ? "을지로입구 " + l.transit_min + "분" : "교통 미산정"].filter(Boolean).join(" · ")) + "<br>" +
+        esc([l.gu, l.station ? l.station + "역" : "", l.transit_min != null ? "직장까지 " + l.transit_min + "분" : "교통 미산정"].filter(Boolean).join(" · ")) + "<br>" +
         esc(area(l)) + " · " + (pay != null ? "월 " + man(pay).toLocaleString() + "만" : "월납입 미산정") + " · " + esc(unitsText(l)) + " · 점수 " + sc + (l.status === "rejected" ? "<br><span style='color:var(--rosed)'>" + esc(l.status_reasons[0] || "탈락") + "</span>" : "") +
         '<div class="row" style="margin-top:6px"><a class="btn primary" href="' + esc(l.source_url) + '" target="_blank" rel="noopener">신청 페이지 바로가기 ↗</a>' + (l.pdf_url ? ' <a class="btn" href="' + esc(l.pdf_url) + '" target="_blank" rel="noopener">공고문 PDF</a>' : "") + ' <button class="btn" type="button" data-jump="' + esc(l.id) + '">카드로 이동</button></div>', { maxWidth: 360 });
       var short = l.name.replace(/\[.*?\]\s*/g, "").replace(/(최초|추가)?모집\s*공고(문)?/g, "").trim().slice(0, 18);
@@ -440,7 +436,8 @@
     }).join("");
     $("#gu").innerHTML += Object.keys(gus).sort().map(function (g) { return '<option value="' + esc(g) + '">' + esc(g) + " (" + gus[g] + ")</option>"; }).join("");
     var p = d.profile_summary;
-    $("#meta").textContent = d.static ? d.today + " 갱신 · " + esc(p.name) + "의 청약 보드 (읽기 전용 공유본)" : d.today + " 갱신 · 자기자금 " + won(p.own_cash_won) + " · 상한 월 " + man(p.max_monthly_won) + "만 · 청년대출 " + (p.rates && p.rates.youth_loan ? (p.rates.youth_loan * 100).toFixed(1) + "%" : "미설정");
+    $("#meta").textContent = "공고 정보 · 한국시간(KST)";
+    $("#freshness").textContent = freshness(d);
     var anyEst = d.listings.some(function (l) { return l.transit_mode === "estimate"; });
     $("#transitNote").textContent = anyEst ? "교통시간은 가까운 지하철역 기준 추정치입니다. config.local.json에 ODsay 키를 넣으면 실제 지하철+버스 경로로 바뀝니다." : "교통시간은 ODsay 실제 경로 기준입니다.";
     $("#fail").innerHTML = d.failures && d.failures.length ? '<div class="fail">수집 실패: ' + esc(d.failures.join(" / ")) + "</div>" : "";
@@ -454,7 +451,7 @@
       if (e.target.closest(".side")) render();
     });
     document.addEventListener("input", function (e) { if (e.target.matches("#minPy,#maxPay,#q")) render(); });
-    $("#refresh").addEventListener("click", function () { startRun("full"); });
+    $("#refresh").addEventListener("click", function () { if (state.mode === "static") refreshPosted(); else startRun("full"); });
     $("#calToggle").addEventListener("click", function () { localStorage.setItem("cheongyak:cal", localStorage.getItem("cheongyak:cal") === "month" ? "2w" : "month"); render(); });
     $("#mapToggle").addEventListener("click", function () { state.mapOn = !state.mapOn; localStorage.setItem("cheongyak:map", state.mapOn ? "1" : "0"); render(); });
     $("#rebuild").addEventListener("click", function () { startRun("rebuild"); });
@@ -484,6 +481,26 @@
   }
   function setRunStatus(msg, show) { var el = $("#runStatus"); el.hidden = !show; el.textContent = msg || ""; }
   function setBusy(b) { $("#refresh").disabled = b; $("#rebuild").disabled = b; }
+  function refreshPosted() {
+    setBusy(true); setRunStatus("게시된 데이터 조회 중… 실제 수집은 실행하지 않습니다.", true);
+    fetch("facts.json?_=" + Date.now(), { cache:"no-store" }).then(function(r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }).then(function(f) {
+      if (!Array.isArray(f.listings)) throw new Error("invalid data");
+      state.facts = f; evaluateAll(); initFilters(); render();
+      setRunStatus("게시된 데이터 재조회 완료 · 실제 재수집은 요청되지 않았습니다.", true);
+    }).catch(function() { setRunStatus("게시된 데이터 조회 실패 · 기존 화면을 유지합니다. 실제 수집 상태는 확인할 수 없습니다.", true); }).finally(function() { setBusy(false); });
+  }
+  function kstTime(value) {
+    if (!value || !/(Z|[+-]\d{2}:\d{2})$/.test(value)) return "미확인";
+    var date = new Date(value); if (isNaN(date.getTime())) return "미확인";
+    return new Intl.DateTimeFormat("ko-KR", {timeZone:"Asia/Seoul",dateStyle:"short",timeStyle:"medium",hour12:false}).format(date) + " KST";
+  }
+  function freshness(d) {
+    var c = d.collection || {}, labels = {unknown:"미확인",running:"수집 중(게시 시점 기준)",completed:"수집 종료",partial:"일부 실패 · 이전 자료 포함 가능",failed:"수집 실패"};
+    return "실제 수집 시작: " + kstTime(c.started_at) + " / 종료: " + kstTime(c.finished_at) +
+      " · 마지막 전체 수집 성공: " + kstTime(c.last_success_at) + " · 게시 시점 수집 상태: " + (labels[c.status] || "미확인") + " · 데이터 생성: " + kstTime(d.generated) +
+      (d.built_at ? " · 공개본 생성: " + kstTime(d.built_at) : "") +
+      (d.static ? " · 이 버튼은 게시 자료만 다시 읽습니다. 수집은 운영자의 Mac 일일 작업에 의존하며 실시간 연결되어 있지 않습니다." : "");
+  }
   function startRun(mode) {
     setBusy(true); setRunStatus(mode === "full" ? "공고 다시 수집 중… (3~5분)" : "다시 계산 중…", true);
     fetch("/api/run?mode=" + mode, { method: "POST" }).then(function (r) { return r.json(); }).then(function (j) {
@@ -507,20 +524,16 @@
   function saveProfiles(m) { localStorage.setItem(PLIST, JSON.stringify(m)); }
   function renderPick() {
     var sel = $("#profPick"); if (!sel) return;
-    var m = loadProfiles(), active = localStorage.getItem(PACTIVE) || "__default__";
+    var m = loadProfiles(), active = localStorage.getItem(PACTIVE) || "__new__";
     var opts = [];
-    if (state.facts && state.facts.default_profile) opts.push(['__default__', (state.facts.default_profile.name || "승리") + " (기본값)"]);
     Object.keys(m).sort().forEach(function (n) { opts.push([n, n]); });
-    ((state.facts && state.facts.presets) || []).forEach(function (p, i) { if (!m[p.name]) opts.push(["__preset__:" + i, "✎ " + p.name + " 프리셋 (숫자만 채우면 됨)"]); });
     opts.push(["__new__", "+ 새 조건 입력"]);
     sel.innerHTML = opts.map(function (o) { return '<option value="' + esc(o[0]) + '"' + (o[0] === active ? " selected" : "") + ">" + esc(o[1]) + "</option>"; }).join("");
   }
   function applyProfile(key) {
     var m = loadProfiles();
-    if (key === "__default__") { state.profile = state.facts.default_profile || null; state.profileIsDefault = !!state.profile; }
-    else if (key === "__new__") { state.profile = null; state.profileIsDefault = false; fillForm({ regions: [] }); $("#prof").open = true; }
-    else if (key.indexOf("__preset__:") === 0) { var pre = (state.facts.presets || [])[parseInt(key.split(":")[1], 10)]; state.profile = null; state.profileIsDefault = false; fillForm(Object.assign({ regions: [] }, pre)); $("#prof").open = true; $("#p_income").focus(); }
-    else { state.profile = m[key] || null; state.profileIsDefault = false; }
+    state.profile = m[key] || null; state.profileIsDefault = false;
+    if (!state.profile) { fillForm({ regions: [] }); $("#prof").open = true; }
     localStorage.setItem(PACTIVE, key); saveProfile(state.profile && !state.profileIsDefault ? state.profile : null);
     if (state.profile) fillForm(state.profile);
     evaluateAll(); initFilters(); render(); renderPick();
@@ -536,13 +549,14 @@
     splitList($("#p_other").value).forEach(function (n) { regions.push({ name: n, points: 3 }); });
     var man = function (id) { var v = parseFloat($(id).value); return isNaN(v) ? null : Math.round(v * 10000); };
     return { name: $("#p_name").value.trim() || "나", birth_year: parseInt($("#p_birth").value, 10) || null, marital: $("#p_marital").value, household_size: 1,
-      income_annual_won: man("#p_income"), savings_won: man("#p_savings") || 0, own_cash_won: man("#p_cash") || 0, car: $("#p_car").checked,
+      income_annual_won: man("#p_income"), savings_won: man("#p_savings"), own_cash_won: man("#p_cash"), car: $("#p_car").checked,
       residence_sido: $("#p_sido").value, work: st, work_name: name, regions: regions,
       min_pyeong: parseFloat($("#p_minpy").value) || 9, max_monthly_won: man("#p_maxpay") || 500000, border_monthly_won: (man("#p_maxpay") || 500000) + 50000, min_private_years: parseInt($("#p_years").value, 10) || 4,
-      rates: { youth_loan: 0.029, bank_loan: 0.0435, support_rate: 0.01, support_cap_won: 200000000 }, seoul_support: $("#p_support").checked, subscription_joined: null };
+      rates: { youth_loan: null, bank_loan: $("#p_rate").value === "" ? null : parseFloat($("#p_rate").value) / 100 }, seoul_support: $("#p_support").checked, subscription_joined: null };
   }
   function fillForm(p) {
     if (!p) return;
+    $("#p_rate").value = p.rates && p.rates.bank_loan != null ? p.rates.bank_loan * 100 : "";
     $("#p_name").value = p.name || ""; $("#p_birth").value = p.birth_year || ""; $("#p_marital").value = p.marital || "single";
     $("#p_income").value = p.income_annual_won != null ? Math.round(p.income_annual_won / 10000) : ""; $("#p_savings").value = p.savings_won != null ? Math.round(p.savings_won / 10000) : "";
     $("#p_cash").value = p.own_cash_won != null ? Math.round(p.own_cash_won / 10000) : ""; $("#p_car").checked = !!p.car; $("#p_sido").value = p.residence_sido || "서울";
@@ -553,7 +567,8 @@
   }
   function validateProfile(p) {
     var miss = [];
-    if (!p.birth_year) miss.push("생년"); if (!p.income_annual_won) miss.push("연소득"); if (!p.work) miss.push("직장 지하철역(목록에서 선택)"); if (!p.regions.length) miss.push("지역(1순위 또는 그 외 허용 지역)");
+    if (!p.work) miss.push("직장 지하철역(목록에서 선택)"); if (!p.regions.length) miss.push("지역(1순위 또는 그 외 허용 지역)");
+    if (p.rates.bank_loan != null && (!isFinite(p.rates.bank_loan) || p.rates.bank_loan < 0 || p.rates.bank_loan > 1)) miss.push("은행 연금리(0~100%)");
     return miss;
   }
   function evaluateAll() {
@@ -564,9 +579,9 @@
       else { c.status = "neutral"; c.status_reasons = []; c.score = { total: 0 }; c.monthly = { display_total: null, verdict: "unknown" }; c.transit_min = null; c.eligibility = null; c.region_points = 0; }
       return c;
     });
-    state.data = { generated: f.generated, today: f.today, failures: f.failures || [], static: true, owner: f.owner, listings: ls,
-      profile_summary: { name: p ? p.name : (f.owner || ""), work: p && p.work ? p.work.station : "", max_monthly_won: p ? p.max_monthly_won : null } };
-    $("#profWho").textContent = p ? ((state.profileIsDefault ? p.name + " (기본값) · " : p.name + " · ") + (p.work ? p.work.station : "") + " · " + (p.regions || []).slice(0, 3).map(function (r) { return r.name; }).join("·")) : "아직 입력 안 함";
+    state.data = { generated: f.generated, today: f.today, failures: f.failures || [], static: true, collection: f.collection, built_at: f.built_at, listings: ls,
+      profile_summary: { name: p ? p.name : "", work: p && p.work ? p.work.station : "", max_monthly_won: p ? p.max_monthly_won : null } };
+    $("#profWho").textContent = p ? ((state.profileIsDefault ? p.name + " (기본값) · " : p.name + " · ") + (p.work ? p.work.station : "") + " · " + (p.regions || []).slice(0, 3).map(function (r) { return r.name; }).join("·")) : "저장된 개인 조건 없음";
     $("#neutralNote").innerHTML = p ? "" : '<div class="neutral-note">왼쪽 <b>내 조건</b>을 입력하면 직장까지 시간·월 납입액·자격·추천 점수가 내 기준으로 계산되고, 내 지역 공고만 보입니다. 지금은 모든 공고를 마감 순으로 보여줍니다.</div>';
   }
   function bindProfile() {
@@ -597,19 +612,22 @@
     Promise.all([fetch("facts.json?_=" + Date.now()).then(function (r) { return r.json(); }), fetch("stations.json?_=" + Date.now()).then(function (r) { return r.json(); }).catch(function () { return []; })])
       .then(function (res) {
         state.facts = res[0]; state.stations = res[1] || [];
-        state.complexes = state.facts.complexes || null; state.calls = loadCallsLocal(); renderPhoneList(); renderNews(state.facts.news);
+        state.complexes = null; state.calls = loadCallsLocal(); renderPhoneList(); renderNews(state.facts.news);
         state.facts.listings.forEach(function (l) { l.status_reasons = []; l.score = { total: 0 }; });
         (function () {
           var m = loadProfiles(), active = localStorage.getItem(PACTIVE), legacy = loadProfile();
           if (legacy && legacy.name && !m[legacy.name] && !active) { m[legacy.name] = legacy; saveProfiles(m); active = legacy.name; localStorage.setItem(PACTIVE, active); }
           if (active && m[active]) { state.profile = m[active]; state.profileIsDefault = false; }
-          else { state.profile = state.facts.default_profile || null; state.profileIsDefault = !!state.profile; if (active !== "__new__") localStorage.setItem(PACTIVE, "__default__"); }
+          else { state.profile = active === "__new__" ? null : legacy; state.profileIsDefault = false; }
+
           fillForm(state.profile);
         })();
         bindProfile(); renderPick(); evaluateAll(); $("#gu").innerHTML = '<option value="">전체</option>'; $("#types").innerHTML = "";
         initFilters(); renderCal(); if (!bound) { bind(); bound = true; } render();
         if (!state.profile) $("#prof").open = true;
-        if (state.profileIsDefault) $("#neutralNote").innerHTML = '<div class="neutral-note">지금은 <b>승리 기준</b>으로 계산된 화면입니다. 왼쪽 <b>내 조건</b>에 본인 정보를 넣고 저장하면 내 기준으로 바뀝니다(내 기기에만 저장).</div>';
+        $("#refresh").textContent = "게시된 데이터 다시 불러오기";
+        $("#refresh").title = "이미 게시된 JSON을 다시 읽습니다. 실제 수집을 시작하지 않습니다.";
+
       }).catch(function (err) { $("#meta").textContent = "facts.json을 읽지 못했어요: " + err; });
   }
   function bootOwner() {
