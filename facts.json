@@ -1,10 +1,10 @@
 {
  "static": true,
- "generated": "2026-10-28T17:34:26+09:00",
+ "generated": "2026-10-28T17:41:32+09:00",
  "today": "2026-10-28",
  "collection": {
-  "started_at": "2026-10-28T17:27:59+09:00",
-  "finished_at": "2026-10-28T17:34:26+09:00",
+  "started_at": "2026-10-28T17:35:04+09:00",
+  "finished_at": "2026-10-28T17:41:32+09:00",
   "last_success_at": "2026-10-28T17:26:32+09:00",
   "status": "partial",
   "failure_count": 1
@@ -273,6 +273,101 @@
    ],
    "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6687&menuNo=400008",
    "schedule_verified_at": null
+  },
+  {
+   "id": "sh:311656",
+   "source": "sh",
+   "provider": "SH",
+   "type": "기타",
+   "name": "고덕강일지구 3단지 토지임대부 분양주택 입주자모집공고",
+   "source_url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/view.do?seq=311656",
+   "is_private": false,
+   "address": "서울특별시 강동구 강일동 174 (고덕강일공공주택지구 3단지)",
+   "gu": "강동구",
+   "sido": "서울",
+   "sigungu": "강동구",
+   "lat": null,
+   "lng": null,
+   "station": null,
+   "station_lat": null,
+   "station_lng": null,
+   "station_lines": [],
+   "station_walk_min": null,
+   "units_youth": 106,
+   "units_general": 147,
+   "units_total": 1305,
+   "area_m2_min": 49.96,
+   "area_m2_max": 59.97,
+   "rooms": "2룸(49형 전용 15.1평·공급 22평형) · 59형",
+   "rooms_guessed": false,
+   "deposit_won": null,
+   "rent_won": null,
+   "max_years": 40,
+   "end_year": null,
+   "apply_start": "2026-10-26",
+   "apply_end": "2026-11-06",
+   "announce_date": "2026-11-26",
+   "movein": "2027-05",
+   "pdf_url": "https://www.i-sh.co.kr/com/file/innoFD.do?brdId=GS0401&seq=311656&fileTp=A&fileSeq=1",
+   "posted": "2026-10-16",
+   "is_new": false,
+   "sites": [],
+   "phase": "upcoming",
+   "phase_days": 5,
+   "apply_start_time": "10:00",
+   "apply_end_time": "17:00",
+   "application_periods": [
+    {
+     "label": "사전청약 당첨자",
+     "start": "2026-10-26",
+     "end": "2026-10-27",
+     "start_time": "10:00",
+     "end_time": "17:00",
+     "note": "인터넷접수 기준. 방문인터넷접수는 유형별 접수기간 중 10:00~16:00 도착자에 한함."
+    },
+    {
+     "label": "특별공급 (청년·신혼부부·생애최초·신생아)",
+     "start": "2026-11-02",
+     "end": "2026-11-03",
+     "start_time": "10:00",
+     "end_time": "17:00",
+     "note": "인터넷접수 기준. 방문인터넷접수는 유형별 접수기간 중 10:00~16:00 도착자에 한함."
+    },
+    {
+     "label": "일반공급 1순위 (서울 2년 이상)",
+     "start": "2026-11-04",
+     "end": "2026-11-04",
+     "start_time": "10:00",
+     "end_time": "17:00",
+     "note": "인터넷접수 기준. 방문인터넷접수는 유형별 접수기간 중 10:00~16:00 도착자에 한함."
+    },
+    {
+     "label": "일반공급 1순위 (서울 2년 미만·인천·경기)",
+     "start": "2026-11-05",
+     "end": "2026-11-05",
+     "start_time": "10:00",
+     "end_time": "17:00",
+     "note": "인터넷접수 기준. 방문인터넷접수는 유형별 접수기간 중 10:00~16:00 도착자에 한함."
+    },
+    {
+     "label": "일반공급 2순위",
+     "start": "2026-11-06",
+     "end": "2026-11-06",
+     "start_time": "10:00",
+     "end_time": "17:00",
+     "note": "인터넷접수 기준. 방문인터넷접수는 유형별 접수기간 중 10:00~16:00 도착자에 한함."
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "winner",
+     "date": "2026-11-26",
+     "time": "16:00",
+     "after": true
+    }
+   ],
+   "schedule_source": "https://youth.seoul.go.kr/api/sh/view.do?key=2309250014&sn=1",
+   "schedule_verified_at": "2026-10-22"
   },
   {
    "id": "soco:6694",
@@ -6516,5 +6611,5 @@
    "first_seen": "2026-10-13"
   }
  ],
- "built_at": "2026-10-28T17:34:26+09:00"
+ "built_at": "2026-10-28T17:41:32+09:00"
 }
