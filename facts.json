@@ -1,6 +1,6 @@
 {
  "static": true,
- "generated": "2026-10-29T10:44:41+09:00",
+ "generated": "2026-10-29T11:13:31+09:00",
  "today": "2026-10-29",
  "collection": {
   "started_at": "2026-10-29T08:05:08+09:00",
@@ -11,6 +11,56 @@
  },
  "failures": [],
  "listings": [
+  {
+   "id": "manual:yongsan_riverview",
+   "source": "manual",
+   "provider": "이지스·KT리빙",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 효창공원앞역 해링턴플레이스 용산 리버뷰 최초모집 (공고 11/3 예정)",
+   "source_url": "https://www.yongsan2030.com/schedule.html",
+   "is_private": true,
+   "address": "서울특별시 용산구 효창원로 80 (6호선·경의중앙선 효창공원앞역 도보 5분)",
+   "gu": "용산구",
+   "sido": "서울",
+   "sigungu": "용산구",
+   "lat": 37.5392,
+   "lng": 126.9617,
+   "station": "효창공원앞",
+   "station_lat": 37.538579,
+   "station_lng": 126.96221,
+   "station_lines": [
+    "6",
+    "GYEONGUI"
+   ],
+   "station_walk_min": 1,
+   "units_youth": 73,
+   "units_general": 58,
+   "units_total": 635,
+   "area_m2_min": 22.53,
+   "area_m2_max": 29.51,
+   "rooms": "35형 29.51㎡(실사용 35㎡, 8.9평) 청년 · 25형 22.53㎡ 청년 / 56·61형 2룸은 신혼 전용",
+   "rooms_guessed": true,
+   "deposit_won": 159000000,
+   "rent_won": 630000,
+   "max_years": 10,
+   "end_year": null,
+   "apply_start": "2026-11-12",
+   "apply_end": "2026-11-15",
+   "announce_date": "2026-11-17",
+   "movein": "2026-12-07~2027-01-15",
+   "pdf_url": null,
+   "posted": "2026-10-29",
+   "is_new": true,
+   "sites": [],
+   "phase": "upcoming",
+   "phase_days": 14,
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
+  },
   {
    "id": "soco:6689",
    "source": "soco",
@@ -6677,5 +6727,5 @@
    "first_seen": "2026-10-13"
   }
  ],
- "built_at": "2026-10-29T10:44:41+09:00"
+ "built_at": "2026-10-29T11:13:31+09:00"
 }

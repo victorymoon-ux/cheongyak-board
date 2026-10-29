@@ -3,7 +3,7 @@
   "use strict";
   var FAV_KEY = "cheongyak:fav";
   var state = { data: null, fav: loadFav(), open: {}, marks: {}, map: null, mapLayer: null, mapOn: localStorage.getItem("cheongyak:map") !== "0", mode: "owner", facts: null, stations: [], profile: null };
-  var MY = { applied: "지원함", docs: "서류 통과", waitlist: "예비번호", won: "당첨", lost: "탈락", gave_up: "포기" };
+  var MY = { planned: "지원 예정", applied: "지원함", docs: "서류 통과", waitlist: "예비번호", won: "당첨", lost: "탈락", gave_up: "포기" };
   var W = ["일", "월", "화", "수", "목", "금", "토"];
   var $ = function (s, el) { return (el || document).querySelector(s); };
   var $$ = function (s, el) { return Array.prototype.slice.call((el || document).querySelectorAll(s)); };
@@ -286,12 +286,14 @@
     var t = todayISO();
     var items = all.filter(function (l) {
       if (!(l.status === "passed" || l.status === "border" || l.status === "unscored" || ((isBig(l) || l.watch) && l.status !== "closed"))) return false;
-      var ph = phaseOf(l);
+      var ph = phaseOf(l), mk = state.marks[l.id];
+      if (mk && (mk.status === "planned" || mk.status === "applied") && ph.k !== "closed") return true;   // 내가 찍어둔 건 무조건
       if (ph.k === "open") return true;
       if (ph.k === "upcoming") return daysFrom(l.apply_start) <= 7;
       return false;
     }).sort(function (a, b) { return (a.apply_end || "9").localeCompare(b.apply_end || "9") || (b.score.total - a.score.total); });
-    items.sort(function (a, b) { return ((b.watch ? 2 : 0) + (isBig(b) ? 1 : 0)) - ((a.watch ? 2 : 0) + (isBig(a) ? 1 : 0)) || (a.apply_end || "9").localeCompare(b.apply_end || "9"); });
+    var pin = function (l) { var mk = state.marks[l.id]; return mk && (mk.status === "planned" || mk.status === "applied") ? 4 : 0; };
+    items.sort(function (a, b) { return (pin(b) + (b.watch ? 2 : 0) + (isBig(b) ? 1 : 0)) - (pin(a) + (a.watch ? 2 : 0) + (isBig(a) ? 1 : 0)) || (a.apply_end || "9").localeCompare(b.apply_end || "9"); });
     var html = '<h2>이번 주 내가 지원할 공고 <small>' + items.length + '건 · 조건 통과(9평↑·월 80만↓) 또는 ⭐ 대형 모집(100호↑, 무조건 지원), 미산정은 노란 메모 · 지금 접수 중이거나 7일 안에 시작 · ⭐ 먼저, 마감 순</small></h2>';
     if (!items.length) html += '<div class="empty">이번 주에 지원할 공고가 없어요. "새로고침(다시 수집)"으로 새 공고를 확인해 보세요.</div>';
     else html += "<ol>" + items.map(function (l, i) {
