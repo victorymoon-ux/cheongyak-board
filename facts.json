@@ -1,6 +1,6 @@
 {
  "static": true,
- "generated": "2026-11-02T13:14:20+09:00",
+ "generated": "2026-11-02T13:26:55+09:00",
  "today": "2026-11-02",
  "collection": {
   "started_at": "2026-11-02T13:06:07+09:00",
@@ -403,6 +403,55 @@
    ],
    "schedule_source": "https://youth.seoul.go.kr/api/sh/view.do?key=2309250014&sn=1",
    "schedule_verified_at": "2026-10-22"
+  },
+  {
+   "id": "manual:seocho_artpalace",
+   "source": "manual",
+   "provider": "롯데건설",
+   "type": "분양",
+   "name": "[분양·청년안심주택 사업지] 서초 롯데캐슬 아트팰리스 소형 146세대 일반분양 (공고 11/2 예정, 청약홈)",
+   "source_url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancListView.do",
+   "is_private": true,
+   "address": "서울특별시 서초구 서초동 1448-1 (3호선 남부터미널역 역세권, 교대역 환승)",
+   "gu": "서초구",
+   "sido": "서울",
+   "sigungu": "서초구",
+   "lat": 37.4848,
+   "lng": 127.0163,
+   "station": "남부터미널",
+   "station_lat": 37.485013,
+   "station_lng": 127.016189,
+   "station_lines": [
+    "3"
+   ],
+   "station_walk_min": 1,
+   "units_youth": 0,
+   "units_general": 146,
+   "units_total": 835,
+   "area_m2_min": 35.0,
+   "area_m2_max": 46.0,
+   "rooms": "35형 24 · 37A 24 · 37B 31 · 37C 22 · 39형 31 · 46형 14 (전용 35~46㎡, 10.6~13.9평, 평면별 드레스룸·팬트리)",
+   "rooms_guessed": true,
+   "deposit_won": null,
+   "rent_won": null,
+   "max_years": null,
+   "end_year": null,
+   "apply_start": null,
+   "apply_end": null,
+   "announce_date": null,
+   "movein": "2027-02",
+   "pdf_url": null,
+   "posted": "2026-11-02",
+   "is_new": true,
+   "sites": [],
+   "phase": "unknown",
+   "phase_days": null,
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
   },
   {
    "id": "soco:6680",
@@ -6693,5 +6742,5 @@
    "first_seen": "2026-10-13"
   }
  ],
- "built_at": "2026-11-02T13:14:20+09:00"
+ "built_at": "2026-11-02T13:26:55+09:00"
 }
