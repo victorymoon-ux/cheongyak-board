@@ -108,7 +108,7 @@
       '<div class="phase"><div class="line">' + esc(ph.sub) + "</div>" + timeline(l) + "</div>" +
       '<div class="kpis">' + transitKpi(l) + payKpi(l) + "</div>" +
       '<div class="row"><span class="chip">' + esc(area(l)) + "</span>" + (rooms ? '<span class="chip">' + esc(rooms) + "</span>" : "") +
-      '<span class="chip">보증금 ' + esc(won(l.deposit_won)) + " / 월세 " + esc(won(l.rent_won)) + "</span>" +
+      '<span class="chip">보증금 ' + esc(won(l.deposit_won)) + " + 월세 " + esc(won(l.rent_won)) + "</span>" +
       '<span class="chip">' + esc(units) + "</span>" + (l.max_years ? '<span class="chip' + (l.max_years < SHORT_YEARS ? ' rose" title="거주 가능 기간이 짧음 (' + SHORT_YEARS + '년 미만)' : '"') + '>최장 ' + l.max_years + "년" + (l.max_years < SHORT_YEARS ? " · 짧음" : "") + "</span>" : l.end_year ? '<span class="chip' + ((l.end_year - new Date().getFullYear()) < SHORT_YEARS ? ' rose" title="임대 종료가 가까움' : '"') + '>임대 종료 ' + l.end_year + "년</span>" : '<span class="chip gray" title="공고문에 최장 거주기간이 없음 — 보통 2년 단위 재계약">거주기간 [확인 필요]</span>') + "</div>" +
       '<div class="ft">' + eligChip(l) + '<span class="row"><a class="btn primary" href="' + esc(l.source_url) + '" target="_blank" rel="noopener" title="공고·신청 페이지 열기">바로가기 ↗</a><span class="score" title="' + esc(scoreTip(l)) + '">추천 점수 <b>' + (sc.total || 0) + "</b>/100</span></span></div>" +
       '<div class="mine-row"><label>내 상태 <select data-mark="' + esc(l.id) + '"><option value="">미지원</option>' + Object.keys(MY).map(function (k) { return '<option value="' + k + '"' + (mine && mine.status === k ? " selected" : "") + ">" + MY[k] + "</option>"; }).join("") + "</select></label>" +
@@ -303,7 +303,7 @@
       return '<li class="' + (ph.urgent ? "urgent" : ph.k) + (mine ? " done" : "") + '"><span class="num">' + (i + 1) + "</span>" +
         '<div class="t"><div class="nm"><button type="button" data-jump="' + esc(l.id) + '">' + esc(starName(l)) + "</button>" + watchBadge(l) + (mine ? ' <span class="pill mine">' + esc(mine.label) + "</span>" : "") + bigBadge(l) + "</div>" +
         '<div class="meta"><span>' + when + " · 접수 " + esc(period) + "</span><span>" + esc(l.gu || "") + (l.station ? " " + esc(l.station) + "역" : "") + (l.transit_min != null ? " · 직장까지 <b>" + l.transit_min + "분</b>" : "") + "</span>" +
-        "<span>" + esc(area(l)) + (l.rooms ? " " + esc(l.rooms) : "") + " · 보증금 " + esc(won(l.deposit_won)) + " / 월세 " + esc(won(l.rent_won)) + " → <b>월 " + (pay != null ? man(pay).toLocaleString() + "만" : "?") + "</b></span>" +
+        "<span>" + esc(area(l)) + (l.rooms ? " " + esc(l.rooms) : "") + " · 보증금 " + esc(won(l.deposit_won)) + " + 월세 " + esc(won(l.rent_won)) + " → <b>월 " + (pay != null ? man(pay).toLocaleString() + "만" : "?") + "</b></span>" +
         "<span>모집 <b>" + esc(unitsText(l)) + "</b></span>" +
         '<span>' + esc((l.rank ? l.eligibility + " · " + l.rank : l.eligibility) || "자격 미판정") + " · 추천 " + ((l.score || {}).total || 0) + "점" + (isBig(l) && l.status === "rejected" ? " · <b style='color:var(--rosed)'>조건 미달(" + esc(l.status_reasons[0] || "") + ")이지만 대형 모집이라 지원</b>" : "") + (l.status === "unscored" ? " · <b style='color:var(--amberd)'>미산정: " + esc(l.status_reasons.join(", ")) + " — 공고문 확인 후 판단</b>" : "") + "</span></div></div>" +
         '<div class="act"><a class="btn primary" href="' + esc(l.source_url) + '" target="_blank" rel="noopener">바로가기 ↗</a>' + (l.pdf_url ? '<a class="btn" href="' + esc(l.pdf_url) + '" target="_blank" rel="noopener">공고문</a>' : "") +
