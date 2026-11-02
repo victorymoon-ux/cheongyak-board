@@ -249,3 +249,6 @@ body.owner .prof{display:none}
 .schedule{margin:12px 0;padding:12px;background:var(--bg,#f5f7fa);border-radius:8px;font-size:13px;line-height:1.65}.schedule ul{margin:6px 0;padding-left:18px}.schedule li{margin:5px 0;overflow-wrap:anywhere}
 
 #freshness{font-size:12px;line-height:1.65;overflow-wrap:anywhere}.eligibility-checks{font-size:13px;line-height:1.6;margin:10px 0}
+
+.followups{background:#FFF8E6;border:1px solid #F3D98B;border-radius:12px;padding:10px 14px;margin:0 0 12px;font-size:13.5px}
+.followups ul{margin:6px 0 0;padding-left:18px}.followups li{margin:3px 0}.followups li.overdue{color:#B42318;font-weight:700}.followups .d{font-weight:800;color:var(--ink2)}.followups a.tel{font-weight:700;color:var(--blued)}

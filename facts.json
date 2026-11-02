@@ -1,6 +1,6 @@
 {
  "static": true,
- "generated": "2026-11-02T16:55:22+09:00",
+ "generated": "2026-11-02T18:15:59+09:00",
  "today": "2026-11-02",
  "collection": {
   "started_at": "2026-11-02T13:06:07+09:00",
@@ -2861,7 +2861,7 @@
    "posted": "2026-10-29",
    "is_new": true,
    "sites": [],
-   "phase": "open",
+   "phase": "closed",
    "phase_days": 0,
    "apply_start_time": "10:00",
    "apply_end_time": "18:00",
@@ -4465,7 +4465,7 @@
    "posted": "2026-10-29",
    "is_new": true,
    "sites": [],
-   "phase": "open",
+   "phase": "closed",
    "phase_days": 0,
    "apply_start_time": "10:00",
    "apply_end_time": "18:00",
@@ -6742,5 +6742,5 @@
    "first_seen": "2026-10-13"
   }
  ],
- "built_at": "2026-11-02T16:55:22+09:00"
+ "built_at": "2026-11-02T18:15:59+09:00"
 }
