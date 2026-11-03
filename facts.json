@@ -1,10 +1,10 @@
 {
  "static": true,
- "generated": "2026-11-03T08:13:59+09:00",
+ "generated": "2026-11-03T09:33:08+09:00",
  "today": "2026-11-03",
  "collection": {
-  "started_at": "2026-11-03T08:00:04+09:00",
-  "finished_at": "2026-11-03T08:13:59+09:00",
+  "started_at": "2026-11-03T09:26:37+09:00",
+  "finished_at": "2026-11-03T09:33:08+09:00",
   "last_success_at": "2026-10-28T17:26:32+09:00",
   "status": "partial",
   "failure_count": 1
@@ -245,71 +245,6 @@
    "schedule_verified_at": null
   },
   {
-   "id": "soco:6711",
-   "source": "soco",
-   "provider": "당산동청년주택피에프브이 주식회사",
-   "type": "청년안심-민간",
-   "name": "[민간임대] 영등포구청역 포레나당산 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6711&menuNo=400008",
-   "is_private": true,
-   "address": "서울특별시 영등포구 당산로 83",
-   "gu": "영등포구",
-   "sido": "서울",
-   "sigungu": "영등포구",
-   "lat": 37.522309,
-   "lng": 126.8952969,
-   "station": "영등포구청",
-   "station_lat": 37.525706,
-   "station_lng": 126.89661,
-   "station_lines": [
-    "2",
-    "5"
-   ],
-   "station_walk_min": 3,
-   "units_youth": 100,
-   "units_general": 100,
-   "units_total": 409,
-   "area_m2_min": 17.0,
-   "area_m2_max": 41.13,
-   "rooms": "2룸(41타입 41.13㎡ 침실2+거실) · 26/33/36 1.5룸 · 17 원룸",
-   "rooms_guessed": false,
-   "deposit_won": null,
-   "rent_won": null,
-   "max_years": null,
-   "end_year": null,
-   "apply_start": "2026-11-02",
-   "apply_end": "2026-11-02",
-   "announce_date": null,
-   "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=a0745863e9be476a81a74753ed9687d9&fileSn=1",
-   "posted": "2026-10-29",
-   "is_new": true,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -1,
-   "apply_start_time": "10:00",
-   "apply_end_time": "23:00",
-   "application_periods": [
-    {
-     "label": "청약신청",
-     "start": "2026-11-02",
-     "end": "2026-11-02",
-     "start_time": "10:00",
-     "end_time": "23:00"
-    }
-   ],
-   "announcements": [
-    {
-     "kind": "documents",
-     "date": "2026-11-04",
-     "time": "15:00",
-     "after": false
-    }
-   ],
-   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6711&menuNo=400008",
-   "schedule_verified_at": null
-  },
-  {
    "id": "sh:311656",
    "source": "sh",
    "provider": "SH",
@@ -453,6 +388,71 @@
    "application_periods": [],
    "announcements": [],
    "schedule_source": null,
+   "schedule_verified_at": null
+  },
+  {
+   "id": "soco:6711",
+   "source": "soco",
+   "provider": "당산동청년주택피에프브이 주식회사",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 영등포구청역 포레나당산 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6711&menuNo=400008",
+   "is_private": true,
+   "address": "서울특별시 영등포구 당산로 83",
+   "gu": "영등포구",
+   "sido": "서울",
+   "sigungu": "영등포구",
+   "lat": 37.522309,
+   "lng": 126.8952969,
+   "station": "영등포구청",
+   "station_lat": 37.525706,
+   "station_lng": 126.89661,
+   "station_lines": [
+    "2",
+    "5"
+   ],
+   "station_walk_min": 3,
+   "units_youth": 100,
+   "units_general": 100,
+   "units_total": 409,
+   "area_m2_min": 17.0,
+   "area_m2_max": 36.0,
+   "rooms": "36타입 36㎡ 1.5룸(신청) · 41 2룸 · 26/33 1.5룸 · 17 원룸",
+   "rooms_guessed": false,
+   "deposit_won": 240860000,
+   "rent_won": 260000,
+   "max_years": null,
+   "end_year": null,
+   "apply_start": "2026-11-02",
+   "apply_end": "2026-11-02",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=a0745863e9be476a81a74753ed9687d9&fileSn=1",
+   "posted": "2026-10-29",
+   "is_new": true,
+   "sites": [],
+   "phase": "closed",
+   "phase_days": -1,
+   "apply_start_time": "10:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-11-02",
+     "end": "2026-11-02",
+     "start_time": "10:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-11-04",
+     "time": "15:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6711&menuNo=400008",
    "schedule_verified_at": null
   },
   {
@@ -2009,7 +2009,7 @@
    "end_year": null,
    "apply_start": "2026-09-21",
    "apply_end": "2026-09-22",
-   "announce_date": "2026-09-21",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68346273",
    "posted": "2026-09-07",
@@ -2020,14 +2020,7 @@
    "apply_start_time": null,
    "apply_end_time": null,
    "application_periods": [],
-   "announcements": [
-    {
-     "kind": "winner",
-     "date": "2026-09-21",
-     "time": null,
-     "after": false
-    }
-   ],
+   "announcements": [],
    "schedule_source": null,
    "schedule_verified_at": null
   },
@@ -2200,6 +2193,53 @@
      "after": false
     }
    ],
+   "schedule_source": null,
+   "schedule_verified_at": null
+  },
+  {
+   "id": "lh:2015122300020619",
+   "source": "lh",
+   "provider": "LH",
+   "type": "국민임대",
+   "name": "'26년 9월 인천시 남동구 국민임대주택 예비입주자 모집 공고(2026.09.07)",
+   "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020619&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
+   "is_private": false,
+   "address": null,
+   "gu": null,
+   "sido": "인천",
+   "sigungu": null,
+   "lat": null,
+   "lng": null,
+   "station": null,
+   "station_lat": null,
+   "station_lng": null,
+   "station_lines": [],
+   "station_walk_min": null,
+   "units_youth": null,
+   "units_general": null,
+   "units_total": null,
+   "area_m2_min": 50.0,
+   "area_m2_max": 50.0,
+   "rooms": "2룸",
+   "rooms_guessed": true,
+   "deposit_won": null,
+   "rent_won": null,
+   "max_years": null,
+   "end_year": null,
+   "apply_start": "2026-09-21",
+   "apply_end": "2026-09-22",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68332341",
+   "posted": "2026-09-07",
+   "is_new": false,
+   "sites": [],
+   "phase": "closed",
+   "phase_days": -42,
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
    "schedule_source": null,
    "schedule_verified_at": null
   },
@@ -4586,53 +4626,6 @@
    "schedule_verified_at": null
   },
   {
-   "id": "lh:2015122300020619",
-   "source": "lh",
-   "provider": "LH",
-   "type": "국민임대",
-   "name": "'26년 9월 인천시 남동구 국민임대주택 예비입주자 모집 공고(2026.09.07)",
-   "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020619&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "is_private": false,
-   "address": null,
-   "gu": null,
-   "sido": "인천",
-   "sigungu": null,
-   "lat": null,
-   "lng": null,
-   "station": null,
-   "station_lat": null,
-   "station_lng": null,
-   "station_lines": [],
-   "station_walk_min": null,
-   "units_youth": null,
-   "units_general": null,
-   "units_total": null,
-   "area_m2_min": null,
-   "area_m2_max": null,
-   "rooms": null,
-   "rooms_guessed": false,
-   "deposit_won": null,
-   "rent_won": null,
-   "max_years": null,
-   "end_year": null,
-   "apply_start": "2026-09-21",
-   "apply_end": "2026-09-22",
-   "announce_date": null,
-   "movein": null,
-   "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68332341",
-   "posted": "2026-09-07",
-   "is_new": false,
-   "sites": [],
-   "phase": "closed",
-   "phase_days": -42,
-   "apply_start_time": null,
-   "apply_end_time": null,
-   "application_periods": [],
-   "announcements": [],
-   "schedule_source": null,
-   "schedule_verified_at": null
-  },
-  {
    "id": "lh:2015122300020697",
    "source": "lh",
    "provider": "LH",
@@ -4664,7 +4657,7 @@
    "end_year": null,
    "apply_start": "2026-09-22",
    "apply_end": "2026-09-22",
-   "announce_date": "2026-09-22",
+   "announce_date": null,
    "movein": null,
    "pdf_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68456720",
    "posted": "2026-09-07",
@@ -4675,14 +4668,7 @@
    "apply_start_time": null,
    "apply_end_time": null,
    "application_periods": [],
-   "announcements": [
-    {
-     "kind": "winner",
-     "date": "2026-09-22",
-     "time": null,
-     "after": false
-    }
-   ],
+   "announcements": [],
    "schedule_source": null,
    "schedule_verified_at": null
   },
@@ -6613,5 +6599,5 @@
    "first_seen": "2026-10-13"
   }
  ],
- "built_at": "2026-11-03T08:13:59+09:00"
+ "built_at": "2026-11-03T09:33:08+09:00"
 }
