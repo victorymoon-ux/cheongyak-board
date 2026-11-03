@@ -1,6 +1,6 @@
 {
  "static": true,
- "generated": "2026-11-03T13:53:25+09:00",
+ "generated": "2026-11-03T17:37:17+09:00",
  "today": "2026-11-03",
  "collection": {
   "started_at": "2026-11-03T13:16:03+09:00",
@@ -11,6 +11,56 @@
  },
  "failures": [],
  "listings": [
+  {
+   "id": "manual:vertium_39b",
+   "source": "manual",
+   "provider": "용산PFV·용산대한뉴스테이(HUG 리츠)",
+   "type": "청년안심-민간",
+   "name": "[잔여세대·선착순] 용산 베르디움 프렌즈 39B 관심고객(대기) 등록함 (11/3) — 11월 공지 대기",
+   "source_url": "https://www.ys-vertium-friends.co.kr",
+   "is_private": true,
+   "address": "서울특별시 용산구 백범로99길 40 (4·6호선 삼각지역 8번 출구 166m)",
+   "gu": "용산구",
+   "sido": "서울",
+   "sigungu": "용산구",
+   "lat": 37.5348,
+   "lng": 126.9731,
+   "station": "삼각지",
+   "station_lat": 37.534075,
+   "station_lng": 126.9726,
+   "station_lines": [
+    "4",
+    "6"
+   ],
+   "station_walk_min": 2,
+   "units_youth": 124,
+   "units_general": 124,
+   "units_total": 1086,
+   "area_m2_min": 39.8,
+   "area_m2_max": 39.8,
+   "rooms": "39B 39.80㎡(12.0평) 2룸 — 침실1 11.63㎡ + 침실2 7.65㎡ + 주방·복도 (평면도 11/3 확인). 39A는 방1+넓은 거실 1.5룸",
+   "rooms_guessed": false,
+   "deposit_won": 68790000,
+   "rent_won": 530000,
+   "max_years": 2,
+   "end_year": 2029,
+   "apply_start": "2026-11-03",
+   "apply_end": "2027-02-03",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": null,
+   "posted": "2026-11-03",
+   "is_new": true,
+   "sites": [],
+   "phase": "unknown",
+   "phase_days": 92,
+   "apply_start_time": null,
+   "apply_end_time": null,
+   "application_periods": [],
+   "announcements": [],
+   "schedule_source": null,
+   "schedule_verified_at": null
+  },
   {
    "id": "manual:yongsan_riverview",
    "source": "manual",
@@ -282,8 +332,8 @@
    "posted": "2026-10-16",
    "is_new": false,
    "sites": [],
-   "phase": "open",
-   "phase_days": 0,
+   "phase": "upcoming",
+   "phase_days": 1,
    "apply_start_time": "10:00",
    "apply_end_time": "17:00",
    "application_periods": [
@@ -2066,7 +2116,7 @@
    "posted": "2026-10-29",
    "is_new": true,
    "sites": [],
-   "phase": "open",
+   "phase": "closed",
    "phase_days": 0,
    "apply_start_time": "09:00",
    "apply_end_time": "17:00",
@@ -6601,5 +6651,5 @@
    "first_seen": "2026-10-13"
   }
  ],
- "built_at": "2026-11-03T13:53:56+09:00"
+ "built_at": "2026-11-03T17:37:17+09:00"
 }
