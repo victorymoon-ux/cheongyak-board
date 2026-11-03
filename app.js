@@ -137,7 +137,7 @@
   function payDetail(l) {
     var m = l.monthly || {};
     if (l.status === "neutral") return "내 조건을 입력하면 비용 예시 계산";
-    var text = m.display_total == null ? "보증금·월세·자기자금·은행 금리 확인 필요" : "월세 + 입력한 일반은행 금리의 이자 예시 · 대출 승인/한도 미확인 · 서울시 이자지원 자동 할인 없음";
+    var text = m.display_total == null ? "보증금·월세·자기자금·금리 확인 필요" : ("월세 + 대출이자 예시 · " + (m.policy_note || "대출 승인/한도 미확인"));
     if (state.profile && state.profile.seoul_support) text += " · " + Engine.supportChecks(l, state.profile).join(" / ");
     return esc(text);
   }
@@ -376,7 +376,7 @@
           var sm = L.circleMarker([site.lat, site.lng], { radius: 6, color: scolor, weight: 2, fillColor: "#fff", fillOpacity: .95 });
           var p = state.profile;
           var costs = p ? Engine.monthlyCost(Object.assign({}, l, site, { rent_won:site.rent_won == null ? l.rent_won : site.rent_won }), p) : null;
-          var payText = costs && costs.display_total != null ? "<br>입력한 은행 금리의 월 비용 예시 " + esc(won(costs.display_total)) + " · 대출 승인/한도 미확인 · 이자지원 자동 할인 없음" : "<br>내 조건·보증금·월세·금리 확인 후 비용 예시 계산";
+          var payText = costs && costs.display_total != null ? "<br>월 비용 예시 " + esc(won(costs.display_total)) + " · " + esc(costs.policy_note || "대출 승인/한도 미확인") : "<br>내 조건·보증금·월세·금리 확인 후 비용 예시 계산";
           sm.bindPopup('<span class="pill ' + ph.k + '">' + esc(ph.text) + "</span><br><b>" + esc(starName(l)) + "</b><br>" + esc(site.name || "") + "<br>" + esc(site.address || "") + "<br>" +
             (site.area_m2 ? "전용 " + site.area_m2 + "㎡(" + py(site.area_m2) + "평)" : "") + (site.rooms ? " 방" + site.rooms : "") + (site.deposit_won != null ? " · 전세 " + won(site.deposit_won) : "") +
             payText +

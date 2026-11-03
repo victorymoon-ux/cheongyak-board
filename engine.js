@@ -13,7 +13,8 @@
     UNITS_POINTS: [[10, 4], [30, 8], [100, 12], [300, 15]],
     LINE_BONUS: 5, LINE_WALK_MAX: 10, ROOM_BONUS: 5, ROOM_BONUS_2: 8, BIG_COMPLEX_BONUS: 2, BIG_COMPLEX_UNITS: 300, BIG_RECRUIT_UNITS: 100,
     SUBWAY_KMH: 32, DETOUR: 1.25, TRANSFER_MIN: 8, WAIT_MIN: 4, WORK_WALK_MIN: 3,
-    POLICY_MAX_DEPOSIT_WON: 300000000, SUPPORT_MAX_RENT_WON: 900000
+    POLICY_MAX_DEPOSIT_WON: 300000000, SUPPORT_MAX_RENT_WON: 900000,
+    YOUTH_LOAN_CAP_WON: 150000000, YOUTH_LOAN_LTV: 0.8   // 청년 버팀목 한도·보증금 80% (2026-11-03 기본 금리 = 버팀목)
   };
   function bround(x) { var f = Math.floor(x), d = x - f; if (d > 0.5) return f + 1; if (d < 0.5) return f; return f % 2 === 0 ? f : f + 1; }
   function toPyeong(m2) { return bround(m2 / R.M2_PER_PYEONG * 10) / 10; }
@@ -51,18 +52,51 @@
 
   // ---- 월 납입 ----
   function interest(loan, rate) { return rate == null ? null : bround(loan * rate / 12); }
+  function pct(r) { return r == null ? "?" : (String(Math.round(r * 10000) / 100) + "%"); }
+  function splitLoan(loan, dep, rates) {
+    // (버팀목으로 받는 부분, 나머지=은행). 버팀목 금리 없음·보증금 3억 초과면 전부 은행. Python cost.split_loan 과 동일.
+    var yr = rates.youth_loan;
+    if (loan <= 0 || yr == null || dep > R.POLICY_MAX_DEPOSIT_WON) return [0, loan];
+    var cap = rates.youth_cap_won != null ? rates.youth_cap_won : R.YOUTH_LOAN_CAP_WON;
+    var ltv = rates.youth_ltv != null ? rates.youth_ltv : R.YOUTH_LOAN_LTV;
+    var y = Math.min(loan, Math.floor(cap), Math.floor(dep * ltv));
+    return [y, loan - y];
+  }
   function baseCost(dep, rent, own, rates) {
-    var out = { loan_won: 0, interest_youth: null, interest_bank: null, total_youth: null, total_bank: null, display_total: null, verdict: "unknown", alt: null, policy_note: null };
+    var out = { loan_won: 0, youth_loan_won: 0, bank_loan_won: 0, interest_youth: null, interest_bank: null, total_youth: null, total_bank: null, total_support: null, display_total: null, verdict: "unknown", alt: null, policy_note: null };
     if (dep == null || rent == null || own == null) return out;
     var loan = Math.max(0, dep - own); out.loan_won = loan;
-    var iy = null;
-    var ib = loan === 0 ? 0 : interest(loan, rates.bank_loan);
-    out.policy_note = "입력한 일반은행 금리의 비용 예시 · 대출 승인/한도 미확인 · 서울시 이자지원 자동 할인 없음";
+    var yr = rates.youth_loan, br = rates.bank_loan;
+    var sp = splitLoan(loan, dep, rates), ypart = sp[0], bpart = sp[1];
+    out.youth_loan_won = ypart; out.bank_loan_won = bpart;
+    var ib = loan === 0 ? 0 : interest(loan, br);
+    var iy;
+    if (loan === 0) iy = 0;
+    else if (ypart === 0) iy = null;
+    else if (bpart === 0) iy = interest(ypart, yr);
+    else if (br == null) iy = null;
+    else iy = interest(ypart, yr) + interest(bpart, br);
     out.interest_youth = iy; out.interest_bank = ib;
     out.total_youth = iy != null ? rent + iy : null; out.total_bank = ib != null ? rent + ib : null;
+    var sr = rates.support_rate, scap = rates.support_cap_won;
+    if (loan > 0 && sr != null && dep <= R.POLICY_MAX_DEPOSIT_WON && rent <= R.SUPPORT_MAX_RENT_WON) {
+      var spart = scap ? Math.min(loan, Math.floor(scap)) : loan, rest = loan - spart, rr = yr != null ? yr : br;
+      if (rest === 0 || rr != null) out.total_support = rent + interest(spart, sr) + (rest ? interest(rest, rr) : 0);
+    }
     if (out.total_youth != null) out.display_total = out.total_youth;
     else if (out.total_bank != null) out.display_total = out.total_bank;
     else { out.display_total = rent; if (loan > 0) { out.display_total = null; return out; } }
+    var cap = rates.youth_cap_won != null ? rates.youth_cap_won : R.YOUTH_LOAN_CAP_WON, ltv = rates.youth_ltv != null ? rates.youth_ltv : R.YOUTH_LOAN_LTV;
+    var note;
+    if (loan === 0) note = "보증금이 자기자금 안이라 대출 없음";
+    else if (iy != null) {
+      note = "청년 버팀목 " + pct(yr) + " 기준(한도 " + Math.floor(cap / 10000).toLocaleString() + "만·보증금 " + Math.round(ltv * 100) + "% 이내)";
+      if (bpart) note += " + 한도 밖 " + bpart.toLocaleString() + "원은 은행 " + pct(br);
+      note += " · 대출 승인/한도 미확인";
+    } else if (dep > R.POLICY_MAX_DEPOSIT_WON) note = "보증금 3억 초과라 정책대출 불가 → 은행 " + pct(br) + " 기준 · 대출 승인/한도 미확인";
+    else note = "은행 " + pct(br) + " 기준(버팀목 금리 미입력) · 대출 승인/한도 미확인";
+    if (out.total_support != null) note += " · 서울시 이자지원(" + pct(sr) + ") 받으면 월 " + out.total_support.toLocaleString() + "원(예산 선착순, 참고)";
+    out.policy_note = note;
     var t = out.display_total, max = rates._max || 800000, border = rates._border || 850000;
     out.verdict = t <= max ? "ok" : t <= border ? "border" : "over";
     return out;
@@ -83,7 +117,7 @@
     var out = baseCost(l.deposit_won, l.rent_won, profile.own_cash_won, rates);
     out.support_checks = supportChecks(l, profile);
     var cp = parseConvertPct(l.convert_note);
-    var rate = rates.bank_loan;
+    var rate = rates.youth_loan != null ? rates.youth_loan : rates.bank_loan;
     if (out.verdict !== "over" || !cp || rate == null) return out;
     var toDep = cp[1] / 100; if (toDep <= 0) return out;
     var max = profile.max_monthly_won, delta = l.rent_won - max, extra = bround(delta * 12 / toDep);
