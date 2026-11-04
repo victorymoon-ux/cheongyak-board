@@ -1,6 +1,6 @@
 {
  "static": true,
- "generated": "2026-11-04T09:33:33+09:00",
+ "generated": "2026-11-04T10:05:01+09:00",
  "today": "2026-11-04",
  "collection": {
   "started_at": "2026-11-04T08:03:14+09:00",
@@ -394,7 +394,7 @@
    "posted": "2026-10-16",
    "is_new": false,
    "sites": [],
-   "phase": "upcoming",
+   "phase": "open",
    "phase_days": 0,
    "apply_start_time": "10:00",
    "apply_end_time": "17:00",
@@ -6768,5 +6768,5 @@
    "first_seen": "2026-10-13"
   }
  ],
- "built_at": "2026-11-04T09:33:33+09:00"
+ "built_at": "2026-11-04T10:05:01+09:00"
 }
