@@ -1,6 +1,6 @@
 {
  "static": true,
- "generated": "2026-11-04T08:53:21+09:00",
+ "generated": "2026-11-04T09:33:33+09:00",
  "today": "2026-11-04",
  "collection": {
   "started_at": "2026-11-04T08:03:14+09:00",
@@ -9,9 +9,7 @@
   "status": "partial",
   "failure_count": 1
  },
- "failures": [
-  "일부 수집 소스 실패 · 기존 자료가 포함될 수 있습니다."
- ],
+ "failures": [],
  "listings": [
   {
    "id": "manual:vertium_39b",
@@ -292,6 +290,68 @@
     }
    ],
    "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6678&menuNo=400008",
+   "schedule_verified_at": null
+  },
+  {
+   "id": "soco:6718",
+   "source": "soco",
+   "provider": "(주)이지스용산청년주택위탁관리부동산투자회사",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 효창공원앞역 해링턴 플레이스 용산 리버뷰 최초모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6718&menuNo=400008",
+   "is_private": true,
+   "address": null,
+   "gu": "용산구",
+   "sido": "서울",
+   "sigungu": "용산구",
+   "lat": null,
+   "lng": null,
+   "station": null,
+   "station_lat": null,
+   "station_lng": null,
+   "station_lines": [],
+   "station_walk_min": null,
+   "units_youth": null,
+   "units_general": 507,
+   "units_total": 988,
+   "area_m2_min": 12.0,
+   "area_m2_max": 126.2,
+   "rooms": "2룸",
+   "rooms_guessed": true,
+   "deposit_won": null,
+   "rent_won": null,
+   "max_years": 10,
+   "end_year": null,
+   "apply_start": "2026-11-12",
+   "apply_end": "2026-11-15",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=f0080708c59b4f6c89a0d4e53c0da80e&fileSn=1",
+   "posted": "2026-11-03",
+   "is_new": true,
+   "sites": [],
+   "phase": "upcoming",
+   "phase_days": 8,
+   "apply_start_time": "00:00",
+   "apply_end_time": null,
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-11-12",
+     "end": "2026-11-15",
+     "start_time": "00:00",
+     "end_time": null
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-11-17",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6718&menuNo=400008",
    "schedule_verified_at": null
   },
   {
@@ -635,68 +695,6 @@
    "schedule_verified_at": null
   },
   {
-   "id": "soco:6718",
-   "source": "soco",
-   "provider": "(주)이지스용산청년주택위탁관리부동산투자회사",
-   "type": "청년안심-민간",
-   "name": "[민간임대] 효창공원앞역 해링턴 플레이스 용산 리버뷰 최초모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6718&menuNo=400008",
-   "is_private": true,
-   "address": null,
-   "gu": "용산구",
-   "sido": "서울",
-   "sigungu": "용산구",
-   "lat": null,
-   "lng": null,
-   "station": null,
-   "station_lat": null,
-   "station_lng": null,
-   "station_lines": [],
-   "station_walk_min": null,
-   "units_youth": null,
-   "units_general": null,
-   "units_total": 988,
-   "area_m2_min": 12.0,
-   "area_m2_max": 126.2,
-   "rooms": "2룸",
-   "rooms_guessed": true,
-   "deposit_won": null,
-   "rent_won": null,
-   "max_years": null,
-   "end_year": null,
-   "apply_start": "2026-11-12",
-   "apply_end": "2026-11-15",
-   "announce_date": null,
-   "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=f0080708c59b4f6c89a0d4e53c0da80e&fileSn=1",
-   "posted": "2026-11-03",
-   "is_new": true,
-   "sites": [],
-   "phase": "upcoming",
-   "phase_days": 8,
-   "apply_start_time": "00:00",
-   "apply_end_time": null,
-   "application_periods": [
-    {
-     "label": "청약신청",
-     "start": "2026-11-12",
-     "end": "2026-11-15",
-     "start_time": "00:00",
-     "end_time": null
-    }
-   ],
-   "announcements": [
-    {
-     "kind": "documents",
-     "date": "2026-11-17",
-     "time": "17:00",
-     "after": false
-    }
-   ],
-   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6718&menuNo=400008",
-   "schedule_verified_at": null
-  },
-  {
    "id": "soco:6694",
    "source": "soco",
    "provider": "주식회사 엘앤피개발",
@@ -822,68 +820,6 @@
     }
    ],
    "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6699&menuNo=400008",
-   "schedule_verified_at": null
-  },
-  {
-   "id": "soco:6719",
-   "source": "soco",
-   "provider": "(주)케이제이",
-   "type": "청년안심-민간",
-   "name": "[민간임대] 송정역 케이제이타워 최초모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6719&menuNo=400008",
-   "is_private": true,
-   "address": "서울특별시 강서구 공항동 50-5번지",
-   "gu": "강서구",
-   "sido": "서울",
-   "sigungu": "강서구",
-   "lat": null,
-   "lng": null,
-   "station": null,
-   "station_lat": null,
-   "station_lng": null,
-   "station_lines": [],
-   "station_walk_min": null,
-   "units_youth": null,
-   "units_general": 68,
-   "units_total": 157,
-   "area_m2_min": 27.6,
-   "area_m2_max": 60.55,
-   "rooms": "2룸",
-   "rooms_guessed": true,
-   "deposit_won": null,
-   "rent_won": null,
-   "max_years": 10,
-   "end_year": null,
-   "apply_start": "2026-11-11",
-   "apply_end": "2026-11-15",
-   "announce_date": null,
-   "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=05af111b43184ddbad610d03529fa4ec&fileSn=1",
-   "posted": "2026-11-03",
-   "is_new": true,
-   "sites": [],
-   "phase": "upcoming",
-   "phase_days": 7,
-   "apply_start_time": "09:00",
-   "apply_end_time": "23:00",
-   "application_periods": [
-    {
-     "label": "청약신청",
-     "start": "2026-11-11",
-     "end": "2026-11-15",
-     "start_time": "09:00",
-     "end_time": "23:00"
-    }
-   ],
-   "announcements": [
-    {
-     "kind": "documents",
-     "date": "2026-11-17",
-     "time": "17:00",
-     "after": false
-    }
-   ],
-   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6719&menuNo=400008",
    "schedule_verified_at": null
   },
   {
@@ -2170,6 +2106,68 @@
     }
    ],
    "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6710&menuNo=400008",
+   "schedule_verified_at": null
+  },
+  {
+   "id": "soco:6719",
+   "source": "soco",
+   "provider": "(주)케이제이",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 송정역 케이제이타워 최초모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6719&menuNo=400008",
+   "is_private": true,
+   "address": "서울특별시 강서구 공항동 50-5번지",
+   "gu": "강서구",
+   "sido": "서울",
+   "sigungu": "강서구",
+   "lat": null,
+   "lng": null,
+   "station": null,
+   "station_lat": null,
+   "station_lng": null,
+   "station_lines": [],
+   "station_walk_min": null,
+   "units_youth": 35,
+   "units_general": 68,
+   "units_total": 157,
+   "area_m2_min": 21.19,
+   "area_m2_max": 29.45,
+   "rooms": "청년: 21~23㎡ 원룸 8개 타입(6.4~7평) + D TYPE 29.45㎡(8.9평) 2세대 · 50.19㎡ 2룸(E TYPE, 40세대)은 신혼부부 전용 → 1인 불가",
+   "rooms_guessed": false,
+   "deposit_won": 114000000,
+   "rent_won": 680000,
+   "max_years": 10,
+   "end_year": null,
+   "apply_start": "2026-11-11",
+   "apply_end": "2026-11-15",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=05af111b43184ddbad610d03529fa4ec&fileSn=1",
+   "posted": "2026-11-03",
+   "is_new": true,
+   "sites": [],
+   "phase": "upcoming",
+   "phase_days": 7,
+   "apply_start_time": "09:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-11-11",
+     "end": "2026-11-15",
+     "start_time": "09:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-11-17",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6719&menuNo=400008",
    "schedule_verified_at": null
   },
   {
@@ -6770,5 +6768,5 @@
    "first_seen": "2026-10-13"
   }
  ],
- "built_at": "2026-11-04T08:53:21+09:00"
+ "built_at": "2026-11-04T09:33:33+09:00"
 }
