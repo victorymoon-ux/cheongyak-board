@@ -1,6 +1,6 @@
 {
  "static": true,
- "generated": "2026-11-04T13:12:22+09:00",
+ "generated": "2026-11-04T18:00:24+09:00",
  "today": "2026-11-04",
  "collection": {
   "started_at": "2026-11-04T08:03:14+09:00",
@@ -394,8 +394,8 @@
    "posted": "2026-10-16",
    "is_new": false,
    "sites": [],
-   "phase": "open",
-   "phase_days": 0,
+   "phase": "upcoming",
+   "phase_days": 1,
    "apply_start_time": "10:00",
    "apply_end_time": "17:00",
    "application_periods": [
@@ -2127,12 +2127,12 @@
    "station_lng": null,
    "station_lines": [],
    "station_walk_min": null,
-   "units_youth": 35,
-   "units_general": 68,
+   "units_youth": 11,
+   "units_general": 35,
    "units_total": 157,
    "area_m2_min": 21.19,
    "area_m2_max": 29.45,
-   "rooms": "청년: 21~23㎡ 원룸 8개 타입(6.4~7평) + D TYPE 29.45㎡(8.9평) 2세대 · 50.19㎡ 2룸(E TYPE, 40세대)은 신혼부부 전용 → 1인 불가",
+   "rooms": "청년: 21~23㎡ 원룸 8개 타입(6.4~7평) + D TYPE 29.45㎡(8.9평) 일반 2세대만 8평↑ · 50.19㎡ 2룸(E TYPE, 40세대)은 신혼부부 전용 → 1인 불가. 승리 조건(8평↑)에 맞는 건 D TYPE 2세대뿐",
    "rooms_guessed": false,
    "deposit_won": 114000000,
    "rent_won": 680000,
@@ -2232,70 +2232,6 @@
     }
    ],
    "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6701&menuNo=400008",
-   "schedule_verified_at": null
-  },
-  {
-   "id": "soco:6715",
-   "source": "soco",
-   "provider": "(주)하나하우징개봉위탁관리부동산투자회사",
-   "type": "청년안심-민간",
-   "name": "[민간임대] 개봉역 에드가개봉 추가모집공고",
-   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6715&menuNo=400008",
-   "is_private": true,
-   "address": "서울특별시 구로구 개봉동 179-11 일원",
-   "gu": "구로구",
-   "sido": "서울",
-   "sigungu": "구로구",
-   "lat": 37.4931629,
-   "lng": 126.851736,
-   "station": "오류동",
-   "station_lat": 37.494526,
-   "station_lng": 126.845365,
-   "station_lines": [
-    "1"
-   ],
-   "station_walk_min": 8,
-   "units_youth": 9,
-   "units_general": 9,
-   "units_total": 268,
-   "area_m2_min": 35.0,
-   "area_m2_max": 36.0,
-   "rooms": "35형 6세대 · 36형 3세대(신혼 또는 청년 일반공급, 1인 가능) · 16형 34세대(청년 일반, 4.8평이라 8평 미달 제외)",
-   "rooms_guessed": false,
-   "deposit_won": 79000000,
-   "rent_won": 800000,
-   "max_years": 10,
-   "end_year": null,
-   "apply_start": "2026-11-02",
-   "apply_end": "2026-11-04",
-   "announce_date": null,
-   "movein": null,
-   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=ffaa1c9ca6a8486193289c012c3df799&fileSn=1",
-   "posted": "2026-10-29",
-   "is_new": true,
-   "sites": [],
-   "phase": "open",
-   "phase_days": 0,
-   "apply_start_time": "09:00",
-   "apply_end_time": "23:00",
-   "application_periods": [
-    {
-     "label": "청약신청",
-     "start": "2026-11-02",
-     "end": "2026-11-04",
-     "start_time": "09:00",
-     "end_time": "23:00"
-    }
-   ],
-   "announcements": [
-    {
-     "kind": "documents",
-     "date": "2026-11-06",
-     "time": "17:00",
-     "after": false
-    }
-   ],
-   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6715&menuNo=400008",
    "schedule_verified_at": null
   },
   {
@@ -3029,6 +2965,70 @@
     }
    ],
    "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6707&menuNo=400008",
+   "schedule_verified_at": null
+  },
+  {
+   "id": "soco:6715",
+   "source": "soco",
+   "provider": "(주)하나하우징개봉위탁관리부동산투자회사",
+   "type": "청년안심-민간",
+   "name": "[민간임대] 개봉역 에드가개봉 추가모집공고",
+   "source_url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6715&menuNo=400008",
+   "is_private": true,
+   "address": "서울특별시 구로구 개봉동 179-11 일원",
+   "gu": "구로구",
+   "sido": "서울",
+   "sigungu": "구로구",
+   "lat": 37.4931629,
+   "lng": 126.851736,
+   "station": "오류동",
+   "station_lat": 37.494526,
+   "station_lng": 126.845365,
+   "station_lines": [
+    "1"
+   ],
+   "station_walk_min": 8,
+   "units_youth": 0,
+   "units_general": 9,
+   "units_total": 268,
+   "area_m2_min": 35.0,
+   "area_m2_max": 36.0,
+   "rooms": "35형 6세대 · 36형 3세대(신혼 또는 청년 일반공급, 1인 가능) · 16형 34세대(청년 일반, 4.8평이라 8평 미달 제외)",
+   "rooms_guessed": false,
+   "deposit_won": 79000000,
+   "rent_won": 800000,
+   "max_years": 10,
+   "end_year": null,
+   "apply_start": "2026-11-02",
+   "apply_end": "2026-11-04",
+   "announce_date": null,
+   "movein": null,
+   "pdf_url": "https://soco.seoul.go.kr/coHouse/cmmn/file/fileDown.do?atchFileId=ffaa1c9ca6a8486193289c012c3df799&fileSn=1",
+   "posted": "2026-10-29",
+   "is_new": true,
+   "sites": [],
+   "phase": "open",
+   "phase_days": 0,
+   "apply_start_time": "09:00",
+   "apply_end_time": "23:00",
+   "application_periods": [
+    {
+     "label": "청약신청",
+     "start": "2026-11-02",
+     "end": "2026-11-04",
+     "start_time": "09:00",
+     "end_time": "23:00"
+    }
+   ],
+   "announcements": [
+    {
+     "kind": "documents",
+     "date": "2026-11-06",
+     "time": "17:00",
+     "after": false
+    }
+   ],
+   "schedule_source": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6715&menuNo=400008",
    "schedule_verified_at": null
   },
   {
@@ -4293,7 +4293,7 @@
    "posted": "2026-10-19",
    "is_new": false,
    "sites": [],
-   "phase": "open",
+   "phase": "closed",
    "phase_days": 0,
    "apply_start_time": "10:00",
    "apply_end_time": "16:00",
@@ -6768,5 +6768,5 @@
    "first_seen": "2026-10-13"
   }
  ],
- "built_at": "2026-11-04T13:12:22+09:00"
+ "built_at": "2026-11-04T18:00:25+09:00"
 }
